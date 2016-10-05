@@ -1,4 +1,4 @@
-package com.example.manishvishwakarma.searchablespinnermine;
+package ayyash;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -17,6 +17,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
+
+import ayyash.R;
 
 import java.io.Serializable;
 import java.util.List;
@@ -96,7 +98,7 @@ public class SearchableListDialog extends DialogFragment implements
         String strPositiveButton = _strPositiveButtonText == null ? "CLOSE" : _strPositiveButtonText;
         alertDialog.setPositiveButton(strPositiveButton, _onClickListener);
 
-        String strTitle = _strTitle == null ? "Select Item" : _strTitle;
+        String strTitle = _strTitle == null ? "Pilih makanan/minuman" : _strTitle;
         alertDialog.setTitle(strTitle);
 
         final AlertDialog dialog = alertDialog.create();

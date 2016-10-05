@@ -1,9 +1,9 @@
-package com.example.manishvishwakarma.searchablespinnermine;
+package ayyash;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.ContextWrapper;
-import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.text.TextUtils;
 import android.util.AttributeSet;
@@ -14,8 +14,7 @@ import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 import android.widget.Toast;
 
-import com.example.manishvishwakarma.searchablespinnermine.R;
-import com.example.manishvishwakarma.searchablespinnermine.SearchableListDialog;
+import ayyash.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +25,7 @@ public class SearchableSpinner extends Spinner implements View.OnTouchListener,
 
     String selectedItem;
     //this string above will store the value of selected item.
+    int selectedIndex;
 
     public static final int NO_ITEM_SELECTED = -1;
     private Context _context;
@@ -130,9 +130,18 @@ public class SearchableSpinner extends Spinner implements View.OnTouchListener,
             setAdapter(_arrayAdapter);
             setSelection(_items.indexOf(item));
         }
-        selectedItem= getItemAtPosition(position).toString();
+        selectedIndex = getSelectedItemPosition();
+        selectedItem= getItemAtPosition(selectedIndex).toString();
+
 
         Toast.makeText(getContext(),"You selected "+selectedItem,Toast.LENGTH_LONG).show();
+
+        Intent i = new Intent(_context, PerhitunganPagi.class);
+        i.putExtra("indexMakanan", selectedIndex);
+        i.putExtra("namaMakanan",selectedItem);
+        _context.startActivity(i);
+
+
     }
 
 

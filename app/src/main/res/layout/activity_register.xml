@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.manishvishwakarma.searchablespinnermine.ayyash.Register">
+
+    <!--****ORDER TEXT****-->
+
+    <FrameLayout
+        android:id="@+id/order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:id="@+id/order1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textSize="22dp"
+            android:textColor="#333333"
+            android:gravity="center"
+            android:padding="16dp"
+            />
+
+        <LinearLayout
+            android:layout_width="45dp"
+            android:layout_height="58dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/arrow"
+                android:paddingLeft="16dp"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#dad8d8"
+            android:gravity="bottom"/>
+
+
+
+
+    </FrameLayout>
+
+
+    <!--****PAY****-->
+
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1c57ff"
+        android:text="Next >"
+        android:textSize="20dp"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_alignParentBottom="true"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/order"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp"
+        android:layout_above="@+id/pay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#dad8d8"
+                android:gravity="bottom"/>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:paddingTop="12dp">
+
+
+                <!--****NAME TEXT****-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:id="@+id/name1"
+                        android:layout_weight="2.5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nama"
+                        android:textColor="#333333" />
+
+                    <TextView
+                        android:id="@+id/name2"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Masukkan Nama Lengkap"
+                        android:textColor="#c3c3c3" />
+                </LinearLayout>
+
+
+                <!--****Your name TEXT****-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginRight="16dp">
+
+                        <EditText
+                            android:id="@+id/txtNama"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="#333333"
+                            android:background="#00000000"
+                            android:maxLines="1" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#dad8d8" />
+
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+                <!--****CARD TEXT****-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="12dp">
+
+                        <TextView
+                            android:id="@+id/card1"
+                            android:layout_weight="1.9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tempat Tinggal di Jakarta"
+                            android:textColor="#333333" />
+                        <CheckBox
+                            android:text="Ya"
+                            android:id="@+id/checkJkt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+                <!--****CARD NO.****-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="12dp">
+
+                        <TextView
+                            android:id="@+id/hamil"
+                            android:layout_weight="1.9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tempat Tinggal di Jakarta"
+                            android:textColor="#333333" />
+                        <CheckBox
+                            android:text="Ya"
+                            android:id="@+id/checkHamil"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                ****CVV****
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="12dp">
+
+                        <TextView
+                            android:id="@+id/ccv1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Status Mahasiswa"
+                            android:textColor="#333333"
+                            />
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:gravity="right"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <RadioButton
+                                    android:text="Mahasiswa UI"
+                                    android:id="@+id/UI"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <RadioButton
+                                    android:text="Alumni UI"
+                                    android:id="@+id/alumniUI"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+                        </RadioGroup>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!--****CVV NO.****-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp"
+                    >
+
+
+                </LinearLayout>
+
+
+                <!--****DATE****-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="12dp">
+
+                        <TextView
+                            android:id="@+id/date1"
+                            android:layout_weight="5.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tanggal Lahir"
+                            android:textColor="#333333" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!--****CALENDAR****-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+
+                        >
+
+                        <EditText
+                            android:id="@+id/calendarTxt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#00000000"
+                            android:onClick="setDate"
+                            android:textColor="#333333"
+                            android:hint="dd/mm/year"
+                            android:inputType="number"
+
+
+                            />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#dad8d8" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!--****ADDRESS 1****-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="12dp">
+
+                        <TextView
+                            android:id="@+id/Status"
+                            android:layout_weight="5.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Status Nikah"
+                            android:textColor="#333333" />
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:gravity="right"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <RadioButton
+                                    android:id="@+id/menikah"
+                                    android:text="Menikah"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <RadioButton
+                                    android:id="@+id/single"
+                                    android:text="Single"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <RadioButton
+                                    android:id="@+id/duda"
+                                    android:text="Duda/Janda"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+                        </RadioGroup>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!--****ADDRESS LINE 1 FIELD****-->
+
+
+                <!--****DATE****-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="12dp">
+
+                        <TextView
+                            android:id="@+id/jmlAnak"
+                            android:layout_weight="5.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Jumlah Anak"
+                            android:textColor="#333333" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!--****Jumlah Anak****-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+
+                        >
+
+                        <EditText
+                            android:id="@+id/txtJmlAnak"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#00000000"
+                            android:onClick="setDate"
+                            android:textColor="#333333"
+                            android:hint=""
+                            android:inputType="number"
+
+
+                            />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#dad8d8" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+
+                <!--**** Status Kerja ****-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="12dp">
+
+                        <TextView
+                            android:id="@+id/Kerja"
+                            android:layout_weight="5.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Status Pekerjaan"
+                            android:textColor="#333333" />
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:gravity="right"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <RadioButton
+                                    android:id="@+id/Bekerja"
+                                    android:text="Bekerja"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <RadioButton
+                                    android:id="@+id/Nganggur"
+                                    android:text="Tidak Bekerja"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+
+                            </LinearLayout>
+
+                        </RadioGroup>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!--**** Status Kerja ****-->
+
+                <!--**** Status Kerja ****-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="12dp">
+
+                        <TextView
+                            android:id="@+id/Pekerjaan"
+                            android:layout_weight="5.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Status Pekerjaan"
+                            android:textColor="#333333" />
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:gravity="right"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <RadioButton
+                                    android:id="@+id/PNS"
+                                    android:text="PNS"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <RadioButton
+                                    android:id="@+id/Swasta"
+                                    android:text="Swasta"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <RadioButton
+                                    android:id="@+id/Wiraswasta"
+                                    android:text="Wiraswasta"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+                        </RadioGroup>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <!--****ADDRESS 2****-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="12dp">
+
+                        <TextView
+                            android:id="@+id/addL3"
+                            android:layout_weight="5.5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Alamat"
+                            android:textColor="#333333" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--****ADDRESS LINE 2 FIELD****-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+
+                        >
+
+                        <EditText
+                            android:id="@+id/addL4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="#333333"
+                            android:background="#00000000"
+                            android:maxLines="1" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#dad8d8" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--****CITY AND STATE****-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        android:id="@+id/city1"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="HP"
+                        android:textColor="#333333" />
+
+                    <TextView
+                        android:id="@+id/state1"
+                        android:layout_weight="1.1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:textColor="#333333" />
+                </LinearLayout>
+
+
+                <!--****CITY AND STATE   TEXT****-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="16dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginRight="16dp">
+
+                        <EditText
+                            android:id="@+id/hp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="#333333"
+                            android:background="#00000000"
+                            android:maxLines="1" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#dad8d8" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        >
+
+                        <EditText
+                            android:id="@+id/email"
+                            android:inputType="textEmailAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="#333333"
+                            android:background="#00000000"
+                            android:maxLines="1" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#dad8d8" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
