@@ -136,7 +136,7 @@ public class Register extends AppCompatActivity {
         final String email = txt_email.getText().toString().trim();
         final String password = txt_password.getText().toString().trim();
         final String sMhs = rbStatusUser.getText().toString().trim();
-        final String tinggalDKI = rbStatusUser.getText().toString().trim();
+        final String tinggalDKI = rbDKI.getText().toString().trim();
 
 
         //parsing id kelas
