@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:checkableBehavior="single" >
+        <item
+            android:title="Eating Habit "
+            android:id="@+id/kebiasaan"
+            android:icon="@drawable/habit" />
+
+        <item
+            android:title="Food Record"
+            android:id="@+id/foodRecord"
+            
+            android:icon="@drawable/food_recall" />
+        <item
+            android:title="Food Recall"
+            android:id="@+id/foodRecall"
+            android:icon="@drawable/food_records" />
+        <item
+            android:title="Physical Activity"
+            android:id="@+id/aktifitasFisik"
+            android:icon="@drawable/activity" />
+
+        <item
+            android:title="Logout"
+            android:id="@+id/keluarCuy"
+            android:icon="@drawable/keluaar" />
+    </group>
+</menu>

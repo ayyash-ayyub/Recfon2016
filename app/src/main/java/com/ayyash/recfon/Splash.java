@@ -1,4 +1,4 @@
-package ayyash;
+package com.ayyash.recfon;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-import ayyash.R;
+import com.ayyash.recfon.R;
 
 public class Splash extends AppCompatActivity {
     private static int splashInterval = 1500;

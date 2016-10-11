@@ -12,6 +12,9 @@
         app:showAsAction="ifRoom|withText"
         android:title="">
             <menu>
+                <item android:id="@+id/menuHelp"
+                    android:title="Help"
+                    android:icon="@drawable/help" />
                 <item android:id="@+id/menuLogout"
                     android:title="Logout/keluar"
                     android:icon="@drawable/logo_atas" />

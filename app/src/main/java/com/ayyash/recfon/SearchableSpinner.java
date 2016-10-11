@@ -1,4 +1,4 @@
-package ayyash;
+package com.ayyash.recfon;
 
 import android.app.Activity;
 import android.content.Context;
@@ -13,8 +13,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 import android.widget.Toast;
-
-import ayyash.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -140,6 +138,10 @@ public class SearchableSpinner extends Spinner implements View.OnTouchListener,
         i.putExtra("indexMakanan", selectedIndex);
         i.putExtra("namaMakanan",selectedItem);
         _context.startActivity(i);
+
+        //stop aktifitas sekarang
+        Activity activity = (Activity)getContext();
+        activity.finish();
 
 
     }

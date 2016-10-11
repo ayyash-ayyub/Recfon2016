@@ -12,7 +12,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ayyash.SarapanActivity">
+    tools:context="com.ayyash.recfon.SarapanActivity"
+    android:weightSum="1">
 
     <TextView
         android:text="Rekam Sarapan Pagi"
@@ -20,19 +21,68 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView6"
         android:textSize="24sp"
-        android:textColor="@android:color/holo_green_light" />
+        android:textColor="@android:color/holo_green_dark" />
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="35px" />
+        android:layout_height="20px" />
 
-    <ayyash.SearchableSpinner
-        android:id="@+id/spinner"
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/colleges"
-        app:hintText="Apa yang anda makan?"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        app:srcCompat="@drawable/clock"
+        android:id="@+id/imageView" />
 
+    <com.ayyash.recfon.SearchableSpinner
+        android:id="@+id/spinner"
+        android:layout_height="wrap_content"
+        android:entries="@array/colleges"
+        app:hintText="apa yang anda makan hari ini?(tambahkan)"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_width="wrap_content" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <TextView
+        android:text="Data hari ini:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTanggal"
+        android:textColor="@android:color/holo_green_dark" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rv_item">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_weight="1
+        ">
+
+        <Button
+
+            android:text="saya tidak sarapan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rv_item"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="15dp"
+            android:id="@+id/button3"
+            android:background="@android:color/holo_red_light" />
+    </LinearLayout>
 </LinearLayout>

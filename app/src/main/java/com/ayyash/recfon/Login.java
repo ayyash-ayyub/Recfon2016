@@ -1,8 +1,9 @@
-package ayyash;
+package com.ayyash.recfon;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -10,6 +11,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -19,15 +21,19 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import ayyash.R;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import com.ayyash.recfon.R;
 
 public class Login extends AppCompatActivity {
 
     EditText email,password;
     Button btnLogin;
+    Button login;
+    TextView acc;
+    Typeface fonts1;
 
 
 
@@ -37,14 +43,33 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.signin);
 
         email = (EditText)findViewById(R.id.txtEmail);
-        password = (EditText)findViewById(R.id.txtPass);
+        password = (EditText)findViewById(R.id.txtPassword);
         btnLogin = (Button)findViewById(R.id.btnLogin);
 
+        login = (Button) findViewById(R.id.signin1);
+        acc = (TextView) findViewById(R.id.acc);
 
-        btnLogin.setOnClickListener(new View.OnClickListener() {
+        fonts1 =  Typeface.createFromAsset(Login.this.getAssets(),
+                "fonts/Lato-Regular.ttf");
+
+
+
+
+        login.setTypeface(fonts1);
+
+        acc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),Register.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
               //  Toast.makeText(Login.this, "hai: "+email.getText().toString()+","+pass.getText().toString(),Toast.LENGTH_LONG).show();
@@ -135,4 +160,10 @@ public class Login extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent it = new Intent(Login.this, HalamanDepan.class);
+        startActivity(it);
+        finish();
+    }
 }

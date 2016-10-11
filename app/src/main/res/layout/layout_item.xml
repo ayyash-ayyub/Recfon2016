@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        app:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardview_item"
+        android:clickable="true"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/cardview_light_background"
+        app:contentPadding="@dimen/cardview_compat_inset_shadow"
+        android:foreground="?android:attr/selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="93dp"
+        android:padding="12dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/img_avatar"
+            android:layout_centerVertical="true"
+            android:id="@+id/relativeLayout">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/namaMakanan"
+                android:text="Nama makanan"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtPorsi"
+                android:layout_below="@+id/namaMakanan"
+                android:text="Porsi"
+                android:textColorLink="?attr/colorAccent"
+                android:textColor="?attr/colorAccent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ukuran"
+                android:layout_below="@+id/txtPorsi"
+                android:text="Ukuran"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/img_avatar"
+                android:src="@drawable/erase"
+                android:layout_marginRight="15dp"
+                android:layout_alignBottom="@+id/relativeLayout"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

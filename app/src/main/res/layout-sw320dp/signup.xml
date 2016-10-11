@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+
+
+
+
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@drawable/headerss"
+        android:scaleType="centerCrop"
+        android:id="@+id/frameLayout">
+
+    </FrameLayout>
+
+
+    <LinearLayout
+
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/frameLayout">
+        <ScrollView
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/frameLayout"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_above="@+id/acc"
+                android:id="@+id/linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@+id/image"
+
+                >
+
+                <customsfonts.MyEditText
+                    android:id="@+id/txtNama"
+                    android:textSize="16dp"
+                    android:layout_width="253dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Nama Lengkap"
+                    android:layout_marginLeft="46dp"
+
+                    android:textColorHint="@color/colorhint"
+                    android:textColor="@color/colortext"
+
+                    android:background="#0000"
+                    android:padding="16dp"
+                    android:gravity="left"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginRight="56dp"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#dad8d8"/>
+
+                <TextView
+                    android:textStyle="bold"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="10dp"
+                    android:layout_marginLeft="46dp"
+                    android:layout_width="232dp"
+                    android:textColor="@color/colorhint"
+                    android:layout_height="wrap_content"
+                    android:text="Status Participant"/>
+                <LinearLayout
+                    android:padding="10dp"
+                    android:layout_marginLeft="46dp"
+                    android:layout_width="232dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioGroup
+                        android:id="@+id/rParticipant"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <RadioButton
+                            android:textColor="@color/colorhint"
+                            android:text="Mahasiswa UI"
+                            android:layout_width="232dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rbMhs"
+                            android:layout_weight="1"/>
+
+                        <RadioButton
+                            android:textColor="@color/colorhint"
+                            android:text="Karyawan"
+                            android:layout_width="232dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rbKaryawan"
+                            android:layout_weight="1"/>
+
+                        <RadioButton
+                            android:textColor="@color/colorhint"
+                            android:text="Lainnya"
+                            android:layout_width="232dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rblain"
+                            android:layout_weight="1"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginRight="56dp"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#dad8d8"/>
+
+
+                <TextView
+                    android:textStyle="bold"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="10dp"
+                    android:layout_marginLeft="46dp"
+                    android:layout_width="232dp"
+                    android:textColor="@color/colorhint"
+                    android:layout_height="wrap_content"
+                    android:text="Tanggal Lahir"/>
+                <customsfonts.MyEditText
+                    android:id="@+id/txtTgl"
+                    android:textSize="16dp"
+                    android:layout_width="253dp"
+                    android:layout_height="wrap_content"
+                    android:hint="YYYY/MM/DD"
+                    android:layout_marginLeft="46dp"
+
+                    android:textColorHint="@color/colorhint"
+                    android:textColor="@color/colortext"
+
+                    android:background="#0000"
+                    android:padding="16dp"
+                    android:gravity="left"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginRight="56dp"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#dad8d8"/>
+
+                <TextView
+                    android:textStyle="bold"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="10dp"
+                    android:layout_marginLeft="46dp"
+                    android:layout_width="232dp"
+                    android:textColor="@color/colorhint"
+                    android:layout_height="wrap_content"
+                    android:text="Jenis Kelamin"/>
+                <LinearLayout
+                    android:padding="10dp"
+                    android:layout_marginLeft="46dp"
+                    android:layout_width="232dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioGroup
+                        android:id="@+id/rJk"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <RadioButton
+                            android:textColor="@color/colorhint"
+                            android:text="Laki-laki"
+                            android:layout_width="232dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rbLaki"
+                            android:layout_weight="1"/>
+
+                        <RadioButton
+                            android:textColor="@color/colorhint"
+                            android:text="Perempuan"
+                            android:layout_width="232dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rbWanita"
+                            android:layout_weight="1"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginRight="56dp"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#dad8d8"/>
+
+                <TextView
+                    android:textStyle="bold"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="10dp"
+                    android:layout_marginLeft="46dp"
+                    android:layout_width="232dp"
+                    android:textColor="@color/colorhint"
+                    android:layout_height="wrap_content"
+                    android:text="Tempat Tinggal"
+                    android:id="@+id/myTextView" />
+
+
+                <LinearLayout
+                    android:padding="10dp"
+                    android:layout_marginLeft="46dp"
+                    android:layout_width="232dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioGroup
+                        android:id="@+id/rDki"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <RadioButton
+                            android:textColor="@color/colorhint"
+                            android:text="DKI"
+                            android:layout_width="232dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rbDki"
+                            android:layout_weight="1"/>
+
+                        <RadioButton
+                            android:textColor="@color/colorhint"
+                            android:text="Luar DKI"
+                            android:layout_width="232dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rbLuarDki"
+                            android:layout_weight="1"/>
+
+                    </RadioGroup>
+                </LinearLayout>
+
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginRight="56dp"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#dad8d8"/>
+
+                <TextView
+                    android:textStyle="bold"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="10dp"
+                    android:layout_marginLeft="46dp"
+                    android:layout_width="232dp"
+                    android:textColor="@color/colorhint"
+                    android:layout_height="wrap_content"
+                    android:text="Status Menikah"/>
+
+                <LinearLayout
+                    android:padding="10dp"
+                    android:layout_marginLeft="46dp"
+                    android:layout_width="232dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioGroup
+                        android:id="@+id/rStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <RadioButton
+                            android:textColor="@color/colorhint"
+                            android:text="Menikah"
+                            android:layout_width="232dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rbMenikah"
+                            android:layout_weight="1"/>
+
+                        <RadioButton
+                            android:textColor="@color/colorhint"
+                            android:text="Single"
+                            android:layout_width="232dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rbSingle"
+                            android:layout_weight="1"/>
+
+                        <RadioButton
+                            android:textColor="@color/colorhint"
+                            android:text="Duda/Janda"
+                            android:layout_width="232dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rbDuda"
+                            android:layout_weight="1"/>
+                    </RadioGroup>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginRight="56dp"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#dad8d8"/>
+
+                <TextView
+                    android:textStyle="bold"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="10dp"
+                    android:layout_marginLeft="46dp"
+                    android:layout_width="232dp"
+                    android:textColor="@color/colorhint"
+                    android:layout_height="wrap_content"
+                    android:text="Pekerjaan"/>
+
+                <LinearLayout
+                    android:padding="10dp"
+                    android:layout_marginLeft="46dp"
+                    android:layout_width="232dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioGroup
+                        android:id="@+id/rKerja"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <RadioButton
+                            android:textColor="@color/colorhint"
+                            android:text="Pegawai Negri Sipil"
+                            android:layout_width="232dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rbPNS"
+                            android:layout_weight="1"/>
+
+                        <RadioButton
+                            android:textColor="@color/colorhint"
+                            android:text="Pegawai Swasta"
+                            android:layout_width="232dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rbSwasta"
+                            android:layout_weight="1"/>
+
+                        <RadioButton
+                            android:textColor="@color/colorhint"
+                            android:text="Wiraswasta"
+                            android:layout_width="232dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rbWiraswasta"
+                            android:layout_weight="1"/>
+                        <RadioButton
+                            android:textColor="@color/colorhint"
+                            android:text="Ibu Rumah Tangga"
+                            android:layout_width="232dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rbIrt"
+                            android:layout_weight="1"/>
+                        <RadioButton
+                            android:textColor="@color/colorhint"
+                            android:text="Lainnya"
+                            android:layout_width="232dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rbLainnya"
+                            android:layout_weight="1"/>
+                    </RadioGroup>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginRight="56dp"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#dad8d8"/>
+
+                <customsfonts.MyEditText
+
+                    android:id="@+id/email"
+                    android:textSize="16dp"
+                    android:layout_width="272dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Email"
+                    android:layout_marginLeft="46dp"
+                    android:textColorHint="@color/colorhint"
+                    android:textColor="@color/colortext"
+
+                    android:background="#0000"
+                    android:padding="16dp"
+                    android:gravity="left"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginRight="56dp"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#dad8d8"/>
+
+                <customsfonts.MyEditText
+                    android:id="@+id/telp"
+                    android:textSize="16dp"
+                    android:layout_width="272dp"
+                    android:layout_height="wrap_content"
+                    android:hint="No. Handphone"
+                    android:layout_marginLeft="46dp"
+                    android:textColorHint="@color/colorhint"
+                    android:textColor="@color/colortext"
+
+                    android:background="#0000"
+                    android:padding="16dp"
+                    android:gravity="left"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginRight="56dp"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#dad8d8"/>
+
+                <customsfonts.MyEditText
+                    android:id="@+id/password"
+                    android:textSize="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:layout_marginLeft="46dp"
+                    android:layout_marginRight="46dp"
+                    android:drawableRight="@drawable/eye"
+                    android:textColorHint="@color/colorhint"
+                    android:textColor="@color/colortext"
+                    android:background="#0000"
+                    android:padding="16dp"
+                    android:gravity="left"
+                    android:inputType="textPassword"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="56dp"
+                    android:layout_marginRight="56dp"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="25dp"
+                    android:background="#dad8d8"/>
+
+
+
+
+
+
+
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+
+                android:layout_height="1dp"
+                android:layout_marginBottom="5dp"
+                android:background="#dad8d8"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginRight="120dp"
+                android:text="Sign in"
+                android:id="@+id/signup1"
+                android:textAllCaps="false"
+                android:theme="@style/PrimaryButton"
+                android:layout_weight="1"/>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <customsfonts.MyTextView
+                    android:id="@+id/acc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Already have account?"
+                    android:layout_above="@+id/signinhere"
+                    android:gravity="center"
+                    android:lines="1"
+
+                    />
+                <TextView
+                    android:id="@+id/signinhere"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Signin here"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:layout_marginBottom="15dp"
+
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_gravity="center"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/logo_bulat"
+        android:layout_alignTop="@+id/logo"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:text="Sign Up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:textColor="#fff"
+        android:textSize="24sp"
+        android:textStyle="normal|bold"
+        android:layout_marginTop="100dp"
+
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
