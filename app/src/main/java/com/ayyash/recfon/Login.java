@@ -50,13 +50,10 @@ public class Login extends AppCompatActivity {
         btnLogin = (Button)findViewById(R.id.btnLogin);
 
         login = (Button) findViewById(R.id.signin1);
-        acc = (TextView) findViewById(R.id.acc);
+        acc = (TextView) findViewById(R.id.create);
 
         fonts1 =  Typeface.createFromAsset(Login.this.getAssets(),
                 "fonts/Lato-Regular.ttf");
-
-
-
 
         login.setTypeface(fonts1);
 

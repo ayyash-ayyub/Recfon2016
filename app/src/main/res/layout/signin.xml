@@ -143,7 +143,7 @@
         android:id="@+id/acc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Dun't have account?"
+        android:text="Don't have an account?"
         android:layout_above="@+id/create"
         android:gravity="center"
         android:lines="1"

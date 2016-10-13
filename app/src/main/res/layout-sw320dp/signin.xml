@@ -118,8 +118,9 @@
             android:layout_marginRight="120dp"
             android:text="Sign in"
             android:id="@+id/signin1"
+            android:theme="@style/PrimaryButton"
             android:textAllCaps="false"
-            android:theme="@style/PrimaryButton"/>
+            />
 
     </LinearLayout>
 
