@@ -92,19 +92,33 @@ public class Register extends AppCompatActivity {
                 int selectedPK = rgpekerjaan.getCheckedRadioButtonId();
                 int selectedDKI = rgtinggal.getCheckedRadioButtonId();
 
+
+                String su = Integer.toString(selectedSU);
+                String jk = Integer.toString(selectedSU);
+                String st = Integer.toString(selectedSU);
+                String pk = Integer.toString(selectedSU);
+                String dki = Integer.toString(selectedSU);
+
                 rbStatusUser    = (RadioButton) findViewById(selectedSU);
                 rbStatus        = (RadioButton)findViewById(selectedST);
                 rbJK            = (RadioButton)findViewById(selectedJK);
                 rbPekerjaan     = (RadioButton)findViewById(selectedPK);
                 rbDKI           = (RadioButton)findViewById(selectedDKI);
 
-                Toast.makeText(Register.this,
-                        "nama : "+txt_nama.getText().toString()+", tanggal :"+txt_tanggal.getText().toString()+", email :"
-                                +txt_email.getText().toString()+", hp :"+txt_hp.getText().toString()+", password :"+txt_password.getText().toString()+" Status User : "
-                                +rbStatusUser.getText().toString()+" Status :"+rbStatus.getText().toString()+" Jenis Kelamin :" +rbJK.getText().toString()+"Pekerjaan :"
-                                +rbPekerjaan.getText().toString()+" DKI :"+rbDKI.getText().toString()+"", Toast.LENGTH_SHORT).show();
+                if (txt_nama.getText().toString().equals("") || txt_email.getText().toString().equals("") || txt_password.getText().toString().equals("")
+                        ||txt_hp.getText().toString().equals("")||txt_hp.getText().toString().equals("") || rgstatus_user.getCheckedRadioButtonId() == -1 || rgstatus.getCheckedRadioButtonId() == -1
+                        || rgjk.getCheckedRadioButtonId() == -1 || rgpekerjaan.getCheckedRadioButtonId() == -1 || rgtinggal.getCheckedRadioButtonId() ==-1 ){
+                    Toast.makeText(getApplicationContext(),"Mohon Lengkapi data",Toast.LENGTH_LONG).show();
+                }else {
 
-                Save();
+                    Toast.makeText(Register.this,
+                            "nama : " + txt_nama.getText().toString() + ", tanggal :" + txt_tanggal.getText().toString() + ", email :"
+                                    + txt_email.getText().toString() + ", hp :" + txt_hp.getText().toString() + ", password :" + txt_password.getText().toString() + " Status User : "
+                                    + rbStatusUser.getText().toString() + " Status :" + rbStatus.getText().toString() + " Jenis Kelamin :" + rbJK.getText().toString() + "Pekerjaan :"
+                                    + rbPekerjaan.getText().toString() + " DKI :" + rbDKI.getText().toString() + "", Toast.LENGTH_SHORT).show();
+
+                    Save();
+                }
             }
 
 
@@ -180,12 +194,8 @@ public class Register extends AppCompatActivity {
 
         };
 //        Toast.makeText(getApplicationContext(), txt_email + " makanan = " + makanan, Toast.LENGTH_LONG).show();
-
-
-////        Toast.makeText(getApplicationContext(), txt_email + " makanan = " + makanan, Toast.LENGTH_LONG).show();
         int socketTimeout = 30000;//30 seconds - change to what you want
         RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
-
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         sR.setRetryPolicy(policy);
