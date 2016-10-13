@@ -369,6 +369,13 @@
                             android:layout_weight="1"/>
                         <RadioButton
                             android:textColor="@color/colorhint"
+                            android:text="Tidak Bekerja"
+                            android:layout_width="232dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rbNganggur"
+                            android:layout_weight="1"/>
+                        <RadioButton
+                            android:textColor="@color/colorhint"
                             android:text="Lainnya"
                             android:layout_width="232dp"
                             android:layout_height="wrap_content"

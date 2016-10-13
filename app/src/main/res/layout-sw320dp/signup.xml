@@ -369,6 +369,13 @@
                             android:layout_weight="1"/>
                         <RadioButton
                             android:textColor="@color/colorhint"
+                            android:text="Tidak Bekerja"
+                            android:layout_width="232dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rbNganggur"
+                            android:layout_weight="1"/>
+                        <RadioButton
+                            android:textColor="@color/colorhint"
                             android:text="Lainnya"
                             android:layout_width="232dp"
                             android:layout_height="wrap_content"
@@ -408,7 +415,6 @@
                     android:layout_height="1dp"
                     android:layout_marginBottom="10dp"
                     android:background="#dad8d8"/>
-
                 <customsfonts.MyEditText
                     android:id="@+id/telp"
                     android:textSize="16dp"
