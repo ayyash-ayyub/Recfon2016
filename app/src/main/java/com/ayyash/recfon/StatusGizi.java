@@ -13,18 +13,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.volley.DefaultRetryPolicy;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.RetryPolicy;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class StatusGizi extends AppCompatActivity {
     public static final String KEY_NAMA = "nama";
@@ -50,16 +39,18 @@ public class StatusGizi extends AppCompatActivity {
     TextView txt;
 
     Typeface fonts1;
-    ArrayList<String> list ;
+    ArrayList list ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_status_gizi);
 
-        list = new ArrayList<String>();
+
         txt_Berat = (EditText)findViewById(R.id.txtBerat);
         txt_Tinggi = (EditText)findViewById(R.id.txtTinggi);
+
+        list = new ArrayList<>();
 
         cbTidak = (CheckBox)findViewById(R.id.cbTidak);
         cbHipertensi = (CheckBox)findViewById(R.id.cbHipertensi);
@@ -82,7 +73,43 @@ public class StatusGizi extends AppCompatActivity {
         rgSarapan     = (RadioGroup)findViewById(R.id.rgSarapan);
         txt = (TextView)findViewById(R.id.textView5);
 
-        
+
+
+        cbTidak.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               // Toast.makeText(StatusGizi.this, "Test Uyeeeah", Toast.LENGTH_LONG).show();
+                if(cbTidak.isChecked()==true){
+                    cbHipertensi.setEnabled(false);
+                    cbDiabetes.setEnabled(false);
+                    cbKolesterol.setEnabled(false);
+                    cbJantung.setEnabled(false);
+                    cbGinjal.setEnabled(false);
+                    cbKanker.setEnabled(false);
+                    cbStroke.setEnabled(false);
+                    cbPunggung.setEnabled(false);
+                    cbPunggung.setEnabled(false);
+                    cbPengapuran.setEnabled(false);
+                    cbTBC.setEnabled(false);
+
+                }else if(cbTidak.isChecked()==false){
+                    cbHipertensi.setEnabled(true);
+                    cbDiabetes.setEnabled(true);
+                    cbKolesterol.setEnabled(true);
+                    cbJantung.setEnabled(true);
+                    cbGinjal.setEnabled(true);
+                    cbKanker.setEnabled(true);
+                    cbStroke.setEnabled(true);
+                    cbPunggung.setEnabled(true);
+                    cbPunggung.setEnabled(true);
+                    cbPengapuran.setEnabled(true);
+                    cbTBC.setEnabled(true);
+                }
+
+            }
+        });
+
+
 
 
 
@@ -92,6 +119,8 @@ public class StatusGizi extends AppCompatActivity {
         simpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
                 // get selected radio button from radioGroup
                 int selectedBB = rgUkurBB.getCheckedRadioButtonId();
                 int selectedTB = rgUkurTB.getCheckedRadioButtonId();
@@ -100,11 +129,7 @@ public class StatusGizi extends AppCompatActivity {
                 int selectedMakan = rgMakan.getCheckedRadioButtonId();
                 int selectedSarapan = rgSarapan.getCheckedRadioButtonId();
 
-                for (String str : list) {
 
-                    txt.setText(txt.getText().toString() + " , " + str);
-
-                }
 
 
 //                String su = Integer.toString(selectedSU);
@@ -120,21 +145,42 @@ public class StatusGizi extends AppCompatActivity {
                 rbMakan          = (RadioButton)findViewById(selectedMakan);
                 rbSarapan          = (RadioButton)findViewById(selectedSarapan);
 
-                if (txt_Berat.getText().toString().equals("") ||  txt_Tinggi.getText().toString().equals("")
-                        || rgUkurBB.getCheckedRadioButtonId() == -1 || rgUkurTB.getCheckedRadioButtonId() == -1
+                if (rgUkurBB.getCheckedRadioButtonId() == -1 || rgUkurTB.getCheckedRadioButtonId() == -1
                         || rgMerokok.getCheckedRadioButtonId() == -1 || rgAlkohol.getCheckedRadioButtonId() == -1
                         || rgMakan.getCheckedRadioButtonId() ==-1 || rgSarapan.getCheckedRadioButtonId() ==-1){
                     Toast.makeText(getApplicationContext(),"Mohon Lengkapi data",Toast.LENGTH_LONG).show();
                 }else {
 
-                    Toast.makeText(getApplicationContext(),
-                            "Berat : " + txt_Berat.getText().toString() + ", Ukur BB :" + rbUkurBB.getText().toString()
-                                    + ", Tinggi :"+ txt_Tinggi.getText().toString() + ",  :" +  rbUkurTB.getText().toString()
-                                    + ", Merokok :" + rbMerokok.getText().toString() + " Alkohol : "+ rbAlkohol.getText().toString()
-                                    + " Makan :" + rbMakan.getText().toString() + " Sarapan :" + rbSarapan.getText().toString()
-                                    , Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getApplicationContext(),
+//                            "Berat : " + txt_Berat.getText().toString() + ", Ukur BB :" + rbUkurBB.getText().toString()
+//                                    + ", Tinggi :"+ txt_Tinggi.getText().toString() + ",  :" +  rbUkurTB.getText().toString()
+//                                    + ", Merokok :" + rbMerokok.getText().toString() + " Alkohol : "+ rbAlkohol.getText().toString()
+//                                    + " Makan :" + rbMakan.getText().toString() + " Sarapan :" + rbSarapan.getText().toString()
+//                                    , Toast.LENGTH_SHORT).show();
 
 //                    Save();
+
+
+
+
+
+                       // txt.setText(txt.getText().toString() + " , " + str);
+                    ambilValueCheckList();
+
+
+                       Toast.makeText(StatusGizi.this,"Penyakit : " +list.toString(), Toast.LENGTH_SHORT).show();
+
+
+
+
+
+
+
+
+
+
+
+
                 }
             }
 
@@ -152,6 +198,127 @@ public class StatusGizi extends AppCompatActivity {
 //        t1.setTypeface(fonts1);
     }
 
+    String tidak,hipertensi,diabetes,kolestrol,jantung,ginjal,kanker,stroke,punggung,pengapuran,tbc;
+
+    public void ambilValueCheckList(){
+
+        if(cbTidak.isChecked()){
+             tidak= cbTidak.getText().toString();
+            list.add(tidak);
+        }
+        if(cbTidak.isChecked()==false){
+            list.remove(tidak);
+        }
+
+
+        if(cbHipertensi.isChecked()==true){
+            hipertensi  = cbHipertensi.getText().toString();
+            list.add(hipertensi);
+        }
+        if(cbHipertensi.isChecked()==false){
+            list.remove(hipertensi);
+        }
+
+
+
+        if(cbDiabetes.isChecked()==true){
+             diabetes = cbDiabetes.getText().toString();
+            list.add(diabetes);
+        }
+        if(cbDiabetes.isChecked()==false){
+            list.remove(diabetes);
+        }
+
+
+        if(cbKolesterol.isChecked()==true){
+             kolestrol = cbKolesterol.getText().toString();
+            list.add(kolestrol);
+        }
+        if(cbKolesterol.isChecked()==false){
+            list.remove(kolestrol);
+        }
+
+
+
+        if(cbJantung.isChecked()==true){
+             jantung = cbJantung.getText().toString();
+            list.add(jantung);
+
+        }
+        if(cbJantung.isChecked()==false){
+            list.remove(jantung);
+        }
+
+
+        if(cbGinjal.isChecked()==true){
+             ginjal = cbGinjal.getText().toString();
+            list.add(ginjal);
+
+        }
+        if(cbGinjal.isChecked()==false){
+            list.remove(ginjal);
+        }
+
+
+        if(cbKanker.isChecked()==true){
+             kanker = cbKanker.getText().toString();
+            list.add(kanker);
+
+        }
+        if(cbKanker.isChecked()==false){
+            list.remove(kanker);
+        }
+
+
+        if(cbStroke.isChecked()==true){
+             stroke = cbStroke.getText().toString();
+            list.add(stroke);
+        }
+        if(cbStroke.isChecked()==false){
+            list.remove(stroke);
+        }
+
+
+
+        if(cbPunggung.isChecked()==true){
+             punggung = cbPunggung.getText().toString();
+            list.add(punggung);
+
+        }
+        if(cbPunggung.isChecked()==false){
+            list.remove(punggung);
+        }
+
+
+
+        if(cbPengapuran.isChecked()==true){
+             pengapuran = cbPengapuran.getText().toString();
+            list.add(pengapuran);
+
+        }
+        if(cbPengapuran.isChecked()==false){
+            list.remove(pengapuran);
+        }
+
+
+        if(cbTBC.isChecked()==true){
+             tbc = cbTBC.getText().toString();
+            list.add(tbc);
+
+        }
+        if(cbTBC.isChecked()==false){
+            list.remove(tbc);
+        }
+
+
+
+
+    }
+
+
+
+
+
     @Override
     public void onBackPressed() {
         Intent it = new Intent(getApplicationContext(), HalamanDepan.class);
@@ -161,59 +328,7 @@ public class StatusGizi extends AppCompatActivity {
 
 
 
-//    public void onCheckboxClicked(View view) {
-//
-//        boolean checked = ((CheckBox) view).isChecked();
-//
-//        switch(view.getId()) {
-//            case R.id.cbTidak:
-//                list.add(cbTidak.getTag().toString());
-//
-//                break;
-//            case R.id.cbHipertensi:
-//                list.add(cbTidak.getTag().toString());
-//
-//                break;
-//
-//            case R.id.cbDiabetes:
-//                list.add(cbDiabetes.getTag().toString());
-//
-//                break;
-//            case R.id.cbKolesterol:
-//                list.add(cbKolesterol.getTag().toString());
-//
-//                break;
-//            case R.id.cbJantung:
-//                list.add(cbJantung.getTag().toString());
-//
-//                break;
-//            case R.id.cbGinjal:
-//                list.add(cbGinjal.getTag().toString());
-//
-//                break;
-//            case R.id.cbKanker:
-//                list.add(cbKanker.getTag().toString());
-//
-//                break;
-//            case R.id.cbStroke:
-//                list.add(cbStroke.getTag().toString());
-//
-//                break;
-//            case R.id.cbPunggung:
-//                list.add(cbPunggung.getTag().toString());
-//
-//                break;
-//            case R.id.cbPengapuran:
-//                list.add(cbPengapuran.getTag().toString());
-//
-//                break;
-//            case R.id.cbTBC:
-//                list.add(cbTBC.getTag().toString());
-//
-//                break;
-//
-//        }
-//    }
+
 
 //    private void Save() {
 //        final String nama = txt_nama.getText().toString().trim();
