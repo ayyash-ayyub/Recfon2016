@@ -38,9 +38,11 @@ public class MenuFoodsRecord extends AppCompatActivity {
         makanMalam = (Button)findViewById(R.id.makanMalam);
         selinganMalam = (Button)findViewById(R.id.selinganMala);
 
-
+        help();
          /* Top toolbar */
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setNavigationIcon(R.drawable.logo_atas);
         toolbar.inflateMenu(R.menu.menu_main);
         setSupportActionBar(toolbar);
 

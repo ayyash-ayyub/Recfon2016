@@ -16,12 +16,15 @@
         android:minHeight="?attr/actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:title="Recfon Demo, Food Record :beta"
+        app:title="Food Frequency Questionnaire"
         app:titleTextColor="#fff"
         android:layout_marginTop="0dp"
-
-        android:background="?attr/colorPrimary">
-    </android.support.v7.widget.Toolbar>
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Light"/>
+<ScrollView
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -88,7 +91,23 @@
             android:layout_width="150dp"
             android:background="@drawable/selinganmalam" />
     </LinearLayout>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Perbandingan Asupan Makan"
+            android:theme="@style/PrimaryButton"
+            android:id="@+id/Asupan"
+             />
+    </LinearLayout>
 
 </LinearLayout>
+</ScrollView>
 
 </LinearLayout>

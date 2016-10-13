@@ -27,7 +27,8 @@
         <activity android:name=".HalamanDepan" />
         <activity android:name=".MenuFoodsRecord" />
         <activity android:name=".Login" />
-        <activity android:name=".MainMenu"></activity>
+        <activity android:name=".MainMenu" />
+        <activity android:name=".StatusGizi"></activity>
     </application>
 
 </manifest>

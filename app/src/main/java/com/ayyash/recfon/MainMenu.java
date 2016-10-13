@@ -73,6 +73,7 @@ public class MainMenu extends AppCompatActivity {
 
 
         // On click of menu icon on toolbar
+
         toolbar.setNavigationIcon(R.drawable.ic_menu_24dp);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,7 +108,11 @@ public class MainMenu extends AppCompatActivity {
                     startActivity(i);
                     finish();
                     // Toast.makeText(getApplicationContext(),"Kebiasaan Food Record",Toast.LENGTH_LONG).show();
-                } else if (id == R.id.keluarCuy) {
+                }else if (id == R.id.StatusGizi){
+                    Intent i = new Intent(MainMenu.this, StatusGizi.class);
+                    startActivity(i);
+                    finish();
+                }else if (id == R.id.keluarCuy) {
                     logout();
 
                 }

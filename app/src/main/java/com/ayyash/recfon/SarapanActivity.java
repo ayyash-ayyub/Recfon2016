@@ -11,9 +11,11 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
@@ -56,10 +58,12 @@ public class SarapanActivity extends AppCompatActivity {
 
 
         //SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-        String currentDateandTime = sdf.format(new Date());
 
-        tanggal.setText("Data hari ini : " + currentDateandTime);
+
+//        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+//        String currentDateandTime = sdf.format(new Date());
+//
+//        tanggal.setText("Data hari ini : " + currentDateandTime);
 
         // Toast.makeText(SarapanActivity.this, "Hari ini: "+currentDateandTime, Toast.LENGTH_SHORT).show();
 
@@ -91,6 +95,11 @@ public class SarapanActivity extends AppCompatActivity {
                 progressDialog.hide();
             }
         });
+//        int socketTimeout = 30000;//30 seconds - change to what you want
+//        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+        int socketTimeout = 30000;//30 seconds - change to what you want
+        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+        stringRequest.setRetryPolicy(policy);
         queue.add(stringRequest);
     }
 
