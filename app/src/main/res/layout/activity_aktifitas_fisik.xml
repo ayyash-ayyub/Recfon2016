@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:padding="25dp"
         android:clickable="true">
-    <com.ayyash.recfon.SearchableSpinnerAktifitas
+    <com.ayyash.recfon.aktifitas.SearchableSpinnerAktifitas
         android:id="@+id/spinner"
         android:layout_height="wrap_content"
         android:entries="@array/aktifitas"

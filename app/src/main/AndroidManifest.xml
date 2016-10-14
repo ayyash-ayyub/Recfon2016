@@ -29,8 +29,8 @@
         <activity android:name=".Login" />
         <activity android:name=".MainMenu" />
         <activity android:name=".StatusGizi" />
-        <activity android:name=".AktifitasFisik" />
-        <activity android:name=".FormAktifitas"
+        <activity android:name=".aktifitas.AktifitasFisik" />
+        <activity android:name=".aktifitas.FormAktifitas"
             android:theme="@style/Theme.AppCompat.Light.Dialog">
 
         </activity>

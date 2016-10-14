@@ -17,6 +17,8 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.ayyash.recfon.aktifitas.AktifitasFisik;
+
 public class MainMenu extends AppCompatActivity {
     private int mutedColor;
     private DrawerLayout drawerLayout;

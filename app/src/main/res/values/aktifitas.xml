@@ -11,6 +11,7 @@
         <item>Lari cepat</item>
         <item>Marathon</item>
         <item>Mendaki Gunung</item>
+
         <item>Menyapu Halaman</item>
         <item>Mengepel </item>
         <item>Mencuci Baju</item>
@@ -25,7 +26,19 @@
         <item>Basket</item>
         <item>Bola Voli</item>
         <item>Jogging</item>
+        <item>Sepak Bola</item>
+
         <item>Jalan Ringan, Dikantor, Dirumah dll</item>
 
+        <item>Duduk di transportasi (Hari Kerja)</item>
+        <item>Duduk di transportasi (Hari Libur)</item>
+        <item>Duduk Ditempat Kerja (Hari Kerja)</item>
+        <item>Duduk Ditempat Kerja (Hari Libur)</item>
+        <item>Duduk di rumah (Hari Kerja)</item>
+        <item>Duduk di rumah (Hari Libur)</item>
+        <item>Duduk Menonton TV dan Bersantai (Hari Kerja)</item>
+        <item>Duduk Menonton TV dan Bersantai (Hari Libur)</item>
+        <item>Tidur (Hari Kerja)</item>
+        <item>Tidur (Hari Libur)</item>
     </string-array>
 </resources>

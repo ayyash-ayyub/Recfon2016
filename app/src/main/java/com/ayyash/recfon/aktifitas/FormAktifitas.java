@@ -1,20 +1,15 @@
-package com.ayyash.recfon;
+package com.ayyash.recfon.aktifitas;
 
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,8 +21,10 @@ import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.ayyash.recfon.ConfigUmum;
+import com.ayyash.recfon.MenuFoodsRecord;
+import com.ayyash.recfon.R;
 
-import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -35,14 +32,17 @@ public class FormAktifitas extends AppCompatActivity {
 
 
     public static final String KEY_EMAIL = "txt_email";
-    public static final String KEY_MKN = "makanan";
+    public static final String KEY_AKTIFITAS = "aktifitas";
+    public static final String KEY_KATEGORI = "catagory";
+    public static final String KEY_DURASI = "durasi";
 
 
+    Button Simpan;
     TextView namaAktifitas;
-    EditText Jam;
+    EditText Jam, Menit;
     String nM;
     int indexActivity;
-    String email, kategori;
+    private String email, kategori;
 
 
     ProgressDialog PD;
@@ -54,6 +54,8 @@ public class FormAktifitas extends AppCompatActivity {
         setContentView(R.layout.activity_form_aktifitas);
 
         namaAktifitas = (TextView) findViewById(R.id.txtActivity);
+        Jam = (EditText)findViewById(R.id.txtJam);
+        Menit = (EditText)findViewById(R.id.txtMenit);
 
         SharedPreferences sharedPreferences = getSharedPreferences(ConfigUmum.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         email = sharedPreferences.getString(ConfigUmum.NIS_SHARED_PREF, "tidak tersedia");
@@ -101,8 +103,28 @@ public class FormAktifitas extends AppCompatActivity {
             case 21:
                 kategori = "Sedang";
                 break;
-
+            case 22:
+            case 23:
+            case 24:
+            case 25:
+            case 26:
+            case 27:
+            case 28:
+            case 29:
+            case 30:
+            case 31:
+            case 32:
+                kategori = "ringan";
+                break;
         }
+
+        Simpan = (Button)findViewById(R.id.btnSimpan);
+        Simpan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Save();
+            }
+        });
 
     }
 
@@ -112,7 +134,7 @@ public class FormAktifitas extends AppCompatActivity {
         // Setting Dialog Title
         alertDialog.setTitle("Sarapan");
         // Setting Dialog Message
-        alertDialog.setMessage("Apakah Anda yakin sudah memasukan semua menu sarapan Anda?");
+        alertDialog.setMessage("Apakah Anda yakin data yang anda masukkan sudah Sesuai?");
         // Setting Icon to Dialog
         alertDialog.setIcon(R.drawable.x);
 
@@ -141,16 +163,19 @@ public class FormAktifitas extends AppCompatActivity {
 
     private void ConfirmSave() {
         final String txt_email = email.toString().trim();
-        final String makanan = namaAktifitas.getText().toString().trim();
+        final String aktifitas = namaAktifitas.getText().toString().trim();
+        final String catagory = kategori.trim();
+        final String durasi = Jam.getText().toString().trim()+" Jam "+Menit.getText().toString().trim()+" Menit";
 
-        StringRequest sR = new StringRequest(Request.Method.POST, "http://103.43.45.237/recfon/api/insert_record_pagi.php",
+        StringRequest sR = new StringRequest(Request.Method.POST, "http://103.43.45.237/recfon/api/insert_activity.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
-                        Intent i = new Intent(getApplicationContext(), SarapanActivity.class);
-                        startActivity(i);
-                        finish();
+                        namaAktifitas.setText(response);
+//                        Intent i = new Intent(getApplicationContext(), AktifitasFisik.class);
+//                        startActivity(i);
+//                        finish();
                     }
                 },
                 new Response.ErrorListener() {
@@ -163,19 +188,20 @@ public class FormAktifitas extends AppCompatActivity {
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
                 params.put(KEY_EMAIL, txt_email);
-                params.put(KEY_MKN, makanan);
+                params.put(KEY_AKTIFITAS, aktifitas);
+                params.put(KEY_KATEGORI, catagory);
+                params.put(KEY_DURASI, durasi);
                 return params;
             }
 
         };
-        Toast.makeText(getApplicationContext(), txt_email + " makanan = " + makanan, Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), txt_email + " aktifitas = " + aktifitas+" sasda"+durasi, Toast.LENGTH_LONG).show();
         int socketTimeout = 30000;//30 seconds - change to what you want
         RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
         sR.setRetryPolicy(policy);
         requestQueue.add(sR);
     }
-
 
     @Override
     public void onBackPressed() {

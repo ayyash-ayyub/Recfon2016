@@ -1,4 +1,4 @@
-package com.ayyash.recfon;
+package com.ayyash.recfon.aktifitas;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -17,6 +17,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
+
+import com.ayyash.recfon.R;
 
 import java.io.Serializable;
 import java.util.List;

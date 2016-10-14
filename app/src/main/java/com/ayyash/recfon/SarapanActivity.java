@@ -202,7 +202,9 @@ public class SarapanActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialog,int which) {
 
                 // Write your code here to invoke YES event
-                Toast.makeText(getApplicationContext(), "You clicked on YES", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(),MenuFoodsRecord.class);
+                startActivity(intent);
+                finish();
             }
         });
 

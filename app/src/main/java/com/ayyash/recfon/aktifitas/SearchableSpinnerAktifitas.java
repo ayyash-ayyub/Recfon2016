@@ -1,4 +1,4 @@
-package com.ayyash.recfon;
+package com.ayyash.recfon.aktifitas;
 
 import android.app.Activity;
 import android.content.Context;
@@ -13,6 +13,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 import android.widget.Toast;
+
+import com.ayyash.recfon.R;
 
 import java.util.ArrayList;
 import java.util.List;
