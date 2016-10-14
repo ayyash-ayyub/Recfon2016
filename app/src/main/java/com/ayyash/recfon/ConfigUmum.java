@@ -14,6 +14,7 @@ public class ConfigUmum {
     public static final String LOGIN_URL = "http://"+IP+"/recfon/api/login.php";
 
     //buat pagi
+    public static String URL_SHOW_ACTIVITY = "http://"+IP+"/recfon/api/get_record_activity.php?email=";
     public static String URL_SHOW_PAGI = "http://"+IP+"/recfon/api/get_record_pagi.php?email=";
     public static String URL_DELETE_PAGI = "http://"+IP+"/recfon/api/delete_food_record.php?id=";
 //    public static String URL_SIMPAN_PAGI(String email, String bahan_makanan, String jumlah, String besaran_makanan) {

@@ -356,9 +356,9 @@ public class StatusGizi extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
-//                        Intent i = new Intent(getApplicationContext(), Login.class);
-//                        startActivity(i);
-//                        finish();
+                        Intent i = new Intent(getApplicationContext(), MainMenu.class);
+                        startActivity(i);
+                        finish();
                         System.out.println("sql"+response);
                     }
                 },

@@ -2,8 +2,10 @@ package com.ayyash.recfon.aktifitas;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
@@ -17,8 +19,9 @@ import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.ayyash.recfon.ItemObject;
-import com.ayyash.recfon.MainAdapter;
+import com.ayyash.recfon.ConfigUmum;
+import com.ayyash.recfon.aktifitas.ItemObjectAktifitas;
+import com.ayyash.recfon.aktifitas.MainAdapterAktifitas;
 import com.ayyash.recfon.MenuFoodsRecord;
 import com.ayyash.recfon.R;
 import com.google.gson.Gson;
@@ -27,9 +30,11 @@ import com.google.gson.GsonBuilder;
 public class AktifitasFisik extends AppCompatActivity {
 
     ProgressDialog progressDialog;
-    private ItemObject.ObjectBelajar objectBelajar;
-    private MainAdapter adapter;
+    private ItemObjectAktifitas.ObjectBelajar objectBelajar;
+    private MainAdapterAktifitas adapter;
     private RecyclerView rv_item;
+    String email;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +45,10 @@ public class AktifitasFisik extends AppCompatActivity {
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Silahkan Tunggu...");
 
+        SharedPreferences sharedPreferences = getSharedPreferences(ConfigUmum.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        email = sharedPreferences.getString(ConfigUmum.NIS_SHARED_PREF, "tidak tersedia");
+
+        GetData(ConfigUmum.URL_SHOW_PAGI + email);
     }
     public void GetData(String URL) {
 
@@ -52,8 +61,9 @@ public class AktifitasFisik extends AppCompatActivity {
             public void onResponse(String response) {
                 GsonBuilder builder = new GsonBuilder();
                 Gson mGson = builder.create();
-                objectBelajar = mGson.fromJson(response, ItemObject.ObjectBelajar.class);
-                adapter = new MainAdapter(getApplication(), objectBelajar.result);
+                objectBelajar = mGson.fromJson(response, ItemObjectAktifitas.ObjectBelajar.class);
+                System.out.println("Respond "+ response);
+                adapter = new MainAdapterAktifitas(getApplication(), objectBelajar.result);
                 rv_item.setAdapter(adapter);
 //                if(response.contains("1")){
 //                    tidakSarapan.setVisibility(View.INVISIBLE);
