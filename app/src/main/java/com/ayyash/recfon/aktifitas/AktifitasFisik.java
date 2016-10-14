@@ -50,7 +50,7 @@ public class AktifitasFisik extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences(ConfigUmum.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         email = sharedPreferences.getString(ConfigUmum.NIS_SHARED_PREF, "tidak tersedia");
 
-        GetData(ConfigUmum.URL_SHOW_PAGI + email);
+        GetData(ConfigUmum.URL_SHOW_ACTIVITY + email);
     }
     public void GetData(String URL) {
 
