@@ -211,7 +211,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 
             case 1:
 
-                Img.setImageResource(R.drawable.nasi_merah);
+                Img.setImageResource(R.drawable.nasi);
 
                 rg.setVisibility(View.VISIBLE);
 
@@ -263,7 +263,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 
             case 2:
 
-                Img.setImageResource(R.drawable.nasi_uduk);
+                Img.setImageResource(R.drawable.nasi);
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Centong Plastik");
@@ -324,7 +324,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 
             case 3:
 
-                Img.setImageResource(R.drawable.nasigoreng);
+                Img.setImageResource(R.drawable.nasi);
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Centong Plastik");
@@ -572,24 +572,32 @@ public class PerhitunganPagi extends AppCompatActivity {
                 break;
 
             case 8:
-                Img.setImageResource(R.drawable.kwetiau_goreng);
+                Img.setImageResource(R.drawable.madu);
                 rg.setVisibility(View.VISIBLE);
 
-                r1.setText("Porsi");
-                r2.setVisibility(View.GONE);
+                final String makanan = "Madu";
+
+
+                r1.setText("Sendok makan");
+                r2.setText("Sachet");
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        double e = 144.59;
-                        double p = 3.47;
-                        double l = 11.20;
-                        double k = 7.63;
+                        double e = 294.00;
+                        double p = 0.30;
+                        double l = 0;
+                        double k = 79.50;
 
                         if (r1.isChecked()) {
-                            urt = 275 * pengali;
-                            ukuran = "Porsi";
+                            urt = 12 * pengali;
+                            ukuran = "Sendok makan";
                         }
+                        if (r2.isChecked()) {
+                            urt = 20 * pengali;
+                            ukuran = "Sachet";
+                        }
+
 
                         //JANGAN DIGANTI BAGIAN INI
                         double hEnergi = (urt / 100) * e;
@@ -604,7 +612,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -615,9 +623,69 @@ public class PerhitunganPagi extends AppCompatActivity {
 
 
 
+
+
+                        Toast.makeText(getApplicationContext(),
+                                "Email: " + email +
+                                        "Makanan: " + makanan +
+                                        "Jumlah: " + penampungProgres +
+                                        "Ukuran: " + penampungUkuran +
+                                        "Energi: " + hEnergiSort +
+                                        "Protein: " + hProteinSort +
+                                        "Lemak: " + hLemakSort +
+                                        "Kalori: " + hKaloriSort, Toast.LENGTH_LONG).show();
+
                         Save();
+
+
                     }
                 });
+//                Img.setImageResource(R.drawable.kwetiau_goreng);
+//                rg.setVisibility(View.VISIBLE);
+//
+//                r1.setText("Porsi");
+//                r2.setVisibility(View.GONE);
+//
+//                hitung.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//                        double e = 144.59;
+//                        double p = 3.47;
+//                        double l = 11.20;
+//                        double k = 7.63;
+//
+//                        if (r1.isChecked()) {
+//                            urt = 275 * pengali;
+//                            ukuran = "Porsi";
+//                        }
+//
+//                        //JANGAN DIGANTI BAGIAN INI
+//                        double hEnergi = (urt / 100) * e;
+//                        double hProtein = (urt / 100) * p;
+//                        double hLemak = (urt / 100) * l;
+//                        double hKalori = (urt / 100) * k;
+//
+//                        //buat batasi digit coma
+////                        double hEnergiSort = Math.round(hEnergi * 100) / 100;
+////                        double hProteinSort = Math.round(hProtein * 100) / 100;
+////                        double hLemakSort = Math.round(hLemak * 100) / 100;
+////                        double hKaloriSort = Math.round(hKalori * 100) / 100;
+//
+//                        hEnergiSort = df.format(hEnergi);
+//                        hProteinSort = df.format(hEnergi);
+//                        hLemakSort = df.format(hLemak);
+//                        hKaloriSort = df.format(hKalori);
+//
+//                        //JANGAN DIUTAK ATIK
+//
+//                        penampungProgres = String.valueOf(progress);
+//                        penampungUkuran = String.valueOf(ukuran);
+//
+//
+//
+//                        Save();
+//                    }
+//                });
 
                 break;
 
@@ -1037,7 +1105,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 break;
 
             case 17:
-                Img.setImageResource(R.drawable.perkedel_jagung);
+                Img.setImageResource(R.drawable.perkedel_kentang);
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah sedang");
@@ -1639,7 +1707,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 break;
 
             case 29:
-                Img.setImageResource(R.drawable.tumis_sawi_putih);
+                Img.setImageResource(R.drawable.tumis_sawi_hijau);
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Sendok makan");
@@ -1693,7 +1761,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 break;
 
             case 30:
-                Img.setImageResource(R.drawable.sayur_sop);
+                Img.setImageResource(R.drawable.tumis_sawi_putih);
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Sendok makan");
@@ -1855,7 +1923,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 break;
 
             case 33:
-                Img.setImageResource(R.drawable.sayur_bening_bayam);
+                Img.setImageResource(R.drawable.sayur_bayam_bening);
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Sendok sayur");
@@ -4590,7 +4658,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 r2.setVisibility(View.VISIBLE);
                 r3.setVisibility(View.VISIBLE);
 
-                r1.setText("Bbuah sedang");
+                r1.setText("Buah sedang");
                 r2.setText("Buah besar");
                 r3.setText("Buah kecil");
 
@@ -4698,7 +4766,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 break;
 
             case 89:
-                Img.setImageResource(R.drawable.sosis_ayam_goreng);
+                Img.setImageResource(R.drawable.sosis_sapi_goreng);
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah sosis sedang");
@@ -5170,16 +5238,21 @@ public class PerhitunganPagi extends AppCompatActivity {
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        double e = 264;
-                        double p = 21.2;
-                        double l = 16.6;
-                        double k = 8.5;
+
 
                         if (r1.isChecked()) {
+                            double e = 264;
+                            double p = 21.2;
+                            double l = 16.6;
+                            double k = 8.5;
                             urt = 100 * pengali;
-                            ukuran = "Potong dada atas";
+                            ukuran = "Potong dada atas ";
                         }
                         if (r2.isChecked()) {
+                            double e = 153;
+                            double p = 27.3;
+                            double l = 4.8;
+                            double k = 0.3;
                             urt = 170 * pengali;
                             ukuran = "Potong dada bawah";
                         }
@@ -5224,18 +5297,21 @@ public class PerhitunganPagi extends AppCompatActivity {
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        double e = 153;
-                        double p = 27.3;
-                        double l = 4.8;
-                        double k = 0.3;
-
                         if (r1.isChecked()) {
+                            double e = 264;
+                            double p = 21.2;
+                            double l = 16.6;
+                            double k = 8.5;
                             urt = 100 * pengali;
-                            ukuran = "Potong dada atas";
+                            ukuran = "Potong dada atas ";
                         }
                         if (r2.isChecked()) {
+                            double e = 153;
+                            double p = 27.3;
+                            double l = 4.8;
+                            double k = 0.3;
                             urt = 170 * pengali;
-                            ukuran = "Potong dada mentok";
+                            ukuran = "Potong dada bawah";
                         }
 
 
@@ -5278,15 +5354,35 @@ public class PerhitunganPagi extends AppCompatActivity {
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        double e = 337;
-                        double p = 20.8;
-                        double l = 23;
-                        double k = 11.7;
+//                        double e = 337;
+//                        double p = 20.8;
+//                        double l = 23;
+//                        double k = 11.7;
+//
+//                        if (r1.isChecked()) {
+//                            urt = 60 * pengali;
+//                            ukuran = "Potong";
+//                        }
 
                         if (r1.isChecked()) {
+                            double e = 337;
+                            double p = 20.8;
+                            double l = 23;
+                            double k = 11.7;
+
                             urt = 60 * pengali;
                             ukuran = "Potong";
                         }
+                        if (r2.isChecked()) {
+                            double e = 236;
+                            double p = 28.7;
+                            double l = 12.1;
+                            double k = 3;
+
+                            urt = 60 * pengali;
+                            ukuran = "Potong";
+                        }
+
 
                         //JANGAN DIGANTI BAGIAN INI
                         double hEnergi = (urt / 100) * e;
@@ -5321,21 +5417,41 @@ public class PerhitunganPagi extends AppCompatActivity {
                 Img.setImageResource(R.drawable.ayam_goreng_tepung_sayap_tanpa_kulit);
                 rg.setVisibility(View.VISIBLE);
 
-                r1.setText("Potong");
-                r2.setVisibility(View.GONE);
+                r2.setText("Potong");
+                r1.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        double e = 236;
-                        double p = 28.7;
-                        double l = 12.1;
-                        double k = 3;
+//                        double e = 236;
+//                        double p = 28.7;
+//                        double l = 12.1;
+//                        double k = 3;
+//
+//                        if (r1.isChecked()) {
+//                            urt = 60 * pengali;
+//                            ukuran = "Potong";
+//                        }
 
                         if (r1.isChecked()) {
+                            double e = 337;
+                            double p = 20.8;
+                            double l = 23;
+                            double k = 11.7;
+
                             urt = 60 * pengali;
                             ukuran = "Potong";
                         }
+                        if (r2.isChecked()) {
+                            double e = 236;
+                            double p = 28.7;
+                            double l = 12.1;
+                            double k = 3;
+
+                            urt = 60 * pengali;
+                            ukuran = "Potong ";
+                        }
+
 
                         //JANGAN DIGANTI BAGIAN INI
                         double hEnergi = (urt / 100) * e;
@@ -5376,15 +5492,35 @@ public class PerhitunganPagi extends AppCompatActivity {
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        double e = 274;
-                        double p = 20.6;
-                        double l = 17.7;
-                        double k = 8;
+//                        double e = 274;
+//                        double p = 20.6;
+//                        double l = 17.7;
+//                        double k = 8;
+//
+//                        if (r1.isChecked()) {
+//                            urt = 70 * pengali;
+//                            ukuran = "Potong";
+//                        }
 
                         if (r1.isChecked()) {
+                            double e = 274;
+                            double p = 20.6;
+                            double l = 17.7;
+                            double k = 8;
+
                             urt = 70 * pengali;
                             ukuran = "Potong";
                         }
+                        if (r2.isChecked()) {
+                            double e = 170;
+                            double p = 25.6;
+                            double l = 7.4;
+                            double k = 0;
+
+                            urt = 70 * pengali;
+                            ukuran = "Potong";
+                        }
+
 
                         //JANGAN DIGANTI BAGIAN INI
                         double hEnergi = (urt / 100) * e;
@@ -5419,18 +5555,37 @@ public class PerhitunganPagi extends AppCompatActivity {
                 Img.setImageResource(R.drawable.ayam_goreng_tepung_paha_bawah_tanpa_kulit);
                 rg.setVisibility(View.VISIBLE);
 
-                r1.setText("Potong");
-                r2.setVisibility(View.GONE);
+                r2.setText("Potong");
+                r1.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        double e = 170;
-                        double p = 25.6;
-                        double l = 7.4;
-                        double k = 0;
+//                        double e = 170;
+//                        double p = 25.6;
+//                        double l = 7.4;
+//                        double k = 0;
+//
+//                        if (r1.isChecked()) {
+//                            urt = 70 * pengali;
+//                            ukuran = "Potong";
+//                        }
 
                         if (r1.isChecked()) {
+                            double e = 274;
+                            double p = 20.6;
+                            double l = 17.7;
+                            double k = 8;
+
+                            urt = 70 * pengali;
+                            ukuran = "Potong";
+                        }
+                        if (r2.isChecked()) {
+                            double e = 170;
+                            double p = 25.6;
+                            double l = 7.4;
+                            double k = 0;
+
                             urt = 70 * pengali;
                             ukuran = "Potong";
                         }
@@ -5474,15 +5629,36 @@ public class PerhitunganPagi extends AppCompatActivity {
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        double e = 309;
-                        double p = 17.2;
-                        double l = 22.1;
-                        double k = 10.3;
+//                        double e = 309;
+//                        double p = 17.2;
+//                        double l = 22.1;
+//                        double k = 10.3;
+//
+//                        if (r1.isChecked()) {
+//                            urt = 100 * pengali;
+//                            ukuran = "Potong";
+//                        }
 
                         if (r1.isChecked()) {
+                            double e = 309;
+                            double p = 17.2;
+                            double l = 22.1;
+                            double k = 10.3;
+
                             urt = 100 * pengali;
                             ukuran = "Potong";
                         }
+                        if (r2.isChecked()) {
+                            double e = 179;
+                            double p = 22.4;
+                            double l = 10;
+                            double k = 0;
+
+                            urt = 100 * pengali;
+                            ukuran = "Potong";
+                        }
+
+
 
                         //JANGAN DIGANTI BAGIAN INI
                         double hEnergi = (urt / 100) * e;
@@ -5517,18 +5693,37 @@ public class PerhitunganPagi extends AppCompatActivity {
                 Img.setImageResource(R.drawable.ayam_goreng_tepung_paha_atas_tanpa_kulit);
                 rg.setVisibility(View.VISIBLE);
 
-                r1.setText("Potong");
-                r2.setVisibility(View.GONE);
+                r2.setText("Potong");
+                r1.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        double e = 179;
-                        double p = 22.4;
-                        double l = 10;
-                        double k = 0;
+//                        double e = 179;
+//                        double p = 22.4;
+//                        double l = 10;
+//                        double k = 0;
+//
+//                        if (r1.isChecked()) {
+//                            urt = 100 * pengali;
+//                            ukuran = "Potong";
+//                        }
 
                         if (r1.isChecked()) {
+                            double e = 309;
+                            double p = 17.2;
+                            double l = 22.1;
+                            double k = 10.3;
+
+                            urt = 100 * pengali;
+                            ukuran = "Potong";
+                        }
+                        if (r2.isChecked()) {
+                            double e = 179;
+                            double p = 22.4;
+                            double l = 10;
+                            double k = 0;
+
                             urt = 100 * pengali;
                             ukuran = "Potong";
                         }
@@ -8033,25 +8228,23 @@ public class PerhitunganPagi extends AppCompatActivity {
                 break;
 
             case 154:
-                Img.setImageResource(R.drawable.popcorn);
+                Img.setImageResource(R.drawable.selai);
                 rg.setVisibility(View.VISIBLE);
 
-                r1.setText("Piring");
-                // r2.setText("1 bungkus besar");
+                r1.setText("Sendok makan");
                 r2.setVisibility(View.GONE);
-                //  r2.setText("S1 iris kecil");
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        double e = 380.00;
-                        double p = 6.90;
-                        double l = 0.80;
-                        double k = 86.40;
+                        double e = 590.00;
+                        double p = 27.00;
+                        double l = 49.00;
+                        double k = 20.90;
 
                         if (r1.isChecked()) {
-                            urt = 100 * pengali;
-                            ukuran = "Piring";
+                            urt = 10 * pengali;
+                            ukuran = "Sendok makan";
                         }
 
                         //JANGAN DIGANTI BAGIAN INI
@@ -8067,7 +8260,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -8081,6 +8274,54 @@ public class PerhitunganPagi extends AppCompatActivity {
                         Save();
                     }
                 });
+//                Img.setImageResource(R.drawable.popcorn);
+//                rg.setVisibility(View.VISIBLE);
+//
+//                r1.setText("Piring");
+//                // r2.setText("1 bungkus besar");
+//                r2.setVisibility(View.GONE);
+//                //  r2.setText("S1 iris kecil");
+//
+//                hitung.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//                        double e = 380.00;
+//                        double p = 6.90;
+//                        double l = 0.80;
+//                        double k = 86.40;
+//
+//                        if (r1.isChecked()) {
+//                            urt = 100 * pengali;
+//                            ukuran = "Piring";
+//                        }
+//
+//                        //JANGAN DIGANTI BAGIAN INI
+//                        double hEnergi = (urt / 100) * e;
+//                        double hProtein = (urt / 100) * p;
+//                        double hLemak = (urt / 100) * l;
+//                        double hKalori = (urt / 100) * k;
+//
+//                        //buat batasi digit coma
+////                        double hEnergiSort = Math.round(hEnergi * 100) / 100;
+////                        double hProteinSort = Math.round(hProtein * 100) / 100;
+////                        double hLemakSort = Math.round(hLemak * 100) / 100;
+////                        double hKaloriSort = Math.round(hKalori * 100) / 100;
+//
+//                        hEnergiSort = df.format(hEnergi);
+//                        hProteinSort = df.format(hEnergi);
+//                        hLemakSort = df.format(hLemak);
+//                        hKaloriSort = df.format(hKalori);
+//
+//                        //JANGAN DIUTAK ATIK
+//
+//                        penampungProgres = String.valueOf(progress);
+//                        penampungUkuran = String.valueOf(ukuran);
+//
+//
+//
+//                        Save();
+//                    }
+//                });
 
                 break;
 
@@ -9492,125 +9733,125 @@ public class PerhitunganPagi extends AppCompatActivity {
                 });
                 break;
 
-            case 181:
-                Img.setImageResource(R.drawable.selai);
-                rg.setVisibility(View.VISIBLE);
+//            case 181:
+//                Img.setImageResource(R.drawable.selai);
+//                rg.setVisibility(View.VISIBLE);
+//
+//                r1.setText("Sendok makan");
+//                r2.setVisibility(View.GONE);
+//
+//                hitung.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//                        double e = 590.00;
+//                        double p = 27.00;
+//                        double l = 49.00;
+//                        double k = 20.90;
+//
+//                        if (r1.isChecked()) {
+//                            urt = 10 * pengali;
+//                            ukuran = "Sendok makan";
+//                        }
+//
+//                        //JANGAN DIGANTI BAGIAN INI
+//                        double hEnergi = (urt / 100) * e;
+//                        double hProtein = (urt / 100) * p;
+//                        double hLemak = (urt / 100) * l;
+//                        double hKalori = (urt / 100) * k;
+//
+//                        //buat batasi digit coma
+////                        double hEnergiSort = Math.round(hEnergi * 100) / 100;
+////                        double hProteinSort = Math.round(hProtein * 100) / 100;
+////                        double hLemakSort = Math.round(hLemak * 100) / 100;
+////                        double hKaloriSort = Math.round(hKalori * 100) / 100;
+//
+//                        hEnergiSort = df.format(hEnergi);
+//                        hProteinSort = df.format(hProtein);
+//                        hLemakSort = df.format(hLemak);
+//                        hKaloriSort = df.format(hKalori);
+//
+//                        //JANGAN DIUTAK ATIK
+//
+//                        penampungProgres = String.valueOf(progress);
+//                        penampungUkuran = String.valueOf(ukuran);
+//
+//
+//
+//                        Save();
+//                    }
+//                });
+//                break;
 
-                r1.setText("Sendok makan");
-                r2.setVisibility(View.GONE);
-
-                hitung.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        double e = 590.00;
-                        double p = 27.00;
-                        double l = 49.00;
-                        double k = 20.90;
-
-                        if (r1.isChecked()) {
-                            urt = 10 * pengali;
-                            ukuran = "Sendok makan";
-                        }
-
-                        //JANGAN DIGANTI BAGIAN INI
-                        double hEnergi = (urt / 100) * e;
-                        double hProtein = (urt / 100) * p;
-                        double hLemak = (urt / 100) * l;
-                        double hKalori = (urt / 100) * k;
-
-                        //buat batasi digit coma
-//                        double hEnergiSort = Math.round(hEnergi * 100) / 100;
-//                        double hProteinSort = Math.round(hProtein * 100) / 100;
-//                        double hLemakSort = Math.round(hLemak * 100) / 100;
-//                        double hKaloriSort = Math.round(hKalori * 100) / 100;
-
-                        hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hProtein);
-                        hLemakSort = df.format(hLemak);
-                        hKaloriSort = df.format(hKalori);
-
-                        //JANGAN DIUTAK ATIK
-
-                        penampungProgres = String.valueOf(progress);
-                        penampungUkuran = String.valueOf(ukuran);
-
-
-
-                        Save();
-                    }
-                });
-                break;
-
-            case 182:
-                Img.setImageResource(R.drawable.madu);
-                rg.setVisibility(View.VISIBLE);
-
-                final String makanan = "Madu";
-
-
-                r1.setText("Sendok makan");
-                r2.setText("Sachet");
-
-                hitung.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        double e = 294.00;
-                        double p = 0.30;
-                        double l = 0;
-                        double k = 79.50;
-
-                        if (r1.isChecked()) {
-                            urt = 12 * pengali;
-                            ukuran = "Sendok makan";
-                        }
-                        if (r2.isChecked()) {
-                            urt = 20 * pengali;
-                            ukuran = "Sachet";
-                        }
-
-
-                        //JANGAN DIGANTI BAGIAN INI
-                        double hEnergi = (urt / 100) * e;
-                        double hProtein = (urt / 100) * p;
-                        double hLemak = (urt / 100) * l;
-                        double hKalori = (urt / 100) * k;
-
-                        //buat batasi digit coma
-//                        double hEnergiSort = Math.round(hEnergi * 100) / 100;
-//                        double hProteinSort = Math.round(hProtein * 100) / 100;
-//                        double hLemakSort = Math.round(hLemak * 100) / 100;
-//                        double hKaloriSort = Math.round(hKalori * 100) / 100;
-
-                        hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hProtein);
-                        hLemakSort = df.format(hLemak);
-                        hKaloriSort = df.format(hKalori);
-
-                        //JANGAN DIUTAK ATIK
-
-                        penampungProgres = String.valueOf(progress);
-                        penampungUkuran = String.valueOf(ukuran);
-
-
-
-
-
-                        Toast.makeText(getApplicationContext(),
-                                "Email: " + email +
-                                        "Makanan: " + makanan +
-                                        "Jumlah: " + penampungProgres +
-                                        "Ukuran: " + penampungUkuran +
-                                        "Energi: " + hEnergiSort +
-                                        "Protein: " + hProteinSort +
-                                        "Lemak: " + hLemakSort +
-                                        "Kalori: " + hKaloriSort, Toast.LENGTH_LONG).show();
-
-                        Save();
-
-
-                    }
-                });
-                break;
+//            case 182:
+//                Img.setImageResource(R.drawable.madu);
+//                rg.setVisibility(View.VISIBLE);
+//
+//                final String makanan = "Madu";
+//
+//
+//                r1.setText("Sendok makan");
+//                r2.setText("Sachet");
+//
+//                hitung.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//                        double e = 294.00;
+//                        double p = 0.30;
+//                        double l = 0;
+//                        double k = 79.50;
+//
+//                        if (r1.isChecked()) {
+//                            urt = 12 * pengali;
+//                            ukuran = "Sendok makan";
+//                        }
+//                        if (r2.isChecked()) {
+//                            urt = 20 * pengali;
+//                            ukuran = "Sachet";
+//                        }
+//
+//
+//                        //JANGAN DIGANTI BAGIAN INI
+//                        double hEnergi = (urt / 100) * e;
+//                        double hProtein = (urt / 100) * p;
+//                        double hLemak = (urt / 100) * l;
+//                        double hKalori = (urt / 100) * k;
+//
+//                        //buat batasi digit coma
+////                        double hEnergiSort = Math.round(hEnergi * 100) / 100;
+////                        double hProteinSort = Math.round(hProtein * 100) / 100;
+////                        double hLemakSort = Math.round(hLemak * 100) / 100;
+////                        double hKaloriSort = Math.round(hKalori * 100) / 100;
+//
+//                        hEnergiSort = df.format(hEnergi);
+//                        hProteinSort = df.format(hProtein);
+//                        hLemakSort = df.format(hLemak);
+//                        hKaloriSort = df.format(hKalori);
+//
+//                        //JANGAN DIUTAK ATIK
+//
+//                        penampungProgres = String.valueOf(progress);
+//                        penampungUkuran = String.valueOf(ukuran);
+//
+//
+//
+//
+//
+//                        Toast.makeText(getApplicationContext(),
+//                                "Email: " + email +
+//                                        "Makanan: " + makanan +
+//                                        "Jumlah: " + penampungProgres +
+//                                        "Ukuran: " + penampungUkuran +
+//                                        "Energi: " + hEnergiSort +
+//                                        "Protein: " + hProteinSort +
+//                                        "Lemak: " + hLemakSort +
+//                                        "Kalori: " + hKaloriSort, Toast.LENGTH_LONG).show();
+//
+//                        Save();
+//
+//
+//                    }
+//                });
+//                break;
 
         }
 

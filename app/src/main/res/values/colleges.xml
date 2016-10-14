@@ -14,7 +14,7 @@
         <item>Mie instant goreng</item>
         <item>Mie instant rebus </item>
         <item>Mie goreng (Bukan instant)  </item>
-        <item>Kwetiaw goreng </item>
+        <!--<item>Kwetiaw goreng </item>-->
         <item>Bihun goreng  </item>
         <item>Mie ayam  </item>
         <item>Spagheti </item>
@@ -104,8 +104,8 @@
         <item>Ayam goreng dada</item>
         <item>Ayam goreng sayap</item>
         <item>Ayam goreng paha</item>
-        <item>Ayam goreng tepung dada extra crispy</item>
-        <item>Ayam goreng tepung dada extra crispy, tanpa kulit</item>
+        <item>Ayam goreng tepung dada atas extra crispy</item>
+        <item>Ayam goreng tepung dada mentok extra crispy</item>
         <item>Ayam goreng tepung sayap extra crispy</item>
         <item>Ayam goreng tepung sayap extra crispy, tanpa kulit</item>
         <item>Ayam goreng tepung paha bawah extra crispy</item>
@@ -160,7 +160,7 @@
         <item>Keripik singkong</item>
         <item>Emping goreng (Kerupuk melinjo)</item>
         <item>Happy tos tortilla chips</item>
-        <item>Pop corn</item>
+        <!--<item>Pop corn</item>-->
         <item>Permen</item>
         <item>Minuman bersoda (Fanta, Sprite, Coca cola, Pepsi)</item>
         <item>Minuman isotonik (Pocari sweet, Mizone)</item>
