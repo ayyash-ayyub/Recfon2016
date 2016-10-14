@@ -5238,21 +5238,24 @@ public class PerhitunganPagi extends AppCompatActivity {
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-
+                        double e = 0;
+                        double p = 0;
+                        double l = 0;
+                        double k = 0;
 
                         if (r1.isChecked()) {
-                            double e = 264;
-                            double p = 21.2;
-                            double l = 16.6;
-                            double k = 8.5;
+                                e = 264;
+                             p = 21.2;
+                             l = 16.6;
+                             k = 8.5;
                             urt = 100 * pengali;
                             ukuran = "Potong dada atas ";
                         }
                         if (r2.isChecked()) {
-                            double e = 153;
-                            double p = 27.3;
-                            double l = 4.8;
-                            double k = 0.3;
+                             e = 153;
+                             p = 27.3;
+                             l = 4.8;
+                             k = 0.3;
                             urt = 170 * pengali;
                             ukuran = "Potong dada bawah";
                         }
@@ -5297,19 +5300,23 @@ public class PerhitunganPagi extends AppCompatActivity {
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+                        double e = 0;
+                        double p = 0;
+                        double l = 0;
+                        double k = 0;
                         if (r1.isChecked()) {
-                            double e = 264;
-                            double p = 21.2;
-                            double l = 16.6;
-                            double k = 8.5;
+                             e = 264;
+                             p = 21.2;
+                             l = 16.6;
+                             k = 8.5;
                             urt = 100 * pengali;
                             ukuran = "Potong dada atas ";
                         }
                         if (r2.isChecked()) {
-                            double e = 153;
-                            double p = 27.3;
-                            double l = 4.8;
-                            double k = 0.3;
+                             e = 153;
+                             p = 27.3;
+                             l = 4.8;
+                             k = 0.3;
                             urt = 170 * pengali;
                             ukuran = "Potong dada bawah";
                         }
@@ -5363,21 +5370,24 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                            urt = 60 * pengali;
 //                            ukuran = "Potong";
 //                        }
-
+                        double e = 0;
+                        double p = 0;
+                        double l = 0;
+                        double k = 0;
                         if (r1.isChecked()) {
-                            double e = 337;
-                            double p = 20.8;
-                            double l = 23;
-                            double k = 11.7;
+                             e = 337;
+                             p = 20.8;
+                             l = 23;
+                             k = 11.7;
 
                             urt = 60 * pengali;
                             ukuran = "Potong";
                         }
                         if (r2.isChecked()) {
-                            double e = 236;
-                            double p = 28.7;
-                            double l = 12.1;
-                            double k = 3;
+                             e = 236;
+                             p = 28.7;
+                             l = 12.1;
+                             k = 3;
 
                             urt = 60 * pengali;
                             ukuran = "Potong";
@@ -5432,21 +5442,24 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                            urt = 60 * pengali;
 //                            ukuran = "Potong";
 //                        }
-
+                        double e = 0;
+                        double p = 0;
+                        double l = 0;
+                        double k = 0;
                         if (r1.isChecked()) {
-                            double e = 337;
-                            double p = 20.8;
-                            double l = 23;
-                            double k = 11.7;
+                             e = 337;
+                             p = 20.8;
+                             l = 23;
+                             k = 11.7;
 
                             urt = 60 * pengali;
                             ukuran = "Potong";
                         }
                         if (r2.isChecked()) {
-                            double e = 236;
-                            double p = 28.7;
-                            double l = 12.1;
-                            double k = 3;
+                             e = 236;
+                             p = 28.7;
+                             l = 12.1;
+                             k = 3;
 
                             urt = 60 * pengali;
                             ukuran = "Potong ";
@@ -5501,21 +5514,24 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                            urt = 70 * pengali;
 //                            ukuran = "Potong";
 //                        }
-
+                        double e = 0;
+                        double p = 0;
+                        double l = 0;
+                        double k = 0;
                         if (r1.isChecked()) {
-                            double e = 274;
-                            double p = 20.6;
-                            double l = 17.7;
-                            double k = 8;
+                             e = 274;
+                             p = 20.6;
+                             l = 17.7;
+                             k = 8;
 
                             urt = 70 * pengali;
                             ukuran = "Potong";
                         }
                         if (r2.isChecked()) {
-                            double e = 170;
-                            double p = 25.6;
-                            double l = 7.4;
-                            double k = 0;
+                             e = 170;
+                             p = 25.6;
+                             l = 7.4;
+                             k = 0;
 
                             urt = 70 * pengali;
                             ukuran = "Potong";
@@ -5570,21 +5586,24 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                            urt = 70 * pengali;
 //                            ukuran = "Potong";
 //                        }
-
+                        double e = 0;
+                        double p = 0;
+                        double l = 0;
+                        double k = 0;
                         if (r1.isChecked()) {
-                            double e = 274;
-                            double p = 20.6;
-                            double l = 17.7;
-                            double k = 8;
+                             e = 274;
+                             p = 20.6;
+                             l = 17.7;
+                             k = 8;
 
                             urt = 70 * pengali;
                             ukuran = "Potong";
                         }
                         if (r2.isChecked()) {
-                            double e = 170;
-                            double p = 25.6;
-                            double l = 7.4;
-                            double k = 0;
+                             e = 170;
+                             p = 25.6;
+                             l = 7.4;
+                             k = 0;
 
                             urt = 70 * pengali;
                             ukuran = "Potong";
@@ -5638,21 +5657,24 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                            urt = 100 * pengali;
 //                            ukuran = "Potong";
 //                        }
-
+                        double e = 0;
+                        double p = 0;
+                        double l = 0;
+                        double k = 0;
                         if (r1.isChecked()) {
-                            double e = 309;
-                            double p = 17.2;
-                            double l = 22.1;
-                            double k = 10.3;
+                             e = 309;
+                             p = 17.2;
+                             l = 22.1;
+                             k = 10.3;
 
                             urt = 100 * pengali;
                             ukuran = "Potong";
                         }
                         if (r2.isChecked()) {
-                            double e = 179;
-                            double p = 22.4;
-                            double l = 10;
-                            double k = 0;
+                             e = 179;
+                             p = 22.4;
+                             l = 10;
+                             k = 0;
 
                             urt = 100 * pengali;
                             ukuran = "Potong";
@@ -5708,21 +5730,24 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                            urt = 100 * pengali;
 //                            ukuran = "Potong";
 //                        }
-
+                        double e = 0;
+                        double p = 0;
+                        double l = 0;
+                        double k = 0;
                         if (r1.isChecked()) {
-                            double e = 309;
-                            double p = 17.2;
-                            double l = 22.1;
-                            double k = 10.3;
+                             e = 309;
+                             p = 17.2;
+                             l = 22.1;
+                             k = 10.3;
 
                             urt = 100 * pengali;
                             ukuran = "Potong";
                         }
                         if (r2.isChecked()) {
-                            double e = 179;
-                            double p = 22.4;
-                            double l = 10;
-                            double k = 0;
+                             e = 179;
+                             p = 22.4;
+                             l = 10;
+                             k = 0;
 
                             urt = 100 * pengali;
                             ukuran = "Potong";
