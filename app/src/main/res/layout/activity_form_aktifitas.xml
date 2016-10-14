@@ -10,12 +10,12 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:minWidth="400dp"
     tools:context="com.ayyash.recfon.FormAktifitas">
 
     <TextView
         android:text="Halaman Baru"
         android:textStyle="bold"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
@@ -23,12 +23,68 @@
         android:id="@+id/txtActivity" />
 
     <LinearLayout
+        android:gravity="center"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <customsfonts.MyEditText
+            android:id="@+id/txtJam"
+            android:textSize="16dp"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:hint="00"
+            android:textColorHint="@color/colorhint"
+            android:textColor="@color/colortext"
+            android:background="#0000"
+            android:padding="16dp"
+            android:gravity="left"/>
+
+        <View
+            android:layout_width="56dp"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:background="#dad8d8"/>
+    </LinearLayout>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Jam"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <customsfonts.MyEditText
+                android:id="@+id/txtMenit"
+                android:textSize="16dp"
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:hint="00"
+                android:textColorHint="@color/colorhint"
+                android:textColor="@color/colortext"
+                android:background="#0000"
+                android:padding="16dp"
+                android:gravity="left"/>
+
+            <View
+                android:layout_width="56dp"
+                android:layout_height="1dp"
+                android:layout_marginBottom="10dp"
+                android:background="#dad8d8"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menit per Minggu"/>
     </LinearLayout>
+
+    <Button
+        android:text="Simpan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSimpan"
+        android:theme="@style/PrimaryButton" />
 </LinearLayout>

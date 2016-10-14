@@ -35,14 +35,9 @@ public class FormAktifitas extends AppCompatActivity {
 
     public static final String KEY_EMAIL = "txt_email";
     public static final String KEY_MKN = "makanan";
-    public static final String KEY_UKUR = "ukuran";
-    public static final String KEY_JML = "jumlah";
-    public static final String KEY_PROTEIN = "protein1";
-    public static final String KEY_LEMAK = "lemak1";
-    public static final String KEY_KALORI = "kalori1";
-    public static final String KEY_ENERGI = "energi1";
 
-    TextView tv,namaMakanan;
+
+    TextView namaAktifitas;
     Button btnKeluar;
     String nM;
     int indexActivity;
@@ -54,8 +49,9 @@ public class FormAktifitas extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_perhitungan_pagi);
-        tv = (TextView) findViewById(R.id.textView);
+        setContentView(R.layout.activity_form_aktifitas);
+
+        namaAktifitas = (TextView) findViewById(R.id.txtActivity);
 
         SharedPreferences sharedPreferences = getSharedPreferences(ConfigUmum.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         email = sharedPreferences.getString(ConfigUmum.NIS_SHARED_PREF, "tidak tersedia");
@@ -65,28 +61,16 @@ public class FormAktifitas extends AppCompatActivity {
         PD.setCancelable(false);
 
 
-        btnKeluar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Intent i = new Intent(getApplicationContext(), SarapanActivity.class);
-                startActivity(i);
-                finish();
-            }
-        });
-
 
         Intent i = getIntent();
         indexActivity = i.getIntExtra("indexActivity", 0);
         nM = i.getStringExtra("namaActivity");
 
-        tv.setText("index ke: " + indexActivity);
-        namaMakanan.setText("" + nM);
-
+        Toast.makeText(getApplicationContext(), "index :"+indexActivity+", Nama : "+ namaAktifitas,Toast.LENGTH_LONG).show();
 
         switch (indexActivity) {
             case 0:
-
+                namaAktifitas.setText(nM);
              break;
         }
 
@@ -127,7 +111,7 @@ public class FormAktifitas extends AppCompatActivity {
 
     private void ConfirmSave() {
         final String txt_email = email.toString().trim();
-        final String makanan = namaMakanan.getText().toString().trim();
+        final String makanan = namaAktifitas.getText().toString().trim();
 
         StringRequest sR = new StringRequest(Request.Method.POST, "http://103.43.45.237/recfon/api/insert_record_pagi.php",
                 new Response.Listener<String>() {
