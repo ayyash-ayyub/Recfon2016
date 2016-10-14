@@ -45,6 +45,8 @@ public class AktifitasFisik extends AppCompatActivity {
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Silahkan Tunggu...");
 
+        rv_item = (RecyclerView) findViewById(R.id.rv_item);
+
         SharedPreferences sharedPreferences = getSharedPreferences(ConfigUmum.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         email = sharedPreferences.getString(ConfigUmum.NIS_SHARED_PREF, "tidak tersedia");
 

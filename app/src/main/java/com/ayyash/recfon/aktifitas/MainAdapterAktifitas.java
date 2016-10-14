@@ -19,7 +19,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.ayyash.recfon.ConfigUmum;
 import com.ayyash.recfon.ItemObject;
-import com.ayyash.recfon.MainHolder;
+import com.ayyash.recfon.aktifitas.MainHolderAktifitas;
 import com.ayyash.recfon.R;
 
 import java.util.List;
@@ -27,7 +27,7 @@ import java.util.List;
 /**
  * Created by Isfahani on 30-Jul-16.
  */
-public class MainAdapterAktifitas extends RecyclerView.Adapter<MainHolder> {
+public class MainAdapterAktifitas extends RecyclerView.Adapter<MainHolderAktifitas> {
 
     ProgressDialog progressDialog;
 
@@ -42,9 +42,9 @@ public class MainAdapterAktifitas extends RecyclerView.Adapter<MainHolder> {
     }
 
     @Override
-    public MainHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public MainHolderAktifitas onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_item_aktifitas, null);
-        MainHolder mainHolder = new MainHolder(view);
+        MainHolderAktifitas mainHolder = new MainHolderAktifitas(view);
         return mainHolder;
     }
 
@@ -71,9 +71,8 @@ public class MainAdapterAktifitas extends RecyclerView.Adapter<MainHolder> {
         queue.add(stringRequest);
     }
 
-
     @Override
-    public void onBindViewHolder(MainHolder holder, final int position) {
+    public void onBindViewHolder(MainHolderAktifitas holder, final int position) {
         holder.txt_name.setText("Nama Makanan : "+resultsList.get(position).activity);
         holder.txt_office.setText("Durasi : "+resultsList.get(position).durasi);
 
