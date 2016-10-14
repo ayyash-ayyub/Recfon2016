@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -38,10 +39,11 @@ public class FormAktifitas extends AppCompatActivity {
 
 
     TextView namaAktifitas;
-    Button btnKeluar;
+    EditText Jam;
     String nM;
     int indexActivity;
-    String email;
+    String email, kategori;
+
 
     ProgressDialog PD;
 
@@ -66,12 +68,40 @@ public class FormAktifitas extends AppCompatActivity {
         indexActivity = i.getIntExtra("indexActivity", 0);
         nM = i.getStringExtra("namaActivity");
 
-        Toast.makeText(getApplicationContext(), "index :"+indexActivity+", Nama : "+ namaAktifitas,Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(), "index :"+indexActivity+", Nama : "+ nm,Toast.LENGTH_LONG).show();
+
+        namaAktifitas.setText(nM);
 
         switch (indexActivity) {
             case 0:
-                namaAktifitas.setText(nM);
-             break;
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+
+                kategori = "Berat";
+
+                break;
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+            case 11:
+            case 12:
+            case 13:
+            case 14:
+            case 15:
+            case 16:
+            case 17:
+            case 18:
+            case 19:
+            case 20:
+            case 21:
+                kategori = "Sedang";
+                break;
+
         }
 
     }
