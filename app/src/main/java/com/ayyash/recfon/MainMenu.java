@@ -67,7 +67,7 @@ public class MainMenu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 sudahSetuju = true;
-                aktifkan.setVisibility(View.INVISIBLE);
+                aktifkan.setVisibility(View.GONE);
                 drawerLayout.openDrawer(GravityCompat.START);
             }
         });

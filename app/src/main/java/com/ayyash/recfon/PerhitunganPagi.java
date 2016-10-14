@@ -41,6 +41,7 @@ public class PerhitunganPagi extends AppCompatActivity {
     public static final String KEY_LEMAK = "lemak1";
     public static final String KEY_KALORI = "kalori1";
     public static final String KEY_ENERGI = "energi1";
+
     TextView tv,namaMakanan,satuan;
     Button hitung,btnKeluar;
     String nM;
@@ -86,12 +87,12 @@ public class PerhitunganPagi extends AppCompatActivity {
         r5 = (RadioButton) findViewById(R.id.radioButton5);
         r6 = (RadioButton) findViewById(R.id.radioButton6);
         r7 = (RadioButton) findViewById(R.id.radioButton7);
-        r3.setVisibility(View.INVISIBLE);
-        r4.setVisibility(View.INVISIBLE);
-        r5.setVisibility(View.INVISIBLE);
-        r6.setVisibility(View.INVISIBLE);
-        r7.setVisibility(View.INVISIBLE);
-        rg.setVisibility(View.INVISIBLE);
+        r3.setVisibility(View.GONE);
+        r4.setVisibility(View.GONE);
+        r5.setVisibility(View.GONE);
+        r6.setVisibility(View.GONE);
+        r7.setVisibility(View.GONE);
+        rg.setVisibility(View.GONE);
 
         SharedPreferences sharedPreferences = getSharedPreferences(ConfigUmum.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         email = sharedPreferences.getString(ConfigUmum.NIS_SHARED_PREF, "tidak tersedia");
@@ -215,7 +216,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Centong Plastik");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -266,7 +267,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Centong Plastik");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -327,7 +328,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Centong Plastik");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -378,7 +379,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Porsi");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -427,7 +428,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Bungkus");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -477,7 +478,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Bungkus");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -526,7 +527,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Porsi");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -575,7 +576,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Porsi");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -625,7 +626,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Porsi");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -674,7 +675,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Porsi");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -723,7 +724,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Porsi");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -772,7 +773,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Porsi");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -820,7 +821,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -930,7 +931,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Potong");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
 
                 hitung.setOnClickListener(new View.OnClickListener() {
@@ -1094,7 +1095,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Piring");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -1143,7 +1144,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Potong");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -1246,7 +1247,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Potong");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -1295,7 +1296,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Sendok sayur");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -1344,7 +1345,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Mangkok");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -1447,7 +1448,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Sendok sayur");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -1496,7 +1497,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Porsi");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
 
                 hitung.setOnClickListener(new View.OnClickListener() {
@@ -2023,7 +2024,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Porsi");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -2126,7 +2127,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Porsi");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -2282,7 +2283,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Porsi");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -2331,7 +2332,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Lembar");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -2380,7 +2381,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Potong");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -2537,7 +2538,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Potong");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -2585,7 +2586,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -2795,7 +2796,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Potong panjang");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -2844,7 +2845,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Potong panjang");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -2893,7 +2894,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Potong");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -2942,7 +2943,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Potong panjang");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -3099,7 +3100,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -3148,7 +3149,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Potong sedang");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -3197,7 +3198,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -3246,7 +3247,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Biji durian lokal");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -3295,7 +3296,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Biji durian montong");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -3398,7 +3399,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Biji");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -3447,7 +3448,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -3550,7 +3551,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -3599,7 +3600,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -3691,7 +3692,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Porsi");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -3794,7 +3795,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -3902,7 +3903,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -3951,7 +3952,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Sendok makan");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -4000,7 +4001,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Bungkus");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -4049,7 +4050,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Potong");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -4098,7 +4099,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Potong");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -4147,7 +4148,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Butir");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -4196,7 +4197,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Butir");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -4245,7 +4246,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Butir");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -4294,7 +4295,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Porsi");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -4343,7 +4344,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Porsi");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -4392,7 +4393,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Porsi");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -4441,7 +4442,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Porsi");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -4490,7 +4491,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Tusuk");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -4539,7 +4540,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Porsi");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -4755,7 +4756,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Potong");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -4804,7 +4805,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Tusuk");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -4853,7 +4854,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Porsi");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -4956,7 +4957,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -5059,7 +5060,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Potong sayap");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -5272,7 +5273,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Potong");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -5321,7 +5322,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Potong");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -5370,7 +5371,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Potong");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -5419,7 +5420,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Potong");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -5468,7 +5469,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Potong");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -5517,7 +5518,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Potong");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -5566,7 +5567,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Potong");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -5729,7 +5730,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Sendok makan");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -5778,7 +5779,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Potong");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -6043,7 +6044,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Porsi");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -6092,7 +6093,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Potong");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -6141,7 +6142,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Potong");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -6190,7 +6191,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Tusuk");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -6239,7 +6240,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Piring");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -6288,7 +6289,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Genggam");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -6337,7 +6338,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Porsi");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -6386,7 +6387,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
 
                 hitung.setOnClickListener(new View.OnClickListener() {
@@ -6436,7 +6437,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -6485,7 +6486,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -6534,7 +6535,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
 
                 hitung.setOnClickListener(new View.OnClickListener() {
@@ -6584,7 +6585,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -6633,7 +6634,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -6682,7 +6683,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -6731,7 +6732,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -6780,7 +6781,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -6829,7 +6830,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Potong");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -6878,7 +6879,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Potong");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -6927,7 +6928,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -7035,7 +7036,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -7084,7 +7085,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("2000 rupiah");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -7133,7 +7134,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -7182,7 +7183,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -7233,7 +7234,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -7282,7 +7283,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Keping");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -7331,7 +7332,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Roll");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -7381,7 +7382,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Keping");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -7433,7 +7434,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Keping");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -7484,7 +7485,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Keping");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -7535,7 +7536,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Keping");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -7723,7 +7724,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
                 //  r2.setText("S1 iris kecil");
 
                 hitung.setOnClickListener(new View.OnClickListener() {
@@ -7775,7 +7776,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Buah");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
                 //  r2.setText("S1 iris kecil");
 
                 hitung.setOnClickListener(new View.OnClickListener() {
@@ -7828,7 +7829,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Genggam");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
                 //  r2.setText("S1 iris kecil");
 
                 hitung.setOnClickListener(new View.OnClickListener() {
@@ -7879,7 +7880,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Genggam");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
                 //  r2.setText("S1 iris kecil");
 
                 hitung.setOnClickListener(new View.OnClickListener() {
@@ -7931,7 +7932,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Genggam");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
                 //  r2.setText("S1 iris kecil");
 
                 hitung.setOnClickListener(new View.OnClickListener() {
@@ -8037,7 +8038,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 
                 r1.setText("Piring");
                 // r2.setText("1 bungkus besar");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
                 //  r2.setText("S1 iris kecil");
 
                 hitung.setOnClickListener(new View.OnClickListener() {
@@ -8440,7 +8441,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Sendok teh");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -8681,7 +8682,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Sendok makan gula pasir");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -8730,7 +8731,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Gelas");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -8779,7 +8780,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Porsi");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -8882,7 +8883,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Kotak");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -8931,7 +8932,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Kotak");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -8980,7 +8981,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Sendok makan");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -9202,7 +9203,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Sachet");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -9251,7 +9252,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Gelas");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -9300,7 +9301,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Potong");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -9349,7 +9350,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Sendok makan");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -9398,7 +9399,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Sendok makan");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -9447,7 +9448,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Sendok makan");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -9496,7 +9497,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
 
                 r1.setText("Sendok makan");
-                r2.setVisibility(View.INVISIBLE);
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -9705,5 +9706,10 @@ public class PerhitunganPagi extends AppCompatActivity {
     }
 
 
-
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(getApplicationContext(), MenuFoodsRecord.class);
+        startActivity(i);
+        finish();
+    }
 }

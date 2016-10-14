@@ -29,7 +29,11 @@
         <activity android:name=".Login" />
         <activity android:name=".MainMenu" />
         <activity android:name=".StatusGizi" />
-        <activity android:name=".AktifitasFisik"></activity>
+        <activity android:name=".AktifitasFisik" />
+        <activity android:name=".FormAktifitas"
+            android:theme="@style/Theme.AppCompat.Light.Dialog">
+
+        </activity>
     </application>
 
 </manifest>

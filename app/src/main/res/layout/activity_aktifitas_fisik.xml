@@ -16,7 +16,7 @@
     android:weightSum="1">
 
     <TextView
-        android:text="Rekam Sarapan Pagi"
+        android:text="Phisical Activity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView6"
@@ -33,14 +33,20 @@
         app:srcCompat="@drawable/clock"
         android:id="@+id/imageView" />
 
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:clickable="true">
     <com.ayyash.recfon.SearchableSpinnerAktifitas
         android:id="@+id/spinner"
         android:layout_height="wrap_content"
         android:entries="@array/aktifitas"
-        app:hintText="apa yang anda makan hari ini?(tambahkan)"
+        app:hintText="Add New Phisical Activity"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_width="wrap_content" />
+        android:layout_width="match_parent" />
+    </android.support.v7.widget.CardView>
 
     <Space
         android:layout_width="match_parent"
@@ -67,22 +73,4 @@
 
     </RelativeLayout>
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:layout_weight="1
-        ">
-
-        <Button
-
-            android:text="saya tidak sarapan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/rv_item"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="15dp"
-            android:id="@+id/button3"
-            android:background="@android:color/holo_red_light" />
-    </LinearLayout>
 </LinearLayout>

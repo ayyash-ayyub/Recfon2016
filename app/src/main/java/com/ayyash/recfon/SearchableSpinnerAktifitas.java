@@ -19,7 +19,7 @@ import java.util.List;
 
 
 public class SearchableSpinnerAktifitas extends Spinner implements View.OnTouchListener,
-        SearchableListDialog.SearchableItem {
+        SearchableListDialogAktifitas.SearchableItem {
 
     String selectedItem;
     //this string above will store the value of selected item.
@@ -28,7 +28,7 @@ public class SearchableSpinnerAktifitas extends Spinner implements View.OnTouchL
     public static final int NO_ITEM_SELECTED = -1;
     private Context _context;
     private List _items;
-    private SearchableListDialog _searchableListDialog;
+    private SearchableListDialogAktifitas _searchableListDialog;
 
     private boolean _isDirty;
     private ArrayAdapter _arrayAdapter;
@@ -64,7 +64,7 @@ public class SearchableSpinnerAktifitas extends Spinner implements View.OnTouchL
 
     private void init() {
         _items = new ArrayList();
-        _searchableListDialog = SearchableListDialog.newInstance
+        _searchableListDialog = SearchableListDialogAktifitas.newInstance
                 (_items);
         _searchableListDialog.setOnSearchableItemClickListener(this);
         setOnTouchListener(this);
@@ -134,14 +134,14 @@ public class SearchableSpinnerAktifitas extends Spinner implements View.OnTouchL
 
         Toast.makeText(getContext(),"You selected "+selectedItem,Toast.LENGTH_LONG).show();
 
-        Intent i = new Intent(_context, PerhitunganPagi.class);
-        i.putExtra("indexMakanan", selectedIndex);
-        i.putExtra("namaMakanan",selectedItem);
+        Intent i = new Intent(_context, FormAktifitas.class);
+        i.putExtra("indexActivity", selectedIndex);
+        i.putExtra("namaActivity",selectedItem);
         _context.startActivity(i);
 
         //stop aktifitas sekarang
-        Activity activity = (Activity)getContext();
-        activity.finish();
+//        Activity activity = (Activity)getContext();
+//        activity.finish();
 
 
     }
