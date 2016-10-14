@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.3"
 
     defaultConfig {
-        applicationId "com.example.manishvishwakarma.searchablespinnermine"
+        applicationId "com.ayyash.recfon"
         minSdkVersion 19
         targetSdkVersion 24
         versionCode 1

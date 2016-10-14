@@ -28,7 +28,8 @@
         <activity android:name=".MenuFoodsRecord" />
         <activity android:name=".Login" />
         <activity android:name=".MainMenu" />
-        <activity android:name=".StatusGizi"></activity>
+        <activity android:name=".StatusGizi" />
+        <activity android:name=".AktifitasFisik"></activity>
     </application>
 
 </manifest>

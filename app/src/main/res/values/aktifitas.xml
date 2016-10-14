@@ -1,0 +1,31 @@
+<resources>
+    <string-array name="aktifitas">
+
+
+        //Fix String food
+
+        <item>Bersepeda Cepat</item>
+        <item>Angkat Beban</item>
+        <item>Tenis Tunggal</item>
+        <item>Bulutangkis Tunggal</item>
+        <item>Lari cepat</item>
+        <item>Marathon</item>
+        <item>Mendaki Gunung</item>
+        <item>Menyapu Halaman</item>
+        <item>Mengepel </item>
+        <item>Mencuci Baju</item>
+        <item>Menimba Air</item>
+        <item>Bercocok Tanam</item>
+        <item>Membersihkan Kamar mandi / kolam</item>
+        <item>Tenis Ganda</item>
+        <item>Bulutangkis Ganda </item>
+        <item>Senam Aerobic</item>
+        <item>Senam Tera</item>
+        <item>Renang</item>
+        <item>Basket</item>
+        <item>Bola Voli</item>
+        <item>Jogging</item>
+        <item>Jalan Ringan, Dikantor, Dirumah dll</item>
+
+    </string-array>
+</resources>

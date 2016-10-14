@@ -2,8 +2,10 @@ package com.ayyash.recfon;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9593,14 +9595,14 @@ public class PerhitunganPagi extends AppCompatActivity {
 
 
                         Toast.makeText(getApplicationContext(),
-                                    "Email: " + email +
-                                    "Makanan: " + makanan +
-                                    "Jumlah: " + penampungProgres +
-                                    "Ukuran: " + penampungUkuran +
-                                    "Energi: " + hEnergiSort +
-                                    "Protein: " + hProteinSort +
-                                    "Lemak: " + hLemakSort +
-                                    "Kalori: " + hKaloriSort, Toast.LENGTH_LONG).show();
+                                "Email: " + email +
+                                        "Makanan: " + makanan +
+                                        "Jumlah: " + penampungProgres +
+                                        "Ukuran: " + penampungUkuran +
+                                        "Energi: " + hEnergiSort +
+                                        "Protein: " + hProteinSort +
+                                        "Lemak: " + hLemakSort +
+                                        "Kalori: " + hKaloriSort, Toast.LENGTH_LONG).show();
 
                         Save();
 
@@ -9615,7 +9617,40 @@ public class PerhitunganPagi extends AppCompatActivity {
 
     }
 
-    private void Save() {
+    private void Save(){
+        android.app.AlertDialog.Builder alertDialog = new android.app.AlertDialog.Builder(PerhitunganPagi.this);
+
+        // Setting Dialog Title
+        alertDialog.setTitle("Sarapan");
+        // Setting Dialog Message
+        alertDialog.setMessage("Apakah Anda yakin sudah memasukan semua menu sarapan Anda?");
+        // Setting Icon to Dialog
+        alertDialog.setIcon(R.drawable.x);
+
+        // Setting Positive "Yes" Button
+        alertDialog.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog,int which) {
+
+                // Write your code here to invoke YES event
+                ConfirmSave();
+            }
+        });
+
+        // Setting Negative "NO" Button
+        alertDialog.setNegativeButton("Cek Kembali", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                // Write your code here to invoke NO event
+//                Toast.makeText(getApplicationContext(), "You clicked on NO", Toast.LENGTH_SHORT).show();
+                dialog.cancel();
+            }
+        });
+
+        // Showing Alert Message
+        alertDialog.show();
+//    }
+    }
+
+    private void ConfirmSave() {
         final String txt_email = email.toString().trim();
         final String makanan = namaMakanan.getText().toString().trim();
         final String jumlah = penampungProgres.toString().trim();
@@ -9635,9 +9670,9 @@ public class PerhitunganPagi extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         Toast.makeText(PerhitunganPagi.this, response, Toast.LENGTH_LONG).show();
-                            Intent i = new Intent(PerhitunganPagi.this, SarapanActivity.class);
-                            startActivity(i);
-                            finish();
+                        Intent i = new Intent(PerhitunganPagi.this, SarapanActivity.class);
+                        startActivity(i);
+                        finish();
                     }
                 },
                 new Response.ErrorListener() {
@@ -9664,7 +9699,7 @@ public class PerhitunganPagi extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), txt_email + " makanan = " + makanan, Toast.LENGTH_LONG).show();
         int socketTimeout = 30000;//30 seconds - change to what you want
         RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
         sR.setRetryPolicy(policy);
         requestQueue.add(sR);
     }

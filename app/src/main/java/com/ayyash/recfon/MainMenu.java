@@ -104,7 +104,11 @@ public class MainMenu extends AppCompatActivity {
                 if (id == R.id.kebiasaan) {
                     //   Toast.makeText(getApplicationContext(),"Kebiasaan coy",Toast.LENGTH_LONG).show();
                     // finish();
-                } else if (id == R.id.foodRecord) {
+                }else if (id == R.id.aktifitasFisik){
+                    Intent i = new Intent(MainMenu.this, AktifitasFisik.class);
+                    startActivity(i);
+                    finish();
+                }else if (id == R.id.foodRecord) {
                     Intent i = new Intent(MainMenu.this, MenuFoodsRecord.class);
                     startActivity(i);
                     finish();

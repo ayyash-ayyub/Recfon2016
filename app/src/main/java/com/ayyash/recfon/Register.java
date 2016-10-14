@@ -1,5 +1,6 @@
 package com.ayyash.recfon;
 
+import android.app.ProgressDialog;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -44,6 +45,7 @@ public class Register extends AppCompatActivity {
 
     TextView signinhere;
     Button signup;
+    ProgressDialog progressDialog;
 
     EditText txt_nama, txt_tanggal, txt_email, txt_hp, txt_password;
     RadioGroup rgjk, rgstatus, rgpekerjaan, rgtinggal, rgstatus_user;
@@ -56,6 +58,9 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signup);
 
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setCancelable(false);
+        progressDialog.setMessage("Silahkan Tunggu...");
 
         txt_nama = (EditText)findViewById(R.id.txtNama);
         txt_tanggal = (EditText)findViewById(R.id.txtTgl);
@@ -131,8 +136,8 @@ public class Register extends AppCompatActivity {
 
 
 
-        TextView t1 =(TextView)findViewById(R.id.signinhere);
-        t1.setTypeface(fonts1);
+        signinhere =(TextView)findViewById(R.id.signinhere);
+        signinhere.setTypeface(fonts1);
     }
 
     @Override
@@ -143,6 +148,7 @@ public class Register extends AppCompatActivity {
     }
 
     private void Save() {
+        progressDialog.show();
         final String nama = txt_nama.getText().toString().trim();
         final String jk = rbJK.getText().toString().trim();
         final String tgl_lahir = txt_tanggal.getText().toString().trim();
@@ -164,7 +170,10 @@ public class Register extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+
                         Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
+                        progressDialog.dismiss();
+                        signinhere.setText(response);
                         Intent i = new Intent(getApplicationContext(), Login.class);
                         startActivity(i);
                         finish();
@@ -174,6 +183,7 @@ public class Register extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
+                        progressDialog.dismiss();
                     }
                 }) {
             @Override

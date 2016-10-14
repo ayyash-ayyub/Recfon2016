@@ -32,6 +32,8 @@ public class MainAdapter extends RecyclerView.Adapter<MainHolder> {
 
     ProgressDialog progressDialog;
 
+
+
     public List<ItemObject.ObjectBelajar.Results> resultsList;
     public Context context;
 
@@ -51,20 +53,20 @@ public class MainAdapter extends RecyclerView.Adapter<MainHolder> {
 
 
     public void DeleteData(String Url) {
-        progressDialog.show();
+
         RequestQueue queue = Volley.newRequestQueue(context.getApplicationContext());
         StringRequest stringRequest = new StringRequest(Request.Method.GET, Url,
                 new Response.Listener<String>() {;
                     @Override
                     public void onResponse(String response) {
                         Log.d("uye", response);
-                        progressDialog.dismiss();
+
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Log.e("uye", error.toString());
-                progressDialog.dismiss();
+
             }
         });
         queue.add(stringRequest);
@@ -83,14 +85,14 @@ public class MainAdapter extends RecyclerView.Adapter<MainHolder> {
         holder.cardview_item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View view) {
-                progressDialog = new ProgressDialog(context);
-                progressDialog.setCancelable(false);
-                progressDialog.setMessage("Silahkan Tunggu...");
+//                progressDialog = new ProgressDialog(context);
+//                progressDialog.setCancelable(false);
+//                progressDialog.setMessage("Silahkan Tunggu...");
 
 
                 DeleteData(ConfigUmum.URL_DELETE_PAGI+idd);
-               // Intent i = new Intent(context, Pengalih.class);
-              //  view.getContext().startActivity(i);
+                // Intent i = new Intent(context, Pengalih.class);
+                //  view.getContext().startActivity(i);
 
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
@@ -100,12 +102,12 @@ public class MainAdapter extends RecyclerView.Adapter<MainHolder> {
                 builder.setPositiveButton("Hapus", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         DeleteData(ConfigUmum.URL_DELETE_PAGI+idd);
-                        dialog.dismiss();
+//                        dialog.dismiss();
 
-                     //   Intent i = new Intent(context, SarapanActivity.class);
+                        //   Intent i = new Intent(context, SarapanActivity.class);
 
-                     //
-                      //  i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | IntentCompat.FLAG_ACTIVITY_CLEAR_TASK);
+                        //
+                        //  i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | IntentCompat.FLAG_ACTIVITY_CLEAR_TASK);
                         //view.getContext().startActivity(i);
 
 
@@ -118,14 +120,14 @@ public class MainAdapter extends RecyclerView.Adapter<MainHolder> {
                 builder.setNegativeButton("Batalkan", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        dialog.dismiss();
+//                        dialog.dismiss();
                     }
                 });
                 AlertDialog alert = builder.create();
                 alert.show();
 
 
-             //   Toast.makeText(context,"ID nya: "+resultsList.get(position).nama_makanan, Toast.LENGTH_LONG).show();
+                //   Toast.makeText(context,"ID nya: "+resultsList.get(position).nama_makanan, Toast.LENGTH_LONG).show();
 
 
             }

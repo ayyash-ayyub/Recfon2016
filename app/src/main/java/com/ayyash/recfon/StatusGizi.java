@@ -1,6 +1,8 @@
 package com.ayyash.recfon;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,19 +15,31 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.RetryPolicy;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class StatusGizi extends AppCompatActivity {
-    public static final String KEY_NAMA = "nama";
-    public static final String KEY_JK = "jk";
-    public static final String KEY_TGL_LAHIR= "tgl_lahir";
-    public static final String KEY_STATUS = "status";
-    public static final String KEY_PEKERJAAN = "pekerjaan";
-    public static final String KEY_HP = "telp";
-    public static final String KEY_EMAIL = "email";
-    public static final String KEY_PASS = "password";
-    public static final String KEY_MHS = "sMhs";
-    public static final String KEY_DKI = "tinggalDKI";
+
+    public static final String KEY_Email = "txtEmail";
+    public static final String KEY_BERAT = "BB";
+    public static final String KEY_UKURBB = "ukurBB";
+    public static final String KEY_TINGGI= "TB";
+    public static final String KEY_UKURTB = "ukurTB";
+    public static final String KEY_MEROKOK = "merokok";
+    public static final String KEY_ALKOHOL = "alkohol";
+    public static final String KEY_PENYAKIT = "penyakit";
+    public static final String KEY_MAKAN = "makan";
+    public static final String KEY_SARAPAN = "sarapan";
 
 
 
@@ -37,6 +51,8 @@ public class StatusGizi extends AppCompatActivity {
     RadioButton rbUkurBB, rbUkurTB, rbMerokok, rbAlkohol, rbMakan, rbSarapan;
     CheckBox cbTidak, cbHipertensi, cbDiabetes, cbKolesterol, cbJantung, cbGinjal, cbKanker, cbStroke,cbPunggung,cbPengapuran,cbTBC;
     TextView txt;
+
+    String email;
 
     Typeface fonts1;
     ArrayList list ;
@@ -73,7 +89,8 @@ public class StatusGizi extends AppCompatActivity {
         rgSarapan     = (RadioGroup)findViewById(R.id.rgSarapan);
         txt = (TextView)findViewById(R.id.textView5);
 
-
+        SharedPreferences sharedPreferences = getSharedPreferences(ConfigUmum.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        email = sharedPreferences.getString(ConfigUmum.NIS_SHARED_PREF, "tidak tersedia");
 
         cbTidak.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -145,7 +162,7 @@ public class StatusGizi extends AppCompatActivity {
                 rbMakan          = (RadioButton)findViewById(selectedMakan);
                 rbSarapan          = (RadioButton)findViewById(selectedSarapan);
 
-                if (rgUkurBB.getCheckedRadioButtonId() == -1 || rgUkurTB.getCheckedRadioButtonId() == -1
+                if (txt_Berat.getText().equals("")||txt_Tinggi.getText().equals("")||rgUkurBB.getCheckedRadioButtonId() == -1 || rgUkurTB.getCheckedRadioButtonId() == -1
                         || rgMerokok.getCheckedRadioButtonId() == -1 || rgAlkohol.getCheckedRadioButtonId() == -1
                         || rgMakan.getCheckedRadioButtonId() ==-1 || rgSarapan.getCheckedRadioButtonId() ==-1){
                     Toast.makeText(getApplicationContext(),"Mohon Lengkapi data",Toast.LENGTH_LONG).show();
@@ -158,28 +175,12 @@ public class StatusGizi extends AppCompatActivity {
 //                                    + " Makan :" + rbMakan.getText().toString() + " Sarapan :" + rbSarapan.getText().toString()
 //                                    , Toast.LENGTH_SHORT).show();
 
-//                    Save();
-
-
-
-
-
-                       // txt.setText(txt.getText().toString() + " , " + str);
+//
                     ambilValueCheckList();
 
+//                       Toast.makeText(StatusGizi.this,"Penyakit : " +list.toString(), Toast.LENGTH_SHORT).show();
 
-                       Toast.makeText(StatusGizi.this,"Penyakit : " +list.toString(), Toast.LENGTH_SHORT).show();
-
-
-
-
-
-
-
-
-
-
-
+                    Save();
 
                 }
             }
@@ -330,63 +331,67 @@ public class StatusGizi extends AppCompatActivity {
 
 
 
-//    private void Save() {
-//        final String nama = txt_nama.getText().toString().trim();
-//        final String jk = rbJK.getText().toString().trim();
-//        final String tgl_lahir = txt_tanggal.getText().toString().trim();
-//        final String status = rbStatus.getText().toString().trim();
-//        final String pekerjaan = rbPekerjaan.getText().toString().trim();
-//        final String telp = txt_hp.getText().toString().trim();
-//        final String email = txt_email.getText().toString().trim();
-//        final String password = txt_password.getText().toString().trim();
-//        final String sMhs = rbStatusUser.getText().toString().trim();
-//        final String tinggalDKI = rbDKI.getText().toString().trim();
-//
-//
-//        //parsing id kelas
-////            final String sIdKelas = getIdKelas(ambilIDKelas);
-//        //final String sIdKelas = "100000";
-//        //final int saveIdKelas = Integer.parseInt(sIdKelas);
-//
-//        StringRequest sR = new StringRequest(Request.Method.POST, "http://103.43.45.237/recfon/api/register.php",
-//                new Response.Listener<String>() {
-//                    @Override
-//                    public void onResponse(String response) {
-//                        Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
+    private void Save() {
+
+        final String txtEmail = email.toString().trim();
+        final String BB = txt_Berat.getText().toString().trim();
+        final String ukurBB = rbUkurBB.getText().toString().trim();
+        final String TB = txt_Tinggi.getText().toString().trim();
+        final String ukurTB = rbUkurTB.getText().toString().trim();
+        final String merokok = rbMerokok.getText().toString().trim();
+        final String alkohol = rbAlkohol.getText().toString().trim();
+        final String penyakit = list.toString();
+        final String makan = rbMakan.getText().toString().trim();
+        final String sarapan = rbSarapan.getText().toString().trim();
+
+        Toast.makeText(getApplicationContext(),TB,Toast.LENGTH_LONG).show();
+
+        //parsing id kelas
+//            final String sIdKelas = getIdKelas(ambilIDKelas);
+        //final String sIdKelas = "100000";
+        //final int saveIdKelas = Integer.parseInt(sIdKelas);
+
+        StringRequest sR = new StringRequest(Request.Method.POST, "http://103.43.45.237/recfon/api/update_status_gizi.php",
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
 //                        Intent i = new Intent(getApplicationContext(), Login.class);
 //                        startActivity(i);
 //                        finish();
-//                    }
-//                },
-//                new Response.ErrorListener() {
-//                    @Override
-//                    public void onErrorResponse(VolleyError error) {
-//                        Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
-//                    }
-//                }) {
-//            @Override
-//            protected Map<String, String> getParams() {
-//                Map<String, String> params = new HashMap<String, String>();
-//                params.put(KEY_NAMA, nama);
-//                params.put(KEY_JK, jk);
-//                params.put(KEY_TGL_LAHIR, tgl_lahir);
-//                params.put(KEY_STATUS, status);
-//                params.put(KEY_PEKERJAAN, pekerjaan);
-//                params.put(KEY_HP, telp);
-//                params.put(KEY_EMAIL, email);
-//                params.put(KEY_PASS, password);
-//                params.put(KEY_MHS, sMhs);
-//                params.put(KEY_DKI, tinggalDKI);
-//                return params;
-//            }
-//
-//        };
-////        Toast.makeText(getApplicationContext(), txt_email + " makanan = " + makanan, Toast.LENGTH_LONG).show();
-//        int socketTimeout = 30000;//30 seconds - change to what you want
-//        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
-//
-//        RequestQueue requestQueue = Volley.newRequestQueue(this);
-//        sR.setRetryPolicy(policy);
-//        requestQueue.add(sR);
-//    }
+                        System.out.println("sql"+response);
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
+                    }
+                }) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put(KEY_BERAT, BB);
+                params.put(KEY_UKURBB, ukurBB);
+                params.put(KEY_TINGGI, TB);
+                params.put(KEY_UKURTB, ukurTB);
+                params.put(KEY_MEROKOK, merokok);
+                params.put(KEY_ALKOHOL, alkohol);
+                params.put(KEY_PENYAKIT, penyakit);
+                params.put(KEY_MAKAN, makan);
+                params.put(KEY_SARAPAN, sarapan);
+                params.put(KEY_Email, txtEmail);
+
+                return params;
+            }
+
+        };
+//        Toast.makeText(getApplicationContext(), txt_email + " makanan = " + makanan, Toast.LENGTH_LONG).show();
+        int socketTimeout = 30000;//30 seconds - change to what you want
+        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        sR.setRetryPolicy(policy);
+        requestQueue.add(sR);
+    }
 }
