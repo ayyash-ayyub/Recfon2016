@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -47,7 +48,7 @@ public class Register extends AppCompatActivity {
 
 
     TextView signinhere;
-    Button signup;
+    Button signup,ngisiTTL;
     ProgressDialog progressDialog;
 
     EditText txt_nama, txt_tanggal, txt_email, txt_hp, txt_password;
@@ -68,7 +69,11 @@ public class Register extends AppCompatActivity {
 
         txt_nama = (EditText)findViewById(R.id.txtNama);
         txt_tanggal = (EditText)findViewById(R.id.txtTgl);
+        ngisiTTL =(Button)findViewById(R.id.ngisiTTL);
         txt_tanggal.setText("klik disini untuk mengisi");
+        txt_tanggal.setText("tempat tanggal lahir");
+
+
 
 
         txt_tanggal.setOnClickListener(new View.OnClickListener() {
@@ -200,7 +205,7 @@ public class Register extends AppCompatActivity {
         //final String sIdKelas = "100000";
         //final int saveIdKelas = Integer.parseInt(sIdKelas);
 
-        StringRequest sR = new StringRequest(Request.Method.POST, "http://103.43.45.237/recfon/api/register.php",
+        StringRequest sR = new StringRequest(Request.Method.POST, ConfigUmum.REGISTER,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
