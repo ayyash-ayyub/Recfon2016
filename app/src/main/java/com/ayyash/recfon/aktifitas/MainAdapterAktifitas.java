@@ -19,6 +19,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.ayyash.recfon.ConfigUmum;
 import com.ayyash.recfon.ItemObject;
+import com.ayyash.recfon.MainHolder;
 import com.ayyash.recfon.aktifitas.MainHolderAktifitas;
 import com.ayyash.recfon.R;
 
@@ -33,19 +34,23 @@ public class MainAdapterAktifitas extends RecyclerView.Adapter<MainHolderAktifit
 
 
 
-    public List<ItemObjectAktifitas.ObjectBelajar.Results> resultsList;
+    public List<ItemObjectAktifitas.ObjectAkatifitas.Results> resultsList;
     public Context context;
 
-    public MainAdapterAktifitas(Context context, List<ItemObjectAktifitas.ObjectBelajar.Results> resultsList) {
+    public MainAdapterAktifitas(Context context, List<ItemObjectAktifitas.ObjectAkatifitas.Results> resultsList) {
+
         this.context = context;
         this.resultsList = resultsList;
     }
 
     @Override
     public MainHolderAktifitas onCreateViewHolder(ViewGroup parent, int viewType) {
+
+
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_item_aktifitas, null);
         MainHolderAktifitas mainHolder = new MainHolderAktifitas(view);
         return mainHolder;
+
     }
 
 
@@ -73,7 +78,7 @@ public class MainAdapterAktifitas extends RecyclerView.Adapter<MainHolderAktifit
 
     @Override
     public void onBindViewHolder(MainHolderAktifitas holder, final int position) {
-        holder.txt_name.setText("Nama Makanan : "+resultsList.get(position).activity);
+        holder.txt_name.setText("Aktifitas : : "+resultsList.get(position).activity);
         holder.txt_office.setText("Durasi : "+resultsList.get(position).durasi);
 
 

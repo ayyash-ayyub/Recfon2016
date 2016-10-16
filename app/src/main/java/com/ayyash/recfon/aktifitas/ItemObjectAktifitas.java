@@ -6,7 +6,7 @@ import java.util.List;
 
 
 public class ItemObjectAktifitas {
-    public class ObjectBelajar {
+    public class ObjectAkatifitas {
         @SerializedName("result")
         public List<Results> result;
 

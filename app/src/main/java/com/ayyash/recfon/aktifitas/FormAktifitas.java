@@ -136,7 +136,7 @@ public class FormAktifitas extends AppCompatActivity {
         // Setting Dialog Message
         alertDialog.setMessage("Apakah Anda yakin data yang anda masukkan sudah Sesuai?");
         // Setting Icon to Dialog
-        alertDialog.setIcon(R.drawable.x);
+        alertDialog.setIcon(R.drawable.i);
 
         // Setting Positive "Yes" Button
         alertDialog.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
@@ -172,10 +172,10 @@ public class FormAktifitas extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
-                        namaAktifitas.setText(response);
-//                        Intent i = new Intent(getApplicationContext(), AktifitasFisik.class);
-//                        startActivity(i);
-//                        finish();
+                       // namaAktifitas.setText(response);
+                        Intent i = new Intent(getApplicationContext(), AktifitasFisik.class);
+                        startActivity(i);
+                        finish();
                     }
                 },
                 new Response.ErrorListener() {
@@ -195,7 +195,7 @@ public class FormAktifitas extends AppCompatActivity {
             }
 
         };
-        Toast.makeText(getApplicationContext(), txt_email + " aktifitas = " + aktifitas+" sasda"+durasi, Toast.LENGTH_LONG).show();
+       // Toast.makeText(getApplicationContext(), txt_email + " aktifitas = " + aktifitas+" sasda"+durasi, Toast.LENGTH_LONG).show();
         int socketTimeout = 30000;//30 seconds - change to what you want
         RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());

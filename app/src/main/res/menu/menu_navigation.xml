@@ -1,29 +1,30 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <group
         android:checkableBehavior="single" >
         <item
-            android:title="Eating Habit "
-            android:id="@+id/kebiasaan"
-            android:icon="@drawable/habit" />
+            android:title="Status Gizi"
+            android:id="@+id/StatusGizi"
+            android:icon="@drawable/gizi_icon" />
 
         <item
-            android:title="Food Frequency Questionnaire"
+            android:title="Catatan makan harian"
             android:id="@+id/foodRecord"
             
             android:icon="@drawable/food_recall" />
         <item
-            android:title="Food Recall"
+            android:title="Aktifitas Fisik"
+            android:id="@+id/aktifitasFisik"
+            android:icon="@drawable/activity" />
+
+        <item
+            android:title="Frekuensi makan sebulan"
             android:id="@+id/foodRecall"
             android:icon="@drawable/food_records" />
         <item
-            android:title="Physical Activity"
-            android:id="@+id/aktifitasFisik"
-            android:icon="@drawable/activity" />
-        <item
-            android:title="Status Gizi"
-            android:id="@+id/StatusGizi"
-            android:icon="@drawable/activity" />
-
+            android:title="Profil kalori Anda"
+            android:id="@+id/kebiasaan"
+            android:icon="@drawable/habit" />
         <item
             android:title="Logout"
             android:id="@+id/keluarCuy"

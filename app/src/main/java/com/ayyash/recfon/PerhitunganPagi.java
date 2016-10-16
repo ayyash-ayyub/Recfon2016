@@ -190,7 +190,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -244,7 +244,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -295,7 +295,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -356,7 +356,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -407,7 +407,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -456,7 +456,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -506,7 +506,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -555,7 +555,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -672,7 +672,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 ////                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 //
 //                        hEnergiSort = df.format(hEnergi);
-//                        hProteinSort = df.format(hEnergi);
+//                        hProteinSort = df.format(hProtein);
 //                        hLemakSort = df.format(hLemak);
 //                        hKaloriSort = df.format(hKalori);
 //
@@ -722,7 +722,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -771,7 +771,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -820,7 +820,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -868,7 +868,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -917,7 +917,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -977,7 +977,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -1029,7 +1029,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -1088,7 +1088,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -1142,7 +1142,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -1191,7 +1191,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -1240,7 +1240,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -1294,7 +1294,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -1343,7 +1343,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -1392,7 +1392,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -1441,7 +1441,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -1495,7 +1495,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -1544,7 +1544,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -1594,7 +1594,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -1648,7 +1648,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -1744,7 +1744,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -1798,7 +1798,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -1852,7 +1852,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -1906,7 +1906,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -1960,7 +1960,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -2014,7 +2014,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -2068,7 +2068,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -2120,7 +2120,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -2174,7 +2174,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -2223,7 +2223,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -2276,7 +2276,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -2330,7 +2330,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -2379,7 +2379,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -2428,7 +2428,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -2477,7 +2477,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -2531,7 +2531,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -2585,7 +2585,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -2633,7 +2633,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -2681,7 +2681,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -2735,7 +2735,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -2789,7 +2789,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -2843,7 +2843,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -2892,7 +2892,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -2941,7 +2941,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -2990,7 +2990,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -3039,7 +3039,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -3093,7 +3093,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -3147,7 +3147,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -3196,7 +3196,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -3245,7 +3245,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -3294,7 +3294,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -3343,7 +3343,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -3392,7 +3392,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -3446,7 +3446,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -3495,7 +3495,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -3544,7 +3544,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -3598,7 +3598,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -3647,7 +3647,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -3739,7 +3739,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -3788,7 +3788,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -3842,7 +3842,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -3891,7 +3891,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -3950,7 +3950,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -3999,7 +3999,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -4048,7 +4048,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -4097,7 +4097,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -4146,7 +4146,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -4195,7 +4195,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -4244,7 +4244,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -4293,7 +4293,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -4342,7 +4342,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -4391,7 +4391,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -4440,7 +4440,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -4489,7 +4489,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -4538,7 +4538,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -4587,7 +4587,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -4636,7 +4636,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -4695,7 +4695,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -4749,7 +4749,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -4803,7 +4803,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -4852,7 +4852,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -4901,7 +4901,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -4950,7 +4950,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -5004,7 +5004,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -5053,7 +5053,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -5107,7 +5107,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -5156,7 +5156,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -5210,7 +5210,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -5274,7 +5274,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -5335,7 +5335,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -5407,7 +5407,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -5479,7 +5479,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -5551,7 +5551,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -5622,7 +5622,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -5695,7 +5695,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -5766,7 +5766,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -5815,7 +5815,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -5875,7 +5875,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -5929,7 +5929,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -5978,7 +5978,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -6027,7 +6027,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -6081,7 +6081,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -6135,7 +6135,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -6189,7 +6189,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -6243,7 +6243,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -6292,7 +6292,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -6341,7 +6341,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -6390,7 +6390,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -6439,7 +6439,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -6488,7 +6488,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -6537,7 +6537,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -6586,7 +6586,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -6636,7 +6636,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -6685,7 +6685,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -6734,7 +6734,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -6784,7 +6784,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -6833,7 +6833,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -6882,7 +6882,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -6931,7 +6931,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -6980,7 +6980,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -7029,7 +7029,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -7078,7 +7078,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -7127,7 +7127,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -7176,7 +7176,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -7235,7 +7235,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -7284,7 +7284,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -7333,7 +7333,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -7382,7 +7382,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -7431,7 +7431,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -7482,7 +7482,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -7531,7 +7531,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -7580,7 +7580,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -7631,7 +7631,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -7682,7 +7682,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -7733,7 +7733,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -7784,7 +7784,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -7865,7 +7865,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -7920,7 +7920,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -7973,7 +7973,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -8025,7 +8025,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -8078,7 +8078,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -8129,7 +8129,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -8181,7 +8181,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -8235,7 +8235,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -8333,7 +8333,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 ////                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 //
 //                        hEnergiSort = df.format(hEnergi);
-//                        hProteinSort = df.format(hEnergi);
+//                        hProteinSort = df.format(hProtein);
 //                        hLemakSort = df.format(hLemak);
 //                        hKaloriSort = df.format(hKalori);
 //
@@ -8388,7 +8388,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -8442,7 +8442,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -8513,7 +8513,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -8567,7 +8567,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -8631,7 +8631,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -8686,7 +8686,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -8735,7 +8735,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -8809,7 +8809,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -8873,7 +8873,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -8927,7 +8927,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -8976,7 +8976,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -9025,7 +9025,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -9074,7 +9074,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -9128,7 +9128,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -9177,7 +9177,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -9226,7 +9226,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -9275,7 +9275,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -9329,7 +9329,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -9383,7 +9383,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -9448,7 +9448,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -9497,7 +9497,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -9546,7 +9546,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -9595,7 +9595,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 
@@ -9693,7 +9693,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 //                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
-                        hProteinSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
                         hLemakSort = df.format(hLemak);
                         hKaloriSort = df.format(hKalori);
 

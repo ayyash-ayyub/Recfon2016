@@ -195,7 +195,7 @@ public class SarapanActivity extends AppCompatActivity {
         // Setting Dialog Message
         alertDialog.setMessage("Apakah Anda yakin sudah memasukan semua menu sarapan Anda?");
         // Setting Icon to Dialog
-        alertDialog.setIcon(R.drawable.x);
+        alertDialog.setIcon(R.drawable.i);
 
         // Setting Positive "Yes" Button
         alertDialog.setPositiveButton("Ya", new DialogInterface.OnClickListener() {

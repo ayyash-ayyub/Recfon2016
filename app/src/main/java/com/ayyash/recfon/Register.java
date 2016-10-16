@@ -1,5 +1,6 @@
 package com.ayyash.recfon;
 
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -25,6 +27,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -50,6 +53,7 @@ public class Register extends AppCompatActivity {
     EditText txt_nama, txt_tanggal, txt_email, txt_hp, txt_password;
     RadioGroup rgjk, rgstatus, rgpekerjaan, rgtinggal, rgstatus_user;
     RadioButton rbStatusUser, rbJK, rbPekerjaan, rbDKI, rbStatus;
+    DatePickerDialog datePickerDialog;
 
     Typeface fonts1;
 
@@ -64,6 +68,36 @@ public class Register extends AppCompatActivity {
 
         txt_nama = (EditText)findViewById(R.id.txtNama);
         txt_tanggal = (EditText)findViewById(R.id.txtTgl);
+        txt_tanggal.setText("klik disini untuk mengisi");
+
+
+        txt_tanggal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // calender class's instance and get current date , month and year from calender
+                final Calendar c = Calendar.getInstance();
+                int mYear = c.get(Calendar.YEAR); // current year
+                int mMonth = c.get(Calendar.MONTH); // current month
+                int mDay = c.get(Calendar.DAY_OF_MONTH); // current day
+                // date picker dialog
+                datePickerDialog = new DatePickerDialog(Register.this,
+                        new DatePickerDialog.OnDateSetListener() {
+
+                            @Override
+                            public void onDateSet(DatePicker view, int year,
+                                                  int monthOfYear, int dayOfMonth) {
+                                // set day of month , month and year value in the edit text
+                                txt_tanggal.setText(dayOfMonth + "/"
+                                        + (monthOfYear + 1) + "/" + year);
+
+                            }
+                        }, mYear, mMonth, mDay);
+                datePickerDialog.show();
+            }
+        });
+
+
+
         txt_email = (EditText)findViewById(R.id.email);
         txt_hp = (EditText)findViewById(R.id.telp);
         txt_password = (EditText)findViewById(R.id.password);
