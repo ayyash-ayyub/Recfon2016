@@ -78,8 +78,8 @@ public class MainAdapterAktifitas extends RecyclerView.Adapter<MainHolderAktifit
 
     @Override
     public void onBindViewHolder(MainHolderAktifitas holder, final int position) {
-        holder.txt_name.setText("Aktifitas : : "+resultsList.get(position).activity);
-        holder.txt_office.setText("Durasi : "+resultsList.get(position).durasi);
+        holder.txt_name.setText(resultsList.get(position).activity);
+        holder.txt_durasi.setText(resultsList.get(position).durasi);
 
 
 //        final String nama_makanan =resultsList.get(position).activity;

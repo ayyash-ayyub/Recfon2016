@@ -37,7 +37,7 @@ import org.json.JSONObject;
 public class AktifitasFisik extends AppCompatActivity {
 
     ProgressDialog progressDialog;
-    private ItemObjectAktifitas.ObjectAkatifitas objectBelajar;
+    private ItemObjectAktifitas.ObjectAkatifitas objectAkatifitas;
     private MainAdapterAktifitas adapter;
     private RecyclerView rv_item;
     String email;
@@ -78,10 +78,10 @@ public class AktifitasFisik extends AppCompatActivity {
             public void onResponse(String response) {
                 GsonBuilder builder = new GsonBuilder();
                 Gson mGson = builder.create();
-                objectBelajar = mGson.fromJson(response, ItemObjectAktifitas.ObjectAkatifitas.class);
+                objectAkatifitas = mGson.fromJson(response, ItemObjectAktifitas.ObjectAkatifitas.class);
                 System.out.println("Respond "+ response);
                // adapter = new MainAdapterAktifitas(this, objectBelajar.result);
-                adapter = new MainAdapterAktifitas(getApplication(), objectBelajar.result);
+                adapter = new MainAdapterAktifitas(getApplication(), objectAkatifitas.result);
               //  adapter = new MainAdapterAktifitas((Response.Listener<String>) getApplication(), objectBelajar.result);
                 rv_item.setAdapter(adapter);
 //                if(response.contains("1")){

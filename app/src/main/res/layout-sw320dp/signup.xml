@@ -141,29 +141,48 @@
                     android:textColor="@color/colorhint"
                     android:layout_height="wrap_content"
                     android:text="Tanggal Lahir"/>
-                <customsfonts.MyEditText
-                    android:id="@+id/txtTgl"
-                    android:textSize="16dp"
-                    android:layout_width="253dp"
-                    android:layout_height="wrap_content"
-                    android:hint="YYYY/MM/DD"
-                    android:layout_marginLeft="46dp"
 
-                    android:textColorHint="@color/colorhint"
-                    android:textColor="@color/colortext"
-
-                    android:background="#0000"
-                    android:padding="16dp"
-                    android:gravity="left"
-                    />
-
-                <View
+                <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_marginLeft="56dp"
-                    android:layout_marginRight="56dp"
-                    android:layout_height="1dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="#dad8d8"/>
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_marginLeft="46dp"
+                        android:orientation="vertical"
+                        android:layout_width="215dp"
+                        android:layout_height="match_parent">
+
+                        <customsfonts.MyEditText
+                            android:id="@+id/txtTgl"
+                            android:textSize="16dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint='tempat tanggal lahir"'
+
+
+                            android:textColorHint="@color/colorhint"
+                            android:textColor="@color/colortext"
+
+                            android:background="#0000"
+                            android:padding="16dp"
+                            android:gravity="left"
+                            />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="#dad8d8"/>
+                    </LinearLayout>
+
+                    <Button
+                        android:text="Button"
+                        android:layout_width="63dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ngisiTTL" />
+
+                </LinearLayout>
 
                 <TextView
                     android:textStyle="bold"
