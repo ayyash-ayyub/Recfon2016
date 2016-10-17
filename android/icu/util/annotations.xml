@@ -1,0 +1,5 @@
+<root>
+  <item name='android.icu.util.Calendar'>
+    <annotation name='android.support.annotation.NonNull' />
+  </item>
+</root>

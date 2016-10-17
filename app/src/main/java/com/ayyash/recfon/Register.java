@@ -70,8 +70,8 @@ public class Register extends AppCompatActivity {
         txt_nama = (EditText)findViewById(R.id.txtNama);
         txt_tanggal = (EditText)findViewById(R.id.txtTgl);
         ngisiTTL =(Button)findViewById(R.id.ngisiTTL);
-        txt_tanggal.setText("klik disini untuk mengisi");
-        txt_tanggal.setText("tempat tanggal lahir");
+       // ngisiTTL.setText("klik disini untuk mengisi");
+       // txt_tanggal.setText("tempat tanggal lahir");
 
 
 

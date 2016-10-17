@@ -15,6 +15,7 @@
         <item>Mie instant rebus </item>
         <item>Mie goreng (Bukan instant)  </item>
         <!--<item>Kwetiaw goreng </item>-->
+        <item>Madu</item>
         <item>Bihun goreng  </item>
         <item>Mie ayam  </item>
         <item>Spagheti </item>
@@ -161,6 +162,7 @@
         <item>Emping goreng (Kerupuk melinjo)</item>
         <item>Happy tos tortilla chips</item>
         <!--<item>Pop corn</item>-->
+        <item>Selai kacang tanah (Peanut butter)</item>
         <item>Permen</item>
         <item>Minuman bersoda (Fanta, Sprite, Coca cola, Pepsi)</item>
         <item>Minuman isotonik (Pocari sweet, Mizone)</item>
@@ -187,7 +189,7 @@
         <item>Abon sapi</item>
         <item>Abon ikan</item>
         <item>Jam / Selai</item>
-        <item>Selai kacang tanah (Peanut butter)</item>
-        <item>Madu</item>
+
+
     </string-array>
 </resources>
