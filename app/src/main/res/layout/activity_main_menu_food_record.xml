@@ -27,6 +27,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center">
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -38,14 +39,14 @@
             android:layout_height="150dp"
             android:layout_width="150dp"
             android:id="@+id/btnsarapanpagi"
-            android:background="@drawable/sarapanpagis" />
+            android:background="@drawable/sarapan_pagi" />
 
         <Button
             android:layout_margin="10dp"
             android:id="@+id/selinganPagi"
             android:layout_height="150dp"
             android:layout_width="150dp"
-            android:background="@drawable/selinganpagis" />
+            android:background="@drawable/selingan_pagi" />
     </LinearLayout>
 
     <LinearLayout
@@ -59,14 +60,14 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:id="@+id/makanSiang"
-            android:background="@drawable/msiang" />
+            android:background="@drawable/makan_siang" />
 
         <Button
             android:layout_margin="10dp"
             android:layout_height="150dp"
             android:id="@+id/seliSiang"
             android:layout_width="150dp"
-            android:background="@drawable/selingansiang" />
+            android:background="@drawable/selingan_siang" />
     </LinearLayout>
     <LinearLayout
         android:gravity="center"
@@ -79,14 +80,14 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:id="@+id/makanMalam"
-            android:background="@drawable/mmalam" />
+            android:background="@drawable/makan_malam" />
 
         <Button
             android:layout_margin="10dp"
             android:layout_height="150dp"
             android:id="@+id/selinganMala"
             android:layout_width="150dp"
-            android:background="@drawable/selinganmalam" />
+            android:background="@drawable/selingan_malam" />
     </LinearLayout>
     <LinearLayout
         android:gravity="center"
@@ -102,6 +103,7 @@
             android:theme="@style/PrimaryButton"
             android:id="@+id/Asupan"
              />
+
     </LinearLayout>
 
 </LinearLayout>

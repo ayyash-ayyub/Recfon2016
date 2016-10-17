@@ -41,7 +41,9 @@
             android:textColor="@color/colortext"
             android:background="#0000"
             android:padding="16dp"
-            android:gravity="left"/>
+            android:gravity="left"
+            android:inputType="numberDecimal"
+            android:singleLine="true" />
 
         <View
             android:layout_width="56dp"
@@ -67,7 +69,9 @@
                 android:textColor="@color/colortext"
                 android:background="#0000"
                 android:padding="16dp"
-                android:gravity="left"/>
+                android:gravity="left"
+                android:inputType="numberDecimal"
+                android:singleLine="true" />
 
             <View
                 android:layout_width="56dp"

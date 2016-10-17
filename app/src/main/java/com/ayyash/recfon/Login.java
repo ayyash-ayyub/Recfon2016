@@ -47,7 +47,7 @@ public class Login extends AppCompatActivity {
 
         email = (EditText)findViewById(R.id.txtEmail);
         password = (EditText)findViewById(R.id.txtPassword);
-        btnLogin = (Button)findViewById(R.id.btnLogin);
+        btnLogin = (Button)findViewById(R.id.signin1);
 
         login = (Button) findViewById(R.id.signin1);
         acc = (TextView) findViewById(R.id.create);
