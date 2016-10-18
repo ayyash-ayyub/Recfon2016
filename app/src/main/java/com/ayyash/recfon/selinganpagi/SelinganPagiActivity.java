@@ -1,4 +1,4 @@
-package com.ayyash.recfon;
+package com.ayyash.recfon.selinganpagi;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -6,14 +6,12 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.icu.text.SimpleDateFormat;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,14 +23,18 @@ import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.ayyash.recfon.ConfigUmum;
+import com.ayyash.recfon.ItemObject;
+import com.ayyash.recfon.MainAdapter;
+import com.ayyash.recfon.MenuFoodsRecord;
+import com.ayyash.recfon.R;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SarapanActivity extends AppCompatActivity {
+public class SelinganPagiActivity extends AppCompatActivity {
     public static final String KEY_EMAIL = "txt_email";
     public static final String KEY_MKN = "makanan";
     public static final String KEY_UKUR = "ukuran";
@@ -54,7 +56,7 @@ public class SarapanActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sarapan_activity);
+        setContentView(R.layout.selingan_pagi_activity);
 
         bgSpinner = (CardView)findViewById(R.id.bgSpiner);
         SharedPreferences sharedPreferences = getSharedPreferences(ConfigUmum.SHARED_PREF_NAME, Context.MODE_PRIVATE);
@@ -79,7 +81,7 @@ public class SarapanActivity extends AppCompatActivity {
             }
         });
 
-        GetData(ConfigUmum.URL_SHOW_PAGI + email);
+        GetData(ConfigUmum.URL_SHOW_SELINGAN_PAGI + email);
 
 
 
@@ -101,12 +103,12 @@ public class SarapanActivity extends AppCompatActivity {
         //final String sIdKelas = "100000";
         //final int saveIdKelas = Integer.parseInt(sIdKelas);
 
-        StringRequest sR = new StringRequest(Request.Method.POST, "http://103.43.45.237/recfon/api/insert_record_pagi.php",
+        StringRequest sR = new StringRequest(Request.Method.POST, ConfigUmum.URL_INSERT_SELINGAN_PAGI,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
-                        Intent i = new Intent(getApplicationContext(), SarapanActivity.class);
+                        Intent i = new Intent(getApplicationContext(), SelinganPagiActivity.class);
                         startActivity(i);
                         finish();
                     }
@@ -160,7 +162,7 @@ public class SarapanActivity extends AppCompatActivity {
 //                }else {
 //                    tidakSarapan.setVisibility(View.VISIBLE);
 //                }
-                if (response.contains("Tidak Sarapan")){
+                if (response.contains("tidak makan")){
                     bgSpinner.setVisibility(View.GONE);
                     tidakSarapan.setVisibility(View.VISIBLE);
                     rv_item.setVisibility(View.GONE);
@@ -186,10 +188,10 @@ public class SarapanActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(SarapanActivity.this);
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(SelinganPagiActivity.this);
 
         // Setting Dialog Title
-        alertDialog.setTitle("Sarapan");
+        alertDialog.setTitle("Konfirmasi");
         // Setting Dialog Message
         alertDialog.setMessage("Apakah Anda yakin sudah memasukan semua menu sarapan Anda?");
         // Setting Icon to Dialog

@@ -24,6 +24,8 @@ public class HalamanDepan extends AppCompatActivity {
         signin = (Button)findViewById(R.id.signin);
         signup = (Button)findViewById(R.id.Signup);
 
+        
+
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

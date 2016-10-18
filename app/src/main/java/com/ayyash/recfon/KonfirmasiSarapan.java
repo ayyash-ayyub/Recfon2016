@@ -74,7 +74,7 @@ public class KonfirmasiSarapan extends AppCompatActivity {
 
     private void SaveTidak() {
         final String txt_email = email.toString().trim();
-        final String makanan = "Tidak Sarapan";
+        final String makanan = "tidak makan";
         final String jumlah = "";
         final String ukuran = "";
         final String energi1 = "";
