@@ -351,7 +351,7 @@ public class StatusGizi extends AppCompatActivity {
         //final String sIdKelas = "100000";
         //final int saveIdKelas = Integer.parseInt(sIdKelas);
 
-        StringRequest sR = new StringRequest(Request.Method.POST, "http://103.43.45.237/recfon/api/update_status_gizi.php",
+        StringRequest sR = new StringRequest(Request.Method.POST, ConfigUmum.URL_UPDATE_STATUS_GIZI,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {

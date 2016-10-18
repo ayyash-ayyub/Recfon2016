@@ -30,6 +30,7 @@
         <activity android:name=".MainMenu" />
         <activity android:name=".StatusGizi" />
         <activity android:name=".aktifitas.AktifitasFisik" />
+        <activity android:name=".ForgotPassword" />
         <activity
             android:name=".aktifitas.FormAktifitas"
             android:theme="@style/Theme.AppCompat.Light.Dialog"></activity>

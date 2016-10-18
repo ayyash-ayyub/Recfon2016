@@ -71,73 +71,11 @@ public class SarapanActivity extends AppCompatActivity {
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Silahkan Tunggu...");
 
-        tidakSarapan = (TextView)findViewById(R.id.textView9);
-        tidakSarapan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                SaveTidak();
-            }
-        });
 
         GetData(ConfigUmum.URL_SHOW_PAGI + email);
 
 
 
-    }
-
-
-    private void SaveTidak() {
-        final String txt_email = email.toString().trim();
-        final String makanan = "";
-        final String jumlah = "";
-        final String ukuran = "";
-        final String energi1 = "";
-        final String protein1 = "";
-        final String lemak1 = "";
-        final String kalori1 = "";
-
-        //parsing id kelas
-//            final String sIdKelas = getIdKelas(ambilIDKelas);
-        //final String sIdKelas = "100000";
-        //final int saveIdKelas = Integer.parseInt(sIdKelas);
-
-        StringRequest sR = new StringRequest(Request.Method.POST, "http://103.43.45.237/recfon/api/insert_record_pagi.php",
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
-                        Intent i = new Intent(getApplicationContext(), SarapanActivity.class);
-                        startActivity(i);
-                        finish();
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
-                    }
-                }) {
-            @Override
-            protected Map<String, String> getParams() {
-                Map<String, String> params = new HashMap<String, String>();
-                params.put(KEY_EMAIL, txt_email);
-                params.put(KEY_MKN, makanan);
-                params.put(KEY_UKUR, ukuran);
-                params.put(KEY_JML, jumlah);
-                params.put(KEY_ENERGI, energi1);
-                params.put(KEY_PROTEIN, protein1);
-                params.put(KEY_LEMAK, lemak1);
-                params.put(KEY_KALORI, kalori1);
-                return params;
-            }
-
-        };
-        //Toast.makeText(getApplicationContext(), txt_email + " makanan = " + makanan, Toast.LENGTH_LONG).show();
-        int socketTimeout = 30000;//30 seconds - change to what you want
-        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        sR.setRetryPolicy(policy);
-        requestQueue.add(sR);
     }
 
 
@@ -175,8 +113,7 @@ public class SarapanActivity extends AppCompatActivity {
                 progressDialog.hide();
             }
         });
-//        int socketTimeout = 30000;//30 seconds - change to what you want
-//        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+
         int socketTimeout = 30000;//30 seconds - change to what you want
         RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
         stringRequest.setRetryPolicy(policy);
