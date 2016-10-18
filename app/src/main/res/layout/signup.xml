@@ -158,7 +158,7 @@
                             android:textSize="16dp"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint='tempat tanggal lahir"'
+                            android:hint="klik icon disamping"
 
 
                             android:textColorHint="@color/colorhint"
@@ -177,10 +177,10 @@
                     </LinearLayout>
 
                     <Button
-                        android:text="Button"
                         android:layout_width="63dp"
                         android:layout_height="wrap_content"
-                        android:id="@+id/ngisiTTL" />
+                        android:id="@+id/ngisiTTL"
+                        android:background="@drawable/calendar" />
 
                 </LinearLayout>
 
