@@ -156,8 +156,8 @@ public class PerhitunganPagi extends AppCompatActivity {
 
                 rg.setVisibility(View.VISIBLE);
 
-                r1.setText("Centong Plastik");
-                r2.setText("Centong Rice Cook");
+                r1.setText("Centong ");
+                r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -168,12 +168,9 @@ public class PerhitunganPagi extends AppCompatActivity {
                         double k = 39.95;
 
                         if (r1.isChecked()) {
-                            urt = 60 * pengali;
-                            ukuran = "Centong Plastik";
-
-                        } else if (r2.isChecked()) {
                             urt = 50 * pengali;
-                            ukuran = "Centong Rice Cook";
+                            ukuran = "Centong ";
+
                         }
 
 
@@ -215,7 +212,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 
                 rg.setVisibility(View.VISIBLE);
 
-                r1.setText("Centong Plastik");
+                r1.setText("Centong ");
                 r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
@@ -227,8 +224,8 @@ public class PerhitunganPagi extends AppCompatActivity {
                         double k = 38.1;
 
                         if (r1.isChecked()) {
-                            urt = 60 * pengali;
-                            ukuran = "Centong Plastik";
+                            urt = 50 * pengali;
+                            ukuran = "Centong ";
                         }
 
                         //JANGAN DIGANTI BAGIAN INI
@@ -266,7 +263,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 Img.setImageResource(R.drawable.nasi);
                 rg.setVisibility(View.VISIBLE);
 
-                r1.setText("Centong Plastik");
+                r1.setText("Centong ");
                 r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
@@ -278,8 +275,8 @@ public class PerhitunganPagi extends AppCompatActivity {
                         double k = 41.31;
 
                         if (r1.isChecked()) {
-                            urt = 60 * pengali;
-                            ukuran = "Centong Plastik";
+                            urt = 50 * pengali;
+                            ukuran = "Centong ";
                         }
 
                         //JANGAN DIGANTI BAGIAN INI
@@ -327,7 +324,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 Img.setImageResource(R.drawable.nasi);
                 rg.setVisibility(View.VISIBLE);
 
-                r1.setText("Centong Plastik");
+                r1.setText("Centong ");
                 r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
@@ -339,7 +336,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                         double k = 38.82;
 
                         if (r1.isChecked()) {
-                            urt = 60 * pengali;
+                            urt = 50 * pengali;
                             ukuran = "Centong Plastik";
                         }
 
@@ -937,11 +934,9 @@ public class PerhitunganPagi extends AppCompatActivity {
                 Img.setImageResource(R.drawable.roti_tawar);
                 rg.setVisibility(View.VISIBLE);
                 r2.setVisibility(View.VISIBLE);
-                r3.setVisibility(View.VISIBLE);
 
                 r1.setText("Lembar A");
                 r2.setText("Lembar B");
-                r3.setText("Lembar C");
 
 
                 hitung.setOnClickListener(new View.OnClickListener() {
@@ -958,9 +953,6 @@ public class PerhitunganPagi extends AppCompatActivity {
                         } else if (r2.isChecked()) {
                             urt = 20 * pengali;
                             ukuran = "Lembar B";
-                        } else if (r3.isChecked()) {
-                            urt = 30 * pengali;
-                            ukuran = "Lembar C";
                         }
 
 
@@ -1108,8 +1100,9 @@ public class PerhitunganPagi extends AppCompatActivity {
                 Img.setImageResource(R.drawable.perkedel_kentang);
                 rg.setVisibility(View.VISIBLE);
 
-                r1.setText("Buah sedang");
-                r2.setText("Buah besar");
+                r1.setText("Buah besar");
+                r2.setText("Buah sedang");
+                r3.setText("Buah kecil");
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -1120,12 +1113,14 @@ public class PerhitunganPagi extends AppCompatActivity {
                         double k = 10.44;
 
                         if (r1.isChecked()) {
-                            urt = 20 * pengali;
-                            ukuran = "Buah sedang";
-                        }
-                        if (r2.isChecked()) {
                             urt = 40 * pengali;
-                            ukuran = "buah besar";
+                            ukuran = "Buah sedang";
+                        }else if (r2.isChecked()) {
+                            urt = 20 * pengali;
+                            ukuran = "Buah besar";
+                        }else if (r3.isChecked()){
+                            urt = 10 * pengali;
+                            ukuran = "Buah Kecil";
                         }
 
 
@@ -5465,8 +5460,6 @@ public class PerhitunganPagi extends AppCompatActivity {
                             ukuran = "Potong ";
                         }
 
-
-                        //JANGAN DIGANTI BAGIAN INI
                         double hEnergi = (urt / 100) * e;
                         double hProtein = (urt / 100) * p;
                         double hLemak = (urt / 100) * l;
@@ -7814,9 +7807,9 @@ public class PerhitunganPagi extends AppCompatActivity {
                 r7.setVisibility(View.VISIBLE);
 
                 r1.setText("Chunky Bar");
-                r2.setText("Midi");
-                r3.setText("Jumbo");
-                r4.setText("Chunky");
+                r2.setText("SilverQueen Midi");
+                r3.setText("SilverQueen Jumbo");
+                r4.setText("SilverQueen Chunky");
                 r5.setText("Cadbury kecil");
                 r6.setText("Cadbury sedang");
                 r7.setText("Cadbury besar");
@@ -7834,13 +7827,13 @@ public class PerhitunganPagi extends AppCompatActivity {
                             ukuran = "Chunky Bar";
                         } else if (r2.isChecked()) {
                             urt = 33 * pengali;
-                            ukuran = "Midi";
+                            ukuran = "SilverQueen Midi";
                         } else if (r3.isChecked()) {
                             urt = 68 * pengali;
-                            ukuran = "Jumbo";
+                            ukuran = "SilverQueen Jumbo";
                         } else if (r4.isChecked()) {
                             urt = 36 * pengali;
-                            ukuran = "Chunky";
+                            ukuran = "SilverQueen Chunky";
                         } else if (r5.isChecked()) {
                             urt = 30 * pengali;
                             ukuran = "Cadbury kecil";
