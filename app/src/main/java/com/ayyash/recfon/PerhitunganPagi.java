@@ -145,7 +145,7 @@ public class PerhitunganPagi extends AppCompatActivity {
         indexMakanan = i.getIntExtra("indexMakanan", 0);
         nM = i.getStringExtra("namaMakanan");
 
-       // tv.setText("index ke: " + indexMakanan);
+//        tv.setText("index ke: " + indexMakanan);
         namaMakanan.setText("" + nM);
 
 
