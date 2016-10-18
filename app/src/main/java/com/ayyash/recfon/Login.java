@@ -32,7 +32,7 @@ public class Login extends AppCompatActivity {
     EditText email,password;
     Button btnLogin;
     Button login;
-    TextView acc;
+    TextView acc, lupapass;
     Typeface fonts1;
 
 
@@ -51,6 +51,16 @@ public class Login extends AppCompatActivity {
 
         login = (Button) findViewById(R.id.signin1);
         acc = (TextView) findViewById(R.id.create);
+
+        lupapass = (TextView)findViewById(R.id.textView);
+        lupapass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),ForgotPassword.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
         fonts1 =  Typeface.createFromAsset(Login.this.getAssets(),
                 "fonts/Lato-Regular.ttf");
@@ -103,7 +113,7 @@ public class Login extends AppCompatActivity {
         final String passwordA = password.getText().toString().trim();
 
 
-        Toast.makeText(Login.this, "hai: "+nisA +" "+passwordA,Toast.LENGTH_LONG).show();
+//        Toast.makeText(Login.this, "hai: "+nisA +" "+passwordA,Toast.LENGTH_LONG).show();
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST,ConfigUmum.LOGIN_URL,
                 new Response.Listener<String>() {
