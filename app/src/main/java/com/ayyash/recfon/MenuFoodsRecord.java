@@ -19,6 +19,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.ayyash.recfon.R;
+import com.ayyash.recfon.selinganpagi.KonfirmasiSelinganSarapan;
 
 public class MenuFoodsRecord extends AppCompatActivity {
 
@@ -53,6 +54,17 @@ public class MenuFoodsRecord extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(MenuFoodsRecord.this, KonfirmasiSarapan.class);
                 startActivity(i);
+                finish();
+            }
+        });
+
+
+        selinganPagi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MenuFoodsRecord.this, KonfirmasiSelinganSarapan.class);
+                startActivity(i);
+
             }
         });
 

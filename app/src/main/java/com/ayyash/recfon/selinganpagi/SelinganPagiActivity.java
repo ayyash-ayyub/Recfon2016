@@ -1,4 +1,4 @@
-package com.ayyash.recfon;
+package com.ayyash.recfon.selinganpagi;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -6,10 +6,13 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
@@ -20,13 +23,18 @@ import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.ayyash.recfon.ConfigUmum;
+import com.ayyash.recfon.ItemObject;
+import com.ayyash.recfon.MainAdapter;
+import com.ayyash.recfon.MenuFoodsRecord;
+import com.ayyash.recfon.R;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class KonfirmasiSarapan extends AppCompatActivity {
+public class SelinganPagiActivity extends AppCompatActivity {
     public static final String KEY_EMAIL = "txt_email";
     public static final String KEY_MKN = "makanan";
     public static final String KEY_UKUR = "ukuran";
@@ -37,44 +45,52 @@ public class KonfirmasiSarapan extends AppCompatActivity {
     public static final String KEY_ENERGI = "energi1";
 
     String email;
+    private ItemObject.ObjectBelajar objectBelajar;
+    private MainAdapter adapter;
+    private RecyclerView rv_item;
+    private LinearLayoutManager layoutManager;
     private ProgressDialog progressDialog;
-
-    Button Ya,Tidak;
+    TextView tanggal;
+    TextView tidakSarapan;
+    CardView bgSpinner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_konfirmasi_sarapan);
+        setContentView(R.layout.selingan_pagi_activity);
+
+        bgSpinner = (CardView)findViewById(R.id.bgSpiner);
         SharedPreferences sharedPreferences = getSharedPreferences(ConfigUmum.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         email = sharedPreferences.getString(ConfigUmum.NIS_SHARED_PREF, "tidak tersedia");
 
+        rv_item = (RecyclerView) findViewById(R.id.rv_item);
+        tanggal = (TextView) findViewById(R.id.txtTanggal);
+
+        layoutManager = new LinearLayoutManager(getApplication());
+        rv_item.setHasFixedSize(true);
+        rv_item.setLayoutManager(layoutManager);
+        // Progress dialog
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Silahkan Tunggu...");
-        GetData(ConfigUmum.URL_SHOW_PAGI + email);
 
-        Ya = (Button)findViewById(R.id.btnYa);
-        Ya.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),SarapanActivity.class);
-                startActivity(i);
-                finish();
-            }
-        });
-
-        Tidak = (Button)findViewById(R.id.btnTidak);
-        Tidak.setOnClickListener(new View.OnClickListener() {
+        tidakSarapan = (TextView)findViewById(R.id.textView9);
+        tidakSarapan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 SaveTidak();
             }
         });
 
+        GetData(ConfigUmum.URL_SHOW_SELINGAN_PAGI + email);
+
+
+
     }
+
 
     private void SaveTidak() {
         final String txt_email = email.toString().trim();
-        final String makanan = "tidak makan";
+        final String makanan = "";
         final String jumlah = "";
         final String ukuran = "";
         final String energi1 = "";
@@ -87,12 +103,12 @@ public class KonfirmasiSarapan extends AppCompatActivity {
         //final String sIdKelas = "100000";
         //final int saveIdKelas = Integer.parseInt(sIdKelas);
 
-        StringRequest sR = new StringRequest(Request.Method.POST, ConfigUmum.URL_INSERT_PAGI,
+        StringRequest sR = new StringRequest(Request.Method.POST, ConfigUmum.URL_INSERT_SELINGAN_PAGI,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
-                        Intent i = new Intent(getApplicationContext(), SarapanActivity.class);
+                        Intent i = new Intent(getApplicationContext(), SelinganPagiActivity.class);
                         startActivity(i);
                         finish();
                     }
@@ -136,12 +152,20 @@ public class KonfirmasiSarapan extends AppCompatActivity {
 
             @Override
             public void onResponse(String response) {
-
-                if(response.contains("1")){
-                    Intent i = new Intent(getApplicationContext(),SarapanActivity.class);
-                    startActivity(i);
-                }else {
-
+                GsonBuilder builder = new GsonBuilder();
+                Gson mGson = builder.create();
+                objectBelajar = mGson.fromJson(response, ItemObject.ObjectBelajar.class);
+                adapter = new MainAdapter(getApplication(), objectBelajar.result);
+                rv_item.setAdapter(adapter);
+//                if(response.contains("1")){
+//                    tidakSarapan.setVisibility(View.INVISIBLE);
+//                }else {
+//                    tidakSarapan.setVisibility(View.VISIBLE);
+//                }
+                if (response.contains("tidak makan")){
+                    bgSpinner.setVisibility(View.GONE);
+                    tidakSarapan.setVisibility(View.VISIBLE);
+                    rv_item.setVisibility(View.GONE);
                 }
 
                 progressDialog.hide();
@@ -164,38 +188,39 @@ public class KonfirmasiSarapan extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-//        AlertDialog.Builder alertDialog = new AlertDialog.Builder(SarapanActivity.this);
-//
-//        // Setting Dialog Title
-//        alertDialog.setTitle("Sarapan");
-//        // Setting Dialog Message
-//        alertDialog.setMessage("Apakah Anda yakin sudah memasukan semua menu sarapan Anda?");
-//        // Setting Icon to Dialog
-//        alertDialog.setIcon(R.drawable.i);
-//
-//        // Setting Positive "Yes" Button
-//        alertDialog.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
-//            public void onClick(DialogInterface dialog,int which) {
-//
-//                // Write your code here to invoke YES event
-//                Intent intent = new Intent(getApplicationContext(),MenuFoodsRecord.class);
-//                startActivity(intent);
-//                finish();
-//            }
-//        });
-//
-//        // Setting Negative "NO" Button
-//        alertDialog.setNegativeButton("Cek Kembali", new DialogInterface.OnClickListener() {
-//            public void onClick(DialogInterface dialog, int which) {
-//                // Write your code here to invoke NO event
-////                Toast.makeText(getApplicationContext(), "You clicked on NO", Toast.LENGTH_SHORT).show();
-//                dialog.cancel();
-//            }
-//        });
-//
-//        // Showing Alert Message
-//        alertDialog.show();
-////    }
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(SelinganPagiActivity.this);
+
+        // Setting Dialog Title
+        alertDialog.setTitle("Konfirmasi");
+        // Setting Dialog Message
+        alertDialog.setMessage("Apakah Anda yakin sudah memasukan semua menu sarapan Anda?");
+        // Setting Icon to Dialog
+        alertDialog.setIcon(R.drawable.i);
+
+        // Setting Positive "Yes" Button
+        alertDialog.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog,int which) {
+
+                // Write your code here to invoke YES event
+                Intent intent = new Intent(getApplicationContext(),MenuFoodsRecord.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        // Setting Negative "NO" Button
+        alertDialog.setNegativeButton("Cek Kembali", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                // Write your code here to invoke NO event
+//                Toast.makeText(getApplicationContext(), "You clicked on NO", Toast.LENGTH_SHORT).show();
+                dialog.cancel();
+            }
+        });
+
+        // Showing Alert Message
+        alertDialog.show();
+//    }
 
     }
+
 }

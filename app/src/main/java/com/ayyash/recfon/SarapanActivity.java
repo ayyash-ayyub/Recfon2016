@@ -101,7 +101,7 @@ public class SarapanActivity extends AppCompatActivity {
         //final String sIdKelas = "100000";
         //final int saveIdKelas = Integer.parseInt(sIdKelas);
 
-        StringRequest sR = new StringRequest(Request.Method.POST, "http://103.43.45.237/recfon/api/insert_record_pagi.php",
+        StringRequest sR = new StringRequest(Request.Method.POST, ConfigUmum.URL_INSERT_PAGI,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -160,7 +160,7 @@ public class SarapanActivity extends AppCompatActivity {
 //                }else {
 //                    tidakSarapan.setVisibility(View.VISIBLE);
 //                }
-                if (response.contains("Tidak Sarapan")){
+                if (response.contains("tidak makan")){
                     bgSpinner.setVisibility(View.GONE);
                     tidakSarapan.setVisibility(View.VISIBLE);
                     rv_item.setVisibility(View.GONE);

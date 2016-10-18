@@ -1,13 +1,11 @@
-package com.ayyash.recfon;
+package com.ayyash.recfon.selinganpagi;
 
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -20,13 +18,14 @@ import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import com.ayyash.recfon.ConfigUmum;
+import com.ayyash.recfon.R;
+import com.ayyash.recfon.SarapanActivity;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class KonfirmasiSarapan extends AppCompatActivity {
+public class KonfirmasiSelinganSarapan extends AppCompatActivity {
     public static final String KEY_EMAIL = "txt_email";
     public static final String KEY_MKN = "makanan";
     public static final String KEY_UKUR = "ukuran";
@@ -43,20 +42,20 @@ public class KonfirmasiSarapan extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_konfirmasi_sarapan);
+        setContentView(R.layout.activity_konfirmasi_selingan);
         SharedPreferences sharedPreferences = getSharedPreferences(ConfigUmum.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         email = sharedPreferences.getString(ConfigUmum.NIS_SHARED_PREF, "tidak tersedia");
 
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Silahkan Tunggu...");
-        GetData(ConfigUmum.URL_SHOW_PAGI + email);
+        GetData(ConfigUmum.URL_SHOW_SELINGAN_PAGI + email);
 
         Ya = (Button)findViewById(R.id.btnYa);
         Ya.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),SarapanActivity.class);
+                Intent i = new Intent(getApplicationContext(),SelinganPagiActivity.class);
                 startActivity(i);
                 finish();
             }
@@ -87,12 +86,12 @@ public class KonfirmasiSarapan extends AppCompatActivity {
         //final String sIdKelas = "100000";
         //final int saveIdKelas = Integer.parseInt(sIdKelas);
 
-        StringRequest sR = new StringRequest(Request.Method.POST, ConfigUmum.URL_INSERT_PAGI,
+        StringRequest sR = new StringRequest(Request.Method.POST, ConfigUmum.URL_INSERT_SELINGAN_PAGI,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
-                        Intent i = new Intent(getApplicationContext(), SarapanActivity.class);
+                        Intent i = new Intent(getApplicationContext(), SelinganPagiActivity.class);
                         startActivity(i);
                         finish();
                     }
@@ -137,8 +136,8 @@ public class KonfirmasiSarapan extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
 
-                if(response.contains("1")){
-                    Intent i = new Intent(getApplicationContext(),SarapanActivity.class);
+                if(response.contains("2")){
+                    Intent i = new Intent(getApplicationContext(),SelinganPagiActivity.class);
                     startActivity(i);
                 }else {
 

@@ -14,7 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SarapanActivity" />
+        <activity android:name=".selinganpagi.SelinganPagiActivity" />
+
         <activity android:name=".PerhitunganPagi" />
+        <activity android:name=".selinganpagi.PerhitunganSelinganPagi" />
         <activity android:name=".Register" />
         <activity android:name=".Splash">
             <intent-filter>
@@ -35,6 +38,11 @@
             android:theme="@style/Theme.AppCompat.Light.Dialog"></activity>
         <activity android:name=".KonfirmasiSarapan"
             android:theme="@style/Theme.AppCompat.Light.Dialog"></activity>
+        <activity android:name=".selinganpagi.KonfirmasiSelinganSarapan"
+            android:theme="@style/Theme.AppCompat.Light.Dialog"></activity>
+
+
+
     </application>
 
 </manifest>
