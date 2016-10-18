@@ -1,4 +1,4 @@
-package com.ayyash.recfon.selinganpagi;
+package com.ayyash.recfon.makansiang;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -28,12 +28,13 @@ import com.ayyash.recfon.ItemObject;
 import com.ayyash.recfon.MenuFoodsRecord;
 import com.ayyash.recfon.R;
 import com.ayyash.recfon.SarapanActivity;
+import com.ayyash.recfon.selinganpagi.SelinganPagiActivity;
 
 import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Map;
 
-public class PerhitunganSelinganPagi extends AppCompatActivity {
+public class PerhitunganMakanSiang extends AppCompatActivity {
 
 
     public static final String KEY_EMAIL = "txt_email";
@@ -137,7 +138,7 @@ public class PerhitunganSelinganPagi extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent i = new Intent(PerhitunganSelinganPagi.this, SarapanActivity.class);
+                Intent i = new Intent(PerhitunganMakanSiang.this, MakanSiangActivity.class);
                 startActivity(i);
                 finish();
             }
@@ -9928,12 +9929,12 @@ public class PerhitunganSelinganPagi extends AppCompatActivity {
         //final String sIdKelas = "100000";
         //final int saveIdKelas = Integer.parseInt(sIdKelas);
 
-        StringRequest sR = new StringRequest(Request.Method.POST, ConfigUmum.URL_INSERT_SELINGAN_PAGI,
+        StringRequest sR = new StringRequest(Request.Method.POST, ConfigUmum.URL_INSERT_MAKAN_SIANG,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Toast.makeText(PerhitunganSelinganPagi.this, response, Toast.LENGTH_LONG).show();
-                        Intent i = new Intent(PerhitunganSelinganPagi.this, SelinganPagiActivity.class);
+                        Toast.makeText(PerhitunganMakanSiang.this, response, Toast.LENGTH_LONG).show();
+                        Intent i = new Intent(PerhitunganMakanSiang.this, MakanSiangActivity.class);
                         startActivity(i);
                         finish();
                     }
@@ -9959,7 +9960,7 @@ public class PerhitunganSelinganPagi extends AppCompatActivity {
             }
 
         };
-        Toast.makeText(getApplicationContext(),  "Menambahkan makanan = " + makanan, Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "Menambahkan makanan = " + makanan, Toast.LENGTH_LONG).show();
         int socketTimeout = 30000;//30 seconds - change to what you want
         RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());

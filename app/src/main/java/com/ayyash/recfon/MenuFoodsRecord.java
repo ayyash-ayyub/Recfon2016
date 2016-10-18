@@ -19,7 +19,11 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.ayyash.recfon.R;
+import com.ayyash.recfon.makanmalam.KonfirmasiMakanMalam;
+import com.ayyash.recfon.makansiang.KonfirmasiMakanSiang;
+import com.ayyash.recfon.selinganmalam.KonfirmasiSelinganMalam;
 import com.ayyash.recfon.selinganpagi.KonfirmasiSelinganSarapan;
+import com.ayyash.recfon.selingansiang.KonfirmasiSelinganSiang;
 
 public class MenuFoodsRecord extends AppCompatActivity {
 
@@ -63,6 +67,40 @@ public class MenuFoodsRecord extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MenuFoodsRecord.this, KonfirmasiSelinganSarapan.class);
+                startActivity(i);
+
+            }
+        });
+
+        makanSiang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MenuFoodsRecord.this, KonfirmasiMakanSiang.class);
+                startActivity(i);
+
+            }
+        });
+
+        selinganSiang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MenuFoodsRecord.this, KonfirmasiSelinganSiang.class);
+                startActivity(i);
+
+            }
+        });
+        makanMalam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MenuFoodsRecord.this, KonfirmasiMakanMalam.class);
+                startActivity(i);
+
+            }
+        });
+        selinganMalam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MenuFoodsRecord.this, KonfirmasiSelinganMalam.class);
                 startActivity(i);
 
             }

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_konfirmasi_sarapan"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.ayyash.recfon.KonfirmasiSarapan">
+
+    <TextView
+        android:textSize="20dp"
+
+        android:textStyle="bold"
+        android:text="Apakah hari ini anda makan Cemilan malam?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView7" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:theme="@style/PrimaryButton"
+            android:text="Ya"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnYa"
+            android:layout_weight="1" />
+
+        <Button
+            android:theme="@style/PrimaryButton"
+            android:text="Tidak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnTidak"
+            android:layout_weight="1" />
+    </LinearLayout>
+</LinearLayout>

@@ -25,6 +25,24 @@ public class ConfigUmum {
     public static String URL_SHOW_SELINGAN_PAGI = "http://"+IP+"/recfon/api/get_record_selingan_pagi.php?email=";
     public static String URL_INSERT_SELINGAN_PAGI = "http://"+IP+"/recfon/api/insert_record_selingan_pagi.php";
 
+    //buat makan siang
+    public static String URL_SHOW_MAKAN_SIANG = "http://"+IP+"/recfon/api/get_record_makan_siang.php?email=";
+    public static String URL_INSERT_MAKAN_SIANG = "http://"+IP+"/recfon/api/insert_record_makan_siang.php";
+
+ //buat makan Selingan siang
+    public static String URL_SHOW_SELINGAN_SIANG = "http://"+IP+"/recfon/api/get_record_selingan_siang.php?email=";
+    public static String URL_INSERT_SELINGAN_SIANG = "http://"+IP+"/recfon/api/insert_record_selingan_siang.php";
+
+ //buat makan malam
+    public static String URL_SHOW_MAKAN_MALAM = "http://"+IP+"/recfon/api/get_record_makan_malam.php?email=";
+    public static String URL_INSERT_MAKAN_MALAM = "http://"+IP+"/recfon/api/insert_record_makan_malam.php";
+
+
+ //buat makan selingan malam
+    public static String URL_SHOW_SELINGAN_MALAM = "http://"+IP+"/recfon/api/get_record_selingan_malam.php?email=";
+    public static String URL_INSERT_SELINGAN_MALAM = "http://"+IP+"/recfon/api/insert_record_selingan_malam.php";
+
+
 //    public static String URL_SIMPAN_PAGI(String email, String bahan_makanan, String jumlah, String besaran_makanan) {
 //        return Uri.encode("http://"+IP+"/insert_record_pagi.php?email=" + email + "&bahan_makanan=" + bahan_makanan + "&jumlah=" + jumlah + "&besaran_makanan=" + besaran_makanan, ALLOWED_URI_CHARS);
 //    }

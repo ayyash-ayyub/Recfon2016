@@ -1,4 +1,4 @@
-package com.ayyash.recfon;
+package com.ayyash.recfon.selingansiang;
 
 import android.app.Activity;
 import android.content.Context;
@@ -14,11 +14,14 @@ import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 import android.widget.Toast;
 
+import com.ayyash.recfon.R;
+import com.ayyash.recfon.SearchableListDialog;
+
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class SearchableSpinner extends Spinner implements View.OnTouchListener,
+public class SearchableSpinnerSS extends Spinner implements View.OnTouchListener,
         SearchableListDialog.SearchableItem {
 
     String selectedItem;
@@ -35,13 +38,13 @@ public class SearchableSpinner extends Spinner implements View.OnTouchListener,
     private String _strHintText;
     private boolean _isFromInit;
 
-    public SearchableSpinner(Context context) {
+    public SearchableSpinnerSS(Context context) {
         super(context);
         this._context = context;
         init();
     }
 
-    public SearchableSpinner(Context context, AttributeSet attrs) {
+    public SearchableSpinnerSS(Context context, AttributeSet attrs) {
         super(context, attrs);
         this._context = context;
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.SearchableSpinner);
@@ -56,7 +59,7 @@ public class SearchableSpinner extends Spinner implements View.OnTouchListener,
         init();
     }
 
-    public SearchableSpinner(Context context, AttributeSet attrs, int defStyleAttr) {
+    public SearchableSpinnerSS(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         this._context = context;
         init();
@@ -134,7 +137,7 @@ public class SearchableSpinner extends Spinner implements View.OnTouchListener,
 
         Toast.makeText(getContext(),"Anda Menambahkan "+selectedItem,Toast.LENGTH_LONG).show();
 
-        Intent i = new Intent(_context, PerhitunganPagi.class);
+        Intent i = new Intent(_context, PerhitunganSelinganSiang.class);
         i.putExtra("indexMakanan", selectedIndex);
         i.putExtra("namaMakanan",selectedItem);
         _context.startActivity(i);
