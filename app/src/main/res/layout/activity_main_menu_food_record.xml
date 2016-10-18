@@ -39,14 +39,14 @@
             android:layout_height="150dp"
             android:layout_width="150dp"
             android:id="@+id/btnsarapanpagi"
-            android:background="@drawable/sarapan_pagi" />
+            android:background="@drawable/btn_sarapan" />
 
         <Button
             android:layout_margin="10dp"
             android:id="@+id/selinganPagi"
             android:layout_height="150dp"
             android:layout_width="150dp"
-            android:background="@drawable/selingan_pagi" />
+            android:background="@drawable/btn_spagi" />
     </LinearLayout>
 
     <LinearLayout
@@ -60,14 +60,14 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:id="@+id/makanSiang"
-            android:background="@drawable/makan_siang" />
+            android:background="@drawable/btn_siang" />
 
         <Button
             android:layout_margin="10dp"
             android:layout_height="150dp"
             android:id="@+id/seliSiang"
             android:layout_width="150dp"
-            android:background="@drawable/selingan_siang" />
+            android:background="@drawable/btn_ssiang" />
     </LinearLayout>
     <LinearLayout
         android:gravity="center"
@@ -80,14 +80,14 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:id="@+id/makanMalam"
-            android:background="@drawable/makan_malam" />
+            android:background="@drawable/btn_malam" />
 
         <Button
             android:layout_margin="10dp"
             android:layout_height="150dp"
             android:id="@+id/selinganMala"
             android:layout_width="150dp"
-            android:background="@drawable/selingan_malam" />
+            android:background="@drawable/btn_smalam" />
     </LinearLayout>
     <LinearLayout
         android:gravity="center"
