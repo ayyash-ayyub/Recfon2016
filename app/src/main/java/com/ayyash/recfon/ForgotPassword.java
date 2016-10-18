@@ -43,7 +43,11 @@ public class ForgotPassword extends AppCompatActivity {
         Konfirmasi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Confirm();
+                if (email.getText().equals("") || no_hp.getText().equals("")){
+                    Toast.makeText(getApplicationContext(),"Silakan Lengkapi data anda!",Toast.LENGTH_SHORT).show();
+                }else {
+                    Confirm();
+                }
             }
         });
     }
