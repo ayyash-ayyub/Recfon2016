@@ -9884,40 +9884,40 @@ public class PerhitunganPagi extends AppCompatActivity {
 
     }
 
-    private void Save(){
-        android.app.AlertDialog.Builder alertDialog = new android.app.AlertDialog.Builder(PerhitunganPagi.this);
-
-        // Setting Dialog Title
-        alertDialog.setTitle("Sarapan");
-        // Setting Dialog Message
-        alertDialog.setMessage("Apakah Anda yakin sudah memasukan semua menu sarapan Anda?");
-        // Setting Icon to Dialog
-        alertDialog.setIcon(R.drawable.x);
-
-        // Setting Positive "Yes" Button
-        alertDialog.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog,int which) {
-
-                // Write your code here to invoke YES event
-                ConfirmSave();
-            }
-        });
-
-        // Setting Negative "NO" Button
-        alertDialog.setNegativeButton("Cek Kembali", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int which) {
-                // Write your code here to invoke NO event
-//                Toast.makeText(getApplicationContext(), "You clicked on NO", Toast.LENGTH_SHORT).show();
-                dialog.cancel();
-            }
-        });
-
-        // Showing Alert Message
-        alertDialog.show();
+//    private void Save(){
+//        android.app.AlertDialog.Builder alertDialog = new android.app.AlertDialog.Builder(PerhitunganPagi.this);
+//
+//        // Setting Dialog Title
+//        alertDialog.setTitle("Sarapan");
+//        // Setting Dialog Message
+//        alertDialog.setMessage("Apakah Anda yakin sudah memasukan semua menu sarapan Anda?");
+//        // Setting Icon to Dialog
+//        alertDialog.setIcon(R.drawable.x);
+//
+//        // Setting Positive "Yes" Button
+//        alertDialog.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+//            public void onClick(DialogInterface dialog,int which) {
+//
+//                // Write your code here to invoke YES event
+//                ConfirmSave();
+//            }
+//        });
+//
+//        // Setting Negative "NO" Button
+//        alertDialog.setNegativeButton("Cek Kembali", new DialogInterface.OnClickListener() {
+//            public void onClick(DialogInterface dialog, int which) {
+//                // Write your code here to invoke NO event
+////                Toast.makeText(getApplicationContext(), "You clicked on NO", Toast.LENGTH_SHORT).show();
+//                dialog.cancel();
+//            }
+//        });
+//
+//        // Showing Alert Message
+//        alertDialog.show();
+////    }
 //    }
-    }
 
-    private void ConfirmSave() {
+    private void Save() {
         final String txt_email = email.toString().trim();
         final String makanan = namaMakanan.getText().toString().trim();
         final String jumlah = penampungProgres.toString().trim();
@@ -9932,7 +9932,7 @@ public class PerhitunganPagi extends AppCompatActivity {
         //final String sIdKelas = "100000";
         //final int saveIdKelas = Integer.parseInt(sIdKelas);
 
-        StringRequest sR = new StringRequest(Request.Method.POST, "http://103.43.45.237/recfon/api/insert_record_pagi.php",
+        StringRequest sR = new StringRequest(Request.Method.POST, ConfigUmum.URL_INSERT_PAGI,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
