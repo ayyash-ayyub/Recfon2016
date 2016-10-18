@@ -51,7 +51,7 @@ public class MenuFoodsRecord extends AppCompatActivity {
         sPagi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MenuFoodsRecord.this, SarapanActivity.class);
+                Intent i = new Intent(MenuFoodsRecord.this, KonfirmasiSarapan.class);
                 startActivity(i);
             }
         });
