@@ -68,7 +68,7 @@ public class PerhitunganPagi extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_perhitungan_pagi);
-        tv = (TextView) findViewById(R.id.textView);
+       // tv = (TextView) findViewById(R.id.textView);
         satuan = (TextView) findViewById(R.id.textView2);
         seekBar = (SeekBar) findViewById(R.id.seekBar);
         namaMakanan = (TextView) findViewById(R.id.textView3);
@@ -145,7 +145,7 @@ public class PerhitunganPagi extends AppCompatActivity {
         indexMakanan = i.getIntExtra("indexMakanan", 0);
         nM = i.getStringExtra("namaMakanan");
 
-        tv.setText("index ke: " + indexMakanan);
+       // tv.setText("index ke: " + indexMakanan);
         namaMakanan.setText("" + nM);
 
 
