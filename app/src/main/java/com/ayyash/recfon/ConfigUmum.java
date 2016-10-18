@@ -23,6 +23,12 @@ public class ConfigUmum {
 //        return Uri.encode("http://"+IP+"/insert_record_pagi.php?email=" + email + "&bahan_makanan=" + bahan_makanan + "&jumlah=" + jumlah + "&besaran_makanan=" + besaran_makanan, ALLOWED_URI_CHARS);
 //    }
 
+    // delete activity
+
+    public static String URL_INSERT_ACTIVITY = "http://"+IP+"/recfon/api/insert_activity.php";
+    public static String URL_DELETE_ACTIVITY = "http://"+IP+"/recfon/api/delete_activity.php?id=";
+
+
     //regiser
     public static String REGISTER = "http://"+IP+"/recfon/api/register.php";
 

@@ -31,20 +31,11 @@
                 android:text="Nama makanan"
                 android:textStyle="bold"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtPorsi"
-                android:layout_below="@+id/namaMakanan"
-                android:text="Porsi"
-                android:textColorLink="?attr/colorAccent"
-                android:textColor="?attr/colorAccent" />
-
-            <TextView
+        <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/txtDurasi"
-                android:layout_below="@+id/txtPorsi"
+                android:layout_below="@+id/namaAA"
                 android:text="Ukuran"/>
 
             <ImageView

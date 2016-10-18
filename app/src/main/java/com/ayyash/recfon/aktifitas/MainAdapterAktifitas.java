@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -51,6 +52,8 @@ public class MainAdapterAktifitas extends RecyclerView.Adapter<MainHolderAktifit
         MainHolderAktifitas mainHolder = new MainHolderAktifitas(view);
         return mainHolder;
 
+
+
     }
 
 
@@ -63,13 +66,14 @@ public class MainAdapterAktifitas extends RecyclerView.Adapter<MainHolderAktifit
                 new Response.Listener<String>() {;
                     @Override
                     public void onResponse(String response) {
-                        Log.d("uye", response);
+                        Log.d("uye jadi hapus", response);
+
 
                     }
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.e("uye", error.toString());
+                Log.e("uye gagal hapus", error.toString());
 
             }
         });
@@ -82,57 +86,60 @@ public class MainAdapterAktifitas extends RecyclerView.Adapter<MainHolderAktifit
         holder.txt_durasi.setText(resultsList.get(position).durasi);
 
 
-//        final String nama_makanan =resultsList.get(position).activity;
-//        final String idd = resultsList.get(position).id;
+        final String nama_makanan =resultsList.get(position).activity;
+        final String idd = resultsList.get(position).id;
 
         holder.cardview_item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View view) {
-//                progressDialog = new ProgressDialog(context);
-//                progressDialog.setCancelable(false);
-//                progressDialog.setMessage("Silahkan Tunggu...");
+                progressDialog = new ProgressDialog(context);
+                progressDialog.setCancelable(false);
+                progressDialog.setMessage("Silahkan Tunggu...");
 
 
-//                DeleteData(ConfigUmum.URL_DELETE_PAGI+idd);
-//                // Intent i = new Intent(context, Pengalih.class);
-//                //  view.getContext().startActivity(i);
-//
-//
-//                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
-//                builder.setTitle("Konfirmasi");
-//                builder.setMessage("Apakah anda yakin ingin menghapus\n" +
-//                        nama_makanan + " ?");
-//                builder.setPositiveButton("Hapus", new DialogInterface.OnClickListener() {
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        DeleteData(ConfigUmum.URL_DELETE_PAGI+idd);
-////                        dialog.dismiss();
-//
-//                        //   Intent i = new Intent(context, SarapanActivity.class);
-//
-//                        //
-//                        //  i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | IntentCompat.FLAG_ACTIVITY_CLEAR_TASK);
-//                        //view.getContext().startActivity(i);
-//
-//
-//                        Activity activity = (Activity)view.getContext();
-//                        activity.finish();
-//                        view.getContext().startActivity(activity.getIntent());
-//
-//                    }
-//                });
-//                builder.setNegativeButton("Batalkan", new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-////                        dialog.dismiss();
-//                    }
-//                });
-//                AlertDialog alert = builder.create();
-//                alert.show();
-//
-//
-//                //   Toast.makeText(context,"ID nya: "+resultsList.get(position).nama_makanan, Toast.LENGTH_LONG).show();
-//
-//
+              //  DeleteData(ConfigUmum.URL_DELETE_ACTIVITY+idd);
+                // Intent i = new Intent(context, Pengalih.class);
+                //  view.getContext().startActivity(i);
+
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+                builder.setTitle("Konfirmasi");
+                builder.setMessage("Apakah anda yakin ingin menghapus\n" +
+                        nama_makanan + " ?");
+                builder.setPositiveButton("Hapus", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                      //  http://103.43.45.237/recfon/api/delete_activity.php?id=13
+                        DeleteData(ConfigUmum.URL_DELETE_ACTIVITY+idd);
+//                        dialog.dismiss();
+
+                        //   Intent i = new Intent(context, SarapanActivity.class);
+
+                        //
+                        //  i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | IntentCompat.FLAG_ACTIVITY_CLEAR_TASK);
+                        //view.getContext().startActivity(i);
+
+                     //   Toast.makeText(context,"UYE:"+idd, Toast.LENGTH_SHORT).show();
+
+
+                        Activity activity = (Activity)view.getContext();
+                        activity.finish();
+                        view.getContext().startActivity(activity.getIntent());
+
+                    }
+                });
+                builder.setNegativeButton("Batalkan", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+//                        dialog.dismiss();
+                    }
+                });
+                AlertDialog alert = builder.create();
+                alert.show();
+
+
+                //   Toast.makeText(context,"ID nya: "+resultsList.get(position).nama_makanan, Toast.LENGTH_LONG).show();
+
+
             }
         });
     }

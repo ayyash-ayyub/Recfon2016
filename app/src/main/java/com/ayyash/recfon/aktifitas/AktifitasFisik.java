@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
@@ -41,6 +42,7 @@ public class AktifitasFisik extends AppCompatActivity {
     private MainAdapterAktifitas adapter;
     private RecyclerView rv_item;
     String email;
+    Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,9 @@ public class AktifitasFisik extends AppCompatActivity {
         progressDialog.setMessage("Silahkan Tunggu...");
 
         rv_item = (RecyclerView) findViewById(R.id.rv_item_uye);
+
+        //nambain kampret ini biar muncul
+        rv_item.setLayoutManager(new LinearLayoutManager(context));
         rv_item.setHasFixedSize(true);
 
         SharedPreferences sharedPreferences = getSharedPreferences(ConfigUmum.SHARED_PREF_NAME, Context.MODE_PRIVATE);
@@ -90,7 +95,7 @@ public class AktifitasFisik extends AppCompatActivity {
 //                    tidakSarapan.setVisibility(View.VISIBLE);
 //                }
 
-                Toast.makeText(getApplicationContext(), "Data aktifitas: "+response.toString(), Toast.LENGTH_SHORT).show();
+              //  Toast.makeText(getApplicationContext(), "Data aktifitas: "+response.toString(), Toast.LENGTH_SHORT).show();
 
                 progressDialog.hide();
             }
