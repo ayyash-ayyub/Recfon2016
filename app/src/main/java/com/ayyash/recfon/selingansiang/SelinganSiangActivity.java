@@ -162,6 +162,7 @@ public class SelinganSiangActivity extends AppCompatActivity {
 //                }else {
 //                    tidakSarapan.setVisibility(View.VISIBLE);
 //                }
+                System.out.println(response);
                 if (response.contains("tidak makan")){
                     bgSpinner.setVisibility(View.GONE);
                     tidakSarapan.setVisibility(View.VISIBLE);

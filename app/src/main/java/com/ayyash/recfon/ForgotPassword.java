@@ -108,4 +108,13 @@ public class ForgotPassword extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
     }
+
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i = new Intent(ForgotPassword.this, Login.class);
+        startActivity(i);
+        finish();
+    }
 }

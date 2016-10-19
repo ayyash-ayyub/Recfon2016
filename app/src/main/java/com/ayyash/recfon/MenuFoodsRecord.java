@@ -55,6 +55,9 @@ public class MenuFoodsRecord extends AppCompatActivity {
         makanMalam = (Button)findViewById(R.id.makanMalam);
         selinganMalam = (Button)findViewById(R.id.selinganMala);
 
+
+        //selinganPagi.setEnabled(false);
+
         help();
          /* Top toolbar */
 

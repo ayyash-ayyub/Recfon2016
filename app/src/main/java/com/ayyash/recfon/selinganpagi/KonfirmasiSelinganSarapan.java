@@ -139,6 +139,7 @@ public class KonfirmasiSelinganSarapan extends AppCompatActivity {
                 if(response.contains("2")){
                     Intent i = new Intent(getApplicationContext(),SelinganPagiActivity.class);
                     startActivity(i);
+                    finish();
                 }else {
 
                 }

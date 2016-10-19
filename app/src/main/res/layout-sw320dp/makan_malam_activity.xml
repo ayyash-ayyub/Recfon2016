@@ -42,7 +42,7 @@
         android:id="@+id/spinner"
         android:layout_height="wrap_content"
         android:entries="@array/colleges"
-        app:hintText="Tambahkan Menu Makan Malam Hari ini"
+        app:hintText="Tambahkan makan/minum disini :"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_width="match_parent" />

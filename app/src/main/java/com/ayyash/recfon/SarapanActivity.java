@@ -160,7 +160,7 @@ public class SarapanActivity extends AppCompatActivity {
 //                }else {
 //                    tidakSarapan.setVisibility(View.VISIBLE);
 //                }
-                if (response.contains("Tidak Sarapan")){
+                if (response.contains("tidak makan")){
                     bgSpinner.setVisibility(View.GONE);
                     tidakSarapan.setVisibility(View.VISIBLE);
                     rv_item.setVisibility(View.GONE);

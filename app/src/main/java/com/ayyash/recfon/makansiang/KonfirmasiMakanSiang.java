@@ -137,9 +137,13 @@ public class KonfirmasiMakanSiang extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
 
+//                Toast.makeText(getApplicationContext(), "uye: "+response.toString(), Toast.LENGTH_SHORT).show();
+//                System.out.println(response);
+
                 if(response.contains("3")){
                     Intent i = new Intent(getApplicationContext(),MakanSiangActivity.class);
                     startActivity(i);
+                    finish();
                 }else {
 
                 }

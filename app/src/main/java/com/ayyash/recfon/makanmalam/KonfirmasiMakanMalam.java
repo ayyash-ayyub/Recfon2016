@@ -140,6 +140,7 @@ public class KonfirmasiMakanMalam extends AppCompatActivity {
                 if(response.contains("5")){
                     Intent i = new Intent(getApplicationContext(),MakanMalamActivity.class);
                     startActivity(i);
+                    finish();
                 }else {
 
                 }

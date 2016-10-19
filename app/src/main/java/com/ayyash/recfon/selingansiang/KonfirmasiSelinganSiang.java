@@ -138,6 +138,7 @@ public class KonfirmasiSelinganSiang extends AppCompatActivity {
                 if(response.contains("4")){
                     Intent i = new Intent(getApplicationContext(),SelinganSiangActivity.class);
                     startActivity(i);
+                    finish();
                 }else {
 
                 }

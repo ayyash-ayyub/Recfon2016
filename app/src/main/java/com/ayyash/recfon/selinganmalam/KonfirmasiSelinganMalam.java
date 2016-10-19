@@ -139,6 +139,7 @@ public class KonfirmasiSelinganMalam extends AppCompatActivity {
                 if(response.contains("6")){
                     Intent i = new Intent(getApplicationContext(),SelinganMalamActivity.class);
                     startActivity(i);
+                    finish();
                 }else {
 
                 }

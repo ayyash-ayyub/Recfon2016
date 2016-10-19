@@ -140,6 +140,7 @@ public class KonfirmasiSarapan extends AppCompatActivity {
                 if(response.contains("1")){
                     Intent i = new Intent(getApplicationContext(),SarapanActivity.class);
                     startActivity(i);
+                    finish();
                 }else {
 
                 }
