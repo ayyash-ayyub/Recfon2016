@@ -17,13 +17,25 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.RetryPolicy;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.ayyash.recfon.R;
 import com.ayyash.recfon.makanmalam.KonfirmasiMakanMalam;
 import com.ayyash.recfon.makansiang.KonfirmasiMakanSiang;
 import com.ayyash.recfon.selinganmalam.KonfirmasiSelinganMalam;
 import com.ayyash.recfon.selinganpagi.KonfirmasiSelinganSarapan;
 import com.ayyash.recfon.selingansiang.KonfirmasiSelinganSiang;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class MenuFoodsRecord extends AppCompatActivity {
 
@@ -66,8 +78,10 @@ public class MenuFoodsRecord extends AppCompatActivity {
         selinganPagi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MenuFoodsRecord.this, KonfirmasiSelinganSarapan.class);
-                startActivity(i);
+
+                    Intent i = new Intent(MenuFoodsRecord.this, KonfirmasiSelinganSarapan.class);
+                    startActivity(i);
+                    finish();
 
             }
         });
@@ -77,6 +91,7 @@ public class MenuFoodsRecord extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(MenuFoodsRecord.this, KonfirmasiMakanSiang.class);
                 startActivity(i);
+                finish();
 
             }
         });
@@ -86,6 +101,7 @@ public class MenuFoodsRecord extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(MenuFoodsRecord.this, KonfirmasiSelinganSiang.class);
                 startActivity(i);
+                finish();
 
             }
         });
@@ -94,6 +110,7 @@ public class MenuFoodsRecord extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(MenuFoodsRecord.this, KonfirmasiMakanMalam.class);
                 startActivity(i);
+                finish();
 
             }
         });
@@ -102,11 +119,16 @@ public class MenuFoodsRecord extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(MenuFoodsRecord.this, KonfirmasiSelinganMalam.class);
                 startActivity(i);
+                finish();
 
             }
         });
 
     }
+
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

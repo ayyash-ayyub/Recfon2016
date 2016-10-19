@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -24,7 +25,11 @@ public class MainMenu extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
     Button aktifkan;
-    boolean sudahSetuju = false;
+
+    boolean ayyash=false;
+    SharedPreferences spp;
+    SharedPreferences.Editor edd;
+
 
 
     @Override
@@ -34,6 +39,13 @@ public class MainMenu extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+        SharedPreferences sp = getSharedPreferences("ayyash", MODE_WORLD_READABLE);
+        final Boolean ambil =  sp.getBoolean("ayyash", false);
+
+
+   //  Toast.makeText(MainMenu.this, "apa: "+ambil.toString(), Toast.LENGTH_SHORT).show();
 
 
         String htmlText = " %s ";
@@ -64,11 +76,27 @@ public class MainMenu extends AppCompatActivity {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer);
 
         aktifkan = (Button) findViewById(R.id.buttonAktif);
+        if (ambil) {
+            aktifkan.setVisibility(View.INVISIBLE);
+        }
+
+
+
 
         aktifkan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                sudahSetuju = true;
+                //locked=true;
+               // isPhysicalTheftEnabled
+
+                ayyash=true;
+                spp = getSharedPreferences("ayyash", MODE_WORLD_READABLE);
+                 edd= spp.edit();
+                edd.putBoolean("ayyash", ayyash);
+                edd.commit();
+
+               // Toast.makeText(MainMenu.this, "apa: "+ambil.toString(), Toast.LENGTH_SHORT).show();
+
                 aktifkan.setVisibility(View.GONE);
                 drawerLayout.openDrawer(GravityCompat.START);
             }
@@ -82,7 +110,8 @@ public class MainMenu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (sudahSetuju) {
+
+                if (ambil) {
                     drawerLayout.openDrawer(GravityCompat.START);
                 } else {
                     Toast.makeText(getApplicationContext(), "Anda harus menyetujui terlebih dahulu dengan cara klik tombol, SAYA SETUJU MENGIKUTI SURVEY, untuk dapat mengikuti survey", Toast.LENGTH_LONG).show();
@@ -120,6 +149,11 @@ public class MainMenu extends AppCompatActivity {
                     startActivity(i);
                     finish();
                 }else if (id == R.id.keluarCuy) {
+                    SharedPreferences sp = getSharedPreferences("ayyash", MODE_WORLD_READABLE);
+                    SharedPreferences.Editor edd = sp.edit();
+
+                    edd.clear();
+                    edd.commit();
                     logout();
 
                 }

@@ -13,7 +13,7 @@
         android:minHeight="?attr/actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:title="Food Frequency Questionnaire"
+        app:title="Catatan makan harian"
         app:titleTextColor="#fff"
         android:layout_marginTop="0dp"
         android:background="?attr/colorPrimary"
