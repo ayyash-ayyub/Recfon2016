@@ -17,6 +17,7 @@ public class ConfigUmum {
 
     public static String URL_GET_PASS = "http://"+IP+"/recfon/api/lupapasword.php";
     public static String URL_UPDATE_STATUS_GIZI = "http://"+IP+"/recfon/api/update_status_gizi.php";
+    public static String URL_SHOW_FREKUENSI = "http://"+IP+"/recfon/api/get_frekuensi.php?email=";
     public static String URL_SHOW_ACTIVITY = "http://"+IP+"/recfon/api/get_record_activity.php?email=";
 
 

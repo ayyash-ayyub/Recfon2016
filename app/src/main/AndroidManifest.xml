@@ -19,14 +19,12 @@
         <activity android:name=".selingansiang.SelinganSiangActivity" />
         <activity android:name=".makanmalam.MakanMalamActivity" />
         <activity android:name=".selinganmalam.SelinganMalamActivity" />
-
         <activity android:name=".PerhitunganPagi" />
         <activity android:name=".selinganpagi.PerhitunganSelinganPagi" />
         <activity android:name=".makansiang.PerhitunganMakanSiang" />
         <activity android:name=".selingansiang.PerhitunganSelinganSiang" />
         <activity android:name=".makanmalam.PerhitunganMakanMalam" />
         <activity android:name=".selinganmalam.PerhitunganSelinganMalam" />
-
         <activity android:name=".Register" />
         <activity android:name=".Splash">
             <intent-filter>
@@ -45,28 +43,26 @@
         <activity android:name=".ForgotPassword" />
         <activity
             android:name=".aktifitas.FormAktifitas"
-            android:theme="@style/Theme.AppCompat.Light.Dialog"></activity>
-
-        <activity android:name=".KonfirmasiSarapan"
-            android:theme="@style/Theme.AppCompat.Light.Dialog"></activity>
-
-        <activity android:name=".selinganpagi.KonfirmasiSelinganSarapan"
-            android:theme="@style/Theme.AppCompat.Light.Dialog"></activity>
-
-        <activity android:name=".makansiang.KonfirmasiMakanSiang"
-            android:theme="@style/Theme.AppCompat.Light.Dialog"></activity>
-
-        <activity android:name=".selingansiang.KonfirmasiSelinganSiang"
-            android:theme="@style/Theme.AppCompat.Light.Dialog"></activity>
-
-        <activity android:name=".makanmalam.KonfirmasiMakanMalam"
-            android:theme="@style/Theme.AppCompat.Light.Dialog"></activity>
-
-        <activity android:name=".selinganmalam.KonfirmasiSelinganMalam"
-            android:theme="@style/Theme.AppCompat.Light.Dialog"></activity>
-
-
-
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name=".KonfirmasiSarapan"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name=".selinganpagi.KonfirmasiSelinganSarapan"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name=".makansiang.KonfirmasiMakanSiang"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name=".selingansiang.KonfirmasiSelinganSiang"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name=".makanmalam.KonfirmasiMakanMalam"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity
+            android:name=".selinganmalam.KonfirmasiSelinganMalam"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity android:name=".PerbandinganAsupan"></activity>
     </application>
 
 </manifest>

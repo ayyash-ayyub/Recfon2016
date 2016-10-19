@@ -1,0 +1,187 @@
+
+<resources>
+    <string-array name="makanan">
+
+
+        //Fix String food
+
+        <item>Nasi</item>
+        <item>Nasi merah</item>
+        <item>Nasi uduk / nasi kuning</item>
+        <item>Nasi goreng</item>
+        <item>Bubur ayam</item>
+        <item>Mie instant goreng</item>
+        <item>Mie instant rebus </item>
+        <item>Mie goreng (Bukan instant)  </item>
+        <!--<item>Kwetiaw goreng </item>-->
+        <item>Lontong / Ketupat sayur  </item>
+
+        <item>Ubi goreng </item>
+        <item>Ubi rebus</item>
+        <item>Perkedel kentang</item>
+
+
+        <item>Sayur lodeh</item>
+        <item>Tumis kacang panjang</item>
+
+        <item>Sayur sop</item>
+        <item>Sayur bening bayam</item>
+        <item>Sayur asam</item>
+        <item>Sayur urap</item>
+        <item>Sayur pecel</item>
+        <item>Gado - gado / Karedok</item>
+        <item>Ketoprak</item>
+        <item>Sawi hijau / Bok choy rebus</item>
+        <item>Daun singkong rebus</item>
+        <item>Jengkol rebus</item>
+        <item>Selada bokor</item>
+        <item>Ketimun</item>
+        <item>Terung belanda</item>
+        <item>Tomat merah</item>
+        <item>Pare kukus</item>
+
+        <item>Pisang</item>
+        <item>Mangga</item>
+        <item>Alpukat</item>
+        <item>Jeruk</item>
+        <item>Pepaya</item>
+        <item>Nanas</item>
+        <item>Semangka</item>
+        <item>Melon</item>
+        <item>Pir</item>
+        <item>Apel</item>
+        <item>Anggur</item>
+        <item>Buah naga</item>
+        <item>Duku</item>
+        <item>Durian lokal</item>
+        <item>Durian montong</item>
+        <item>Jambu biji</item>
+        <item>Kurma</item>
+        <item>Rambutan</item>
+        <item>Salak</item>
+        <item>Strawberi</item>
+        <item>Belimbing</item>
+        <item>Nangka</item>
+
+
+        <item>Tempe goreng</item>
+        <item>Tempe goreng tepung / Tempe mendoan</item>
+        <item>Tahu goreng</item>
+        <item>Tahu isi</item>
+        <item>Tempe orek</item>
+        <item>Tahu pepes</item>
+        <item>Tahu bacem</item>
+        <item>Tempe bacem</item>
+
+        <item>Telur ayam rebus</item>
+        <item>Telur ayam goreng / Mata sapi / Dadar</item>
+        <item>Telur bebek asin</item>
+
+        <item>Soto makasar</item>
+        <item>Gulai sapi / Kambing</item>
+        <item>Rawon daging</item>
+        <item>Tongseng sapi / kambing</item>
+        <item>Sate kambing</item>
+        <item>Steak daging sapi</item>
+        <item>Bakso sapi</item>
+        <item>Sosis sapi bakar</item>
+        <item>Sosis ayam bakar</item>
+        <item>Opor / Kare ayam</item>
+        <item>Sate ayam</item>
+        <item>Soto ayam</item>
+        <item>Bebek goreng</item>
+        <item>Nugget goreng</item>
+        <item>Ayam goreng dada</item>
+        <item>Ayam goreng sayap</item>
+        <item>Ayam goreng paha</item>
+        <item>Ayam goreng tepung dada atas extra crispy</item>
+        <item>Ayam goreng tepung dada mentok extra crispy</item>
+        <item>Ayam goreng tepung sayap extra crispy</item>
+        <item>Ayam goreng tepung sayap extra crispy, tanpa kulit</item>
+        <item>Ayam goreng tepung paha bawah extra crispy</item>
+        <item>Ayam goreng tepung paha bawah extra crispy, tanpa kulit</item>
+        <item>Ayam goreng tepung paha atas extra crispy</item>
+        <item>Ayam goreng tepung paha atas extra crispy, tanpa kulit</item>
+        <item>Tongkol goreng / Pesmol / Masak balado</item>
+        <item>Lele goreng / Pesmol / Masak balado</item>
+        <item>Mujair goreng / Pesmol / Masak balado</item>
+        <item>Teri goreng</item>
+        <item>Ikan bakar / Panggang</item>
+        <item>Ikan kukus / Rebus/ Masak sup / Pepes</item>
+        <item>Udang goreng / Pesmol / Masak balado</item>
+        <item>Udang kukus / Rebus / Masak sup</item>
+        <item>Cumi kukus / Rebus / Masak sup</item>
+        <item>Cumi goreng / Pesmol / Masak balado</item>
+
+        <item>Hati ayam goreng</item>
+        <item>Rempela ayam goreng</item>
+        <item>Usus ayam goreng</item>
+
+        <item>Kacang tanah rabus</item>
+        <item>Kacang atom</item>
+        <item>Bubur kacang hijau</item>
+
+        <item>Risoles</item>
+        <item>Lemper</item>
+        <item>Bakpia</item>
+        <item>Pisang goreng</item>
+        <item>Perkedel jagung</item>
+        <item>Bakwan sayuran</item>
+        <item>Roti manis / Roti isi</item>
+        <item>Donat</item>
+        <item>Bolu kukus</item>
+        <item>Martabak telur</item>
+        <item>Martabak manis</item>
+        <item>Batagor</item>
+        <item>Pempek</item>
+        <item>Siomay kukus</item>
+        <item>Cilok</item>
+        <item>Cireng</item>
+        <item>Comro</item>
+        <item>Seblak basah</item>
+        <item>Wafer</item>
+        <item>Wafer roll / Astor</item>
+        <item>Biskuit crackers, Malkist (Roma)</item>
+        <item>Biskuit coklat (Good time, Choco mania)</item>
+        <item>Biskuit krim (Oreo)</item>
+        <item>Biskuit selai (Slai Olai)</item>
+        <item>Coklat batang (Silver queen, Cadbury, Chunky bar)</item>
+        <item>Pizza hut</item>
+        <item>Peyek kacang / Rempeyek</item>
+        <item>Kerupuk udang</item>
+        <item>Keripik kentang</item>
+        <item>Keripik singkong</item>
+        <item>Emping goreng (Kerupuk melinjo)</item>
+        <item>Happy tos tortilla chips</item>
+        
+        <!--<item>Pop corn</item>-->
+        <item>Selai kacang tanah (Peanut butter)</item>
+        <item>Permen</item>
+        <item>Minuman bersoda (Fanta, Sprite, Coca cola, Pepsi)</item>
+        <item>Minuman isotonik (Pocari sweet, Mizone)</item>
+        <item>Minuman berenergy (Krating daeng, Red bull)</item>
+        <item>Minuman kemasan sari buah (Buahvita, Floridina, Minute maid pulpy, Ale ale, Country choice)</item>
+        <item>Minuman serbuk sari buah (Nutrisari, Marimas)</item>
+        <item>Teh manis bukan kemasan (Gula pasirnya)</item>
+        <item>Teh kemasan (Sosro, Teh botol, Teh kotak, Freshtea, NuTea, Teh gelas)</item>
+        <item>Kopi instant bubuk (Abc, Good day, Nescafe, Kapal api)</item>
+        <item>Kopi instant bubuk siap minum (kopiko 78, Good day)</item>
+        <item>Kopi manis bukan kemasan (Gula pasirnya)</item>
+        <item>Es kelapa muda</item>
+        <item>Es teler / Es campur / Es goyobod</item>
+        <item>Orange / Lemon water, You c 1000, Cair</item>
+        <item>Sari kacang ijo, Ultra jaya, cair</item>
+        <item>Susu cair siap minum / Kemasan</item>
+        <item>Susu bubuk</item>
+        <item>Susu kental manis</item>
+        <item>Yogurt</item>
+        <item>Es krim</item>
+        <item>Energen</item>
+        <item>Susu kedelai, Cair</item>
+        <item>Puding</item>
+        <item>Abon sapi</item>
+        <item>Abon ikan</item>
+        <item>Jam / Selai</item>
+
+    </string-array>
+</resources>

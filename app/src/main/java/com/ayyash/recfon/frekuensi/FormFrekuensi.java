@@ -1,12 +1,11 @@
-package com.ayyash.recfon.aktifitas;
+package com.ayyash.recfon.frekuensi;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,7 +27,7 @@ import com.ayyash.recfon.R;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FormAktifitas extends AppCompatActivity {
+public class FormFrekuensi extends AppCompatActivity {
 
 
     public static final String KEY_EMAIL = "txt_email";
@@ -128,38 +127,6 @@ public class FormAktifitas extends AppCompatActivity {
 
     }
 
-//    private void Save(){
-//        android.app.AlertDialog.Builder alertDialog = new android.app.AlertDialog.Builder(FormFrekuensi.this);
-//
-//        // Setting Dialog Title
-//        alertDialog.setTitle("Sarapan");
-//        // Setting Dialog Message
-//        alertDialog.setMessage("Apakah Anda yakin data yang anda masukkan sudah Sesuai?");
-//        // Setting Icon to Dialog
-//        alertDialog.setIcon(R.drawable.i);
-//
-//        // Setting Positive "Yes" Button
-//        alertDialog.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
-//            public void onClick(DialogInterface dialog,int which) {
-//
-//                // Write your code here to invoke YES event
-//                ConfirmSave();
-//            }
-//        });
-//
-//        // Setting Negative "NO" Button
-//        alertDialog.setNegativeButton("Cek Kembali", new DialogInterface.OnClickListener() {
-//            public void onClick(DialogInterface dialog, int which) {
-//                // Write your code here to invoke NO event
-////                Toast.makeText(getApplicationContext(), "You clicked on NO", Toast.LENGTH_SHORT).show();
-//                dialog.cancel();
-//            }
-//        });
-//
-//        // Showing Alert Message
-//        alertDialog.show();
-////    }
-//    }
 
     private void Save() {
         final String txt_email = email.toString().trim();
@@ -173,7 +140,7 @@ public class FormAktifitas extends AppCompatActivity {
                     public void onResponse(String response) {
                         Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
                        // namaAktifitas.setText(response);
-                        Intent i = new Intent(getApplicationContext(), AktifitasFisik.class);
+                        Intent i = new Intent(getApplicationContext(), Frekuensi.class);
                         startActivity(i);
                         finish();
                     }
