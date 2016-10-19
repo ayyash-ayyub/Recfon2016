@@ -49,7 +49,7 @@ public class KonfirmasiSelinganSarapan extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Silahkan Tunggu...");
-        GetData(ConfigUmum.URL_SHOW_SELINGAN_PAGI + email);
+        GetDataSebelumnya(ConfigUmum.CEK_INPUT_SEBELUMNYA +"email="+email+"&waktumakan=1");
 
         Ya = (Button)findViewById(R.id.btnYa);
         Ya.setOnClickListener(new View.OnClickListener() {
@@ -71,6 +71,41 @@ public class KonfirmasiSelinganSarapan extends AppCompatActivity {
 
     }
 
+    public void GetDataSebelumnya(String URL) {
+
+        progressDialog.show();
+        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+            ;
+
+            @Override
+            public void onResponse(String response) {
+                System.out.println(response);
+                //Integer jml_input = Integer.valueOf(response);
+
+                if(response.equals("1")){
+                    Toast.makeText(getApplicationContext(),response,Toast.LENGTH_LONG).show();
+                    GetData(ConfigUmum.URL_SHOW_SELINGAN_PAGI + email);
+                }else {
+                    Toast.makeText(getApplicationContext(),"Data selingan siang belum diisi, silakan periksa kembali!",Toast.LENGTH_LONG).show();
+                    finish();
+                }
+
+                progressDialog.hide();
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(), "Gagal Konek ke server, periksa jaringan anda :(", Toast.LENGTH_SHORT).show();
+                progressDialog.hide();
+            }
+        });
+
+        int socketTimeout = 30000;//30 seconds - change to what you want
+        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+        stringRequest.setRetryPolicy(policy);
+        queue.add(stringRequest);
+    }
     private void SaveTidak() {
         final String txt_email = email.toString().trim();
         final String makanan = "tidak makan";

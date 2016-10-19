@@ -81,7 +81,7 @@ public class SelinganPagiActivity extends AppCompatActivity {
             }
         });
 
-        GetDataSebelumnya(ConfigUmum.CEK_INPUT_SEBELUMNYA +"email="+email+"&waktumakan=1");
+        GetData(ConfigUmum.URL_SHOW_SELINGAN_PAGI +email);
 
 
 
@@ -181,41 +181,7 @@ public class SelinganPagiActivity extends AppCompatActivity {
         queue.add(stringRequest);
     }
 
-    public void GetDataSebelumnya(String URL) {
 
-        progressDialog.show();
-        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
-            ;
-
-            @Override
-            public void onResponse(String response) {
-                System.out.println(response);
-                //Integer jml_input = Integer.valueOf(response);
-
-                if(response.equals("1")){
-                    Toast.makeText(getApplicationContext(),response,Toast.LENGTH_LONG).show();
-                    GetData(ConfigUmum.URL_SHOW_SELINGAN_PAGI + email);
-                }else {
-                    Toast.makeText(getApplicationContext(),"Data sarapan pagi belum diisi, silakan periksa kembali!",Toast.LENGTH_LONG).show();
-                    finish();
-                }
-
-                progressDialog.hide();
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getApplicationContext(), "Gagal Konek ke server, periksa jaringan anda :(", Toast.LENGTH_SHORT).show();
-                progressDialog.hide();
-            }
-        });
-
-        int socketTimeout = 30000;//30 seconds - change to what you want
-        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
-        stringRequest.setRetryPolicy(policy);
-        queue.add(stringRequest);
-    }
 
 
 
@@ -236,8 +202,8 @@ public class SelinganPagiActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialog,int which) {
 
                 // Write your code here to invoke YES event
-                Intent intent = new Intent(getApplicationContext(),MenuFoodsRecord.class);
-                startActivity(intent);
+//                Intent intent = new Intent(getApplicationContext(),MenuFoodsRecord.class);
+//                startActivity(intent);
                 finish();
             }
         });
