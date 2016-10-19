@@ -12,6 +12,7 @@ public class ConfigUmum {
     public static final String IP="103.43.45.237";
 
     public static final String LOGIN_URL = "http://"+IP+"/recfon/api/login.php";
+    public static final String CEK_INPUT_SEBELUMNYA = "http://"+IP+"/recfon/api/check_input_sebelumnya.php?";
 
     //buat pagi
 

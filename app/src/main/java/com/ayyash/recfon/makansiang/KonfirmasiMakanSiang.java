@@ -49,7 +49,7 @@ public class KonfirmasiMakanSiang extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Silahkan Tunggu...");
-        GetData(ConfigUmum.URL_SHOW_MAKAN_SIANG + email);
+
 
         Ya = (Button)findViewById(R.id.btnYa);
         Ya.setOnClickListener(new View.OnClickListener() {
@@ -69,24 +69,23 @@ public class KonfirmasiMakanSiang extends AppCompatActivity {
             }
         });
 
+
+        GetDataSebelumnya(ConfigUmum.CEK_INPUT_SEBELUMNYA +"email="+email+"&waktumakan=2");
+//        System.out.println(ConfigUmum.CEK_INPUT_SEBELUMNYA +"email="+email+"&waktumakan=2");
+
     }
 
     private void SaveTidak() {
-        final String txt_email = email.toString().trim();
-        final String makanan = "tidak makan";
-        final String jumlah = "";
-        final String ukuran = "";
-        final String energi1 = "";
-        final String protein1 = "";
-        final String lemak1 = "";
-        final String kalori1 = "";
+        final String txt_email  = email.toString().trim();
+        final String makanan    = "tidak makan";
+        final String jumlah     = "";
+        final String ukuran     = "";
+        final String energi1    = "";
+        final String protein1   = "";
+        final String lemak1     = "";
+        final String kalori1    = "";
 
-        //parsing id kelas
-//            final String sIdKelas = getIdKelas(ambilIDKelas);
-        //final String sIdKelas = "100000";
-        //final int saveIdKelas = Integer.parseInt(sIdKelas);
-
-//        StringRequest sR = new StringRequest(Request.Method.POST, ConfigUmum.URL_INSERT_SELINGAN_PAGI,
+        progressDialog.show();
         StringRequest sR = new StringRequest(Request.Method.POST, ConfigUmum.URL_INSERT_MAKAN_SIANG,
                 new Response.Listener<String>() {
                     @Override
@@ -95,12 +94,14 @@ public class KonfirmasiMakanSiang extends AppCompatActivity {
                         Intent i = new Intent(getApplicationContext(), MakanSiangActivity.class);
                         startActivity(i);
                         finish();
+                        progressDialog.dismiss();
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Gagal Menghubungkan ke Server, Cek kembali koneksi anda", Toast.LENGTH_LONG).show();
+                        progressDialog.dismiss();
                     }
                 }) {
             @Override
@@ -137,9 +138,6 @@ public class KonfirmasiMakanSiang extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
 
-//                Toast.makeText(getApplicationContext(), "uye: "+response.toString(), Toast.LENGTH_SHORT).show();
-//                System.out.println(response);
-
                 if(response.contains("3")){
                     Intent i = new Intent(getApplicationContext(),MakanSiangActivity.class);
                     startActivity(i);
@@ -157,8 +155,43 @@ public class KonfirmasiMakanSiang extends AppCompatActivity {
                 progressDialog.hide();
             }
         });
-//        int socketTimeout = 30000;//30 seconds - change to what you want
-//        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+
+        int socketTimeout = 30000;//30 seconds - change to what you want
+        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+        stringRequest.setRetryPolicy(policy);
+        queue.add(stringRequest);
+    }
+
+    public void GetDataSebelumnya(String URL) {
+
+        progressDialog.show();
+        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+            ;
+
+            @Override
+            public void onResponse(String response) {
+                System.out.println(response);
+                //Integer jml_input = Integer.valueOf(response);
+
+                if(response.equals("1")){
+                    Toast.makeText(getApplicationContext(),response,Toast.LENGTH_LONG).show();
+                    GetData(ConfigUmum.URL_SHOW_MAKAN_SIANG + email);
+                }else {
+                    Toast.makeText(getApplicationContext(),"Data selingan pagi belum diisi, silakan periksa kembali!",Toast.LENGTH_LONG).show();
+                    finish();
+                }
+
+                progressDialog.hide();
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(), "Gagal Konek ke server, periksa jaringan anda :(", Toast.LENGTH_SHORT).show();
+                progressDialog.hide();
+            }
+        });
+
         int socketTimeout = 30000;//30 seconds - change to what you want
         RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
         stringRequest.setRetryPolicy(policy);
@@ -168,38 +201,6 @@ public class KonfirmasiMakanSiang extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-//        AlertDialog.Builder alertDialog = new AlertDialog.Builder(SarapanActivity.this);
-//
-//        // Setting Dialog Title
-//        alertDialog.setTitle("Sarapan");
-//        // Setting Dialog Message
-//        alertDialog.setMessage("Apakah Anda yakin sudah memasukan semua menu sarapan Anda?");
-//        // Setting Icon to Dialog
-//        alertDialog.setIcon(R.drawable.i);
-//
-//        // Setting Positive "Yes" Button
-//        alertDialog.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
-//            public void onClick(DialogInterface dialog,int which) {
-//
-//                // Write your code here to invoke YES event
-//                Intent intent = new Intent(getApplicationContext(),MenuFoodsRecord.class);
-//                startActivity(intent);
-//                finish();
-//            }
-//        });
-//
-//        // Setting Negative "NO" Button
-//        alertDialog.setNegativeButton("Cek Kembali", new DialogInterface.OnClickListener() {
-//            public void onClick(DialogInterface dialog, int which) {
-//                // Write your code here to invoke NO event
-////                Toast.makeText(getApplicationContext(), "You clicked on NO", Toast.LENGTH_SHORT).show();
-//                dialog.cancel();
-//            }
-//        });
-//
-//        // Showing Alert Message
-//        alertDialog.show();
-////    }
 
     }
 }

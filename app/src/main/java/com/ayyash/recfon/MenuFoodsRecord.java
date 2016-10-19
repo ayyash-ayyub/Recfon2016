@@ -73,7 +73,7 @@ public class MenuFoodsRecord extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(MenuFoodsRecord.this, KonfirmasiSarapan.class);
                 startActivity(i);
-                finish();
+//                finish();
             }
         });
 
@@ -84,7 +84,7 @@ public class MenuFoodsRecord extends AppCompatActivity {
 
                     Intent i = new Intent(MenuFoodsRecord.this, KonfirmasiSelinganSarapan.class);
                     startActivity(i);
-                    finish();
+//                    finish();
 
             }
         });
@@ -94,7 +94,7 @@ public class MenuFoodsRecord extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(MenuFoodsRecord.this, KonfirmasiMakanSiang.class);
                 startActivity(i);
-                finish();
+//                finish();
 
             }
         });
@@ -104,7 +104,7 @@ public class MenuFoodsRecord extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(MenuFoodsRecord.this, KonfirmasiSelinganSiang.class);
                 startActivity(i);
-                finish();
+//                finish();
 
             }
         });
@@ -113,7 +113,7 @@ public class MenuFoodsRecord extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(MenuFoodsRecord.this, KonfirmasiMakanMalam.class);
                 startActivity(i);
-                finish();
+//                finish();
 
             }
         });
@@ -122,7 +122,7 @@ public class MenuFoodsRecord extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(MenuFoodsRecord.this, KonfirmasiSelinganMalam.class);
                 startActivity(i);
-                finish();
+//                finish();
 
             }
         });
