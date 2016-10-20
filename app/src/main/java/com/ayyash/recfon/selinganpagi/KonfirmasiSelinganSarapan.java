@@ -84,10 +84,10 @@ public class KonfirmasiSelinganSarapan extends AppCompatActivity {
                 //Integer jml_input = Integer.valueOf(response);
 
                 if(response.equals("1")){
-                    Toast.makeText(getApplicationContext(),response,Toast.LENGTH_LONG).show();
+                 //   Toast.makeText(getApplicationContext(),response,Toast.LENGTH_LONG).show();
                     GetData(ConfigUmum.URL_SHOW_SELINGAN_PAGI + email);
                 }else {
-                    Toast.makeText(getApplicationContext(),"Data selingan siang belum diisi, silakan periksa kembali!",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Data SARAPAN PAGI belum diisi, silakan periksa kembali!",Toast.LENGTH_SHORT).show();
                     finish();
                 }
 

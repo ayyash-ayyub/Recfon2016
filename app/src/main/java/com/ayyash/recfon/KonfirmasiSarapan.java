@@ -91,7 +91,7 @@ public class KonfirmasiSarapan extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
+                     //   Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
                         Intent i = new Intent(getApplicationContext(), SarapanActivity.class);
                         startActivity(i);
                         finish();

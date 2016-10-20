@@ -171,7 +171,7 @@ public class FormAktifitas extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show();
                        // namaAktifitas.setText(response);
                         Intent i = new Intent(getApplicationContext(), AktifitasFisik.class);
                         startActivity(i);
@@ -181,7 +181,7 @@ public class FormAktifitas extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
                     }
                 }) {
             @Override

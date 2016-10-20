@@ -132,7 +132,7 @@ public class SearchableSpinner extends Spinner implements View.OnTouchListener,
         selectedItem= getItemAtPosition(selectedIndex).toString();
 
 
-        Toast.makeText(getContext(),"Anda Menambahkan "+selectedItem,Toast.LENGTH_LONG).show();
+       // Toast.makeText(getContext(),"Anda Menambahkan "+selectedItem,Toast.LENGTH_LONG).show();
 
         Intent i = new Intent(_context, PerhitunganPagi.class);
         i.putExtra("indexMakanan", selectedIndex);

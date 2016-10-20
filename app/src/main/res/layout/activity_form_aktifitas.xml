@@ -43,7 +43,8 @@
             android:padding="16dp"
             android:gravity="left"
             android:inputType="numberDecimal"
-            android:singleLine="true" />
+            android:singleLine="true"
+            android:text="00" />
 
         <View
             android:layout_width="56dp"
@@ -71,7 +72,8 @@
                 android:padding="16dp"
                 android:gravity="left"
                 android:inputType="numberDecimal"
-                android:singleLine="true" />
+                android:singleLine="true"
+                android:text="00" />
 
             <View
                 android:layout_width="56dp"

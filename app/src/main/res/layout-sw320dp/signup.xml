@@ -12,10 +12,10 @@
     <FrameLayout
 
         android:layout_width="match_parent"
-        android:layout_height="130dp"
         android:background="@drawable/headerss"
         android:scaleType="centerCrop"
-        android:id="@+id/frameLayout">
+        android:id="@+id/frameLayout"
+        android:layout_height="60dp">
 
     </FrameLayout>
 
@@ -505,7 +505,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="120dp"
                 android:layout_marginRight="120dp"
-                android:text="Sign in"
+                android:text="Daftar"
                 android:id="@+id/signup1"
                 android:textAllCaps="false"
                 android:theme="@style/PrimaryButton"
@@ -520,7 +520,7 @@
                     android:id="@+id/acc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Already have account?"
+                    android:text="sudah punya akun?"
                     android:layout_above="@+id/signinhere"
                     android:gravity="center"
                     android:lines="1"
@@ -530,7 +530,7 @@
                     android:id="@+id/signinhere"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Signin here"
+                    android:text="login disini"
                     android:textColor="@color/colorPrimaryDark"
                     android:layout_alignParentBottom="true"
                     android:gravity="center"
@@ -545,22 +545,21 @@
     <ImageView
         android:id="@+id/image"
         android:layout_gravity="center"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
+        android:layout_width="30dp"
         android:src="@drawable/logo_bulat"
         android:layout_alignTop="@+id/logo"
         android:layout_centerHorizontal="true"
-        />
+        android:layout_height="30dp" />
     <TextView
-        android:text="Sign Up"
+        android:text="Daftar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView5"
         android:textColor="#fff"
-        android:textSize="24sp"
+        android:textSize="14sp"
         android:textStyle="normal|bold"
-        android:layout_marginTop="100dp"
 
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/image" />
 
 </RelativeLayout>

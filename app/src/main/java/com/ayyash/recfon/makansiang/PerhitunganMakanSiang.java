@@ -308,15 +308,15 @@ public class PerhitunganMakanSiang extends AppCompatActivity {
 
 
                         Save();
-                        Toast.makeText(getApplicationContext(),
-                                "Email: " + email +
-                                        "Makanan: " + namaMakanan.getText().toString().trim() +
-                                        "Jumlah: " + penampungProgres +
-                                        "Ukuran: " + penampungUkuran +
-                                        "Energi: " + hEnergiSort.toString().trim() +
-                                        "Protein: " + hProteinSort.toString().trim() +
-                                        "Lemak: " + hLemakSort.toString().trim() +
-                                        "Kalori: " + hKaloriSort.toString().trim() , Toast.LENGTH_LONG).show();
+//                        Toast.makeText(getApplicationContext(),
+//                                "Email: " + email +
+//                                        "Makanan: " + namaMakanan.getText().toString().trim() +
+//                                        "Jumlah: " + penampungProgres +
+//                                        "Ukuran: " + penampungUkuran +
+//                                        "Energi: " + hEnergiSort.toString().trim() +
+//                                        "Protein: " + hProteinSort.toString().trim() +
+//                                        "Lemak: " + hLemakSort.toString().trim() +
+//                                        "Kalori: " + hKaloriSort.toString().trim() , Toast.LENGTH_LONG).show();
                     }
                 });
 
@@ -626,15 +626,15 @@ public class PerhitunganMakanSiang extends AppCompatActivity {
 
 
 
-                        Toast.makeText(getApplicationContext(),
-                                "Email: " + email +
-                                        "Makanan: " + makanan +
-                                        "Jumlah: " + penampungProgres +
-                                        "Ukuran: " + penampungUkuran +
-                                        "Energi: " + hEnergiSort +
-                                        "Protein: " + hProteinSort +
-                                        "Lemak: " + hLemakSort +
-                                        "Kalori: " + hKaloriSort, Toast.LENGTH_LONG).show();
+//                        Toast.makeText(getApplicationContext(),
+//                                "Email: " + email +
+//                                        "Makanan: " + makanan +
+//                                        "Jumlah: " + penampungProgres +
+//                                        "Ukuran: " + penampungUkuran +
+//                                        "Energi: " + hEnergiSort +
+//                                        "Protein: " + hProteinSort +
+//                                        "Lemak: " + hLemakSort +
+//                                        "Kalori: " + hKaloriSort, Toast.LENGTH_LONG).show();
 
                         Save();
 
@@ -9755,6 +9755,57 @@ public class PerhitunganMakanSiang extends AppCompatActivity {
                 });
                 break;
 
+
+            case 181:
+                Img.setImageResource(R.drawable.air);
+                rg.setVisibility(View.VISIBLE);
+
+                r1.setText("200 ml");
+                r2.setVisibility(View.GONE);
+
+                hitung.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        double e = 0;
+                        double p = 0;
+                        double l = 0;
+                        double k = 0;
+
+                        if (r1.isChecked()) {
+                            urt = 0 * pengali;
+                            ukuran = "200 ml";
+                        }
+
+                        //JANGAN DIGANTI BAGIAN INI
+                        double hEnergi = (urt / 100) * e;
+                        double hProtein = (urt / 100) * p;
+                        double hLemak = (urt / 100) * l;
+                        double hKalori = (urt / 100) * k;
+
+                        //buat batasi digit coma
+//                        double hEnergiSort = Math.round(hEnergi * 100) / 100;
+//                        double hProteinSort = Math.round(hProtein * 100) / 100;
+//                        double hLemakSort = Math.round(hLemak * 100) / 100;
+//                        double hKaloriSort = Math.round(hKalori * 100) / 100;
+
+                        hEnergiSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
+                        hLemakSort = df.format(hLemak);
+                        hKaloriSort = df.format(hKalori);
+
+                        //JANGAN DIUTAK ATIK
+
+                        penampungProgres = String.valueOf(progress);
+                        penampungUkuran = String.valueOf(ukuran);
+
+
+
+                        Save();
+                    }
+                });
+                break;
+
+
 //            case 181:
 //                Img.setImageResource(R.drawable.selai);
 //                rg.setVisibility(View.VISIBLE);
@@ -9933,7 +9984,7 @@ public class PerhitunganMakanSiang extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Toast.makeText(PerhitunganMakanSiang.this, response, Toast.LENGTH_LONG).show();
+                        Toast.makeText(PerhitunganMakanSiang.this, response, Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(PerhitunganMakanSiang.this, MakanSiangActivity.class);
                         startActivity(i);
                         finish();
@@ -9942,7 +9993,7 @@ public class PerhitunganMakanSiang extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
                     }
                 }) {
             @Override
@@ -9960,7 +10011,7 @@ public class PerhitunganMakanSiang extends AppCompatActivity {
             }
 
         };
-        Toast.makeText(getApplicationContext(), "Menambahkan makanan = " + makanan, Toast.LENGTH_LONG).show();
+       // Toast.makeText(getApplicationContext(), "Menambahkan makanan = " + makanan, Toast.LENGTH_LONG).show();
         int socketTimeout = 30000;//30 seconds - change to what you want
         RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());

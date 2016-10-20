@@ -62,7 +62,7 @@ public class MainMenu extends AppCompatActivity {
                 "" +
                 "<p style='text-align:justify'>Info lebih jelas terkait survey ini dapat ditujukan pada:</p>" +
                 "<p style='text-align:center'>Ir. Helda Khusun, PhD./ Dr. dr. Aria Kekalih, MTI/ Dr. Luh Ade Ari Wiradnyani, MSc.\n" +
-                "SEAMEO-Regional Center for Food and Nutrition/RECFON\n" +
+                "SEAMEO-Regional Center for Food and Nutrition/RECFON \n" +
                 "Pusat Kajian Makanan dan Gizi Regional Universitas Indonesia\n" +
                 "Jl. Salemba Raya no 6, Jakarta Pusat 10430\n" +
                 "Telp 021-31930205, 3913932\n</p>";

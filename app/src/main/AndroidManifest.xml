@@ -33,7 +33,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Register2" />
         <activity android:name=".HalamanDepan" />
         <activity android:name=".MenuFoodsRecord" />
         <activity android:name=".Login" />

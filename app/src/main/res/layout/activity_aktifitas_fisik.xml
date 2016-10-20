@@ -16,7 +16,7 @@
     android:weightSum="1">
 
     <TextView
-        android:text="Phisical Activity"
+        android:text="Aktifitas fisik"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView6"
@@ -42,7 +42,7 @@
         android:id="@+id/spinner"
         android:layout_height="wrap_content"
         android:entries="@array/aktifitas"
-        app:hintText="Add New Phisical Activity"
+        app:hintText="Tambahkan aktifitas disini"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_width="match_parent" />
