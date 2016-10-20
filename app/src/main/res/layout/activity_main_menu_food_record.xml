@@ -18,95 +18,97 @@
         android:layout_marginTop="0dp"
         android:background="?attr/colorPrimary"
         android:theme="@style/ThemeOverlay.AppCompat.Light"/>
-<ScrollView
-    android:layout_gravity="center"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
 
-    <LinearLayout
-        android:orientation="horizontal"
+    <ScrollView
+        android:layout_gravity="center"
         android:layout_width="match_parent"
-        android:gravity="center"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:layout_margin="10dp"
-            android:layout_height="150dp"
-            android:layout_width="150dp"
-            android:id="@+id/btnsarapanpagi"
-            android:background="@drawable/btn_sarapan" />
-
-        <Button
-            android:layout_margin="10dp"
-            android:id="@+id/selinganPagi"
-            android:layout_height="150dp"
-            android:layout_width="150dp"
-            android:background="@drawable/btn_spagi" />
-    </LinearLayout>
-
+        android:layout_height="match_parent">
     <LinearLayout
-        android:orientation="horizontal"
-        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
 
-        <Button
-            android:layout_margin="10dp"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:id="@+id/makanSiang"
-            android:background="@drawable/btn_siang" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content">
 
-        <Button
-            android:layout_margin="10dp"
-            android:layout_height="150dp"
-            android:id="@+id/seliSiang"
-            android:layout_width="150dp"
-            android:background="@drawable/btn_ssiang" />
-    </LinearLayout>
-    <LinearLayout
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            <Button
+                android:layout_margin="10dp"
+                android:layout_height="150dp"
+                android:layout_width="150dp"
+                android:id="@+id/btnsarapanpagi"
+                android:background="@drawable/btn_sarapan" />
 
-        <Button
-            android:layout_margin="10dp"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:id="@+id/makanMalam"
-            android:background="@drawable/btn_malam" />
+            <Button
+                android:layout_margin="10dp"
+                android:id="@+id/selinganPagi"
+                android:layout_height="150dp"
+                android:layout_width="150dp"
+                android:background="@drawable/btn_spagi" />
+        </LinearLayout>
 
-        <Button
-            android:layout_margin="10dp"
-            android:layout_height="150dp"
-            android:id="@+id/selinganMala"
-            android:layout_width="150dp"
-            android:background="@drawable/btn_smalam" />
-    </LinearLayout>
-    <LinearLayout
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <Button
-            android:layout_margin="10dp"
+            <Button
+                android:layout_margin="10dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/makanSiang"
+                android:background="@drawable/btn_siang" />
+
+            <Button
+                android:layout_margin="10dp"
+                android:layout_height="150dp"
+                android:id="@+id/seliSiang"
+                android:layout_width="150dp"
+                android:background="@drawable/btn_ssiang" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_margin="10dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/makanMalam"
+                android:background="@drawable/btn_malam" />
+
+            <Button
+                android:layout_margin="10dp"
+                android:layout_height="150dp"
+                android:id="@+id/selinganMala"
+                android:layout_width="150dp"
+                android:background="@drawable/btn_smalam" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Perbandingan Asupan Makan"
-            android:theme="@style/PrimaryButton"
-            android:id="@+id/Asupan"
-             />
+            android:weightSum="1">
+
+            <Button
+                android:layout_margin="10dp"
+                android:layout_width="293dp"
+                android:layout_height="wrap_content"
+                android:text="Perbandingan Asupan Makan"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/Asupan"
+                android:layout_weight="0.37" />
+
+        </LinearLayout>
 
     </LinearLayout>
-
-</LinearLayout>
-</ScrollView>
+    </ScrollView>
 
 </LinearLayout>
