@@ -103,7 +103,7 @@
                 android:layout_height="wrap_content"
                 android:text="Perbandingan Asupan Makan"
                 android:theme="@style/PrimaryButton"
-                android:id="@+id/Asupan"
+                android:id="@+id/btnAsupan"
                 android:layout_weight="0.37" />
 
         </LinearLayout>

@@ -39,7 +39,7 @@ import java.util.Map;
 
 public class MenuFoodsRecord extends AppCompatActivity {
 
-    Button sPagi,selinganPagi, makanSiang,selinganSiang,makanMalam,selinganMalam;
+    Button sPagi,selinganPagi, makanSiang,selinganSiang,makanMalam,selinganMalam,perbandinganAsupan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +54,7 @@ public class MenuFoodsRecord extends AppCompatActivity {
         selinganSiang =(Button)findViewById(R.id.seliSiang);
         makanMalam = (Button)findViewById(R.id.makanMalam);
         selinganMalam = (Button)findViewById(R.id.selinganMala);
+        perbandinganAsupan = (Button)findViewById(R.id.btnAsupan);
 
 
         //selinganPagi.setEnabled(false);
@@ -124,6 +125,14 @@ public class MenuFoodsRecord extends AppCompatActivity {
                 startActivity(i);
 //                finish();
 
+            }
+        });
+
+        perbandinganAsupan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MenuFoodsRecord.this, PerbandinganAsupan.class);
+                startActivity(i);
             }
         });
 

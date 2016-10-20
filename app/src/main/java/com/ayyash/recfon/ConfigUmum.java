@@ -57,6 +57,10 @@ public class ConfigUmum {
     public static String URL_INSERT_ACTIVITY = "http://"+IP+"/recfon/api/insert_activity.php";
     public static String URL_DELETE_ACTIVITY = "http://"+IP+"/recfon/api/delete_activity.php?id=";
 
+    public static String URL_INSERT_ASUPAN = "http://"+IP+"/recfon/api/insert_asupan.php";
+
+
+
 
     //regiser
     public static String REGISTER = "http://"+IP+"/recfon/api/register.php";

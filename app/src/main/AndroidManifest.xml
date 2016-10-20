@@ -61,7 +61,9 @@
         <activity
             android:name=".selinganmalam.KonfirmasiSelinganMalam"
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
-        <activity android:name=".PerbandinganAsupan"></activity>
+        <activity android:name=".PerbandinganAsupan" android:theme="@style/Theme.AppCompat.Light.Dialog">
+
+        </activity>
     </application>
 
 </manifest>
