@@ -30,7 +30,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/activity"
+        app:srcCompat="@drawable/food_records"
         android:id="@+id/imageView" />
 
     <Space

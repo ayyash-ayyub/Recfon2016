@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -56,6 +57,30 @@ public class FormAktifitas extends AppCompatActivity {
         namaAktifitas = (TextView) findViewById(R.id.txtActivity);
         Jam = (EditText)findViewById(R.id.txtJam);
         Menit = (EditText)findViewById(R.id.txtMenit);
+
+        Jam.setOnTouchListener(new View.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                Jam.setFocusable(true);
+                Jam.requestFocus();
+                Jam.setText(null);
+                return false;
+            }
+        });
+
+        Menit.setOnTouchListener(new View.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                Menit.setFocusable(true);
+                Menit.requestFocus();
+                Menit.setText(null);
+                return false;
+            }
+        });
 
         SharedPreferences sharedPreferences = getSharedPreferences(ConfigUmum.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         email = sharedPreferences.getString(ConfigUmum.NIS_SHARED_PREF, "tidak tersedia");
