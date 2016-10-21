@@ -16,7 +16,7 @@
     android:weightSum="1">
 
     <TextView
-        android:text="Frekuensi Makan"
+        android:text="Frekuensi Makan sebulan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView6"
@@ -33,44 +33,637 @@
         app:srcCompat="@drawable/activity"
         android:id="@+id/imageView" />
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="25dp"
-        android:clickable="true">
-    <com.ayyash.recfon.aktifitas.SearchableSpinnerAktifitas
-        android:id="@+id/spinner"
-        android:layout_height="wrap_content"
-        android:entries="@array/aktifitas"
-        app:hintText="Add New Phisical Activity"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_width="match_parent" />
-    </android.support.v7.widget.CardView>
-
     <Space
         android:layout_width="match_parent"
         android:layout_height="20dp" />
 
-    <TextView
-        android:text="Daftar Aktifitas :"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtTanggal"
-        android:textColor="@android:color/holo_green_dark" />
+        android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:layout_weight="1">
-
-        <android.support.v7.widget.RecyclerView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/rv_item_uye">
+            android:orientation="vertical" >
 
-        </android.support.v7.widget.RecyclerView>
+            <TextView
+                android:text="Makanan pokok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:textSize="24sp"
+                android:textColorLink="@color/colorPrimaryDark" />
 
-    </RelativeLayout>
+            <Button
+                android:text="Nasi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb1" />
+
+            <Button
+                android:text="nasi merah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb2" />
+
+            <Button
+                android:text="nasi masak santan (nasi kuning, nasi uduk)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb3" />
+
+            <Button
+                android:text="mie instant goreng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb4" />
+
+            <Button
+                android:text="mie instant kuah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb5" />
+
+            <Button
+                android:text="nasi goreng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb6" />
+
+            <Button
+                android:text="mie goreng (bukan instant), kwetiaw goreng, bihun goreng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb7" />
+
+            <Button
+                android:text="bubur ayam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb8" />
+
+            <Button
+                android:text="roti tawar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb9" />
+
+            <Button
+                android:text="lontong/ ketupat sayur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb10" />
+
+            <TextView
+                android:text="Umbi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView8"
+                android:theme="@style/PrimaryButton"
+                android:textSize="24sp"
+                android:textColor="@color/cardview_dark_background" />
+
+            <Button
+                android:text="Ubi goreng , Singkong goreng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb11" />
+
+            <Button
+                android:text="Ubi rebus, Singkong rebus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb12" />
+
+            <Button
+                android:text="Perkedel kentang, kentang goreng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb13" />
+
+            <TextView
+                android:text="Sayur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:textSize="24sp"
+                android:id="@+id/textView10"
+                android:textColor="@color/cardview_dark_background"/>
+
+            <Button
+                android:text="sayur masak santan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb14" />
+
+            <Button
+                android:text="sayur tumis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb15" />
+
+            <Button
+                android:text="sayur rebus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb16" />
+
+            <Button
+                android:text="sayur campuran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb17" />
+
+            <TextView
+                android:text="Buah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:textSize="24sp"
+                android:id="@+id/textView11"
+                android:textColor="@color/cardview_dark_background"/>
+
+            <Button
+                android:text="pisang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb18" />
+
+            <Button
+                android:text="mangga"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb19" />
+
+            <Button
+                android:text="alpukat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb20" />
+
+            <Button
+                android:text="jeruk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb21" />
+
+            <Button
+                android:text="pepaya"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb22" />
+
+            <Button
+                android:text="buah lainya"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb23" />
+
+            <TextView
+                android:text="Olahan kedelai"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:textSize="24sp"
+                android:id="@+id/textView12"
+                android:textColor="@color/cardview_dark_background"/>
+
+            <Button
+                android:text="tempe / tahu goreng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb24" />
+
+            <Button
+                android:text="tahu isi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb25" />
+
+            <Button
+                android:text="tempe orek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb26" />
+
+            <Button
+                android:text="tempe / tahu pepes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb27" />
+
+            <Button
+                android:text="tahu / tempe bacem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb28" />
+
+            <TextView
+                android:text="Telur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:textSize="24sp"
+                android:id="@+id/textView13"
+                android:textColor="@color/cardview_dark_background"/>
+
+            <Button
+                android:text="telur ayam rebus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb29" />
+
+            <Button
+                android:text="telur ayam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb30" />
+
+            <Button
+                android:text="telur bebek asin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb31" />
+
+            <TextView
+                android:text="Sumber hewani"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:textSize="24sp"
+                android:id="@+id/textView14"
+                android:textColor="@color/cardview_dark_background"/>
+
+            <Button
+                android:text="Daging merah (kambing, sapi) masak santan (gule, tongseng, redang, coto makasar, rawon)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb32" />
+
+            <Button
+                android:text="Daging merah (kambing, sapi) dibakar / panggang (sate, steak)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb33" />
+
+            <Button
+                android:text="Bakso / sosis / kornet sapi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb34" />
+
+            <Button
+                android:text="Unggas (ayam, bebek) masak santan (ayam pop, kare ayam, opor ayam)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb35" />
+
+            <Button
+                android:text="Unggas (ayam, bebek, nugget) digoreng / ditumis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb36" />
+
+            <Button
+                android:text="Unggas (ayam, bebek)  dibakar / dipanggang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb37" />
+
+            <Button
+                android:text="Unggas (ayam, bebek)  direbus / masak sup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb38" />
+
+            <Button
+                android:text="Ikan goreng / pesmol / masak balado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb39" />
+
+            <Button
+                android:text="Ikan bakar / panggang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb40" />
+
+            <Button
+                android:text="Ikan kukus / rebus/ masak sup/ pepes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb41" />
+
+            <Button
+                android:text="Seafood (cumi, udang) goreng / pesmol / masak balado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb42" />
+
+            <Button
+                android:text="Seafood (cumi, udang) kukus / rebus / masak sup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb43" />
+
+            <TextView
+                android:text="Organ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:textSize="24sp"
+                android:id="@+id/textView15"
+                android:textColor="@color/cardview_dark_background"/>
+
+            <Button
+                android:text="Organ goreng (hati ayam, ampela, usus)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb44" />
+
+            <TextView
+                android:text="Snack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:textSize="24sp"
+                android:id="@+id/textView16"
+                android:textColor="@color/cardview_dark_background"/>
+
+            <Button
+                android:text="kacang kulit rebus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb45" />
+
+            <Button
+                android:text="kacang atom / kacang telur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb46" />
+
+            <Button
+                android:text="Bubur kacang hijau"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb47" />
+
+            <Button
+                android:text="Risoles / pastel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb48" />
+
+            <Button
+                android:text="pisang goreng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb49" />
+
+            <Button
+                android:text="perkedel jagung"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb50" />
+
+            <Button
+                android:text="Roti manis / roti isi, kue Bolu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb51" />
+
+            <Button
+                android:text="Donat, roti goreng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb52" />
+
+            <Button
+                android:text="Martabak telur, Martabak manis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb53" />
+
+            <Button
+                android:text="Batagor, Siomay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb54" />
+
+            <Button
+                android:text="wafer, biskuit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb55" />
+
+            <Button
+                android:text="coklat, permen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb56" />
+
+            <Button
+                android:text="Seblak, cireng, cilok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb57" />
+
+            <Button
+                android:text="keripik, chips, Kerupuk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb58" />
+
+            <TextView
+                android:text="Minuman"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:textSize="24sp"
+                android:id="@+id/textView17"
+                android:textColor="@color/cardview_dark_background"/>
+
+            <Button
+                android:text="minuman bersoda (Fanta, Sprite, Coca Cola, 7Up, Pepsi)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb59" />
+
+            <Button
+                android:text="minuman isotonik (Pocary Sweat, Mizone)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb60" />
+
+            <Button
+                android:text="minuman berenergy (Krating Daeng, Red Bull)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb61" />
+
+            <Button
+                android:text="minuman kemasan sari buah (Buavita, Floridina, Minutes Maid Pulpy, Ale ale)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb62" />
+
+            <Button
+                android:text="minuman serbuk sari buah (Nutrisari, Marimas)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb63" />
+
+            <Button
+                android:text="Teh manis bukan kemasan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb64" />
+
+            <Button
+                android:text="Teh kemasan (Sosro, Teh Botol, Teh Kotak, Freshtea, NuTea)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb65" />
+
+            <Button
+                android:text="Kopi instant bubuk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb66" />
+
+            <Button
+                android:text="Kopi instant siap minum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb67" />
+
+            <Button
+                android:text="Kopi manis bukan kemasan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb68" />
+
+            <Button
+                android:text="Minuman es (es teller, es campur, es buah, es goyobod)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb69" />
+
+            <TextView
+                android:text="Susu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:textSize="24sp"
+                android:id="@+id/textView18"
+                android:textColor="@color/cardview_dark_background"/>
+
+            <Button
+                android:text="susu cair siap minum / kemasan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb70" />
+
+            <Button
+                android:text="susu bubuk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb71" />
+
+            <Button
+                android:text="susu kental manis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb72" />
+
+            <Button
+                android:text="Yogurt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb73" />
+
+            <Button
+                android:text="Es krim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/PrimaryButton"
+                android:id="@+id/bb74" />
+
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

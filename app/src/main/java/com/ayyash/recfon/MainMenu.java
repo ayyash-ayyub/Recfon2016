@@ -5,7 +5,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -19,6 +18,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.ayyash.recfon.aktifitas.AktifitasFisik;
+import com.ayyash.recfon.frekuensi.FrekuensiBulanan;
 
 public class MainMenu extends AppCompatActivity {
     private int mutedColor;
@@ -133,8 +133,14 @@ public class MainMenu extends AppCompatActivity {
 
                 //noinspection SimplifiableIfStatement
                 if (id == R.id.kebiasaan) {
-                    //   Toast.makeText(getApplicationContext(),"Kebiasaan coy",Toast.LENGTH_LONG).show();
+                      Toast.makeText(getApplicationContext(),"Profile Kalori anda",Toast.LENGTH_LONG).show();
                     // finish();
+                }else if(id == R.id.foodRecall) {
+                 //   Toast.makeText(getApplicationContext(),"FrekuensiBulanan",Toast.LENGTH_LONG).show();
+                    Intent i = new Intent(MainMenu.this, FrekuensiBulanan.class);
+                    startActivity(i);
+                    finish();
+
                 }else if (id == R.id.aktifitasFisik){
                     Intent i = new Intent(MainMenu.this, AktifitasFisik.class);
                     startActivity(i);

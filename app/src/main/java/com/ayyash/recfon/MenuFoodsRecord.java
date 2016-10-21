@@ -172,7 +172,7 @@ public class MenuFoodsRecord extends AppCompatActivity {
         builder.setMessage(Html.fromHtml("Anda diminta menuliskan jenis dan jumlah "+"<b>"+ "makanan dan minuman" + "</b>"+" yang dikonsumsi"+"<b>"+" " +
                 "selama 24 jam HARI INI (sejak bangun tidur hingga tidur lagi)"+ "</b>"+"<br><br><br>"+"<u>"+"Cara pengisian :"+"</u>"+"<br>"+
                 "<b>"+"Pilih jenis makanan dan minuman yang dikonsumsi, kemudian isikan jumlah yang dikonsumsi sesuai ukuran wadah yang tersedia"+"</b>"+
-                "<br><br><br>"+"<p style='text-align:justify'>Setelah anda mengisi ke 6 aktifitas harian dari pagi sampai dengan selingan malam , jangan lupa juga mengisi <strong style='color:red;'>PERBANDINGAN ASUPAN MAKAN</strong> pada tombol hijau yang berada  bawah.</p>"+
+                "<br><br><br>"+"<p style='text-align:justify'>Setelah anda mengisi ke 6 aktifitas harian dari pagi sampai dengan selingan malam , jangan lupa juga mengisi <strong style='color:red;'>PERBANDINGAN ASUPAN MAKAN</strong> pada tombol hijau yang berada paling bawah.</p>"+
                 ""));
 
         builder.setPositiveButton("OK", null);
