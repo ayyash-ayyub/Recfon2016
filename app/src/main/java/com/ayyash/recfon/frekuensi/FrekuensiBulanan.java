@@ -26,6 +26,8 @@ Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,
         b41,b42,b43,b44,b45,b46,b47,b48,b49,b50,
         b51,b52,b53,b54,b55,b56,b57,b58,b59,b60,
         b61,b62,b63,b64,b65,b66,b67,b68,b69,b70,b71,b72,b73,b74;
+
+//    String makanan;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -120,6 +122,16 @@ Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(),""+ b73.getText().toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        b7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(),FormFrekuensiMakan.class);
+                i.putExtra("makanan", "Mie Goreng");
+                startActivity(i);
+                Toast.makeText(getApplicationContext(),""+ b7.getText().toString(), Toast.LENGTH_SHORT).show();
             }
         });
 
