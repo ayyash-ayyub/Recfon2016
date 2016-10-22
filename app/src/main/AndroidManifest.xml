@@ -67,6 +67,7 @@
         <activity
             android:name=".PerbandinganAsupan"
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity android:name=".frekuensi.FormFrekuensiMakan"></activity>
     </application>
 
 </manifest>

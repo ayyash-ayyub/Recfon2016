@@ -153,39 +153,6 @@ public class FormAktifitas extends AppCompatActivity {
 
     }
 
-//    private void Save(){
-//        android.app.AlertDialog.Builder alertDialog = new android.app.AlertDialog.Builder(FormFrekuensi.this);
-//
-//        // Setting Dialog Title
-//        alertDialog.setTitle("Sarapan");
-//        // Setting Dialog Message
-//        alertDialog.setMessage("Apakah Anda yakin data yang anda masukkan sudah Sesuai?");
-//        // Setting Icon to Dialog
-//        alertDialog.setIcon(R.drawable.i);
-//
-//        // Setting Positive "Yes" Button
-//        alertDialog.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
-//            public void onClick(DialogInterface dialog,int which) {
-//
-//                // Write your code here to invoke YES event
-//                ConfirmSave();
-//            }
-//        });
-//
-//        // Setting Negative "NO" Button
-//        alertDialog.setNegativeButton("Cek Kembali", new DialogInterface.OnClickListener() {
-//            public void onClick(DialogInterface dialog, int which) {
-//                // Write your code here to invoke NO event
-////                Toast.makeText(getApplicationContext(), "You clicked on NO", Toast.LENGTH_SHORT).show();
-//                dialog.cancel();
-//            }
-//        });
-//
-//        // Showing Alert Message
-//        alertDialog.show();
-////    }
-//    }
-
     private void Save() {
         final String txt_email = email.toString().trim();
         final String aktifitas = namaAktifitas.getText().toString().trim();
