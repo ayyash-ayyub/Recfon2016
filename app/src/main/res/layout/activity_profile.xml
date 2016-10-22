@@ -128,7 +128,20 @@
         android:layout_height="wrap_content"
         android:id="@+id/txtTanggal"
         android:textColor="@android:color/holo_green_dark" />
-
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/txtStatusAKG"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="#f00"
+        android:text="Silakan melengkapi minimal 3 hari catatan makanan harian untuk melihat kecukupan asupan (AKG)"
+        android:layout_height="wrap_content" />
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -138,5 +151,6 @@
         android:layout_weight="0.66">
 
     </android.support.v7.widget.RecyclerView>
+</LinearLayout>
 
 </LinearLayout>

@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -42,7 +43,7 @@ public class ProfileUser extends AppCompatActivity {
     private RecyclerView rv_item;
     String email;
     Context context;
-    TextView bmi,keterangan, statusAk, rataDu;
+    TextView bmi,keterangan, statusAk, rataDu, txtStatusAKG;
 
 
     // This string will hold the results
@@ -72,6 +73,7 @@ public class ProfileUser extends AppCompatActivity {
         keterangan = (TextView) findViewById(R.id.ket);
        statusAk = (TextView)findViewById(R.id.statuasAkfFisik);
         rataDu = (TextView)findViewById(R.id.rataDuduk);
+        txtStatusAKG = (TextView)findViewById(R.id.txtStatusAKG);
 
         SharedPreferences sharedPreferences = getSharedPreferences(ConfigUmum.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         email = sharedPreferences.getString(ConfigUmum.NIS_SHARED_PREF, "tidak tersedia");
@@ -204,10 +206,9 @@ public class ProfileUser extends AppCompatActivity {
 //                String result = response.getJSONObject("result");
 
                if(response.contains("null")){
-                    Toast.makeText(getApplicationContext(), "Mohon lengkapi data rekam makan harian minimal 3 hari untuk melihat Kecukupan asupan makanan (AKG)", Toast.LENGTH_LONG).show();
-//                    Intent intent = new Intent(getApplicationContext(),MainMenu.class);
-//                    startActivity(intent);
-//                    finish();
+//                    Toast.makeText(getApplicationContext(), "Mohon lengkapi data rekam makan harian minimal 3 hari untuk melihat Kecukupan asupan makanan (AKG)", Toast.LENGTH_LONG).show();
+                    rv_item.setVisibility(View.GONE);
+                   txtStatusAKG.setVisibility(View.VISIBLE);
 
                 }else{
                    GsonBuilder builder = new GsonBuilder();
