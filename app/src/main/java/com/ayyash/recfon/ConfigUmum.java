@@ -48,16 +48,24 @@ public class ConfigUmum {
     public static String URL_INSERT_SELINGAN_MALAM = "http://"+IP+"/recfon/api/insert_record_selingan_malam.php";
 
 
-//    public static String URL_SIMPAN_PAGI(String email, String bahan_makanan, String jumlah, String besaran_makanan) {
-//        return Uri.encode("http://"+IP+"/insert_record_pagi.php?email=" + email + "&bahan_makanan=" + bahan_makanan + "&jumlah=" + jumlah + "&besaran_makanan=" + besaran_makanan, ALLOWED_URI_CHARS);
-//    }
+// buat get Kecukupan asupan
+    public static String URL_SHOW_AKG_PROFILE = "http://"+IP+"/recfon/api/get_profile_kecukupan_asupan.php?email=";
 
-    // delete activity
 
+    //activity
     public static String URL_INSERT_ACTIVITY = "http://"+IP+"/recfon/api/insert_activity.php";
     public static String URL_DELETE_ACTIVITY = "http://"+IP+"/recfon/api/delete_activity.php?id=";
 
     public static String URL_INSERT_ASUPAN = "http://"+IP+"/recfon/api/insert_asupan.php";
+
+    //get BMI Profile
+    public static String URL_BMI_PROFILE = "http://"+IP+"/recfon/api/get_profile_status_gizi.php?email=";
+
+
+    //get AktifitasFisik dan duduk
+    public static String URL_FISIK_DUDUK = "http://"+IP+"/recfon/api/get_profile_aktifitas_fisik.php?email=";
+
+
 
 
 

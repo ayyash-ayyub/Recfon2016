@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        app:cardUseCompatPadding="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardview_item_profile"
+        android:clickable="true"
+
+        app:cardBackgroundColor="@color/cardview_light_background"
+        app:contentPadding="@dimen/cardview_compat_inset_shadow"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:padding="12dp"
+            android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/aa"
+                    android:text="Tanggal"
+                    android:textStyle="bold"
+                    android:textSize="12sp" />
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bb"
+                    android:layout_below="@+id/aa"
+                    android:text="AKG ENERGI"
+                android:textColor="@android:color/holo_orange_dark"
+                android:textSize="10sp" />
+
+            <TextView
+                android:text="AKG PROTEIN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_orange_dark"
+                android:id="@+id/cc"
+                android:textSize="10sp" />
+
+            <TextView
+                android:text="AKG LEMAK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_orange_dark"
+
+                android:id="@+id/dd"
+                android:textSize="10sp" />
+
+            <TextView
+                android:text="AKG KARBOHIDRAT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/holo_orange_dark"
+                android:id="@+id/ee"
+                android:textSize="10sp" />
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

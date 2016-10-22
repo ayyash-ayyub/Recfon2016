@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import com.ayyash.recfon.aktifitas.AktifitasFisik;
 import com.ayyash.recfon.frekuensi.FrekuensiBulanan;
+import com.ayyash.recfon.profile.ProfileUser;
 
 public class MainMenu extends AppCompatActivity {
     private int mutedColor;
@@ -133,8 +134,10 @@ public class MainMenu extends AppCompatActivity {
 
                 //noinspection SimplifiableIfStatement
                 if (id == R.id.kebiasaan) {
-                      Toast.makeText(getApplicationContext(),"Profile Kalori anda",Toast.LENGTH_LONG).show();
-                    // finish();
+                    //  Toast.makeText(getApplicationContext(),"Profile Kalori anda",Toast.LENGTH_LONG).show();
+                    Intent i = new Intent(MainMenu.this, ProfileUser.class);
+                    startActivity(i);
+                    finish();
                 }else if(id == R.id.foodRecall) {
                  //   Toast.makeText(getApplicationContext(),"FrekuensiBulanan",Toast.LENGTH_LONG).show();
                     Intent i = new Intent(MainMenu.this, FrekuensiBulanan.class);

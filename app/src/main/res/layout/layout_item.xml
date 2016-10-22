@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/cardview_item"
         android:clickable="true"
-        app:cardElevation="0dp"
+
         app:cardBackgroundColor="@color/cardview_light_background"
         app:contentPadding="@dimen/cardview_compat_inset_shadow"
         android:foreground="?android:attr/selectableItemBackground">

@@ -26,6 +26,8 @@
         <activity android:name=".selingansiang.PerhitunganSelinganSiang" />
         <activity android:name=".makanmalam.PerhitunganMakanMalam" />
         <activity android:name=".selinganmalam.PerhitunganSelinganMalam" />
+        <activity android:name=".profile.ProfileUser" />
+
         <activity android:name=".Register" />
         <activity android:name=".Splash">
             <intent-filter>

@@ -42,7 +42,7 @@
             android:background="#0000"
             android:padding="16dp"
             android:gravity="left"
-            android:inputType="numberDecimal"
+           android:inputType="number"
             android:singleLine="true"
             android:text="00" />
 
@@ -60,6 +60,7 @@
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
             <customsfonts.MyEditText
                 android:id="@+id/txtMenit"
                 android:textSize="16dp"
@@ -71,7 +72,7 @@
                 android:background="#0000"
                 android:padding="16dp"
                 android:gravity="left"
-                android:inputType="numberDecimal"
+                android:inputType="number"
                 android:singleLine="true"
                 android:text="00" />
 

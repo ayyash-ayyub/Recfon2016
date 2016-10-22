@@ -21,7 +21,7 @@ public class MainHolderAktifitas extends RecyclerView.ViewHolder {
     public MainHolderAktifitas(View itemView) {
         super(itemView);
 
-        txt_name = (TextView) itemView.findViewById(R.id.namaAA);
+        txt_name = (TextView) itemView.findViewById(R.id.aa);
         txt_durasi = (TextView) itemView.findViewById(R.id.txtDurasi);
         cardview_item = (CardView) itemView.findViewById(R.id.cardview_item_aktifitas);
     }

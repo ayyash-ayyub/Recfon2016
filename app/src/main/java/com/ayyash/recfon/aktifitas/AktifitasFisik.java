@@ -85,9 +85,9 @@ public class AktifitasFisik extends AppCompatActivity {
                 Gson mGson = builder.create();
                 objectAkatifitas = mGson.fromJson(response, ItemObjectAktifitas.ObjectAkatifitas.class);
                 System.out.println("Respond "+ response);
-               // adapter = new MainAdapterAktifitas(this, objectBelajar.result);
+               // adapter = new MainAdapterProfile(this, objectBelajar.result);
                 adapter = new MainAdapterAktifitas(getApplication(), objectAkatifitas.result);
-              //  adapter = new MainAdapterAktifitas((Response.Listener<String>) getApplication(), objectBelajar.result);
+              //  adapter = new MainAdapterProfile((Response.Listener<String>) getApplication(), objectBelajar.result);
                 rv_item.setAdapter(adapter);
 //                if(response.contains("1")){
 //                    tidakSarapan.setVisibility(View.INVISIBLE);

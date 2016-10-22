@@ -101,7 +101,7 @@ public class PerbandinganAsupan extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
-                        Intent i = new Intent(getApplicationContext(), MenuFoodsRecord.class);
+                        Intent i = new Intent(getApplicationContext(), MainMenu.class);
                         startActivity(i);
                         finish();
                         System.out.println(response);
