@@ -1,5 +1,11 @@
 
 <resources>
+    <string-array name="frekuensi">
+        <item>Hari</item>
+        <item>Minggu</item>
+        <item>Bulan</item>
+    </string-array>
+
     <string-array name="makanan">
 
 

@@ -200,25 +200,27 @@ public class ProfileUser extends AppCompatActivity {
 
             @Override
             public void onResponse(String response) {
-                GsonBuilder builder = new GsonBuilder();
-                Gson mGson = builder.create();
-                objectProfile = mGson.fromJson(response, ItemObjectProfile.ObjectProfile.class);
 
+//                String result = response.getJSONObject("result");
 
-//               if(response.contains("0")){
-//
-//
-//
-//                    Toast.makeText(getApplicationContext(), "Mohon lengkapi data rekam makan harian minimal 3 hari sebelum anda mengakses menu ini", Toast.LENGTH_LONG).show();
+               if(response.contains("null")){
+                    Toast.makeText(getApplicationContext(), "Mohon lengkapi data rekam makan harian minimal 3 hari untuk melihat Kecukupan asupan makanan (AKG)", Toast.LENGTH_LONG).show();
 //                    Intent intent = new Intent(getApplicationContext(),MainMenu.class);
 //                    startActivity(intent);
 //                    finish();
-//
-//                }else {
 
-                    adapter = new MainAdapterProfile(getApplication(), objectProfile.result);
-                    //  adapter = new MainAdapterProfile((Response.Listener<String>) getApplication(), objectBelajar.result);
-                    rv_item.setAdapter(adapter);
+                }else{
+                   GsonBuilder builder = new GsonBuilder();
+                   Gson mGson = builder.create();
+                   objectProfile = mGson.fromJson(response, ItemObjectProfile.ObjectProfile.class);
+                   adapter = new MainAdapterProfile(getApplication(), objectProfile.result);
+                   //  adapter = new MainAdapterProfile((Response.Listener<String>) getApplication(), objectBelajar.result);
+                   rv_item.setAdapter(adapter);
+                   System.out.println("Respon uhuy :"+ response);
+               }
+// else {
+
+
 
 
                     //  Toast.makeText(getApplicationContext(), "Data aktifitas: "+response.toString(), Toast.LENGTH_SHORT).show();

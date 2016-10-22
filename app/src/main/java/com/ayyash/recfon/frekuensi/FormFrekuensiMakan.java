@@ -181,33 +181,34 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 Img.setImageResource(R.drawable.mie_goreng_bukan_instan);
                 rm1.setText("Mie goreng (Bukan instant)");
                 rm2.setText("kwetiaw goreng");
-                rm3.setText("kwetiaw goreng");
+                rm3.setText("Bihun Goreng");
                 rm3.setVisibility(View.VISIBLE);
                 rm2.setVisibility(View.VISIBLE);
 
-                rm1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
+                rgJenisMakanan.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                     @Override
-                    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                    public void onCheckedChanged(RadioGroup radioGroup, int i) {
                         if (rm1.isChecked()){
-                            e = 198.78;
-                            p = 4.26;
-                            l = 1.99;
-                            k = 41.31;
+                            e = 156.74;
+                            p = 4.22;
+                            l = 11.93;
+                            k = 38.82;
                             Img.setImageResource(R.drawable.mie_goreng_bukan_instan);
-                            namaMakanan.setText("kwetiaw goreng");
+                            namaMakanan.setText("Mie goreng (bukan instant)");
+
                         }else if(rm2.isChecked()){
-                            e = 198.78;
-                            p = 4.26;
-                            l = 1.99;
-                            k = 41.31;
+                            e = 144.59;
+                            p = 3.47;
+                            l = 11.20;
+                            k = 7.63;
                             Img.setImageResource(R.drawable.kwetiau_goreng);
                             namaMakanan.setText("Kwetiaw goreng");
                         }else if (rm3.isChecked()){
-                            e = 198.78;
-                            p = 4.26;
-                            l = 1.99;
-                            k = 41.31;
+                            e = 398.51;
+                            p = 3.23;
+                            l = 22.48;
+                            k = 6.62;
                             Img.setImageResource(R.drawable.bihun_goreng);
                             namaMakanan.setText("Bihun goreng");
                         }
@@ -216,7 +217,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 
                 rg.setVisibility(View.VISIBLE);
 
-                r1.setText("Centong");
+                r1.setText("Porsi");
                 r2.setVisibility(View.GONE);
 
                 hitung.setOnClickListener(new View.OnClickListener() {
@@ -226,7 +227,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 
                         if (r1.isChecked()) {
                             urt = 50 * pengali;
-                            ukuran = "Centong ";
+                            ukuran = "Porsi";
                         }
 
                         //JANGAN DIGANTI BAGIAN INI
