@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
@@ -43,11 +42,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 
     public static final String KEY_EMAIL = "txt_email";
     public static final String KEY_MKN = "makanan";
-    public static final String KEY_IDMKN = "idmakanan";
     public static final String KEY_UKUR = "ukuran";
     public static final String KEY_JML = "jumlah";
-    public static final String KEY_JML_FREQ= "jml_frekuensi";
-    public static final String KEY_FREQ = "satuan_frekuensi";
     public static final String KEY_PROTEIN = "protein1";
     public static final String KEY_LEMAK = "lemak1";
     public static final String KEY_KALORI = "kalori1";
@@ -61,7 +57,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
     RadioButton r1,r2,r3,r4,r5,r6,r7,rm1,rm2,rm3,rm4,rm5,rm6,rm7;
     double urt;
     int frekuensi;
-    double n;
+    int n;
     SeekBar seekBar,seekBar2;
     double progress;
     double pengali;
@@ -71,12 +67,11 @@ public class FormFrekuensiMakan extends AppCompatActivity {
     int berat;
     ProgressDialog PD;
     private ItemObject.ObjectBelajar objectBelajar;
-    String penampungProgres, penampungUkuran, penampungFrekuensi, penampungSatuan;
+    String penampungProgres, penampungUkuran;
     String hEnergiSort;
     String hProteinSort ;
     String hLemakSort;
     String hKaloriSort;
-    String id_bahan_makanan;
     double e = 0;
     double p = 0;
     double l = 0;
@@ -166,7 +161,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent i = new Intent(getApplicationContext(), FrekuensiBulanan.class);
+                Intent i = new Intent(getApplicationContext(), SarapanActivity.class);
                 startActivity(i);
                 finish();
             }
@@ -183,7 +178,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
         switch (nM) {
 
             case "Mie Goreng":
-                id_bahan_makanan = "7";
+
                 Img.setImageResource(R.drawable.mie_goreng_bukan_instan);
                 rm1.setText("Mie goreng (Bukan instant)");
                 rm2.setText("kwetiaw goreng");
@@ -196,42 +191,16 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l = 11.93;
                 k = 38.82;
                 berat = 300;
+                String x = txtFrekuensi.getText().toString().trim();
+                n = Integer.parseInt(x);
 
-                satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        // Toast.makeText(getApplicationContext(),adapterView.getSelectedItem().toString(),Toast.LENGTH_LONG).show();
-//                        if (adapterView.getSelectedItem().toString() == "Hari"){
-//                            frekuensi=0;
-//                            frekuensi += 1;
-//                        }else if (adapterView.getSelectedItem().toString() == "Minggu"){
-//                            frekuensi += 7;
-//                        }else if (adapterView.getSelectedItem().toString() == "Bulan"){
-//                            frekuensi += 30;
-//                        }
-                        if(adapterView.getSelectedItemId()==0){
-                            frekuensi=1;
-                            penampungSatuan="Hari";
-                        }else if(adapterView.getSelectedItemId()==1){
-                            frekuensi=7;
-                            penampungSatuan="Minggu";
-
-                        }else if(adapterView.getSelectedItemId()==2){
-                            frekuensi=30;
-                            penampungSatuan="Bulan";
-
-                        }
-//                        Toast.makeText(getApplicationContext(),"Sekarang : "+String.valueOf(frekuensi),Toast.LENGTH_LONG).show();
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> adapterView) {
-                        frekuensi = 1;
-                    }
-                });
-
-
-
+                if (satuanFrekuensi.getSelectedItem().toString().trim() == "Hari"){
+                    frekuensi = 1;
+                }else if (satuanFrekuensi.getSelectedItem().toString().trim() == "Bulan"){
+                    frekuensi = 7;
+                }else if (satuanFrekuensi.getSelectedItem().toString().trim() == "Tahun"){
+                    frekuensi = 30;
+                }
 
                 rgJenisMakanan.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                     @Override
@@ -278,11 +247,6 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
 
-                        String x = txtFrekuensi.getText().toString().trim();
-                        n = Integer.parseInt(x);
-
-                        Toast.makeText(getApplicationContext(),"uhuy" + txtFrekuensi.getText().toString().trim(),Toast.LENGTH_LONG).show();
-
 
                         if (r1.isChecked()) {
                             urt = berat * pengali * n /frekuensi;
@@ -309,7 +273,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 
 
 
-                        Save();
+//                        Save();
                     }
                 });
 
@@ -322,41 +286,35 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 
     private void Save() {
         final String txt_email = email.toString().trim();
-        final String idmakanan = id_bahan_makanan.toString().trim();
         final String makanan = namaMakanan.getText().toString().trim();
         final String jumlah = penampungProgres.toString().trim();
         final String ukuran = penampungUkuran.toString().trim();
-        final String jml_frekuensi = String.valueOf(n);
-        final String satuan_frekuensi   = penampungSatuan.toString().trim();
+        final String frekuensi = txtFrekuensi.toString().trim();
+        final String periode   = satuanFrekuensi.toString().trim();
         final String energi1 = hEnergiSort;
         final String protein1 = hProteinSort;
         final String lemak1 = hLemakSort;
         final String kalori1 = hKaloriSort;
-
-        PD.show();
 
         //parsing id kelas
 //            final String sIdKelas = getIdKelas(ambilIDKelas);
         //final String sIdKelas = "100000";
         //final int saveIdKelas = Integer.parseInt(sIdKelas);
 
-        StringRequest sR = new StringRequest(Request.Method.POST, ConfigUmum.URL_INSERT_FOOD_RECALL,
+        StringRequest sR = new StringRequest(Request.Method.POST, ConfigUmum.URL_INSERT_PAGI,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
                         Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show();
-                        Intent i = new Intent(getApplicationContext(), FrekuensiBulanan.class);
+                        Intent i = new Intent(getApplicationContext(), SarapanActivity.class);
                         startActivity(i);
                         finish();
-                        PD.dismiss();
-                        System.out.println(response);
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
-                        PD.dismiss();
                     }
                 }) {
             @Override
@@ -364,11 +322,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 Map<String, String> params = new HashMap<String, String>();
                 params.put(KEY_EMAIL, txt_email);
                 params.put(KEY_MKN, makanan);
-                params.put(KEY_IDMKN, idmakanan);
                 params.put(KEY_UKUR, ukuran);
                 params.put(KEY_JML, jumlah);
-                params.put(KEY_JML_FREQ, jml_frekuensi);
-                params.put(KEY_FREQ, satuan_frekuensi);
                 params.put(KEY_ENERGI, energi1);
                 params.put(KEY_PROTEIN, protein1);
                 params.put(KEY_LEMAK, lemak1);

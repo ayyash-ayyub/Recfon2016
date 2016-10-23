@@ -31,7 +31,7 @@
                     android:id="@+id/aa"
                     android:text="Tanggal"
                     android:textStyle="bold"
-                    android:textSize="12sp" />
+                    android:textSize="14sp" />
 
             <TextView
                     android:layout_width="match_parent"
@@ -40,7 +40,7 @@
                     android:layout_below="@+id/aa"
                     android:text="AKG ENERGI"
                 android:textColor="@android:color/holo_orange_dark"
-                android:textSize="10sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:text="AKG PROTEIN"
@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/holo_orange_dark"
                 android:id="@+id/cc"
-                android:textSize="10sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:text="AKG LEMAK"
@@ -57,7 +57,7 @@
                 android:textColor="@android:color/holo_orange_dark"
 
                 android:id="@+id/dd"
-                android:textSize="10sp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:text="AKG KARBOHIDRAT"
@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/holo_orange_dark"
                 android:id="@+id/ee"
-                android:textSize="10sp" />
+                android:textSize="14sp" />
 
 
         </LinearLayout>

@@ -155,7 +155,7 @@ public class ProfileUser extends AppCompatActivity {
                     data3 = "";
                     data4 = "";
                     data3 += "Rata-rata Aktifitas Fisik: " + aa;
-                    data4 += "Rata-rata duduk / Menit : "+ bb;
+                    data4 += "Rata-rata duduk : "+ bb+" Menit";
 
 
                     statusAk.setText(data3);
