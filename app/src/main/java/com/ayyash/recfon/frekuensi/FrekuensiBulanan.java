@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.annotation.ColorInt;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -133,7 +134,7 @@ Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,
         b74 = (Button)findViewById(R.id.bb74);
 
         cekJalan();
-        //getBMI();
+        getBMI();
     }
 
 
@@ -176,37 +177,47 @@ Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,
         finish();
     }
 
-//    private void getBMI(){
-//        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+    private void getBMI(){
+        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+       // System.out.println("url get : "+ConfigUmum.URL_LIST_MAKANAN+email);
+         JsonArrayRequest  request = new JsonArrayRequest( ConfigUmum.URL_LIST_MAKANAN+email,new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+                //  Log.d("sabtu", response.toString());
+             //   Toast.makeText(getApplicationContext(),"sasa"+response,Toast.LENGTH_LONG).show();
+                System.out.println("hampir"+response.toString());
+//                try {
+//                    JSONArray result = new JSONArray(response);
 //
-//        final JsonArrayRequest  request = new JsonArrayRequest( ConfigUmum.URL_LIST_MAKANAN+email,new Response.Listener<JSONArray>() {
-//            @Override
-//            public void onResponse(JSONArray response) {
-//                //  Log.d("sabtu", response.toString());
-//
-//                System.out.println("response"+response);
-//
-//
-//                //   Toast.makeText(getApplicationContext(), response.toString(), Toast.LENGTH_LONG).show();
+//                    for(int i=0;i<result.length();i++){
+//                        JSONObject jresponse =
+//                                result.getJSONObject(i);
+//                        String status = (String) jresponse.get("status_makanan");
+//                        Log.d("status_makanan",status);
+//                    }
 //
 //
 //
-//            }
-//        }, new Response.ErrorListener() {
-//            @Override
-//            public void onErrorResponse(VolleyError error) {
-//                Toast.makeText(getApplicationContext(), "Masalah pada koneksi, atau data makan kurang lengkap", Toast.LENGTH_LONG).show();
+//                } catch (JSONException e) {
+//                    e.printStackTrace();
+//                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(), "Masalah pada koneksi, atau data makan kurang lengkap", Toast.LENGTH_LONG).show();
+                Log.d("sabtu", "gagal");
 //                Intent intent = new Intent(getApplicationContext(),MainMenu.class);
 //                startActivity(intent);
 //                finish();
-//            }
-//        });
-//
-//        int socketTimeout = 30000;//30 seconds - change to what you want
-//        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
-//        request.setRetryPolicy(policy);
-//        queue.add(request);
-//    }
+            }
+        });
+
+        int socketTimeout = 30000;//30 seconds - change to what you want
+        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+        request.setRetryPolicy(policy);
+        queue.add(request);
+    }
 
 
 }

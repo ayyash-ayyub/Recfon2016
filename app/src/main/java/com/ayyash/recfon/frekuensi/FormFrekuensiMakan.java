@@ -227,6 +227,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                     @Override
                     public void onNothingSelected(AdapterView<?> adapterView) {
                         frekuensi = 1;
+                        penampungSatuan="Hari";
                     }
                 });
 
@@ -281,7 +282,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        Toast.makeText(getApplicationContext(),"uhuy" + txtFrekuensi.getText().toString().trim(),Toast.LENGTH_LONG).show();
+//                        Toast.makeText(getApplicationContext(),"uhuy" + txtFrekuensi.getText().toString().trim(),Toast.LENGTH_LONG).show();
 
 
                         if (r1.isChecked()) {
@@ -307,7 +308,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         penampungProgres = String.valueOf(progress);
                         penampungUkuran = String.valueOf(ukuran);
 
-
+                        Toast.makeText(getApplicationContext(),"ciu :"+penampungSatuan,Toast.LENGTH_LONG).show();
 
                         Save();
                     }
@@ -327,7 +328,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
         final String jumlah = penampungProgres.toString().trim();
         final String ukuran = penampungUkuran.toString().trim();
         final String jml_frekuensi = String.valueOf(n);
-        final String satuan_frekuensi   = penampungSatuan.toString().trim();
+        final String satuan_frekuensi  = penampungSatuan.toString().trim();
         final String energi1 = hEnergiSort;
         final String protein1 = hProteinSort;
         final String lemak1 = hLemakSort;
