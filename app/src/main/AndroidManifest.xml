@@ -42,6 +42,7 @@
         <activity android:name=".MainMenu" />
         <activity android:name=".StatusGizi" />
         <activity android:name=".aktifitas.AktifitasFisik" />
+        <activity android:name=".frekuensi.FormFrekuensiMakan" />
         <activity android:name=".ForgotPassword" />
         <activity
             android:name=".aktifitas.FormAktifitas"
@@ -67,7 +68,6 @@
         <activity
             android:name=".PerbandinganAsupan"
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
-        <activity android:name=".frekuensi.FormFrekuensiMakan"></activity>
     </application>
 
 </manifest>
