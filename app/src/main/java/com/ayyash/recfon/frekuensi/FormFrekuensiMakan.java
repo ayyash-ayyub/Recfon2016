@@ -87,7 +87,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
         satuan = (TextView) findViewById(R.id.textView2);
         seekBar = (SeekBar) findViewById(R.id.seekBar);
         namaMakanan = (TextView) findViewById(R.id.textView3);
-        txtFrekuensi = (EditText) findViewById(R.id.txtFrekuensi);
+        txtFrekuensi = (EditText) findViewById(R.id.txtFrekuensiUye);
         satuanFrekuensi = (Spinner) findViewById(R.id.spinner2) ;
 
         Toast.makeText(getApplicationContext(),"sdads"+ txtFrekuensi.getText().toString().trim(),Toast.LENGTH_LONG).show();
@@ -295,6 +295,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
         final String protein1 = hProteinSort;
         final String lemak1 = hLemakSort;
         final String kalori1 = hKaloriSort;
+        PD.show();
 
         //parsing id kelas
 //            final String sIdKelas = getIdKelas(ambilIDKelas);
@@ -309,12 +310,14 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         Intent i = new Intent(getApplicationContext(), SarapanActivity.class);
                         startActivity(i);
                         finish();
+                        PD.dismiss();
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
+                        PD.dismiss();
                     }
                 }) {
             @Override

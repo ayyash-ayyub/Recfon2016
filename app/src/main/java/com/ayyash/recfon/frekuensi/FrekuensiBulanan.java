@@ -133,7 +133,7 @@ Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,
         b74 = (Button)findViewById(R.id.bb74);
 
         cekJalan();
-//        getBMI();
+        getBMI();
     }
 
 
@@ -175,38 +175,38 @@ Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,
         startActivity(i);
         finish();
     }
-//
-//    private void getBMI(){
-//        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-//
-//        final JsonArrayRequest  request = new JsonArrayRequest( ConfigUmum.URL_LIST_MAKANAN+email,new Response.Listener<JSONArray>() {
-//            @Override
-//            public void onResponse(JSONArray response) {
-//                //  Log.d("sabtu", response.toString());
-//
-//                System.out.println("response"+response);
-//
-//
-//                //   Toast.makeText(getApplicationContext(), response.toString(), Toast.LENGTH_LONG).show();
-//
-//
-//
-//            }
-//        }, new Response.ErrorListener() {
-//            @Override
-//            public void onErrorResponse(VolleyError error) {
-//                Toast.makeText(getApplicationContext(), "Masalah pada koneksi, atau data makan kurang lengkap", Toast.LENGTH_LONG).show();
-//                Intent intent = new Intent(getApplicationContext(),MainMenu.class);
-//                startActivity(intent);
-//                finish();
-//            }
-//        });
-//
-//        int socketTimeout = 30000;//30 seconds - change to what you want
-//        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
-//        request.setRetryPolicy(policy);
-//        queue.add(request);
-//    }
+
+    private void getBMI(){
+        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+
+        final JsonArrayRequest  request = new JsonArrayRequest( ConfigUmum.URL_LIST_MAKANAN+email,new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+                //  Log.d("sabtu", response.toString());
+
+                System.out.println("response"+response);
+
+
+                //   Toast.makeText(getApplicationContext(), response.toString(), Toast.LENGTH_LONG).show();
+
+
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(), "Masalah pada koneksi, atau data makan kurang lengkap", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(getApplicationContext(),MainMenu.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        int socketTimeout = 30000;//30 seconds - change to what you want
+        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+        request.setRetryPolicy(policy);
+        queue.add(request);
+    }
 
 
 }
