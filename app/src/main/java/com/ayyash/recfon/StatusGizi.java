@@ -344,7 +344,7 @@ public class StatusGizi extends AppCompatActivity {
         final String makan = rbMakan.getText().toString().trim();
         final String sarapan = rbSarapan.getText().toString().trim();
 
-        Toast.makeText(getApplicationContext(),TB,Toast.LENGTH_LONG).show();
+       // Toast.makeText(getApplicationContext(),TB,Toast.LENGTH_LONG).show();
 
         //parsing id kelas
 //            final String sIdKelas = getIdKelas(ambilIDKelas);

@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
@@ -87,7 +88,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
         satuan = (TextView) findViewById(R.id.textView2);
         seekBar = (SeekBar) findViewById(R.id.seekBar);
         namaMakanan = (TextView) findViewById(R.id.textView3);
-        txtFrekuensi = (EditText) findViewById(R.id.txtFrekuensi);
+        txtFrekuensi = (EditText) findViewById(R.id.txtFrekuensiUye);
         satuanFrekuensi = (Spinner) findViewById(R.id.spinner2) ;
 
         Toast.makeText(getApplicationContext(),"sdads"+ txtFrekuensi.getText().toString().trim(),Toast.LENGTH_LONG).show();
@@ -191,16 +192,37 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l = 11.93;
                 k = 38.82;
                 berat = 300;
-                String x = txtFrekuensi.getText().toString().trim();
-                n = Integer.parseInt(x);
 
-                if (satuanFrekuensi.getSelectedItem().toString().trim() == "Hari"){
-                    frekuensi = 1;
-                }else if (satuanFrekuensi.getSelectedItem().toString().trim() == "Bulan"){
-                    frekuensi = 7;
-                }else if (satuanFrekuensi.getSelectedItem().toString().trim() == "Tahun"){
-                    frekuensi = 30;
-                }
+                satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                       // Toast.makeText(getApplicationContext(),adapterView.getSelectedItem().toString(),Toast.LENGTH_LONG).show();
+//                        if (adapterView.getSelectedItem().toString() == "Hari"){
+//                            frekuensi=0;
+//                            frekuensi += 1;
+//                        }else if (adapterView.getSelectedItem().toString() == "Minggu"){
+//                            frekuensi += 7;
+//                        }else if (adapterView.getSelectedItem().toString() == "Bulan"){
+//                            frekuensi += 30;
+//                        }
+                        if(adapterView.getSelectedItemId()==0){
+                            frekuensi=1;
+                        }else if(adapterView.getSelectedItemId()==1){
+                            frekuensi=7;
+                        }else if(adapterView.getSelectedItemId()==2){
+                            frekuensi=30;
+                        }
+                        Toast.makeText(getApplicationContext(),"Sekarang : "+String.valueOf(frekuensi),Toast.LENGTH_LONG).show();
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+                        frekuensi = 1;
+                    }
+                });
+
+
+
 
                 rgJenisMakanan.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                     @Override
@@ -246,6 +268,11 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
+
+                        String x = txtFrekuensi.getText().toString().trim();
+                        n = Integer.parseInt(x);
+
+                        Toast.makeText(getApplicationContext(),"uhuy" + txtFrekuensi.getText().toString().trim(),Toast.LENGTH_LONG).show();
 
 
                         if (r1.isChecked()) {

@@ -229,7 +229,7 @@
                         android:inputType="textPersonName|numberSigned"
                         android:text="00"
                         android:ems="10"
-                        android:id="@+id/txtFrekuensi"
+                        android:id="@+id/txtFrekuensiUye"
                         android:layout_weight="1"/>
                 <Spinner
                     android:layout_width="match_parent"

@@ -74,7 +74,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/ket"
                 android:layout_weight="1"
-                android:textColor="@android:color/holo_red_light" />
+                android:textColor="@android:color/holo_blue_dark" />
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
@@ -115,7 +115,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/rataDuduk"
                 android:layout_weight="1"
-                android:textColor="@android:color/holo_red_light" />
+                android:textColor="@android:color/holo_blue_dark" />
 
         </LinearLayout>
     </android.support.v7.widget.CardView>
