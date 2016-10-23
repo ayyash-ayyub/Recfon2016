@@ -129,6 +129,8 @@ public class FormAktifitas extends AppCompatActivity {
                 kategori = "Sedang";
                 break;
             case 22:
+                kategori = "Ringan";
+                break;
             case 23:
             case 24:
             case 25:
@@ -139,7 +141,7 @@ public class FormAktifitas extends AppCompatActivity {
             case 30:
             case 31:
             case 32:
-                kategori = "ringan";
+                kategori = "Duduk";
                 break;
         }
 

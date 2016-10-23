@@ -1,5 +1,6 @@
 package com.ayyash.recfon;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -34,6 +35,7 @@ public class Login extends AppCompatActivity {
     Button login;
     TextView acc, lupapass;
     Typeface fonts1;
+    ProgressDialog progressDialog;
 
 
 
@@ -51,6 +53,11 @@ public class Login extends AppCompatActivity {
 
         login = (Button) findViewById(R.id.signin1);
         acc = (TextView) findViewById(R.id.create);
+
+        // Progress dialog
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setCancelable(false);
+        progressDialog.setMessage("Silahkan Tunggu...");
 
         lupapass = (TextView)findViewById(R.id.textView);
         lupapass.setOnClickListener(new View.OnClickListener() {
@@ -109,6 +116,7 @@ public class Login extends AppCompatActivity {
 
 
     private void login() {
+        progressDialog.show();
         final String nisA = email.getText().toString().trim();
         final String passwordA = password.getText().toString().trim();
 
@@ -130,9 +138,12 @@ public class Login extends AppCompatActivity {
 
                             Intent i = new Intent(Login.this, MainMenu.class);
                             startActivity(i);
+                            progressDialog.dismiss();
                         } else {
 
                             Toast.makeText(Login.this, "username/password salah /masalah koneksi ke server", Toast.LENGTH_LONG).show();
+                            progressDialog.dismiss();
+
                         }
                     }
                 },

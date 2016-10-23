@@ -183,14 +183,6 @@ public class ProfileUser extends AppCompatActivity {
         queue.add(request);
     }
 
-
-
-
-
-
-
-
-
     public void GetData(String URL) {
 
         progressDialog.show();
@@ -217,7 +209,7 @@ public class ProfileUser extends AppCompatActivity {
                    adapter = new MainAdapterProfile(getApplication(), objectProfile.result);
                    //  adapter = new MainAdapterProfile((Response.Listener<String>) getApplication(), objectBelajar.result);
                    rv_item.setAdapter(adapter);
-                   System.out.println("Respon uhuy :"+ response);
+
                }
 // else {
 

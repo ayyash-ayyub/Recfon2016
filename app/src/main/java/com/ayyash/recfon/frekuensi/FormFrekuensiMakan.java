@@ -6,13 +6,16 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,20 +49,22 @@ public class FormFrekuensiMakan extends AppCompatActivity {
     public static final String KEY_KALORI = "kalori1";
     public static final String KEY_ENERGI = "energi1";
 
-    TextView tv,namaMakanan,satuan;
+    TextView tv,namaMakanan,satuan,jmlFrekuensi;
     Button hitung,btnKeluar;
     String nM;
     int indexMakanan;
     RadioGroup rg, rgJenisMakanan;
     RadioButton r1,r2,r3,r4,r5,r6,r7,rm1,rm2,rm3,rm4,rm5,rm6,rm7;
     double urt;
-    SeekBar seekBar;
+    int frekuensi;
+    int n;
+    SeekBar seekBar,seekBar2;
     double progress;
     double pengali;
     ImageView Img;
     String ukuran="";
     String email;
-    int id_waktu_makan=1;
+    int berat;
     ProgressDialog PD;
     private ItemObject.ObjectBelajar objectBelajar;
     String penampungProgres, penampungUkuran;
@@ -71,6 +76,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
     double p = 0;
     double l = 0;
     double k = 0;
+    EditText txtFrekuensi;
+    Spinner satuanFrekuensi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +87,11 @@ public class FormFrekuensiMakan extends AppCompatActivity {
         satuan = (TextView) findViewById(R.id.textView2);
         seekBar = (SeekBar) findViewById(R.id.seekBar);
         namaMakanan = (TextView) findViewById(R.id.textView3);
+        txtFrekuensi = (EditText) findViewById(R.id.txtFrekuensi);
+        satuanFrekuensi = (Spinner) findViewById(R.id.spinner2) ;
+
+        Toast.makeText(getApplicationContext(),"sdads"+ txtFrekuensi.getText().toString().trim(),Toast.LENGTH_LONG).show();
+
         btnKeluar = (Button) findViewById(R.id.batal);
 
         hitung = (Button) findViewById(R.id.hitung);
@@ -95,14 +107,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
         rm5 = (RadioButton) findViewById(R.id.rm5);
         rm6 = (RadioButton) findViewById(R.id.rm6);
         rm7 = (RadioButton) findViewById(R.id.rm7);
-//        rm1.setVisibility(View.GONE);
-        rm2.setVisibility(View.GONE);
-        rm3.setVisibility(View.GONE);
-        rm4.setVisibility(View.GONE);
-        rm5.setVisibility(View.GONE);
-        rm6.setVisibility(View.GONE);
-        rm7.setVisibility(View.GONE);
 
+        rm2.setVisibility(View.GONE);
 
         rg = (RadioGroup) findViewById(R.id.rg);
         r1 = (RadioButton) findViewById(R.id.radioButton);
@@ -113,11 +119,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
         r6 = (RadioButton) findViewById(R.id.radioButton6);
         r7 = (RadioButton) findViewById(R.id.radioButton7);
         r3.setVisibility(View.GONE);
-        r4.setVisibility(View.GONE);
-        r5.setVisibility(View.GONE);
-        r6.setVisibility(View.GONE);
-        r7.setVisibility(View.GONE);
-        rg.setVisibility(View.GONE);
+
 
         SharedPreferences sharedPreferences = getSharedPreferences(ConfigUmum.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         email = sharedPreferences.getString(ConfigUmum.NIS_SHARED_PREF, "tidak tersedia");
@@ -130,7 +132,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 
         progress = 0.5;
         pengali = 0.5;
-        satuan.setText("porsi: " + String.valueOf(progress));
+        satuan.setText( String.valueOf(progress));
 
 
         //seekbar
@@ -138,7 +140,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 progress = ((float) i / 2);
-                satuan.setText("porsi: " + String.valueOf(progress));
+                satuan.setText( String.valueOf(progress));
                 pengali = progress;
 
             }
@@ -167,10 +169,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 
 
         Intent i = getIntent();
-//        indexMakanan = i.getIntExtra("indexMakanan", 0);
+
         nM = i.getStringExtra("makanan");
 
-//        tv.setText("index ke: " + indexMakanan);
         namaMakanan.setText("" + nM);
 
 
@@ -185,6 +186,21 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 rm3.setVisibility(View.VISIBLE);
                 rm2.setVisibility(View.VISIBLE);
 
+                e = 156.74;
+                p = 4.22;
+                l = 11.93;
+                k = 38.82;
+                berat = 300;
+                String x = txtFrekuensi.getText().toString().trim();
+                n = Integer.parseInt(x);
+
+                if (satuanFrekuensi.getSelectedItem().toString().trim() == "Hari"){
+                    frekuensi = 1;
+                }else if (satuanFrekuensi.getSelectedItem().toString().trim() == "Bulan"){
+                    frekuensi = 7;
+                }else if (satuanFrekuensi.getSelectedItem().toString().trim() == "Tahun"){
+                    frekuensi = 30;
+                }
 
                 rgJenisMakanan.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                     @Override
@@ -194,6 +210,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             p = 4.22;
                             l = 11.93;
                             k = 38.82;
+                            berat = 300;
                             Img.setImageResource(R.drawable.mie_goreng_bukan_instan);
                             namaMakanan.setText("Mie goreng (bukan instant)");
 
@@ -202,6 +219,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             p = 3.47;
                             l = 11.20;
                             k = 7.63;
+                            berat = 275;
+
                             Img.setImageResource(R.drawable.kwetiau_goreng);
                             namaMakanan.setText("Kwetiaw goreng");
                         }else if (rm3.isChecked()){
@@ -209,6 +228,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             p = 3.23;
                             l = 22.48;
                             k = 6.62;
+                            berat = 250;
+
                             Img.setImageResource(R.drawable.bihun_goreng);
                             namaMakanan.setText("Bihun goreng");
                         }
@@ -220,14 +241,17 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 r1.setText("Porsi");
                 r2.setVisibility(View.GONE);
 
+
+                System.out.println("urt luar :"+ urt +"="+berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
 
 
                         if (r1.isChecked()) {
-                            urt = 50 * pengali;
+                            urt = berat * pengali * n /frekuensi;
                             ukuran = "Porsi";
+                            System.out.println("urt luar :"+ urt +"="+berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
                         }
 
                         //JANGAN DIGANTI BAGIAN INI
@@ -265,6 +289,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
         final String makanan = namaMakanan.getText().toString().trim();
         final String jumlah = penampungProgres.toString().trim();
         final String ukuran = penampungUkuran.toString().trim();
+        final String frekuensi = txtFrekuensi.toString().trim();
+        final String periode   = satuanFrekuensi.toString().trim();
         final String energi1 = hEnergiSort;
         final String protein1 = hProteinSort;
         final String lemak1 = hLemakSort;

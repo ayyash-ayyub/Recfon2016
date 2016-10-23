@@ -47,7 +47,7 @@
                 <TextView
                     android:textSize="15dp"
                     android:textStyle="bold"
-                    android:text="Jenis Makanan"
+                    android:text="Pilih 1 jenis makanan yang paling sering anda makan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/tJenisMakan" />
@@ -70,27 +70,32 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/rm2" />
                     <RadioButton
+                        android:visibility="gone"
                         android:text="RadioButton"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/rm3" />
 
                     <RadioButton
+                        android:visibility="gone"
                         android:text="RadioButton"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/rm4" />
                     <RadioButton
+                        android:visibility="gone"
                         android:text="RadioButton"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/rm5" />
                     <RadioButton
+                        android:visibility="gone"
                         android:text="RadioButton"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/rm6" />
                     <RadioButton
+                        android:visibility="gone"
                         android:text="RadioButton"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -112,11 +117,14 @@
                     android:id="@+id/textView19" />
 
                 <RadioGroup
+
                     android:layout_width="match_parent"
                     android:id="@+id/rg"
                     android:layout_height="wrap_content">
 
                     <RadioButton
+
+
                         android:text="RadioButton"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -124,49 +132,63 @@
                         android:id="@+id/radioButton" />
 
                     <RadioButton
+
                         android:text="RadioButton"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/radioButton2" />
                     <RadioButton
+                        android:visibility="gone"
                         android:text="RadioButton"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/radioButton3" />
 
                     <RadioButton
+                        android:visibility="gone"
                         android:text="RadioButton"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/radioButton4" />
                     <RadioButton
+                        android:visibility="gone"
                         android:text="RadioButton"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/radioButton5" />
                     <RadioButton
+                        android:visibility="gone"
                         android:text="RadioButton"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/radioButton6" />
                     <RadioButton
+                        android:visibility="gone"
                         android:text="RadioButton"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/radioButton7" />
 
                 </RadioGroup>
-
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+                <TextView
+                    android:text="Jumlah Porsi Sekali Maakan "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sfas" />
+                <TextView
+                    android:text=""
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2" />
+                    </LinearLayout>
 
-                    <TextView
-                        android:text="porsi: "
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textView2" />
+
+
 
                     <SeekBar
                         android:progress="2"
@@ -179,18 +201,51 @@
 
 
 
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:text="Frekuensi Konsumsi dalam 1 bulan terakhir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtFrekuensi1" />
+                    <TextView
+                        android:text=""
+                        android:textColor="@color/colorPrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/jmlFrekuensi" />
                 </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName|numberSigned"
+                        android:text="00"
+                        android:ems="10"
+                        android:id="@+id/txtFrekuensi"
+                        android:layout_weight="1"/>
                 <Spinner
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:entries="@array/frekuensi"
                     app:hintText="Pilih Satuan Frekuensi"
                     android:id="@+id/spinner2"
                     android:layout_weight="1" />
+
+                </LinearLayout>
+
                 <Space
                     android:layout_width="match_parent"
                     android:layout_height="20dp"
                     android:layout_weight="1" />
+
 
 
 
