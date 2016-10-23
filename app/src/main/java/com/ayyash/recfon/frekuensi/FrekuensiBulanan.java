@@ -18,6 +18,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
@@ -25,6 +26,7 @@ import com.ayyash.recfon.ConfigUmum;
 import com.ayyash.recfon.MainMenu;
 import com.ayyash.recfon.MenuFoodsRecord;
 import com.ayyash.recfon.R;
+import com.google.gson.JsonObject;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -44,6 +46,9 @@ Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,
         b51,b52,b53,b54,b55,b56,b57,b58,b59,b60,
         b61,b62,b63,b64,b65,b66,b67,b68,b69,b70,b71,b72,b73,b74;
     String email;
+
+    String data7, data7a;
+
 
 
     //    String makanan;
@@ -134,7 +139,7 @@ Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,
         b74 = (Button)findViewById(R.id.bb74);
 
         cekJalan();
-        getBMI();
+        getDataNgisi();
     }
 
 
@@ -177,46 +182,68 @@ Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,
         finish();
     }
 
-    private void getBMI(){
+    private void getDataNgisi(){
         RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-       // System.out.println("url get : "+ConfigUmum.URL_LIST_MAKANAN+email);
-         JsonArrayRequest  request = new JsonArrayRequest( ConfigUmum.URL_LIST_MAKANAN+email,new Response.Listener<JSONArray>() {
-            @Override
-            public void onResponse(JSONArray response) {
-                //  Log.d("sabtu", response.toString());
-             //   Toast.makeText(getApplicationContext(),"sasa"+response,Toast.LENGTH_LONG).show();
-                System.out.println("hampir"+response.toString());
-//                try {
-//                    JSONArray result = new JSONArray(response);
+      //  System.out.println("url get : "+ConfigUmum.URL_LIST_MAKANAN+email);
+
+        JsonObjectRequest req = new JsonObjectRequest(ConfigUmum.URL_LIST_MAKANAN+email, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        System.out.println("ar"+response.toString());
+                        JSONArray ayyash = null;
+                        try {
+                             ayyash = response.getJSONArray("result");
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+
+                        for (int i = 0; i < ayyash.length(); i++) {
+                            try {
+                                JSONObject obj = ayyash.getJSONObject(i);
+
+                                //tujuh
+                                String d7 = (String) obj.get("id");
+                                String d7b = (String) obj.get("status_makanan");
 //
-//                    for(int i=0;i<result.length();i++){
-//                        JSONObject jresponse =
-//                                result.getJSONObject(i);
-//                        String status = (String) jresponse.get("status_makanan");
-//                        Log.d("status_makanan",status);
-//                    }
+//                                data7 = "";
+//                                data7a = "";
+//
+//                                data7 +=d7;
+//                                data7a +=d7b;
 //
 //
+//                                if(data7.equals("7")&&data7a.equals("1")){
+//                                    b7.setEnabled(false);
 //
-//                } catch (JSONException e) {
-//                    e.printStackTrace();
-//                }
-            }
-        }, new Response.ErrorListener() {
+//                                }else if(data7.equals("7")&&data7a.equals("0")){
+//                                    b7.setEnabled(true);
+//                                }
+
+
+
+                                //batas tujuh
+
+
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+
+                        }
+                    }
+                }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getApplicationContext(), "Masalah pada koneksi, atau data makan kurang lengkap", Toast.LENGTH_LONG).show();
-                Log.d("sabtu", "gagal");
-//                Intent intent = new Intent(getApplicationContext(),MainMenu.class);
-//                startActivity(intent);
-//                finish();
+                VolleyLog.e("Error: ", error.getMessage());
             }
         });
 
         int socketTimeout = 30000;//30 seconds - change to what you want
         RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
-        request.setRetryPolicy(policy);
-        queue.add(request);
+        req.setRetryPolicy(policy);
+        queue.add(req);
     }
 
 
