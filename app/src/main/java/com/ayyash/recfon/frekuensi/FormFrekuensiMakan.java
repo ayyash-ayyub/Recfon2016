@@ -308,7 +308,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         penampungProgres = String.valueOf(progress);
                         penampungUkuran = String.valueOf(ukuran);
 
-                        Toast.makeText(getApplicationContext(),"ciu :"+penampungSatuan,Toast.LENGTH_LONG).show();
+//                        Toast.makeText(getApplicationContext(),"ciu :"+penampungSatuan,Toast.LENGTH_LONG).show();
 
                         Save();
                     }
