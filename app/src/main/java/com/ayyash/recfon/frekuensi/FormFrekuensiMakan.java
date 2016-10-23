@@ -135,8 +135,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
         final DecimalFormat df = new DecimalFormat("#.##");
 
 
-        progress = 0.5;
-        pengali = 0.5;
+        progress = 1;
+        pengali = 1;
         satuan.setText( String.valueOf(progress));
 
 

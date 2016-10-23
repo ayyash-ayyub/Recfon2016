@@ -162,7 +162,7 @@ public class FrekuensiBulanan extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent i = new Intent(FrekuensiBulanan.this, MenuFoodsRecord.class);
+        Intent i = new Intent(FrekuensiBulanan.this, MainMenu.class);
         startActivity(i);
         finish();
     }
@@ -199,12 +199,190 @@ public class FrekuensiBulanan extends AppCompatActivity {
 //                                data7a +=d7b;
 //
 //
-//                                if(data7.equals("7")&&data7a.equals("1")){
-//                                    b7.setEnabled(false);
-//
-//                                }else if(data7.equals("7")&&data7a.equals("0")){
-//                                    b7.setEnabled(true);
-//                                }
+//                                Toast.makeText(getApplicationContext(),d7+" dan "+d7b,Toast.LENGTH_LONG).show();
+                                if(d7.equals("1") && d7b.equals("1")){
+                                    b3.setEnabled(false);
+                                }else if(d7.equals("1") && d7b.equals("0")) {
+                                    b3.setEnabled(true);
+                                }
+
+                                if(d7.equals("2")&&d7b.equals("1")){
+                                    b2.setEnabled(false);
+                                }
+                                if(d7.equals("3")&&d7b.equals("1")){
+                                    b3.setEnabled(false);
+                                }
+                                if(d7.equals("4")&&d7b.equals("1")){
+                                    b4.setEnabled(false);
+                                }
+                                if(d7.equals("5")&&d7b.equals("1")){
+                                    b5.setEnabled(false);
+                                }
+                                if(d7.equals("6")&&d7b.equals("1")){
+                                    b6.setEnabled(false);
+                                }
+                                if(d7.equals("7")&&d7b.equals("1")){
+                                    b7.setEnabled(false);
+                                }
+                                if(d7.equals("8")&&d7b.equals("1")){
+                                    b8.setEnabled(false);
+                                }
+                                if(d7.equals("9")&&d7b.equals("1")){
+                                    b9.setEnabled(false);
+                                }
+                                if(d7.equals("10")&&d7b.equals("1")){
+                                    b10.setEnabled(false);
+                                }
+                                if(d7.equals("11")&&d7b.equals("1")){
+                                    b11.setEnabled(false);
+                                }
+                                if(d7.equals("12")&&d7b.equals("1")){
+                                    b12.setEnabled(false);
+                                }
+                                if(d7.equals("13")&&d7b.equals("1")){
+                                    b13.setEnabled(false);
+                                }
+                                if(d7.equals("14")&&d7b.equals("1")){
+                                    b14.setEnabled(false);
+                                }
+                                if(d7.equals("15")&&d7b.equals("1")){
+                                    b15.setEnabled(false);
+                                }
+                                if(d7.equals("16")&&d7b.equals("1")){
+                                    b16.setEnabled(false);
+                                }
+                                if(d7.equals("17")&&d7b.equals("1")){
+                                    b17.setEnabled(false);
+                                }
+                                if(d7.equals("18")&&d7b.equals("1")){
+                                    b18.setEnabled(false);
+                                }
+                                if(d7.equals("19")&&d7b.equals("1")){
+                                    b19.setEnabled(false);
+                                }
+                                if(d7.equals("20")&&d7b.equals("1")){
+                                    b20.setEnabled(false);
+                                }
+                                if(d7.equals("21")&&d7b.equals("1")){
+                                    b21.setEnabled(false);
+                                }
+                                if(d7.equals("22")&&d7b.equals("1")){
+                                    b22.setEnabled(false);
+                                }
+                                if(d7.equals("23")&&d7b.equals("1")){
+                                    b23.setEnabled(false);
+                                }
+                                if(d7.equals("24")&&d7b.equals("1")){
+                                    b24.setEnabled(false);
+                                }
+                                if(d7.equals("25")&&d7b.equals("1")){
+                                    b25.setEnabled(false);
+                                }
+                                if(d7.equals("26")&&d7b.equals("1")){
+                                    b26.setEnabled(false);
+                                }
+                                if(d7.equals("27")&&d7b.equals("1")){
+                                    b27.setEnabled(false);
+                                }
+                                if(d7.equals("28")&&d7b.equals("1")){
+                                    b28.setEnabled(false);
+                                }
+                                if(d7.equals("29")&&d7b.equals("1")){
+                                    b29.setEnabled(false);
+                                }
+                                if(d7.equals("30")&&d7b.equals("1")){
+                                    b30.setEnabled(false);
+                                }
+                                if(d7.equals("31")&&d7b.equals("1")){
+                                    b31.setEnabled(false);
+                                }
+                                if(d7.equals("32")&&d7b.equals("1")){
+                                    b32.setEnabled(false);
+                                }
+                                if(d7.equals("33")&&d7b.equals("1")){
+                                    b33.setEnabled(false);
+                                }
+                                if(d7.equals("34")&&d7b.equals("1")){
+                                    b34.setEnabled(false);
+                                }
+                                if(d7.equals("35")&&d7b.equals("1")){
+                                    b35.setEnabled(false);
+                                }
+                                if(d7.equals("36")&&d7b.equals("1")){
+                                    b36.setEnabled(false);
+                                }
+                                if(d7.equals("37")&&d7b.equals("1")){
+                                    b37.setEnabled(false);
+                                }
+                                if(d7.equals("38")&&d7b.equals("1")){
+                                    b38.setEnabled(false);
+                                }
+                                if(d7.equals("39")&&d7b.equals("1")){
+                                    b39.setEnabled(false);
+                                }
+                                if(d7.equals("40")&&d7b.equals("1")){
+                                    b40.setEnabled(false);
+                                }
+                                if(d7.equals("41")&&d7b.equals("1")){
+                                    b41.setEnabled(false);
+                                }
+                                if(d7.equals("42")&&d7b.equals("1")){
+                                    b42.setEnabled(false);
+                                }
+                                if(d7.equals("43")&&d7b.equals("1")){
+                                    b43.setEnabled(false);
+                                }
+                                if(d7.equals("44")&&d7b.equals("1")){
+                                    b44.setEnabled(false);
+                                }
+                                if(d7.equals("45")&&d7b.equals("1")){
+                                    b45.setEnabled(false);
+                                }
+                                if(d7.equals("46")&&d7b.equals("1")){
+                                    b46.setEnabled(false);
+                                }
+                                if(d7.equals("47")&&d7b.equals("1")){
+                                    b47.setEnabled(false);
+                                }
+                                if(d7.equals("48")&&d7b.equals("1")){
+                                    b48.setEnabled(false);
+                                }
+                                if(d7.equals("49")&&d7b.equals("1")){
+                                    b49.setEnabled(false);
+                                }
+                                if(d7.equals("50")&&d7b.equals("1")){
+                                    b50.setEnabled(false);
+                                }
+                                if(d7.equals("51")&&d7b.equals("1")){
+                                    b51.setEnabled(false);
+                                }
+                                if(d7.equals("52")&&d7b.equals("1")){
+                                    b52.setEnabled(false);
+                                }
+                                if(d7.equals("53")&&d7b.equals("1")){
+                                    b53.setEnabled(false);
+                                }
+                                if(d7.equals("54")&&d7b.equals("1")){
+                                    b54.setEnabled(false);
+                                }
+                                if(d7.equals("55")&&d7b.equals("1")){
+                                    b55.setEnabled(false);
+                                }
+                                if(d7.equals("56")&&d7b.equals("1")){
+                                    b56.setEnabled(false);
+                                }
+                                if(d7.equals("57")&&d7b.equals("1")){
+                                    b57.setEnabled(false);
+                                }
+                                if(d7.equals("58")&&d7b.equals("1")){
+                                    b58.setEnabled(false);
+                                }
+                                if(d7.equals("59")&&d7b.equals("1")){
+                                    b59.setEnabled(false);
+                                }
+                                if(d7.equals("60")&&d7b.equals("1")){
+                                    b60.setEnabled(false);
+                                }
 
 
 
