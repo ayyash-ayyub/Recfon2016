@@ -20,6 +20,8 @@ public class ConfigUmum {
     public static String URL_UPDATE_STATUS_GIZI = "http://"+IP+"/recfon/api/update_status_gizi.php";
     public static String URL_SHOW_FREKUENSI = "http://"+IP+"/recfon/api/get_frekuensi.php?email=";
     public static String URL_SHOW_ACTIVITY = "http://"+IP+"/recfon/api/get_record_activity.php?email=";
+    public static String URL_LIST_MAKANAN = "http://"+IP+"/recfon/api/get_list_makanan.php?email=";
+    public static String URL_INSERT_FOOD_RECALL = "http://"+IP+"/recfon/api/insert_frekuensi_makan.php";
 
 
     public static String URL_SHOW_PAGI = "http://"+IP+"/recfon/api/get_record_pagi.php?email=";

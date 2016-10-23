@@ -213,9 +213,6 @@ public class ProfileUser extends AppCompatActivity {
                }
 // else {
 
-
-
-
                     //  Toast.makeText(getApplicationContext(), "Data aktifitas: "+response.toString(), Toast.LENGTH_SHORT).show();
              //  }
                     progressDialog.hide();

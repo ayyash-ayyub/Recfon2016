@@ -1,6 +1,8 @@
 package com.ayyash.recfon.frekuensi;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.ColorInt;
@@ -10,8 +12,22 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.android.volley.DefaultRetryPolicy;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.RetryPolicy;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+import com.ayyash.recfon.ConfigUmum;
+import com.ayyash.recfon.MainMenu;
 import com.ayyash.recfon.MenuFoodsRecord;
 import com.ayyash.recfon.R;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * Created by Ayyash on 10/20/2016.
@@ -26,8 +42,10 @@ Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,
         b41,b42,b43,b44,b45,b46,b47,b48,b49,b50,
         b51,b52,b53,b54,b55,b56,b57,b58,b59,b60,
         b61,b62,b63,b64,b65,b66,b67,b68,b69,b70,b71,b72,b73,b74;
+    String email;
 
-//    String makanan;
+
+    //    String makanan;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +53,9 @@ Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        SharedPreferences sharedPreferences = getSharedPreferences(ConfigUmum.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        email = sharedPreferences.getString(ConfigUmum.NIS_SHARED_PREF, "tidak tersedia");
 
         b1 = (Button)findViewById(R.id.bb1);
         b2 = (Button)findViewById(R.id.bb2);
@@ -112,6 +133,7 @@ Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,
         b74 = (Button)findViewById(R.id.bb74);
 
         cekJalan();
+//        getBMI();
     }
 
 
@@ -153,4 +175,38 @@ Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,
         startActivity(i);
         finish();
     }
+//
+//    private void getBMI(){
+//        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
+//
+//        final JsonArrayRequest  request = new JsonArrayRequest( ConfigUmum.URL_LIST_MAKANAN+email,new Response.Listener<JSONArray>() {
+//            @Override
+//            public void onResponse(JSONArray response) {
+//                //  Log.d("sabtu", response.toString());
+//
+//                System.out.println("response"+response);
+//
+//
+//                //   Toast.makeText(getApplicationContext(), response.toString(), Toast.LENGTH_LONG).show();
+//
+//
+//
+//            }
+//        }, new Response.ErrorListener() {
+//            @Override
+//            public void onErrorResponse(VolleyError error) {
+//                Toast.makeText(getApplicationContext(), "Masalah pada koneksi, atau data makan kurang lengkap", Toast.LENGTH_LONG).show();
+//                Intent intent = new Intent(getApplicationContext(),MainMenu.class);
+//                startActivity(intent);
+//                finish();
+//            }
+//        });
+//
+//        int socketTimeout = 30000;//30 seconds - change to what you want
+//        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+//        request.setRetryPolicy(policy);
+//        queue.add(request);
+//    }
+
+
 }
