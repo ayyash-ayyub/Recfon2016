@@ -55,7 +55,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 
     TextView tv,namaMakanan,satuan,jmlFrekuensi;
     Button hitung,btnKeluar;
-    String nM;
+    Integer nM;
     int indexMakanan;
     RadioGroup rg, rgJenisMakanan;
     RadioButton r1,r2,r3,r4,r5,r6,r7,rm1,rm2,rm3,rm4,rm5,rm6,rm7;
@@ -175,14 +175,14 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 
         Intent i = getIntent();
 
-        nM = i.getStringExtra("makanan");
+        nM = i.getIntExtra ("makanan", 0);
 
         namaMakanan.setText("" + nM);
 
 
         switch (nM) {
 
-            case "Mie Goreng":
+            case 7:
                 id_bahan_makanan = "7";
                 Img.setImageResource(R.drawable.mie_goreng_bukan_instan);
                 rm1.setText("Mie goreng (Bukan instant)");
