@@ -721,11 +721,8 @@ public class FrekuensiBulanan extends AppCompatActivity {
 //
 //                                Toast.makeText(getApplicationContext(),d7+" dan "+d7b,Toast.LENGTH_LONG).show();
                                 if(d7.equals("1") && d7b.equals("1")){
-                                    b3.setEnabled(false);
-                                }else if(d7.equals("1") && d7b.equals("0")) {
-                                    b3.setEnabled(true);
+                                    b1.setEnabled(false);
                                 }
-
                                 if(d7.equals("2")&&d7b.equals("1")){
                                     b2.setEnabled(false);
                                 }

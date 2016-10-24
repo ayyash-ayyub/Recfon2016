@@ -145,7 +145,6 @@ public class PerhitunganPagi extends AppCompatActivity {
         indexMakanan = i.getIntExtra("indexMakanan", 0);
         nM = i.getStringExtra("namaMakanan");
 
-//        tv.setText("index ke: " + indexMakanan);
         namaMakanan.setText("" + nM);
 
 
@@ -180,11 +179,6 @@ public class PerhitunganPagi extends AppCompatActivity {
                         double hLemak = (urt / 100) * l;
                         double hKalori = (urt / 100) * k;
 
-                        //buat batasi digit coma
-//                        double hEnergiSort = Math.round(hEnergi * 100) / 100;
-//                        double hProteinSort = Math.round(hProtein * 100) / 100;
-//                        double hLemakSort = Math.round(hLemak * 100) / 100;
-//                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
                         hProteinSort = df.format(hProtein);
@@ -234,11 +228,6 @@ public class PerhitunganPagi extends AppCompatActivity {
                         double hLemak = (urt / 100) * l;
                         double hKalori = (urt / 100) * k;
 
-                        //buat batasi digit coma
-//                        double hEnergiSort = Math.round(hEnergi * 100) / 100;
-//                        double hProteinSort = Math.round(hProtein * 100) / 100;
-//                        double hLemakSort = Math.round(hLemak * 100) / 100;
-//                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
                         hEnergiSort = df.format(hEnergi);
                         hProteinSort = df.format(hProtein);
@@ -1864,6 +1853,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 break;
 
             case 32:
+
                 Img.setImageResource(R.drawable.sayur_sop);
                 rg.setVisibility(View.VISIBLE);
 
