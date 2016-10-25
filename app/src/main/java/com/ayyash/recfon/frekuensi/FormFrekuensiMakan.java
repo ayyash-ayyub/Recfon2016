@@ -8114,68 +8114,68 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 
     private void Save() {
         System.out.println(urt+" ="+ berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
-//        final String txt_email = email.toString().trim();
-//        final String idmakanan = id_bahan_makanan.toString().trim();
-//        final String makanan = namaMakanan.getText().toString().trim();
-//        final String jumlah = penampungProgres.toString().trim();
-//        final String ukuran = penampungUkuran.toString().trim();
-//        final String jml_frekuensi = String.valueOf(n);
-//        final String satuan_frekuensi  = penampungSatuan.toString().trim();
-//        final String energi1 = hEnergiSort;
-//        final String protein1 = hProteinSort;
-//        final String lemak1 = hLemakSort;
-//        final String kalori1 = hKaloriSort;
-//
-//        PD.show();
-//
-//        //parsing id kelas
-////            final String sIdKelas = getIdKelas(ambilIDKelas);
-//        //final String sIdKelas = "100000";
-//        //final int saveIdKelas = Integer.parseInt(sIdKelas);
-//
-//        StringRequest sR = new StringRequest(Request.Method.POST, ConfigUmum.URL_INSERT_FOOD_RECALL,
-//                new Response.Listener<String>() {
-//                    @Override
-//                    public void onResponse(String response) {
-//                        Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show();
-//                        Intent i = new Intent(getApplicationContext(), FrekuensiBulanan.class);
-//                        startActivity(i);
-//                        finish();
-//                        PD.dismiss();
-//                        System.out.println(response);
-//                    }
-//                },
-//                new Response.ErrorListener() {
-//                    @Override
-//                    public void onErrorResponse(VolleyError error) {
-//                        Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
-//                        PD.dismiss();
-//                    }
-//                }) {
-//            @Override
-//            protected Map<String, String> getParams() {
-//                Map<String, String> params = new HashMap<String, String>();
-//                params.put(KEY_EMAIL, txt_email);
-//                params.put(KEY_MKN, makanan);
-//                params.put(KEY_IDMKN, idmakanan);
-//                params.put(KEY_UKUR, ukuran);
-//                params.put(KEY_JML, jumlah);
-//                params.put(KEY_JML_FREQ, jml_frekuensi);
-//                params.put(KEY_FREQ, satuan_frekuensi);
-//                params.put(KEY_ENERGI, energi1);
-//                params.put(KEY_PROTEIN, protein1);
-//                params.put(KEY_LEMAK, lemak1);
-//                params.put(KEY_KALORI, kalori1);
-//                return params;
-//            }
-//
-//        };
-//        //  Toast.makeText(getApplicationContext(), "Menambahkan makanan = " + makanan, Toast.LENGTH_LONG).show();
-//        int socketTimeout = 30000;//30 seconds - change to what you want
-//        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
-//        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
-//        sR.setRetryPolicy(policy);
-//        requestQueue.add(sR);
+        final String txt_email = email.toString().trim();
+        final String idmakanan = id_bahan_makanan.toString().trim();
+        final String makanan = namaMakanan.getText().toString().trim();
+        final String jumlah = penampungProgres.toString().trim();
+        final String ukuran = penampungUkuran.toString().trim();
+        final String jml_frekuensi = String.valueOf(n);
+        final String satuan_frekuensi  = penampungSatuan.toString().trim();
+        final String energi1 = hEnergiSort;
+        final String protein1 = hProteinSort;
+        final String lemak1 = hLemakSort;
+        final String kalori1 = hKaloriSort;
+
+        PD.show();
+
+        //parsing id kelas
+//            final String sIdKelas = getIdKelas(ambilIDKelas);
+        //final String sIdKelas = "100000";
+        //final int saveIdKelas = Integer.parseInt(sIdKelas);
+
+        StringRequest sR = new StringRequest(Request.Method.POST, ConfigUmum.URL_INSERT_FOOD_RECALL,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show();
+                        Intent i = new Intent(getApplicationContext(), FrekuensiBulanan.class);
+                        startActivity(i);
+                        finish();
+                        PD.dismiss();
+                        System.out.println(response);
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
+                        PD.dismiss();
+                    }
+                }) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put(KEY_EMAIL, txt_email);
+                params.put(KEY_MKN, makanan);
+                params.put(KEY_IDMKN, idmakanan);
+                params.put(KEY_UKUR, ukuran);
+                params.put(KEY_JML, jumlah);
+                params.put(KEY_JML_FREQ, jml_frekuensi);
+                params.put(KEY_FREQ, satuan_frekuensi);
+                params.put(KEY_ENERGI, energi1);
+                params.put(KEY_PROTEIN, protein1);
+                params.put(KEY_LEMAK, lemak1);
+                params.put(KEY_KALORI, kalori1);
+                return params;
+            }
+
+        };
+        //  Toast.makeText(getApplicationContext(), "Menambahkan makanan = " + makanan, Toast.LENGTH_LONG).show();
+        int socketTimeout = 30000;//30 seconds - change to what you want
+        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+        sR.setRetryPolicy(policy);
+        requestQueue.add(sR);
     }
 
 
