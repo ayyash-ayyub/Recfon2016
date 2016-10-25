@@ -190,11 +190,13 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 keteranganPilihan.setVisibility(View.GONE);
                 rm1.setVisibility(View.GONE);
 
+
                  e = 177.00;
                  p = 3.90;
                  l = 0.20;
                  k = 39.95;
                 berat = 50;
+                ukuran = "centong";
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -259,11 +261,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 //                        Toast.makeText(getApplicationContext(),"uhuy" + txtFrekuensi.getText().toString().trim(),Toast.LENGTH_LONG).show();
 
 
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "centong";
-                           // System.out.println("urt luar :"+ urt +"="+berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
-                        }
+                        urt = berat * pengali * n /frekuensi;
+
 
                         //JANGAN DIGANTI BAGIAN INI
                         double hEnergi = (urt / 100) * e;
@@ -295,7 +294,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 id_bahan_makanan = "2";
                 namaMakanan.setText("Nasi merah");
 
-                Img.setImageResource(R.drawable.nasi_merah);
+                Img.setImageResource(R.drawable.nasi);
                 rm1.setText("Nasi merah");
                 keteranganPilihan.setVisibility(View.GONE);
                 rm1.setVisibility(View.GONE);
@@ -305,6 +304,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l = 0.45;
                 k = 38.10;
                 berat = 50;
+                ukuran = "centong";
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -345,7 +345,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             l = 0.45;
                             k = 38.10;
                             berat = 50;
-                            Img.setImageResource(R.drawable.nasi_merah);
+                            Img.setImageResource(R.drawable.nasi);
                             namaMakanan.setText("Nasi");
 
                         }
@@ -365,10 +365,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
+
                             urt = berat * pengali * n /frekuensi;
-                            ukuran = "centong";
-                        }
 
                         //Batas disesuaikan
 
@@ -402,7 +400,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 id_bahan_makanan = "3";
                 namaMakanan.setText("Nasi uduk / nasi kuning");
 
-                Img.setImageResource(R.drawable.nasi_uduk);
+                Img.setImageResource(R.drawable.nasi);
                 rm1.setText("Nasi uduk / nasi kuning");
                 keteranganPilihan.setVisibility(View.GONE);
                 rm1.setVisibility(View.GONE);
@@ -412,6 +410,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l = 1.99;
                 k = 41.31;
                 berat = 50;
+                ukuran = "centong";
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -452,7 +451,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             l = 1.99;
                             k = 41.31;
                             berat = 50;
-                            Img.setImageResource(R.drawable.nasi_uduk);
+                            Img.setImageResource(R.drawable.nasi);
                             namaMakanan.setText("Nasi");
 
                         }
@@ -472,10 +471,10 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
+
                             urt = berat * pengali * n /frekuensi;
-                            ukuran = "centong";
-                        }
+
+
 
                         //Batas disesuaikan
 
@@ -519,6 +518,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l = 20.00;
                 k = 60.00;
                 berat = 85;
+                ukuran = "bungkus";
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -579,10 +579,10 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
+
                             urt = berat * pengali * n /frekuensi;
-                            ukuran = "bungkus";
-                        }
+
+
 
                         //Batas disesuaikan
 
@@ -625,6 +625,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l = 59.40;
                 k = 1.40;
                 berat = 70;
+                ukuran = "bungkus";
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -685,10 +686,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
+
                             urt = berat * pengali * n /frekuensi;
-                            ukuran = "bungkus";
-                        }
+
 
                         //Batas disesuaikan
 
@@ -732,6 +732,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l = 21.37;
                 k = 38.82;
                 berat = 50;
+                ukuran = "centong";
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -792,10 +793,10 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
+
                             urt = berat * pengali * n /frekuensi;
-                            ukuran = "centong";
-                        }
+
+
 
                         //Batas disesuaikan
 
@@ -839,19 +840,12 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l = 11.93;
                 k = 38.82;
                 berat = 300;
+                ukuran = "Porsi";
 
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        // Toast.makeText(getApplicationContext(),adapterView.getSelectedItem().toString(),Toast.LENGTH_LONG).show();
-//                        if (adapterView.getSelectedItem().toString() == "Hari"){
-//                            frekuensi=0;
-//                            frekuensi += 1;
-//                        }else if (adapterView.getSelectedItem().toString() == "Minggu"){
-//                            frekuensi += 7;
-//                        }else if (adapterView.getSelectedItem().toString() == "Bulan"){
-//                            frekuensi += 30;
-//                        }
+
                         if(adapterView.getSelectedItemId()==0){
                             frekuensi=1;
                             penampungSatuan="Hari";
@@ -917,7 +911,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 r2.setVisibility(View.GONE);
 
 
-                System.out.println("urt luar :"+ urt +"="+berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
+
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -928,11 +922,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 //                        Toast.makeText(getApplicationContext(),"uhuy" + txtFrekuensi.getText().toString().trim(),Toast.LENGTH_LONG).show();
 
 
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Porsi";
-                            System.out.println("urt luar :"+ urt +"="+berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
-                        }
+                         urt = berat * pengali * n /frekuensi;
+
+
 
                         //JANGAN DIGANTI BAGIAN INI
                         double hEnergi = (urt / 100) * e;
@@ -974,6 +966,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l = 6.53;
                 k = 29.19;
                 berat = 300;
+                ukuran = "porsi";
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -1034,10 +1027,10 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "porsi";
-                        }
+
+                        urt = berat * pengali * n /frekuensi;
+
+
 
                         //Batas disesuaikan
 
@@ -1081,6 +1074,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l = 9.32;
                 k = 65.14;
                 berat = 35;
+                ukuran = "lembar A";
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -1131,6 +1125,18 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 rg.setVisibility(View.VISIBLE);
                 r1.setText("lembar A");
                 r2.setText("lembar B");
+                rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                        if (r1.isChecked()) {
+                            berat = 35;
+                            ukuran = "lembar A";
+                        }else if(r2.isChecked()){
+                            berat = 20;
+                            ukuran = "lembar B";
+                        }
+                    }
+                });
 
 
 
@@ -1141,15 +1147,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            berat = 35;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "lembar A";
-                        }else if(r2.isChecked()){
-                            berat = 20;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "lembar B";
-                        }
+                        urt = berat * pengali * n /frekuensi;
 
                         //Batas disesuaikan
 
@@ -1193,6 +1191,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l = 7.43;
                 k = 29.19;
                 berat = 350;
+                ukuran = "porsi";
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -1252,10 +1251,10 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "porsi";
-                        }
+
+                        urt = berat * pengali * n /frekuensi;
+
+
 
                         //Batas disesuaikan
 
@@ -1301,19 +1300,13 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l = 3.25;
                 k = 35.29;
                 berat = 75;
+                urt = berat * pengali * n /frekuensi;
+                ukuran = "potong";
 
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        // Toast.makeText(getApplicationContext(),adapterView.getSelectedItem().toString(),Toast.LENGTH_LONG).show();
-//                        if (adapterView.getSelectedItem().toString() == "Hari"){
-//                            frekuensi=0;
-//                            frekuensi += 1;
-//                        }else if (adapterView.getSelectedItem().toString() == "Minggu"){
-//                            frekuensi += 7;
-//                        }else if (adapterView.getSelectedItem().toString() == "Bulan"){
-//                            frekuensi += 30;
-//                        }
+
                         if(adapterView.getSelectedItemId()==0){
                             frekuensi=1;
                             penampungSatuan="Hari";
@@ -1354,10 +1347,10 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r2.setVisibility(View.GONE);
                             r3.setVisibility(View.GONE);
 
-                            if (r1.isChecked()) {
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "potong";
-                            }
+
+
+                            ukuran = "potong";
+
 
                             Img.setImageResource(R.drawable.ubi_goreng);
                             namaMakanan.setText("Ubi goreng");
@@ -1374,10 +1367,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r2.setVisibility(View.GONE);
                             r3.setVisibility(View.GONE);
 
-                            if (r1.isChecked()) {
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "potong";
-                            }
+
+                            ukuran = "potong";
+
                             Img.setImageResource(R.drawable.singkong_goreng);
                             namaMakanan.setText("Singkong goreng");
 
@@ -1394,20 +1386,22 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setVisibility(View.VISIBLE);
                             r2.setVisibility(View.VISIBLE);
                             r3.setVisibility(View.VISIBLE);
-
-                            if (r1.isChecked()) {
-                                berat = 150;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "buah sedang";
-                            }else if (r2.isChecked()) {
-                                berat = 200;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "buah besar";
-                            }else if (r3.isChecked()) {
-                                berat = 100;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "buah kecil";
-                            }
+                            ukuran = "buah sedang";
+                            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                                @Override
+                                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                                    if (r1.isChecked()) {
+                                        berat = 150;
+                                        ukuran = "buah sedang";
+                                    }else if (r2.isChecked()) {
+                                        berat = 200;
+                                        ukuran = "buah besar";
+                                    }else if (r3.isChecked()) {
+                                        berat = 100;
+                                        ukuran = "buah kecil";
+                                    }
+                                }
+                            });
                             Img.setImageResource(R.drawable.ubi_rebus);
                             namaMakanan.setText("Ubi rebus");
 
@@ -1423,17 +1417,22 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setVisibility(View.VISIBLE);
                             r2.setVisibility(View.VISIBLE);
                             r3.setVisibility(View.GONE);
+                            ukuran = "potong besar";
+                            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                                @Override
+                                public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                            if (r1.isChecked()) {
-                                berat = 100;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "potong besar";
-                            }else if (r2.isChecked()) {
-                                berat = 50;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "potong kecil";
-                            }
+                                if (r1.isChecked()) {
+                                    berat = 100;
+                                    ukuran = "potong besar";
+                                }else if (r2.isChecked()) {
+                                    berat = 50;
 
+                                    ukuran = "potong kecil";
+                                }
+
+                                }
+                            });
                             Img.setImageResource(R.drawable.singkong_rebus);
                             namaMakanan.setText("Singkong rebus");
                         }
@@ -1446,7 +1445,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 r2.setVisibility(View.GONE);
 
 
-                System.out.println("urt luar :"+ urt +"="+berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
+
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -1455,13 +1454,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         n = Integer.parseInt(x);
 
 //                        Toast.makeText(getApplicationContext(),"uhuy" + txtFrekuensi.getText().toString().trim(),Toast.LENGTH_LONG).show();
-
-
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "potong";
-                            System.out.println("urt luar :"+ urt +"="+berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
-                        }
+                        urt = berat * pengali * n /frekuensi;
 
                         //JANGAN DIGANTI BAGIAN INI
                         double hEnergi = (urt / 100) * e;
@@ -1505,6 +1498,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l = 7.57;
                 k = 10.44;
                 berat = 40;
+                ukuran = "buah besar";
+
+
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -1546,6 +1542,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             k = 10.44;
                             berat = 40;
 
+
                             r1.setText("buah besar");
                             r2.setText("buah sedang");
                             r3.setText("buah kecil");
@@ -1554,19 +1551,27 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r2.setVisibility(View.VISIBLE);
                             r3.setVisibility(View.VISIBLE);
 
-                            if (r1.isChecked()) {
-                                berat = 40;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "buah besar";
-                            }else if (r2.isChecked()) {
-                                berat = 20;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "buah sedang";
-                            }else if (r3.isChecked()) {
-                                berat = 10;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "buah kecil";
-                            }
+                            ukuran = "buah besar";
+                            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                                @Override
+                                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+
+                                    if (r1.isChecked()) {
+                                        berat = 40;
+
+                                        ukuran = "buah besar";
+                                    }else if (r2.isChecked()) {
+                                        berat = 20;
+
+                                        ukuran = "buah sedang";
+                                    }else if (r3.isChecked()) {
+                                        berat = 10;
+
+                                        ukuran = "buah kecil";
+                                    }
+
+                                }
+                            });
                             Img.setImageResource(R.drawable.perkedel_kentang);
                             namaMakanan.setText("Perkedel kentang");
                         }
@@ -1582,10 +1587,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r2.setVisibility(View.GONE);
                             r3.setVisibility(View.GONE);
 
-                            if (r1.isChecked()) {
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "piring";
-                            }
+
+                            ukuran = "piring";
 
                             Img.setImageResource(R.drawable.kentang_goreng);
                             namaMakanan.setText("Kentang goreng");
@@ -1609,19 +1612,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            berat = 40;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "buah besar";
-                        }else if (r2.isChecked()) {
-                            berat = 20;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "buah sedang";
-                        }else if (r3.isChecked()) {
-                            berat = 10;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "buah kecil";
-                        }
+                        urt = berat * pengali * n /frekuensi;
+
 
                         //Batas disesuaikan
 
@@ -1668,6 +1660,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l = 5.57;
                 k = 7.11;
                 berat = 55;
+                ukuran = "sendok sayur";
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -1713,10 +1706,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setVisibility(View.VISIBLE);
                             r2.setVisibility(View.GONE);
 
-                            if (r1.isChecked()) {
-                                urt = berat * pengali * n /frekuensi;
+
                                 ukuran = "sendok sayur";
-                            }
+
                             Img.setImageResource(R.drawable.labu_siam_masak_santan);
                             namaMakanan.setText("Labu siam masak santan");
                         }
@@ -1731,10 +1723,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setVisibility(View.VISIBLE);
                             r2.setVisibility(View.GONE);
 
-                            if (r1.isChecked()) {
-                                urt = berat * pengali * n /frekuensi;
+
                                 ukuran = "mangkok";
-                            }
+
 
                             Img.setImageResource(R.drawable.gulai_daun_singkong);
                             namaMakanan.setText("Gulai daun singkong");
@@ -1745,21 +1736,25 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             l = 5.57;
                             k = 7.11;
                             berat = 30;
+                            ukuran = "sendok sayur";
 
                             r1.setText("sendok sayur");
                             r2.setText("mangkok");
                             r1.setVisibility(View.VISIBLE);
                             r2.setVisibility(View.VISIBLE);
+                            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                                @Override
+                                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                                    if (r1.isChecked()) {
+                                        berat = 30;
+                                        ukuran = "sendok sayur";
+                                    }else if (r2.isChecked()) {
+                                        berat = 250;
+                                        ukuran = "mangkok";
+                                    }
+                                }
+                            });
 
-                            if (r1.isChecked()) {
-                                berat = 30;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "sendok sayur";
-                            }else if (r2.isChecked()) {
-                                berat = 250;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "mangkok";
-                            }
 
                             Img.setImageResource(R.drawable.sayur_lodeh);
                             namaMakanan.setText("Sayur lodeh");
@@ -1780,10 +1775,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "sendok sayur";
-                        }
+                        urt = berat * pengali * n /frekuensi;
 
                         //Batas disesuaikan
 
@@ -1830,6 +1822,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  16.05;
                 k =  4.45;
                 berat = 15;
+                ukuran = "sendok makan";
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -1870,21 +1863,25 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             l =  16.05;
                             k =  4.45;
                             berat = 15;
+                            ukuran = "sendok makan";
 
                             r1.setText("sendok makan");
                             r2.setText("piring");
                             r1.setVisibility(View.VISIBLE);
                             r2.setVisibility(View.VISIBLE);
-
-                            if (r1.isChecked()) {
-                                berat = 15;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "sendok makan";
-                            }else if (r2.isChecked()) {
-                                berat = 100;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "piring";
+                        rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                            @Override
+                            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                                if (r1.isChecked()) {
+                                    berat = 15;
+                                    ukuran = "sendok makan";
+                                }else if (r2.isChecked()) {
+                                    berat = 100;
+                                    ukuran = "piring";
+                                }
                             }
+                        });
+
                             Img.setImageResource(R.drawable.tumis_kacang_panjang);
                             namaMakanan.setText("Tumis kacang panjang");
                         }
@@ -1894,21 +1891,26 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             l =  16.96;
                             k =  3.48;
                             berat = 10;
+                            ukuran = "sendok makan";
 
                             r1.setText("sendok makan");
                             r2.setText("piring");
                             r1.setVisibility(View.VISIBLE);
                             r2.setVisibility(View.VISIBLE);
+                            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                                @Override
+                                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                                    if (r1.isChecked()) {
+                                        berat = 10;
+                                        ukuran = "sendok makan";
+                                    }else if (r2.isChecked()) {
+                                        berat = 100;
+                                        ukuran = "piring";
+                                    }
+                                }
+                            });
 
-                            if (r1.isChecked()) {
-                                berat = 10;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "sendok makan";
-                            }else if (r2.isChecked()) {
-                                berat = 100;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "piring";
-                            }
+
 
                             Img.setImageResource(R.drawable.tumis_kangkung);
                             namaMakanan.setText("Tumis kangkung");
@@ -1919,21 +1921,26 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             l =  12.49;
                             k =  3.24;
                             berat = 15;
+                            ukuran = "sendok makan";
 
                             r1.setText("sendok makan");
                             r2.setText("piring");
                             r1.setVisibility(View.VISIBLE);
                             r2.setVisibility(View.VISIBLE);
+                            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                                @Override
+                                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                                    if (r1.isChecked()) {
+                                        berat = 15;
+                                        ukuran = "sendok makan";
+                                    }else if (r2.isChecked()) {
+                                        berat = 100;
+                                        ukuran = "piring";
+                                    }
+                                }
+                            });
 
-                            if (r1.isChecked()) {
-                                berat = 15;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "sendok makan";
-                            }else if (r2.isChecked()) {
-                                berat = 100;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "piring";
-                            }
+
 
                             Img.setImageResource(R.drawable.tumis_sawi_hijau);
                             namaMakanan.setText("Tumis sawi hijau / Bok choy");
@@ -1954,15 +1961,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            berat = 15;
+
                             urt = berat * pengali * n /frekuensi;
-                            ukuran = "sendok makan";
-                        }else if (r2.isChecked()) {
-                            berat = 100;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "piring";
-                        }
+
 
                         //Batas disesuaikan
 
@@ -2009,6 +2010,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  0.36;
                 k =  9.43;
                 berat = 30;
+                ukuran = "sendok sayur";
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -2049,21 +2051,26 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             l =  0.36;
                             k =  9.43;
                             berat = 30;
+                            ukuran = "sendok sayur";
 
                             r1.setText("sendok sayur");
                             r2.setText("mangkok");
                             r1.setVisibility(View.VISIBLE);
                             r2.setVisibility(View.VISIBLE);
+                            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                                @Override
+                                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                                    if (r1.isChecked()) {
+                                        berat = 30;
+                                        ukuran = "sendok sayur";
+                                    }else if (r2.isChecked()) {
+                                        berat = 250;
+                                        ukuran = "mangkok";
+                                    }
+                                }
+                            });
 
-                            if (r1.isChecked()) {
-                                berat = 30;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "sendok sayur";
-                            }else if (r2.isChecked()) {
-                                berat = 250;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "mangkok";
-                            }
+
                             Img.setImageResource(R.drawable.sayur_sop);
                             namaMakanan.setText("Sayur sop");
                         }
@@ -2073,21 +2080,24 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             l =  0.53;
                             k =  15.25;
                             berat = 15;
+                            ukuran = "sendok sayur";
 
                             r1.setText("sendok sayur");
                             r2.setText("mangkok");
                             r1.setVisibility(View.VISIBLE);
                             r2.setVisibility(View.VISIBLE);
-
-                            if (r1.isChecked()) {
-                                berat = 15;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "sendok sayur";
-                            }else if (r2.isChecked()) {
-                                berat = 100;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "mangkok";
-                            }
+                            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                                  @Override
+                                  public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                                      if (r1.isChecked()) {
+                                          berat = 15;
+                                          ukuran = "sendok sayur";
+                                      } else if (r2.isChecked()) {
+                                          berat = 100;
+                                          ukuran = "mangkok";
+                                      }
+                                  }
+                              });
 
                             Img.setImageResource(R.drawable.sayur_bayam_bening);
                             namaMakanan.setText("Sayur bening bayam");
@@ -2098,21 +2108,28 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             l =  6.96;
                             k =  19.01;
                             berat = 30;
+                            ukuran = "sendok sayur";
 
                             r1.setText("sendok sayur");
                             r2.setText("mangkok");
                             r1.setVisibility(View.VISIBLE);
                             r2.setVisibility(View.VISIBLE);
+                            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                                @Override
+                                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                                    if (r1.isChecked()) {
+                                        berat = 30;
 
-                            if (r1.isChecked()) {
-                                berat = 30;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "sendok sayur";
-                            }else if (r2.isChecked()) {
-                                berat = 250;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "mangkok";
-                            }
+                                        ukuran = "sendok sayur";
+                                    }else if (r2.isChecked()) {
+                                        berat = 250;
+
+                                        ukuran = "mangkok";
+                                    }
+                                }
+                            });
+
+
 
                             Img.setImageResource(R.drawable.sayur_asem);
                             namaMakanan.setText("Sayur asam");
@@ -2133,15 +2150,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            berat = 30;
+
                             urt = berat * pengali * n /frekuensi;
-                            ukuran = "sendok sayur";
-                        }else if (r2.isChecked()) {
-                            berat = 250;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "mangkok";
-                        }
+
 
                         //Batas disesuaikan
 
@@ -2190,6 +2201,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  5.32;
                 k =  7.42;
                 berat = 15;
+                ukuran = "sendok makan";
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -2230,21 +2242,28 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             l =  5.32;
                             k =  7.42;
                             berat = 15;
+                            ukuran = "sendok makan";
 
                             r1.setText("sendok makan");
                             r2.setText("porsi");
                             r1.setVisibility(View.VISIBLE);
                             r2.setVisibility(View.VISIBLE);
+                            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                                @Override
+                                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                                    if (r1.isChecked()) {
+                                        berat = 15;
 
-                            if (r1.isChecked()) {
-                                berat = 15;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "sendok makan";
-                            }else if (r2.isChecked()) {
-                                berat = 150;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "porsi";
-                            }
+                                        ukuran = "sendok makan";
+                                    }else if (r2.isChecked()) {
+                                        berat = 150;
+
+                                        ukuran = "porsi";
+                                    }
+                                }
+                            });
+
+
                             Img.setImageResource(R.drawable.sayur_urap);
                             namaMakanan.setText("Sayur urap");
                         }
@@ -2259,10 +2278,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setVisibility(View.VISIBLE);
                             r2.setVisibility(View.GONE);
 
-                            if (r1.isChecked()) {
-                                urt = berat * pengali * n /frekuensi;
+
                                 ukuran = "porsi";
-                            }
+
 
                             Img.setImageResource(R.drawable.sayur_pecel);
                             namaMakanan.setText("Sayur pecel");
@@ -2273,21 +2291,26 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             l =  10.61;
                             k =  10.16;
                             berat = 20;
+                            ukuran = "sendok makan";
 
                             r1.setText("sendok makan");
                             r2.setText("porsi");
                             r1.setVisibility(View.VISIBLE);
                             r2.setVisibility(View.VISIBLE);
+                            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                                @Override
+                                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                                    if (r1.isChecked()) {
+                                        berat = 20;
+                                        ukuran = "sendok makan";
+                                    }else if (r2.isChecked()) {
+                                        berat = 200;
+                                        ukuran = "porsi";
+                                    }
+                                }
+                            });
 
-                            if (r1.isChecked()) {
-                                berat = 20;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "sendok makan";
-                            }else if (r2.isChecked()) {
-                                berat = 200;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "porsi";
-                            }
+
 
                             Img.setImageResource(R.drawable.gado_gado);
                             namaMakanan.setText("Gado - gado / Karedok");
@@ -2303,10 +2326,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setVisibility(View.VISIBLE);
                             r2.setVisibility(View.GONE);
 
-                            if (r1.isChecked()) {
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "porsi";
-                            }
+
+                            ukuran = "porsi";
+
 
                             Img.setImageResource(R.drawable.ketoprak);
                             namaMakanan.setText("Ketoprak");
@@ -2327,15 +2349,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            berat = 15;
+
                             urt = berat * pengali * n /frekuensi;
-                            ukuran = "sendok makan";
-                        }else if (r2.isChecked()) {
-                            berat = 150;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "porsi";
-                        }
+
 
                         //Batas disesuaikan
 
@@ -2379,6 +2395,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  0.80;
                 k =  24.30;
                 berat = 100;
+                ukuran = "buah";
+
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -2439,10 +2457,10 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "buah";
-                        }
+
+                        urt = berat * pengali * n /frekuensi;
+
+
 
                         //Batas disesuaikan
 
@@ -2486,6 +2504,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  0;
                 k =  12.30;
                 berat = 250;
+                ukuran = "buah sedang";
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -2537,6 +2556,19 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 r1.setText("buah sedang");
                 r2.setText("buah besar");
 
+                rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                        if (r1.isChecked()) {
+                            berat = 250;
+                            ukuran = "buah sedang";
+                        }else if (r2.isChecked()){
+                            berat = 350;
+                            ukuran = "buah besar";
+                        }
+                    }
+                });
+
 
 
                 hitung.setOnClickListener(new View.OnClickListener() {
@@ -2546,15 +2578,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            berat = 250;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "buah sedang";
-                        }else if (r2.isChecked()){
-                            berat = 350;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "buah besar";
-                        }
+                        urt = berat * pengali * n /frekuensi;
 
                         //Batas disesuaikan
 
@@ -2598,6 +2622,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  6.50;
                 k =  7.70;
                 berat = 130;
+                ukuran = "buah sedang";
+
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -2649,6 +2675,19 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 r1.setText("buah sedang");
                 r2.setText("buah besar");
 
+                rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                        if (r1.isChecked()) {
+                            berat = 130;
+                            ukuran = "buah sedang";
+                        }else if (r2.isChecked()){
+                            berat = 170;
+                            ukuran = "buah besar";
+                        }
+                    }
+                });
+
 
 
                 hitung.setOnClickListener(new View.OnClickListener() {
@@ -2658,15 +2697,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            berat = 130;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "buah sedang";
-                        }else if (r2.isChecked()){
-                            berat = 170;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "buah besar";
-                        }
+                        urt = berat * pengali * n /frekuensi;
 
                         //Batas disesuaikan
 
@@ -2710,6 +2741,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  0.20;
                 k =  11.20;
                 berat = 100;
+                ukuran = "buah sedang";
+
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -2761,6 +2794,19 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 r1.setText("buah sedang");
                 r2.setText("buah besar");
 
+                rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                        if (r1.isChecked()) {
+                            berat = 100;
+                            ukuran = "buah sedang";
+                        }else if (r2.isChecked()){
+                            berat = 110;
+                            ukuran = "buah besar";
+                        }
+                    }
+                });
+
 
 
                 hitung.setOnClickListener(new View.OnClickListener() {
@@ -2770,15 +2816,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            berat = 100;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "buah sedang";
-                        }else if (r2.isChecked()){
-                            berat = 110;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "buah besar";
-                        }
+                        urt = berat * pengali * n /frekuensi;
 
                         //Batas disesuaikan
 
@@ -2822,6 +2860,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  0.10;
                 k =  12.20;
                 berat = 100;
+                ukuran = "potong panjang";
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -2882,10 +2921,10 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "potong panjang";
-                        }
+
+                        urt = berat * pengali * n /frekuensi;
+
+
 
                         //Batas disesuaikan
 
@@ -2932,6 +2971,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  0.20;
                 k =  6.90;
                 berat = 100;
+                ukuran = "potong";
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -2990,14 +3030,10 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             l =  0.30;
                             k =  6.70;
                             berat = 100;
+                            ukuran = "potong panjang";
 
                             r1.setText("potong panjang");
                             r2.setVisibility(View.GONE);
-
-                            if (r1.isChecked()) {
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "potong panjang";
-                            }
 
                             Img.setImageResource(R.drawable.melon);
                             namaMakanan.setText("Melon");
@@ -3008,24 +3044,26 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             l =  0.40;
                             k =  14.90;
                             berat = 100;
+                            ukuran = "buah sedang";
 
                             r1.setText("buah sedang");
                             r2.setText("buah besar");
 
                             r1.setVisibility(View.VISIBLE);
                             r2.setVisibility(View.VISIBLE);
+                            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                                @Override
+                                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                                    if (r1.isChecked()) {
+                                        berat = 100;
+                                        ukuran = "buah sedang";
+                                    }else if (r2.isChecked()){
+                                        berat = 200;
+                                        ukuran = "buah besar";
+                                    }
+                                }
+                            });
 
-                            if (r1.isChecked()) {
-                                berat = 100;
-                                urt = berat * pengali * n /frekuensi;
-                                System.out.println(urt+" ="+ berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
-                                ukuran = "buah sedang";
-                            }else if (r2.isChecked()){
-                                berat = 200;
-                                urt = berat * pengali * n /frekuensi;
-                                System.out.println(urt+" ="+ berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
-                                ukuran = "buah besar";
-                            }
 
                             Img.setImageResource(R.drawable.apel);
                             namaMakanan.setText("Apel");
@@ -3046,10 +3084,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "potong";
-                        }
+                        urt = berat * pengali * n /frekuensi;
 
                         //Batas disesuaikan
 
@@ -3094,6 +3129,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  14.23;
                 k =  0.72;
                 berat = 80;
+                ukuran = "potong besar";
+
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -3155,15 +3192,12 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                     public void onCheckedChanged(RadioGroup radioGroup, int i) {
                         if (r1.isChecked()) {
                             berat = 80;
-                            urt = berat * pengali * n /frekuensi;
                             ukuran = "potong besar";
                         }else if (r2.isChecked()) {
                             berat = 40;
-                            urt = berat * pengali * n /frekuensi;
                             ukuran = "potong sedang";
                         }else if (r3.isChecked()) {
                             berat = 20;
-                            urt = berat * pengali * n /frekuensi;
                             ukuran = "potong kecil";
                         }
 
@@ -3177,7 +3211,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        berat = 80;
+
                         urt = berat * pengali * n /frekuensi;
 
                         //Batas disesuaikan
@@ -3223,6 +3257,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  16.09;
                 k =  8.27;
                 berat = 50;
+                ukuran = "potong B";
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -3263,6 +3298,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             l =  16.09;
                             k =  8.27;
                             berat = 50;
+                            ukuran = "potong B";
 
 
                             Img.setImageResource(R.drawable.tempe_goreng);
@@ -3279,6 +3315,22 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 r1.setVisibility(View.VISIBLE);
                 r2.setVisibility(View.VISIBLE);
                 r3.setVisibility(View.VISIBLE);
+                rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                        if (r1.isChecked()) {
+                            berat = 50;
+                            ukuran = "potong B";
+                        }else if (r2.isChecked()) {
+                            berat = 30;
+                            ukuran = "potong A";
+                        }else if (r3.isChecked()) {
+                            berat = 25;
+                            ukuran = "potong C";
+                        }
+                    }
+                });
+
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -3287,19 +3339,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            berat = 50;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "potong B";
-                        }else if (r2.isChecked()) {
-                            berat = 30;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "potong A";
-                        }else if (r3.isChecked()) {
-                            berat = 25;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "potong C";
-                        }
+                        urt = berat * pengali * n /frekuensi;
 
                         //Batas disesuaikan
 
@@ -3343,6 +3383,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  10.80;
                 k =  0.70;
                 berat = 60;
+                ukuran = "butir";
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -3403,10 +3444,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "butir";
-                        }
+                        urt = berat * pengali * n /frekuensi;
 
                         //Batas disesuaikan
 
@@ -3450,6 +3488,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  15.15;
                 k =  0.67;
                 berat = 60;
+                ukuran = "butir";
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -3510,10 +3549,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "butir";
-                        }
+                        urt = berat * pengali * n /frekuensi;
 
                         //Batas disesuaikan
 
@@ -3557,6 +3593,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  12.40;
                 k =  7.90;
                 berat = 70;
+                ukuran = "butir";
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -3617,10 +3654,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "butir";
-                        }
+
+                        urt = berat * pengali * n /frekuensi;
 
                         //Batas disesuaikan
 
@@ -3669,6 +3704,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  6.25;
                 k =  0.89;
                 berat = 250;
+                ukuran = "porsi";
+
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -3713,10 +3750,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setText("porsi");
                             r2.setVisibility(View.GONE);
 
-                            if (r1.isChecked()) {
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "porsi";
-                            }
+
+                            ukuran = "porsi";
+
 
                             Img.setImageResource(R.drawable.soto_makassar);
                             namaMakanan.setText("Soto makasar");
@@ -3731,10 +3767,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setText("porsi");
                             r2.setVisibility(View.GONE);
 
-                            if (r1.isChecked()) {
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "porsi";
-                            }
+                            ukuran = "porsi";
+
 
                             Img.setImageResource(R.drawable.gulai_sapi_kambing);
                             namaMakanan.setText("Gulai sapi / Kambing");
@@ -3749,11 +3783,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setText("porsi");
                             r1.setVisibility(View.VISIBLE);
 
-                            if (r1.isChecked()) {
-                                berat = 285;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "porsi";
-                            }
+                            ukuran = "porsi";
+
 
                             Img.setImageResource(R.drawable.rawon_daging);
                             namaMakanan.setText("Rawon daging");
@@ -3767,11 +3798,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setText("porsi");
                             r1.setVisibility(View.VISIBLE);
 
-                            if (r1.isChecked()) {
-                                berat = 350;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "porsi";
-                            }
+                            ukuran = "porsi";
+
 
                             Img.setImageResource(R.drawable.tongseng_sapi);
                             namaMakanan.setText("Tongseng sapi / kambing");
@@ -3792,10 +3820,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "porsi";
-                        }
+                        urt = berat * pengali * n /frekuensi;
 
                         //Batas disesuaikan
 
@@ -3839,6 +3864,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  22.84;
                 k =  13.43;
                 berat = 10;
+                ukuran = "tusuk";
+
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -3899,10 +3926,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "tusuk";
-                        }
+                        urt = berat * pengali * n /frekuensi;
 
                         //Batas disesuaikan
 
@@ -3946,6 +3970,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  12.38;
                 k =  6.86;
                 berat = 250;
+                ukuran = "porsi";
+
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -4006,10 +4032,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "porsi";
-                        }
+                        urt = berat * pengali * n /frekuensi;
 
                         //Batas disesuaikan
 
@@ -4053,6 +4076,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l = 9.00;
                 k = 8.00;
                 berat = 90;
+                ukuran = "buah besar";
 
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -4088,9 +4112,6 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                     }
                 });
 
-
-
-
                 rgJenisMakanan.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                     @Override
                     public void onCheckedChanged(RadioGroup radioGroup, int i) {
@@ -4100,6 +4121,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             l = 9.00;
                             k = 8.00;
                             berat = 90;
+                            ukuran = "buah besar";
 
                             r1.setText("buah besar");
                             r2.setText("buah sedang");
@@ -4108,19 +4130,22 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r2.setVisibility(View.VISIBLE);
                             r3.setVisibility(View.VISIBLE);
 
-                            if (r1.isChecked()) {
-                                berat = 90;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "buah besar";
-                            }else if (r2.isChecked()) {
-                                berat = 15;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "buah sedang";
-                            }else if (r3.isChecked()) {
-                                berat = 5;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "buah kecil";
-                            }
+                            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                                @Override
+                                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                                    if (r1.isChecked()) {
+                                        berat = 90;
+                                        ukuran = "buah besar";
+                                    }else if (r2.isChecked()) {
+                                        berat = 15;
+                                        ukuran = "buah sedang";
+                                    }else if (r3.isChecked()) {
+                                        berat = 5;
+                                        ukuran = "buah kecil";
+                                    }
+                                }
+                            });
+
 
 
                             Img.setImageResource(R.drawable.bakso_sapi);
@@ -4132,6 +4157,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             l = 31.83;
                             k = 11.00;
                             berat = 70;
+                            ukuran = "buah sosis besar";
 
                             r1.setText("buah sosis besar");
                             r1.setText("buah sosis sedang");
@@ -4139,15 +4165,18 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r2.setVisibility(View.VISIBLE);
                             r3.setVisibility(View.GONE);
 
-                            if (r1.isChecked()) {
-                                berat = 70;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "buah sosis besar";
-                            }else if (r2.isChecked()) {
-                                berat = 30;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "buah sosis sedang";
-                            }
+                            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                                @Override
+                                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                                    if (r1.isChecked()) {
+                                        berat = 70;
+                                        ukuran = "buah sosis besar";
+                                    }else if (r2.isChecked()) {
+                                        berat = 30;
+                                        ukuran = "buah sosis sedang";
+                                    }
+                                }
+                            });
 
                             Img.setImageResource(R.drawable.sosis_sapi_goreng);
                             namaMakanan.setText("Sosis sapi bakar");
@@ -4158,6 +4187,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             l = 20.80;
                             k = 9.28;
                             berat = 70;
+                            ukuran = "buah sosis besar";
 
                             r1.setText("buah sosis besar");
                             r1.setText("buah sosis sedang");
@@ -4165,15 +4195,19 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r2.setVisibility(View.VISIBLE);
                             r3.setVisibility(View.GONE);
 
-                            if (r1.isChecked()) {
-                                berat = 70;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "buah sosis besar";
-                            }else if (r2.isChecked()) {
-                                berat = 30;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "buah sosis sedang";
-                            }
+                            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                                @Override
+                                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                                    if (r1.isChecked()) {
+                                        berat = 70;
+                                        ukuran = "buah sosis besar";
+                                    }else if (r2.isChecked()) {
+                                        berat = 30;
+                                        ukuran = "buah sosis sedang";
+                                    }
+                                }
+                            });
+
 
                             Img.setImageResource(R.drawable.sosis_ayam_goreng);
                             namaMakanan.setText("Sosis ayam bakar");
@@ -4202,21 +4236,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 
 //                        Toast.makeText(getApplicationContext(),"uhuy" + txtFrekuensi.getText().toString().trim(),Toast.LENGTH_LONG).show();
 
-
-                        if (r1.isChecked()) {
-                            berat = 90;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "buah besar";
-                        }else if (r2.isChecked()) {
-                            berat = 15;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "buah sedang";
-                        }else if (r3.isChecked()) {
-                            berat = 5;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "buah kecil";
-                        }
-
+                        urt = berat * pengali * n /frekuensi;
 
                         //JANGAN DIGANTI BAGIAN INI
                         double hEnergi = (urt / 100) * e;
@@ -4258,6 +4278,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  27.29;
                 k =  1.26;
                 berat = 140;
+                ukuran = "potong";
+
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -4318,10 +4340,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "potong";
-                        }
+                        urt = berat * pengali * n /frekuensi;
 
                         //Batas disesuaikan
 
@@ -4365,6 +4384,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  19.706422;
                 k =  2.788990826;
                 berat = 60;
+                ukuran = "dada atas";
+
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -4416,6 +4437,18 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 r1.setText("dada atas");
                 r2.setText("dada bawah");
 
+                rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                        if (r1.isChecked()) {
+                            berat = 60;
+                            ukuran = "dada atas";
+                        }else if (r2.isChecked()){
+                            berat = 50;
+                            ukuran = "dada bawah";
+                        }
+                    }
+                });
 
 
                 hitung.setOnClickListener(new View.OnClickListener() {
@@ -4425,15 +4458,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            berat = 60;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "dada atas";
-                        }else if (r2.isChecked()){
-                            berat = 50;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "dada bawah";
-                        }
+                        urt = berat * pengali * n /frekuensi;
 
                         //Batas disesuaikan
 
@@ -4477,6 +4502,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  42.56;
                 k =  4.97;
                 berat = 10;
+                ukuran = "tusuk";
+
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -4537,10 +4564,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "tusuk";
-                        }
+                        urt = berat * pengali * n /frekuensi;
 
                         //Batas disesuaikan
 
@@ -4585,19 +4609,11 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l = 15.45;
                 k = 6.87;
                 berat = 60;
+                ukuran = "potong";
 
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        // Toast.makeText(getApplicationContext(),adapterView.getSelectedItem().toString(),Toast.LENGTH_LONG).show();
-//                        if (adapterView.getSelectedItem().toString() == "Hari"){
-//                            frekuensi=0;
-//                            frekuensi += 1;
-//                        }else if (adapterView.getSelectedItem().toString() == "Minggu"){
-//                            frekuensi += 7;
-//                        }else if (adapterView.getSelectedItem().toString() == "Bulan"){
-//                            frekuensi += 30;
-//                        }
                         if(adapterView.getSelectedItemId()==0){
                             frekuensi=1;
                             penampungSatuan="Hari";
@@ -4610,7 +4626,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             penampungSatuan="Bulan";
 
                         }
-//                        Toast.makeText(getApplicationContext(),"Sekarang : "+String.valueOf(frekuensi),Toast.LENGTH_LONG).show();
+
                     }
 
                     @Override
@@ -4638,11 +4654,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r2.setVisibility(View.GONE);
                             r3.setVisibility(View.GONE);
 
-                            if (r1.isChecked()) {
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "potong";
-                            }
-
+                            ukuran = "potong";
 
                             Img.setImageResource(R.drawable.tongkol_goreng);
                             namaMakanan.setText("Tongkol goreng / Pesmol / Masak balado");
@@ -4660,20 +4672,22 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setVisibility(View.VISIBLE);
                             r2.setVisibility(View.VISIBLE);
                             r3.setVisibility(View.VISIBLE);
-
-                            if (r1.isChecked()) {
-                                berat = 70;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "ekor besar";
-                            }else if (r2.isChecked()) {
-                                berat = 40;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "ekor sedang";
-                            }else if (r3.isChecked()) {
-                                berat = 30;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "ekor kecil";
-                            }
+                            ukuran = "ekor besar";
+                            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                                @Override
+                                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                                    if (r1.isChecked()) {
+                                        berat = 70;
+                                        ukuran = "ekor besar";
+                                    }else if (r2.isChecked()) {
+                                        berat = 40;
+                                        ukuran = "ekor sedang";
+                                    }else if (r3.isChecked()) {
+                                        berat = 30;
+                                        ukuran = "ekor kecil";
+                                    }
+                                }
+                            });
 
                             Img.setImageResource(R.drawable.lele_goreng);
                             namaMakanan.setText("Lele goreng / Pesmol / Masak balado");
@@ -4684,6 +4698,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             l = 14.72;
                             k = 0;
                             berat = 40;
+                            ukuran = "ekor sedang";
 
                             r1.setText("ekor sedang");
                             r2.setText("ekor kecil");
@@ -4691,16 +4706,18 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r2.setVisibility(View.VISIBLE);
                             r3.setVisibility(View.GONE);
 
-                            if (r1.isChecked()) {
-                                berat = 40;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "ekor sedang";
-                            }else if (r2.isChecked()) {
-                                berat = 25;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "ekor kecil";
-                            }
-
+                            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                                @Override
+                                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                                    if (r1.isChecked()) {
+                                        berat = 40;
+                                        ukuran = "ekor sedang";
+                                    }else if (r2.isChecked()) {
+                                        berat = 25;
+                                        ukuran = "ekor kecil";
+                                    }
+                                }
+                            });
                             Img.setImageResource(R.drawable.mujair_goreng);
                             namaMakanan.setText("Mujair goreng / Pesmol / Masak balado");
 
@@ -4724,13 +4741,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-//                        Toast.makeText(getApplicationContext(),"uhuy" + txtFrekuensi.getText().toString().trim(),Toast.LENGTH_LONG).show();
-
-
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "potong";
-                        }
+                        urt = berat * pengali * n /frekuensi;
 
 
                         //JANGAN DIGANTI BAGIAN INI
@@ -4776,19 +4787,11 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l = 20.08;
                 k = 1.45;
                 berat = 10;
+                ukuran = "ekor sedang";
 
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        // Toast.makeText(getApplicationContext(),adapterView.getSelectedItem().toString(),Toast.LENGTH_LONG).show();
-//                        if (adapterView.getSelectedItem().toString() == "Hari"){
-//                            frekuensi=0;
-//                            frekuensi += 1;
-//                        }else if (adapterView.getSelectedItem().toString() == "Minggu"){
-//                            frekuensi += 7;
-//                        }else if (adapterView.getSelectedItem().toString() == "Bulan"){
-//                            frekuensi += 30;
-//                        }
                         if(adapterView.getSelectedItemId()==0){
                             frekuensi=1;
                             penampungSatuan="Hari";
@@ -4829,16 +4832,20 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setVisibility(View.VISIBLE);
                             r2.setVisibility(View.VISIBLE);
                             r3.setVisibility(View.GONE);
-
-                            if (r1.isChecked()) {
-                                berat = 10;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "ekor sedang";
-                            }else if(r2.isChecked()) {
-                                berat = 6;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "ekor kecil";
-                            }
+                            berat = 10;
+                            ukuran = "ekor sedang";
+                            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                                @Override
+                                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                                    if (r1.isChecked()) {
+                                        berat = 10;
+                                        ukuran = "ekor sedang";
+                                    }else if(r2.isChecked()) {
+                                        berat = 6;
+                                        ukuran = "ekor kecil";
+                                    }
+                                }
+                            });
 
 
                             Img.setImageResource(R.drawable.udang_goreng);
@@ -4856,16 +4863,22 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setVisibility(View.VISIBLE);
                             r2.setVisibility(View.VISIBLE);
                             r3.setVisibility(View.GONE);
+                            berat = 10;
+                            ukuran = "ekor sedang";
+                            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                                @Override
+                                public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                            if (r1.isChecked()) {
-                                berat = 10;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "ekor sedang";
-                            }else if (r2.isChecked()) {
-                                berat = 6;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "ekor kecil";
-                            }
+
+                                if (r1.isChecked()) {
+                                    berat = 10;
+                                    ukuran = "ekor sedang";
+                                }else if (r2.isChecked()) {
+                                    berat = 6;
+                                    ukuran = "ekor kecil";
+                                }
+                                }
+                            });
 
                             Img.setImageResource(R.drawable.udang_rebus);
                             namaMakanan.setText("Udang kukus / Rebus / Masak sup");
@@ -4882,16 +4895,21 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setVisibility(View.VISIBLE);
                             r2.setVisibility(View.VISIBLE);
                             r3.setVisibility(View.GONE);
+                            berat = 40;
+                            ukuran = "cumi sotong sedang";
+                            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                                @Override
+                                public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                            if (r1.isChecked()) {
-                                berat = 40;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "cumi sotong sedang";
-                            }else if (r2.isChecked()) {
-                                berat = 20;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "cumi sotong kecil";
-                            }
+                                    if (r1.isChecked()) {
+                                        berat = 40;
+                                        ukuran = "cumi sotong sedang";
+                                    }else if (r2.isChecked()) {
+                                        berat = 20;
+                                        ukuran = "cumi sotong kecil";
+                                    }
+                                }
+                            });
 
                             Img.setImageResource(R.drawable.cumi_kukus);
                             namaMakanan.setText("Cumi kukus / Rebus / Masak sup");
@@ -4908,10 +4926,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r2.setVisibility(View.GONE);
                             r3.setVisibility(View.GONE);
 
-                            if (r1.isChecked()) {
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "porsi";
-                            }
+
+                            ukuran = "porsi";
+
 
                             Img.setImageResource(R.drawable.cumi_goreng_tepung);
                             namaMakanan.setText("Cumi goreng / Pesmol / Masak balado");
@@ -4929,6 +4946,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 r3.setVisibility(View.GONE);
 
 
+
                 System.out.println("urt luar :"+ urt +"="+berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -4940,15 +4958,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 //                        Toast.makeText(getApplicationContext(),"uhuy" + txtFrekuensi.getText().toString().trim(),Toast.LENGTH_LONG).show();
 
 
-                        if (r1.isChecked()) {
-                            berat = 10;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "ekor sedang";
-                        }else if(r2.isChecked()) {
-                            berat = 6;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "ekor kecil";
-                        }
+                        urt = berat * pengali * n /frekuensi;
 
 
                         //JANGAN DIGANTI BAGIAN INI
@@ -4994,6 +5004,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  37.63;
                 k =  5.19;
                 berat = 30;
+                ukuran = "potong";
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -5099,10 +5110,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "potong";
-                        }
+
+                        urt = berat * pengali * n /frekuensi;
+
 
                         //Batas disesuaikan
 
@@ -5146,6 +5156,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  17.66;
                 k =  20.00;
                 berat = 50;
+                ukuran = "buah";
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -5206,10 +5217,10 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "buah";
-                        }
+
+                        urt = berat * pengali * n /frekuensi;
+
+
 
                         //Batas disesuaikan
 
@@ -5253,6 +5264,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  9.13;
                 k =  38.60;
                 berat = 60;
+                ukuran = "buah";
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -5313,10 +5325,10 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
+
                             urt = berat * pengali * n /frekuensi;
-                            ukuran = "buah";
-                        }
+
+
 
                         //Batas disesuaikan
 
@@ -5358,19 +5370,12 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l = 8.09;
                 k = 34.66;
                 berat = 65;
+                ukuran = "buah";
 
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        // Toast.makeText(getApplicationContext(),adapterView.getSelectedItem().toString(),Toast.LENGTH_LONG).show();
-//                        if (adapterView.getSelectedItem().toString() == "Hari"){
-//                            frekuensi=0;
-//                            frekuensi += 1;
-//                        }else if (adapterView.getSelectedItem().toString() == "Minggu"){
-//                            frekuensi += 7;
-//                        }else if (adapterView.getSelectedItem().toString() == "Bulan"){
-//                            frekuensi += 30;
-//                        }
+
                         if(adapterView.getSelectedItemId()==0){
                             frekuensi=1;
                             penampungSatuan="Hari";
@@ -5437,11 +5442,11 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 //                        Toast.makeText(getApplicationContext(),"uhuy" + txtFrekuensi.getText().toString().trim(),Toast.LENGTH_LONG).show();
 
 
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "buah";
-                            System.out.println("urt luar :"+ urt +"="+berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
-                        }
+
+                        urt = berat * pengali * n /frekuensi;
+
+
+
 
                         //JANGAN DIGANTI BAGIAN INI
                         double hEnergi = (urt / 100) * e;
@@ -5481,19 +5486,12 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l = 0;
                 k = 48.00;
                 berat = 75;
+                ukuran = "buah";
 
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        // Toast.makeText(getApplicationContext(),adapterView.getSelectedItem().toString(),Toast.LENGTH_LONG).show();
-//                        if (adapterView.getSelectedItem().toString() == "Hari"){
-//                            frekuensi=0;
-//                            frekuensi += 1;
-//                        }else if (adapterView.getSelectedItem().toString() == "Minggu"){
-//                            frekuensi += 7;
-//                        }else if (adapterView.getSelectedItem().toString() == "Bulan"){
-//                            frekuensi += 30;
-//                        }
+
                         if(adapterView.getSelectedItemId()==0){
                             frekuensi=1;
                             penampungSatuan="Hari";
@@ -5548,8 +5546,6 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 r1.setText("buah");
                 r2.setVisibility(View.GONE);
 
-
-                System.out.println("urt luar :"+ urt +"="+berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -5560,11 +5556,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 //                        Toast.makeText(getApplicationContext(),"uhuy" + txtFrekuensi.getText().toString().trim(),Toast.LENGTH_LONG).show();
 
 
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "buah";
-                            System.out.println("urt luar :"+ urt +"="+berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
-                        }
+                        urt = berat * pengali * n /frekuensi;
 
                         //JANGAN DIGANTI BAGIAN INI
                         double hEnergi = (urt / 100) * e;
@@ -5606,6 +5598,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  18.13;
                 k =  62.11;
                 berat = 30;
+                ukuran = "buah";
+
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -5666,10 +5660,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "buah";
-                        }
+
+                        urt = berat * pengali * n /frekuensi;
 
                         //Batas disesuaikan
 
@@ -5711,19 +5703,12 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l = 17.23;
                 k = 22.34;
                 berat = 40;
+                ukuran = "potong";
 
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        // Toast.makeText(getApplicationContext(),adapterView.getSelectedItem().toString(),Toast.LENGTH_LONG).show();
-//                        if (adapterView.getSelectedItem().toString() == "Hari"){
-//                            frekuensi=0;
-//                            frekuensi += 1;
-//                        }else if (adapterView.getSelectedItem().toString() == "Minggu"){
-//                            frekuensi += 7;
-//                        }else if (adapterView.getSelectedItem().toString() == "Bulan"){
-//                            frekuensi += 30;
-//                        }
+
                         if(adapterView.getSelectedItemId()==0){
                             frekuensi=1;
                             penampungSatuan="Hari";
@@ -5789,12 +5774,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 
 //                        Toast.makeText(getApplicationContext(),"uhuy" + txtFrekuensi.getText().toString().trim(),Toast.LENGTH_LONG).show();
 
-
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "potong";
-                            System.out.println("urt luar :"+ urt +"="+berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
-                        }
+                        urt = berat * pengali * n /frekuensi;
 
                         //JANGAN DIGANTI BAGIAN INI
                         double hEnergi = (urt / 100) * e;
@@ -5836,6 +5816,10 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  16.23;
                 k =  17.21;
                 berat = 40;
+                ukuran = "buah";
+
+
+
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -5896,10 +5880,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "buah";
-                        }
+                        urt = berat * pengali * n /frekuensi;
+
 
                         //Batas disesuaikan
 
@@ -5951,19 +5933,12 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l = 25.00;
                 k = 65.00;
                 berat = 10;
+                ukuran = "keping";
 
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        // Toast.makeText(getApplicationContext(),adapterView.getSelectedItem().toString(),Toast.LENGTH_LONG).show();
-//                        if (adapterView.getSelectedItem().toString() == "Hari"){
-//                            frekuensi=0;
-//                            frekuensi += 1;
-//                        }else if (adapterView.getSelectedItem().toString() == "Minggu"){
-//                            frekuensi += 7;
-//                        }else if (adapterView.getSelectedItem().toString() == "Bulan"){
-//                            frekuensi += 30;
-//                        }
+
                         if(adapterView.getSelectedItemId()==0){
                             frekuensi=1;
                             penampungSatuan="Hari";
@@ -6001,10 +5976,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setText("keping");
                             r1.setVisibility(View.VISIBLE);
 
-                            if (r1.isChecked()) {
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "keping";
-                            }
+                            ukuran = "keping";
+
                             Img.setImageResource(R.drawable.wafer);
                             namaMakanan.setText("Wafer");
 
@@ -6018,10 +5991,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setText("roll");
                             r1.setVisibility(View.VISIBLE);
 
-                            if (r1.isChecked()) {
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "roll";
-                            }
+
+                            ukuran = "roll";
 
                             Img.setImageResource(R.drawable.wafer_roll_astor);
                             namaMakanan.setText("Wafer roll / Astor");
@@ -6035,10 +6006,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setText("keping");
                             r1.setVisibility(View.VISIBLE);
 
-                            if (r1.isChecked()) {
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "keping";
-                            }
+
+                            ukuran = "keping";
+
 
                             Img.setImageResource(R.drawable.biskuit_crackers_malkist);
                             namaMakanan.setText("Biskuit crackers, Malkist (Roma)");
@@ -6052,10 +6022,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setText("keping");
                             r1.setVisibility(View.VISIBLE);
 
-                            if (r1.isChecked()) {
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "keping";
-                            }
+
+                            ukuran = "keping";
 
                             Img.setImageResource(R.drawable.biskuit_coklat);
                             namaMakanan.setText("Biskuit coklat (Good time, Choco mania)");
@@ -6069,10 +6037,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setText("keping");
                             r1.setVisibility(View.VISIBLE);
 
-                            if (r1.isChecked()) {
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "keping";
-                            }
+
+                            ukuran = "keping";
+
 
                             Img.setImageResource(R.drawable.biskuit_krim);
                             namaMakanan.setText("Biskuit krim (Oreo)");
@@ -6086,10 +6053,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setText("keping");
                             r1.setVisibility(View.VISIBLE);
 
-                            if (r1.isChecked()) {
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "keping";
-                            }
+                            ukuran = "keping";
+
 
                             Img.setImageResource(R.drawable.biskuit_selai);
                             namaMakanan.setText("Biskuit selai (Slai Olai)");
@@ -6102,8 +6067,6 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 r1.setText("keping");
                 r2.setVisibility(View.GONE);
 
-
-                System.out.println("urt luar :"+ urt +"="+berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -6113,12 +6076,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 
 //                        Toast.makeText(getApplicationContext(),"uhuy" + txtFrekuensi.getText().toString().trim(),Toast.LENGTH_LONG).show();
 
+                        urt = berat * pengali * n /frekuensi;
 
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "keping";
-                            System.out.println("urt luar :"+ urt +"="+berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
-                        }
 
                         //JANGAN DIGANTI BAGIAN INI
                         double hEnergi = (urt / 100) * e;
@@ -6226,7 +6185,33 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 r6.setVisibility(View.VISIBLE);
                 r7.setVisibility(View.VISIBLE);
 
-
+                rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                        if (r1.isChecked()) {
+                            berat = 100;
+                            ukuran = "Chunky Bar";
+                        }else if (r2.isChecked()) {
+                            berat = 33;
+                            ukuran = "Silver Queen Midi";
+                        }else if (r3.isChecked()) {
+                            berat = 68;
+                            ukuran = "Silver Queen Jumbo";
+                        }else if (r4.isChecked()) {
+                            berat = 36;
+                            ukuran = "Silver Queen Chunky";
+                        }else if (r5.isChecked()) {
+                            berat = 30;
+                            ukuran = "Cadbury kecil";
+                        }else if (r6.isChecked()) {
+                            berat = 65;
+                            ukuran = "Cadbury sedang";
+                        }else if (r7.isChecked()) {
+                            berat = 165;
+                            ukuran = "Cadbury besar";
+                        }
+                    }
+                });
 
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -6235,35 +6220,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            berat = 100;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Chunky Bar";
-                        }else if (r2.isChecked()) {
-                            berat = 33;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Silver Queen Midi";
-                        }else if (r3.isChecked()) {
-                            berat = 68;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Silver Queen Jumbo";
-                        }else if (r4.isChecked()) {
-                            berat = 36;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Silver Queen Chunky";
-                        }else if (r5.isChecked()) {
-                            berat = 30;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Cadbury kecil";
-                        }else if (r6.isChecked()) {
-                            berat = 65;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Cadbury sedang";
-                        }else if (r7.isChecked()) {
-                            berat = 165;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Cadbury besar";
-                        }
+                        urt = berat * pengali * n /frekuensi;
 
                         //Batas disesuaikan
 
@@ -6307,19 +6264,11 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l = 0.50;
                 k = 55.07;
                 berat = 2000;
+                ukuran = "2000 rupiah";
 
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        // Toast.makeText(getApplicationContext(),adapterView.getSelectedItem().toString(),Toast.LENGTH_LONG).show();
-//                        if (adapterView.getSelectedItem().toString() == "Hari"){
-//                            frekuensi=0;
-//                            frekuensi += 1;
-//                        }else if (adapterView.getSelectedItem().toString() == "Minggu"){
-//                            frekuensi += 7;
-//                        }else if (adapterView.getSelectedItem().toString() == "Bulan"){
-//                            frekuensi += 30;
-//                        }
                         if(adapterView.getSelectedItemId()==0){
                             frekuensi=1;
                             penampungSatuan="Hari";
@@ -6358,11 +6307,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setText("2000 rupiah");
                             r2.setVisibility(View.GONE);
 
-                            if (r1.isChecked()) {
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "2000 rupiah";
-                                System.out.println("urt luar :"+ urt +"="+berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
-                            }
+
+                            ukuran = "2000 rupiah";
+
                             Img.setImageResource(R.drawable.cilok);
                             namaMakanan.setText("Cilok");
 
@@ -6376,11 +6323,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setText("buah");
                             r2.setVisibility(View.GONE);
 
-                            if (r1.isChecked()) {
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "buah";
-                                System.out.println("urt luar :"+ urt +"="+berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
-                            }
+
+                            ukuran = "buah";
+
 
                             Img.setImageResource(R.drawable.cireng);
                             namaMakanan.setText("Cireng");
@@ -6394,11 +6339,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setText("buah");
                             r2.setVisibility(View.GONE);
 
-                            if (r1.isChecked()) {
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "buah";
-                                System.out.println("urt luar :"+ urt +"="+berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
-                            }
+
+                            ukuran = "buah";
+
 
                             Img.setImageResource(R.drawable.seblak_basah);
                             namaMakanan.setText("Seblak basah");
@@ -6423,11 +6366,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 //                        Toast.makeText(getApplicationContext(),"uhuy" + txtFrekuensi.getText().toString().trim(),Toast.LENGTH_LONG).show();
 
 
-                        if (r1.isChecked()) {
+
                             urt = berat * pengali * n /frekuensi;
-                            ukuran = "2000 rupiah";
-                            System.out.println("urt luar :"+ urt +"="+berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
-                        }
+
 
                         //JANGAN DIGANTI BAGIAN INI
                         double hEnergi = (urt / 100) * e;
@@ -6469,19 +6410,12 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l = 13.74;
                 k = 57.39;
                 berat = 5;
+                ukuran = "buah";
 
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        // Toast.makeText(getApplicationContext(),adapterView.getSelectedItem().toString(),Toast.LENGTH_LONG).show();
-//                        if (adapterView.getSelectedItem().toString() == "Hari"){
-//                            frekuensi=0;
-//                            frekuensi += 1;
-//                        }else if (adapterView.getSelectedItem().toString() == "Minggu"){
-//                            frekuensi += 7;
-//                        }else if (adapterView.getSelectedItem().toString() == "Bulan"){
-//                            frekuensi += 30;
-//                        }
+
                         if(adapterView.getSelectedItemId()==0){
                             frekuensi=1;
                             penampungSatuan="Hari";
@@ -6520,11 +6454,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setText("buah");
                             r2.setVisibility(View.GONE);
 
-                            if (r1.isChecked()) {
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "buah";
-                                System.out.println("urt luar :"+ urt +"="+berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
-                            }
+
+                            ukuran = "buah";
+
                             Img.setImageResource(R.drawable.kerupuk_udang);
                             namaMakanan.setText("Kerupuk udang");
 
@@ -6538,11 +6470,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setText("genggam");
                             r2.setVisibility(View.GONE);
 
-                            if (r1.isChecked()) {
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "genggam";
-                                System.out.println("urt luar :"+ urt +"="+berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
-                            }
+
+                            ukuran = "genggam";
+
 
                             Img.setImageResource(R.drawable.keripik_kentang);
                             namaMakanan.setText("Keripik kentang");
@@ -6556,11 +6486,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setText("genggam");
                             r2.setVisibility(View.GONE);
 
-                            if (r1.isChecked()) {
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "genggam";
-                                System.out.println("urt luar :"+ urt +"="+berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
-                            }
+
+                            ukuran = "genggam";
+
 
                             Img.setImageResource(R.drawable.keripik_singkong);
                             namaMakanan.setText("Keripik singkong");
@@ -6585,11 +6513,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 //                        Toast.makeText(getApplicationContext(),"uhuy" + txtFrekuensi.getText().toString().trim(),Toast.LENGTH_LONG).show();
 
 
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "buah";
-                            System.out.println("urt luar :"+ urt +"="+berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
-                        }
+
+                        urt = berat * pengali * n /frekuensi;
+
 
                         //JANGAN DIGANTI BAGIAN INI
                         double hEnergi = (urt / 100) * e;
@@ -6632,6 +6558,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  0;
                 k =  10.80;
                 berat = 425;
+                ukuran = "botol";
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -6660,8 +6587,6 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 });
                 //jangan diapa-apain
 
-
-
                 //Sesuaikan
                 rgJenisMakanan.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                     @Override
@@ -6685,6 +6610,20 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 r1.setVisibility(View.VISIBLE);
                 r2.setVisibility(View.VISIBLE);
 
+                rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                        if (r1.isChecked()) {
+                            berat = 425;
+                            ukuran = "botol";
+                        }else if (r2.isChecked()) {
+                            berat = 330;
+
+                            ukuran = "kaleng";
+                        }
+                    }
+                });
+
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -6692,15 +6631,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            berat = 425;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "botol";
-                        }else if (r2.isChecked()) {
-                            berat = 330;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "kaleng";
-                        }
+                        urt = berat * pengali * n /frekuensi;
 
                         //Batas disesuaikan
 
@@ -6745,6 +6676,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  0;
                 k =  6.00;
                 berat = 500;
+                ukuran = "Botol Mizone";
+
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -6806,6 +6739,28 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 r4.setVisibility(View.VISIBLE);
                 r5.setVisibility(View.VISIBLE);
 
+                rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                        if (r1.isChecked()) {
+                            berat = 500;
+                            ukuran = "Botol Mizone";
+                        }else if (r2.isChecked()) {
+                            berat = 330;
+                            ukuran = "Kaleng";
+                        }else if (r3.isChecked()) {
+                            berat = 350;
+                            ukuran = "Botol kecil Pocari";
+                        }else if (r4.isChecked()) {
+                            berat = 500;
+                            ukuran = "Botol sedang Pocari";
+                        }else if (r5.isChecked()) {
+                            berat = 900;
+                            ukuran = "Botol Besar Pocari";
+                        }
+                    }
+                });
+
 
 
                 hitung.setOnClickListener(new View.OnClickListener() {
@@ -6815,27 +6770,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            berat = 500;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Botol Mizone";
-                        }else if (r2.isChecked()) {
-                            berat = 330;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Kaleng";
-                        }else if (r3.isChecked()) {
-                            berat = 350;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Botol kecil Pocari";
-                        }else if (r4.isChecked()) {
-                            berat = 500;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Botol sedang Pocari";
-                        }else if (r5.isChecked()) {
-                            berat = 900;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Botol Besar Pocari";
-                        }
+                        urt = berat * pengali * n /frekuensi;
 
                         //Batas disesuaikan
 
@@ -6880,6 +6815,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  0;
                 k =  16.70;
                 berat = 150;
+                ukuran = "botol";
+
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -6935,6 +6872,20 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 
                 r1.setVisibility(View.VISIBLE);
                 r2.setVisibility(View.VISIBLE);
+                rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                        if (r1.isChecked()) {
+                            berat = 150;
+                            ukuran = "botol";
+                        }else if (r2.isChecked()) {
+                            berat = 355;
+                            ukuran = "kaleng";
+                        }
+                    }
+                });
+
+
 
 
                 hitung.setOnClickListener(new View.OnClickListener() {
@@ -6944,15 +6895,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            berat = 150;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "botol";
-                        }else if (r2.isChecked()) {
-                            berat = 355;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "kaleng";
-                        }
+
+                        urt = berat * pengali * n /frekuensi;
 
                         //Batas disesuaikan
 
@@ -6995,19 +6939,12 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l = 0;
                 k = 12.00;
                 berat = 400;
+                ukuran = "Botol Minute Maid";
 
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                        // Toast.makeText(getApplicationContext(),adapterView.getSelectedItem().toString(),Toast.LENGTH_LONG).show();
-//                        if (adapterView.getSelectedItem().toString() == "Hari"){
-//                            frekuensi=0;
-//                            frekuensi += 1;
-//                        }else if (adapterView.getSelectedItem().toString() == "Minggu"){
-//                            frekuensi += 7;
-//                        }else if (adapterView.getSelectedItem().toString() == "Bulan"){
-//                            frekuensi += 30;
-//                        }
+
                         if(adapterView.getSelectedItemId()==0){
                             frekuensi=1;
                             penampungSatuan="Hari";
@@ -7042,6 +6979,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             l = 0;
                             k = 12.00;
                             berat = 400;
+                            ukuran = "Botol Minute Maid";
 
                             r1.setText("Botol Minute Maid");
                             r2.setText("Botol Floridina");
@@ -7053,23 +6991,25 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r3.setVisibility(View.VISIBLE);
                             r4.setVisibility(View.VISIBLE);
 
-                            if (r1.isChecked()) {
-                                berat = 400;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "Botol Minute Maid";
-                            }else if (r2.isChecked()) {
-                                berat = 360;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "Botol Floridina";
-                            }else if (r3.isChecked()) {
-                                berat = 250;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "Kotak Buahvita/Country Choice";
-                            }else if (r4.isChecked()) {
-                                berat = 200;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "Gelas Ale ale";
-                            }
+                            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                                @Override
+                                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                                    if (r1.isChecked()) {
+                                        berat = 400;
+                                        ukuran = "Botol Minute Maid";
+                                    }else if (r2.isChecked()) {
+                                        berat = 360;
+                                        ukuran = "Botol Floridina";
+                                    }else if (r3.isChecked()) {
+                                        berat = 250;
+                                        ukuran = "Kotak Buahvita/Country Choice";
+                                    }else if (r4.isChecked()) {
+                                        berat = 200;
+                                        ukuran = "Gelas Ale ale";
+                                    }
+                                }
+                            });
+
 
 
                             Img.setImageResource(R.drawable.minuman_kemasan_sari_buah);
@@ -7088,16 +7028,21 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r2.setVisibility(View.VISIBLE);
                             r3.setVisibility(View.GONE);
                             r4.setVisibility(View.GONE);
+                            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                                @Override
+                                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                                    if (r1.isChecked()) {
+                                        berat = 14;
+                                        urt = berat * pengali * n /frekuensi;
+                                        ukuran = "Sachet Nutrisari";
+                                    }else if (r2.isChecked()) {
+                                        berat = 8;
+                                        urt = berat * pengali * n /frekuensi;
+                                        ukuran = "Sachet Marimas";
+                                    }
+                                }
+                            });
 
-                            if (r1.isChecked()) {
-                                berat = 14;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "Sachet Nutrisari";
-                            }else if (r2.isChecked()) {
-                                berat = 8;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "Sachet Marimas";
-                            }
 
                             Img.setImageResource(R.drawable.minuman_serbuk_sari_buah);
                             namaMakanan.setText("Minuman serbuk sari buah (Nutrisari, Marimas)");
@@ -7130,23 +7075,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 //                        Toast.makeText(getApplicationContext(),"uhuy" + txtFrekuensi.getText().toString().trim(),Toast.LENGTH_LONG).show();
 
 
-                        if (r1.isChecked()) {
-                            berat = 400;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Botol Minute Maid";
-                        }else if (r2.isChecked()) {
-                            berat = 360;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Botol Floridina";
-                        }else if (r3.isChecked()) {
-                            berat = 250;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Kotak Buahvita/Country Choice";
-                        }else if (r4.isChecked()) {
-                            berat = 200;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Gelas Ale ale";
-                        }
+
+                        urt = berat * pengali * n /frekuensi;
 
 
                         //JANGAN DIGANTI BAGIAN INI
@@ -7189,6 +7119,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  0;
                 k =  94;
                 berat = 5;
+                ukuran = "Sendok Teh";
+
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -7249,10 +7181,10 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
+
                             urt = berat * pengali * n /frekuensi;
-                            ukuran = "Sendok Teh";
-                        }
+
+
 
                         //Batas disesuaikan
 
@@ -7343,6 +7275,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             l = 0;
                             k = 35.00;
                             berat = 31;
+                            ukuran = "Sachet ABC";
 
                             r1.setText("Sachet ABC");
                             r2.setText("Sachet Nescafe");
@@ -7352,24 +7285,25 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r2.setVisibility(View.VISIBLE);
                             r3.setVisibility(View.VISIBLE);
                             r4.setVisibility(View.VISIBLE);
+                            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                                @Override
+                                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                                    if (r1.isChecked()) {
+                                        berat = 31;
+                                        ukuran = "Sachet ABC";
+                                    }else if (r2.isChecked()) {
+                                        berat = 17.5;
+                                        ukuran = "Sachet Nescafe";
+                                    }else if (r3.isChecked()) {
+                                        berat = 20;
+                                        ukuran = "Sachet Good Day";
+                                    }else if (r4.isChecked()) {
+                                        berat = 25;
+                                        ukuran = "Sachet Kapal Api";
+                                    }
+                                }
+                            });
 
-                            if (r1.isChecked()) {
-                                berat = 31;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "Sachet ABC";
-                            }else if (r2.isChecked()) {
-                                berat = 17.5;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "Sachet Nescafe";
-                            }else if (r3.isChecked()) {
-                                berat = 20;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "Sachet Good Day";
-                            }else if (r4.isChecked()) {
-                                berat = 25;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "Sachet Kapal Api";
-                            }
 
 
                             Img.setImageResource(R.drawable.kopi_bubuk_instant);
@@ -7381,6 +7315,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             l = 1.50;
                             k = 9.20;
                             berat = 250;
+                            ukuran = "Botol Good Day";
 
                             r1.setText("Botol Good Day");
                             r1.setText("Botol Kopiko 78C");
@@ -7388,16 +7323,20 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r2.setVisibility(View.VISIBLE);
                             r3.setVisibility(View.GONE);
                             r4.setVisibility(View.GONE);
+                            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                                @Override
+                                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                                    if (r1.isChecked()) {
+                                        berat = 250;
+                                        ukuran = "Botol Good Day";
+                                    }else if (r2.isChecked()) {
+                                        berat = 240;
+                                        ukuran = "Botol Kopiko 78C";
+                                    }
+                                }
+                            });
 
-                            if (r1.isChecked()) {
-                                berat = 250;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "Botol Good Day";
-                            }else if (r2.isChecked()) {
-                                berat = 240;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "Botol Kopiko 78C";
-                            }
+
 
                             Img.setImageResource(R.drawable.kopi_instant_siap_minum);
                             namaMakanan.setText("Kopi instant bubuk siap minum (kopiko 78, Good day)");
@@ -7415,11 +7354,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r3.setVisibility(View.GONE);
                             r4.setVisibility(View.GONE);
 
-                            if (r1.isChecked()) {
-                                berat = 10;
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "buah sosis besar";
-                            }
+
+                            ukuran = "buah sosis besar";
+
 
                             Img.setImageResource(R.drawable.kopi_manis_bukan_kemasan);
                             namaMakanan.setText("Kopi manis bukan kemasan (Gula pasirnya)");
@@ -7451,23 +7388,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 //                        Toast.makeText(getApplicationContext(),"uhuy" + txtFrekuensi.getText().toString().trim(),Toast.LENGTH_LONG).show();
 
 
-                        if (r1.isChecked()) {
-                            berat = 31;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Sachet ABC";
-                        }else if (r2.isChecked()) {
-                            berat = 17.5;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Sachet Nescafe";
-                        }else if (r3.isChecked()) {
-                            berat = 20;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Sachet Good Day";
-                        }else if (r4.isChecked()) {
-                            berat = 25;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Sachet Kapal Api";
-                        }
+                        urt = berat * pengali * n /frekuensi;
+
 
 
                         //JANGAN DIGANTI BAGIAN INI
@@ -7510,6 +7432,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  6.86;
                 k =  23.93;
                 berat = 300;
+                ukuran = "porsi";
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -7570,10 +7493,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
+
                             urt = berat * pengali * n /frekuensi;
-                            ukuran = "porsi";
-                        }
+
 
                         //Batas disesuaikan
 
@@ -7616,6 +7538,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  10.00;
                 k =  9.00;
                 berat = 200;
+                ukuran = "kotak";
+
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -7676,10 +7600,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "kotak";
-                        }
+
+                        urt = berat * pengali * n /frekuensi;
+
 
                         //Batas disesuaikan
 
@@ -7723,6 +7646,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  10.70;
                 k =  71.40;
                 berat = 5;
+                ukuran = "Sendok Makan";
+
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -7783,10 +7708,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Sendok Makan";
-                        }
+
+                        urt = berat * pengali * n /frekuensi;
 
                         //Batas disesuaikan
 
@@ -7830,6 +7753,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  10.00;
                 k =  55.00;
                 berat = 10;
+                ukuran = "Sendok Makan";
+
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -7881,6 +7806,21 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 r1.setText("Sendok Makan");
                 r2.setText("Sachet");
 
+                rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                        if (r1.isChecked()) {
+                            berat = 10;
+                            ukuran = "Sendok Makan";
+                        }else if (r2.isChecked()){
+                            berat = 40;
+                            ukuran = "Sachet";
+                        }
+                    }
+                });
+
+
+
 
 
                 hitung.setOnClickListener(new View.OnClickListener() {
@@ -7890,15 +7830,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            berat = 10;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Sendok Makan";
-                        }else if (r2.isChecked()){
-                            berat = 40;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Sendok Makan";
-                        }
+                        urt = berat * pengali * n /frekuensi;
 
                         //Batas disesuaikan
 
@@ -7942,6 +7874,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  2.50;
                 k =  4.00;
                 berat = 250;
+                ukuran = "Botol";
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -7993,6 +7926,21 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 r1.setText("Botol");
                 r2.setText("Kotak");
 
+                rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                        if (r1.isChecked()) {
+                            berat = 250;
+                            ukuran = "Botol";
+                        }else if (r2.isChecked()){
+                            berat = 200;
+                            ukuran = "Kotak";
+                        }
+                    }
+                });
+
+
+
 
 
                 hitung.setOnClickListener(new View.OnClickListener() {
@@ -8002,15 +7950,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            berat = 250;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Botol";
-                        }else if (r2.isChecked()){
-                            berat = 200;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Kotak";
-                        }
+                        urt = berat * pengali * n /frekuensi;
 
                         //Batas disesuaikan
 
@@ -8055,6 +7995,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  12.50;
                 k =  20.60;
                 berat = 86;
+                ukuran = "Batang";
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -8112,6 +8053,28 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 r3.setVisibility(View.VISIBLE);
                 r4.setVisibility(View.VISIBLE);
 
+                rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                        if (r1.isChecked()) {
+                            berat = 86;
+                            ukuran = "Batang";
+                        }else if (r2.isChecked()) {
+                            berat = 100;
+                            ukuran = "Cup";
+                        }else if (r3.isChecked()) {
+                            berat = 110;
+                            ukuran = "Cone";
+                        }else if (r4.isChecked()) {
+                            berat = 50;
+                            ukuran = "Scoop";
+                        }
+                    }
+                });
+
+
+
+
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -8119,23 +8082,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         String x = txtFrekuensi.getText().toString().trim();
                         n = Integer.parseInt(x);
 
-                        if (r1.isChecked()) {
-                            berat = 86;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Batang";
-                        }else if (r2.isChecked()) {
-                            berat = 100;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Cup";
-                        }else if (r3.isChecked()) {
-                            berat = 110;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Cone";
-                        }else if (r4.isChecked()) {
-                            berat = 50;
-                            urt = berat * pengali * n /frekuensi;
-                            ukuran = "Scoop";
-                        }
+                        urt = berat * pengali * n /frekuensi;
 
                         //Batas disesuaikan
 
