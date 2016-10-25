@@ -4226,7 +4226,6 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 r3.setVisibility(View.VISIBLE);
 
 
-                System.out.println("urt luar :"+ urt +"="+berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -5049,10 +5048,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setText("potong");
                             r2.setVisibility(View.GONE);
 
-                            if (r1.isChecked()) {
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "potong";
-                            }
+                            ukuran = "potong";
+
 
                             Img.setImageResource(R.drawable.hati_ayam_goreng);
                             namaMakanan.setText("Hati ayam goreng");
@@ -5067,10 +5064,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setText("potong");
                             r2.setVisibility(View.GONE);
 
-                            if (r1.isChecked()) {
-                                urt = berat * pengali * n /frekuensi;
-                                ukuran = "potong";
-                            }
+                            ukuran = "potong";
+
 
                             Img.setImageResource(R.drawable.rempela_ayam_goreng);
                             namaMakanan.setText("Rempela ayam goreng");
@@ -5087,10 +5082,9 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setVisibility(View.VISIBLE);
                             r2.setVisibility(View.GONE);
 
-                            if (r1.isChecked()) {
-                                urt = berat * pengali * n /frekuensi;
+
                                 ukuran = "tusuk";
-                            }
+
                             Img.setImageResource(R.drawable.usus);
                             namaMakanan.setText("Usus ayam goreng");
                         }
@@ -6120,6 +6114,8 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l =  33.30;
                 k =  53.30;
                 berat = 100;
+                ukuran = "Chunky Bar";
+
                 //jangan diapa-apain
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
@@ -6501,8 +6497,6 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 r1.setText("buah");
                 r2.setVisibility(View.GONE);
 
-
-                System.out.println("urt luar :"+ urt +"="+berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -7021,6 +7015,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             l = 0;
                             k = 100.00;
                             berat = 14;
+                            ukuran = "Sachet Nutrisari";
 
                             r1.setText("Sachet Nutrisari");
                             r2.setText("Sachet Marimas");
@@ -7033,11 +7028,11 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                                 public void onCheckedChanged(RadioGroup radioGroup, int i) {
                                     if (r1.isChecked()) {
                                         berat = 14;
-                                        urt = berat * pengali * n /frekuensi;
+
                                         ukuran = "Sachet Nutrisari";
                                     }else if (r2.isChecked()) {
                                         berat = 8;
-                                        urt = berat * pengali * n /frekuensi;
+
                                         ukuran = "Sachet Marimas";
                                     }
                                 }
@@ -7228,6 +7223,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 l = 0;
                 k = 35.00;
                 berat = 31;
+                ukuran = "Sachet ABC";
 
                 satuanFrekuensi.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
                     @Override
