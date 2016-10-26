@@ -27,11 +27,25 @@
         android:layout_width="match_parent"
         android:layout_height="20px" />
 
-    <ImageView
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/food_records"
-        android:id="@+id/imageView" />
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="51dp"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/question2"
+            android:id="@+id/imageViewPeFrek"
+            android:layout_weight="0.00" />
+
+        <TextView
+            android:text="Klik icon ini untuk petunjuk pengisian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView21" />
+    </LinearLayout>
 
     <Space
         android:layout_width="match_parent"

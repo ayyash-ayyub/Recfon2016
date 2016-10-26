@@ -1,11 +1,15 @@
 package com.ayyash.recfon;
 
+import android.app.AlarmManager;
 import android.app.AlertDialog;
+import android.app.PendingIntent;
 import android.app.ProgressDialog;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +27,7 @@ import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -38,14 +43,17 @@ public class KonfirmasiSarapan extends AppCompatActivity {
 
     String email;
     private ProgressDialog progressDialog;
+    private SharedPreferences sharedPreferences;
+    private Context context;
 
     Button Ya,Tidak;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_konfirmasi_sarapan);
-        SharedPreferences sharedPreferences = getSharedPreferences(ConfigUmum.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences(ConfigUmum.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         email = sharedPreferences.getString(ConfigUmum.NIS_SHARED_PREF, "tidak tersedia");
+        context = this;
 
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
@@ -132,7 +140,7 @@ public class KonfirmasiSarapan extends AppCompatActivity {
         progressDialog.show();
         RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
-            ;
+
 
             @Override
             public void onResponse(String response) {
@@ -141,7 +149,37 @@ public class KonfirmasiSarapan extends AppCompatActivity {
                     Intent i = new Intent(getApplicationContext(),SarapanActivity.class);
                     startActivity(i);
                     finish();
+
+                    ///////////  Potongan kode untuk persiapan bikin alarm notification
+                    if(!sharedPreferences.getBoolean("alarm_aktif", false)){
+                        Calendar cal = Calendar.getInstance();
+                        cal.add(Calendar.DATE, 2);
+                        cal.set(Calendar.HOUR_OF_DAY, 20);
+                        cal.set(Calendar.MINUTE, 30);
+                        cal.set(Calendar.SECOND, 0);
+                        cal.set(Calendar.MILLISECOND, 0);
+
+                        Intent intent = new Intent(context, NotifikasiListener.class);
+                        PendingIntent pIntent = PendingIntent.getBroadcast(context, 10408, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+                        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+                        alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 2, pIntent);
+
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putLong("start_time", cal.getTimeInMillis());
+                        editor.putBoolean("alarm_aktif", true);
+                        editor.commit();
+
+                        // enable pas boot
+                        ComponentName receiver = new ComponentName(context, SimpleBootReceiver.class);
+                        PackageManager pm = context.getPackageManager();
+
+                        pm.setComponentEnabledSetting(receiver,
+                                PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                                PackageManager.DONT_KILL_APP);
+                    }
                 }else {
+
 
                 }
 

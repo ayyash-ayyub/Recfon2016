@@ -8113,7 +8113,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 
 
     private void Save() {
-        System.out.println(urt+" ="+ berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
+      //  System.out.println(urt+" ="+ berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
         final String txt_email = email.toString().trim();
         final String idmakanan = id_bahan_makanan.toString().trim();
         final String makanan = namaMakanan.getText().toString().trim();

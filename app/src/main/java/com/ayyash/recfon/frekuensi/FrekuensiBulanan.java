@@ -6,11 +6,17 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.ColorInt;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
@@ -47,6 +53,7 @@ public class FrekuensiBulanan extends AppCompatActivity {
     String email;
 
     String data7, data7a;
+    ImageView pePeng;
 
 
 
@@ -122,9 +129,37 @@ public class FrekuensiBulanan extends AppCompatActivity {
         b58 = (Button)findViewById(R.id.bb58);
         b59 = (Button)findViewById(R.id.bb59);
         b60 = (Button)findViewById(R.id.bb60);
+        pePeng = (ImageView)findViewById(R.id.imageViewPeFrek) ;
+
+
+        pePeng.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               // Toast.makeText(FrekuensiBulanan.this,"Petunjuk frekunesi", Toast.LENGTH_SHORT).show();
+                help();
+            }
+        });
 
         cekJalan();
         getDataNgisi();
+    }
+
+    private void help(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Petunjuk");
+        // builder.setMessage("Anda diminta menuliskan jenis dan jumlah yang makanan dan minuman yang dikonsumsi selama 24 jam HARI INI (sejak bangun tidur hingga tidur lagi)");
+        // (Html.fromHtml("Hello "+"<b>"+"World"+"</b>"));
+        builder.setMessage(Html.fromHtml("Anda diminta mengisi semua catatan makan dengan mengklik masing-masing tombol dibawah ini"+ "</b>"+"<br><br><br>"+"<u>"+"Data Valid :"+"</u>"+"<br>"+
+                "<b>"+"data anda akan dianggap valid apabila anda telah mengisi semua jenis makanan. pengisian dapat dilakukan sekaligus ataupun sesuai waktu senggang."+"</b>"+
+                "<br><br><br>"+"<p style='text-align:justify'>Setelah anda mengisi semua data makanan, ditandai dengan <strong style='color:red;'>SEMUA TOMBOL DISABLE/TIDAK AKTIF</strong> maka data anda sudah tersimpan di database.</p>"+
+                ""));
+
+        builder.setPositiveButton("OK", null);
+        AlertDialog dialog = builder.show();
+        TextView messageText = (TextView)dialog.findViewById(android.R.id.message);
+        messageText.setGravity(Gravity.LEFT);
+        dialog.show();
+
     }
 
 
