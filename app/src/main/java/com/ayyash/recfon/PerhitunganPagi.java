@@ -1,10 +1,14 @@
 package com.ayyash.recfon;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.app.ProgressDialog;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,6 +31,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import java.text.DecimalFormat;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -41,6 +46,8 @@ public class PerhitunganPagi extends AppCompatActivity {
     public static final String KEY_LEMAK = "lemak1";
     public static final String KEY_KALORI = "kalori1";
     public static final String KEY_ENERGI = "energi1";
+    private SharedPreferences sharedPreferences;
+    private Context context;
 
     TextView tv,namaMakanan,satuan;
     Button hitung,btnKeluar;
@@ -77,6 +84,9 @@ public class PerhitunganPagi extends AppCompatActivity {
         hitung = (Button) findViewById(R.id.hitung);
 //        btnKeluar =(Button)findViewById(R.id.button3);
         satuan.setText(String.valueOf(progress));
+
+        sharedPreferences = getSharedPreferences(ConfigUmum.SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        context = this;
 
         Img = (ImageView) findViewById(R.id.imageViewUye);
         rg = (RadioGroup) findViewById(R.id.rg);
@@ -9951,6 +9961,38 @@ public class PerhitunganPagi extends AppCompatActivity {
 ////    }
 //    }
 
+
+    private void setPengingatAA(){
+        if(!sharedPreferences.getBoolean("alarm_aktif", false)){
+            Calendar cal = Calendar.getInstance();
+            cal.add(Calendar.DATE, 2);
+            cal.set(Calendar.HOUR_OF_DAY, 20);
+            cal.set(Calendar.MINUTE, 30);
+            cal.set(Calendar.SECOND, 0);
+            cal.set(Calendar.MILLISECOND, 0);
+
+            Intent intent = new Intent(context, NotifikasiListener.class);
+            PendingIntent pIntent = PendingIntent.getBroadcast(context, 10408, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+            AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+            alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 2, pIntent);
+
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putLong("start_time", cal.getTimeInMillis());
+            editor.putBoolean("alarm_aktif", true);
+            editor.commit();
+
+            // enable pas boot
+            ComponentName receiver = new ComponentName(context, SimpleBootReceiver.class);
+            PackageManager pm = context.getPackageManager();
+
+            pm.setComponentEnabledSetting(receiver,
+                    PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                    PackageManager.DONT_KILL_APP);
+        }
+
+    }
+
     private void Save() {
         final String txt_email = email.toString().trim();
         final String makanan = namaMakanan.getText().toString().trim();
@@ -9970,6 +10012,13 @@ public class PerhitunganPagi extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+
+                        if(response.equals("Sukses")){
+                         setPengingatAA();
+
+                        }
+
+
                         Toast.makeText(PerhitunganPagi.this, response, Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(PerhitunganPagi.this, SarapanActivity.class);
                         startActivity(i);

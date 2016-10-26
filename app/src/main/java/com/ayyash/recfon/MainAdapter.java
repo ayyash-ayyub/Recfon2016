@@ -90,7 +90,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainHolder> {
 //                progressDialog.setMessage("Silahkan Tunggu...");
 
 
-                DeleteData(ConfigUmum.URL_DELETE_PAGI+idd);
+              //  DeleteData(ConfigUmum.URL_DELETE_PAGI+idd);
                 // Intent i = new Intent(context, Pengalih.class);
                 //  view.getContext().startActivity(i);
 
@@ -114,6 +114,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainHolder> {
                         Activity activity = (Activity)view.getContext();
                         activity.finish();
                         view.getContext().startActivity(activity.getIntent());
+                      //  Toast.makeText(context, "Temuan si okta",Toast.LENGTH_SHORT).show();
 
                     }
                 });

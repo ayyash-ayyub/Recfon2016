@@ -81,6 +81,12 @@ public class KonfirmasiSarapan extends AppCompatActivity {
     }
 
     private void SaveTidak() {
+    //Toast.makeText(KonfirmasiSarapan.this, "BABBA", Toast.LENGTH_SHORT).show();
+
+
+
+
+
         final String txt_email = email.toString().trim();
         final String makanan = "tidak makan";
         final String jumlah = "";
@@ -99,7 +105,13 @@ public class KonfirmasiSarapan extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                     //   Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
+                      //  Toast.makeText(getApplicationContext(), response.toString(), Toast.LENGTH_LONG).show();
+
+
+                        if(response.equals("Sukses")){
+                            setPengingat();
+
+                        }
                         Intent i = new Intent(getApplicationContext(), SarapanActivity.class);
                         startActivity(i);
                         finish();
@@ -146,39 +158,14 @@ public class KonfirmasiSarapan extends AppCompatActivity {
             public void onResponse(String response) {
 
                 if(response.contains("1")){
+
+
+
+
                     Intent i = new Intent(getApplicationContext(),SarapanActivity.class);
                     startActivity(i);
                     finish();
 
-                    ///////////  Potongan kode untuk persiapan bikin alarm notification
-                    if(!sharedPreferences.getBoolean("alarm_aktif", false)){
-                        Calendar cal = Calendar.getInstance();
-                        cal.add(Calendar.DATE, 2);
-                        cal.set(Calendar.HOUR_OF_DAY, 20);
-                        cal.set(Calendar.MINUTE, 30);
-                        cal.set(Calendar.SECOND, 0);
-                        cal.set(Calendar.MILLISECOND, 0);
-
-                        Intent intent = new Intent(context, NotifikasiListener.class);
-                        PendingIntent pIntent = PendingIntent.getBroadcast(context, 10408, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-
-                        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-                        alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 2, pIntent);
-
-                        SharedPreferences.Editor editor = sharedPreferences.edit();
-                        editor.putLong("start_time", cal.getTimeInMillis());
-                        editor.putBoolean("alarm_aktif", true);
-                        editor.commit();
-
-                        // enable pas boot
-                        ComponentName receiver = new ComponentName(context, SimpleBootReceiver.class);
-                        PackageManager pm = context.getPackageManager();
-
-                        pm.setComponentEnabledSetting(receiver,
-                                PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
-                                PackageManager.DONT_KILL_APP);
-                    }
-                }else {
 
 
                 }
@@ -198,6 +185,37 @@ public class KonfirmasiSarapan extends AppCompatActivity {
         RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
         stringRequest.setRetryPolicy(policy);
         queue.add(stringRequest);
+    }
+
+    private void setPengingat(){
+        if(!sharedPreferences.getBoolean("alarm_aktif", false)){
+            Calendar cal = Calendar.getInstance();
+            cal.add(Calendar.DATE, 2);
+            cal.set(Calendar.HOUR_OF_DAY, 20);
+            cal.set(Calendar.MINUTE, 30);
+            cal.set(Calendar.SECOND, 0);
+            cal.set(Calendar.MILLISECOND, 0);
+
+            Intent intent = new Intent(context, NotifikasiListener.class);
+            PendingIntent pIntent = PendingIntent.getBroadcast(context, 10408, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+            AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+            alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 2, pIntent);
+
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putLong("start_time", cal.getTimeInMillis());
+            editor.putBoolean("alarm_aktif", true);
+            editor.commit();
+
+            // enable pas boot
+            ComponentName receiver = new ComponentName(context, SimpleBootReceiver.class);
+            PackageManager pm = context.getPackageManager();
+
+            pm.setComponentEnabledSetting(receiver,
+                    PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                    PackageManager.DONT_KILL_APP);
+        }
+
     }
 
 
