@@ -10012,6 +10012,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        Toast.makeText(getApplicationContext(), response.toString(), Toast.LENGTH_LONG).show();
 
                         if(response.equals("Sukses")){
                          setPengingatAA();
@@ -10019,7 +10020,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                         }
 
 
-                        Toast.makeText(PerhitunganPagi.this, response, Toast.LENGTH_SHORT).show();
+                       // Toast.makeText(PerhitunganPagi.this, response, Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(PerhitunganPagi.this, SarapanActivity.class);
                         startActivity(i);
                         finish();

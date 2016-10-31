@@ -33,7 +33,7 @@ public class HalamanDepan extends AppCompatActivity {
         signin = (Button)findViewById(R.id.signin);
         signup = (Button)findViewById(R.id.Signup);
 
-        
+
 
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,7 +69,8 @@ public class HalamanDepan extends AppCompatActivity {
 
 
         //SharedPreferences sharedPref = getSharedPreferences(ConfigUmum.SHARED_PREF_NAME, Context.MODE_PRIVATE);
-        long startTime = sharedPreferences.getLong("alarm_start_time", 0L);
+
+        long startTime = sharedPreferences.getLong("start_time", 0L);
 
         Calendar now = Calendar.getInstance();
         Calendar cal = Calendar.getInstance();

@@ -232,7 +232,9 @@ ngisiTTL.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onResponse(String response) {
 
-                        Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
+                      //  Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
+
+
                         progressDialog.dismiss();
                         signinhere.setText(response);
                         Intent i = new Intent(getApplicationContext(), Login.class);
