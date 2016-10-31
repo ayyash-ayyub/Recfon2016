@@ -177,11 +177,11 @@ ngisiTTL.setOnClickListener(new View.OnClickListener() {
                     Toast.makeText(getApplicationContext(),"Mohon Lengkapi data",Toast.LENGTH_LONG).show();
                 }else {
 
-                    Toast.makeText(Register.this,
-                            "nama : " + txt_nama.getText().toString() + ", tanggal :" + txt_tanggal.getText().toString() + ", email :"
-                                    + txt_email.getText().toString() + ", hp :" + txt_hp.getText().toString() + ", password :" + txt_password.getText().toString() + " Status User : "
-                                    + rbStatusUser.getText().toString() + " Status :" + rbStatus.getText().toString() + " Jenis Kelamin :" + rbJK.getText().toString() + "Pekerjaan :"
-                                    + rbPekerjaan.getText().toString() + " DKI :" + rbDKI.getText().toString() + "", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(Register.this,
+//                            "nama : " + txt_nama.getText().toString() + ", tanggal :" + txt_tanggal.getText().toString() + ", email :"
+//                                    + txt_email.getText().toString() + ", hp :" + txt_hp.getText().toString() + ", password :" + txt_password.getText().toString() + " Status User : "
+//                                    + rbStatusUser.getText().toString() + " Status :" + rbStatus.getText().toString() + " Jenis Kelamin :" + rbJK.getText().toString() + "Pekerjaan :"
+//                                    + rbPekerjaan.getText().toString() + " DKI :" + rbDKI.getText().toString() + "", Toast.LENGTH_SHORT).show();
 
                     Save();
                 }
