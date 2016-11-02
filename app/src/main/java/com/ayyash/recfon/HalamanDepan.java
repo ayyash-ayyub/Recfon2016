@@ -11,10 +11,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import com.ayyash.recfon.R;
 
 import java.util.Calendar;
 
@@ -99,7 +95,7 @@ public class HalamanDepan extends AppCompatActivity {
 
         loggedIn = sharedPreferences.getBoolean(ConfigUmum.LOGGEDIN_SHARED_PREF, false);
         if (loggedIn) {
-            Intent intent = new Intent(HalamanDepan.this, MainMenu.class);
+            Intent intent = new Intent(HalamanDepan.this, Persetujuan.class);
             startActivity(intent);
             finish();
         }

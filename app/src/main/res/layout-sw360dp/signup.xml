@@ -5,10 +5,6 @@
     android:layout_height="match_parent"
     android:background="#fff">
 
-
-
-
-
     <FrameLayout
 
         android:layout_width="match_parent"
@@ -41,7 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/frameLayout"
-            android:layout_alignParentStart="true"
+
             android:layout_weight="1">
             <LinearLayout
                 android:layout_above="@+id/acc"
@@ -425,7 +421,8 @@
                     android:background="#0000"
                     android:padding="16dp"
                     android:gravity="left"
-                    />
+                    android:singleLine="true"
+                    android:inputType="textWebEmailAddress" />
 
                 <View
                     android:layout_width="match_parent"
@@ -447,7 +444,7 @@
                     android:background="#0000"
                     android:padding="16dp"
                     android:gravity="left"
-                    />
+                    android:inputType="phone" />
 
                 <View
                     android:layout_width="match_parent"
@@ -483,63 +480,63 @@
                     android:background="#dad8d8"/>
 
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <View
+                        android:layout_width="match_parent"
 
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="#dad8d8"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginRight="120dp"
+                        android:text="Daftar"
+                        android:id="@+id/signup1"
+                        android:textAllCaps="false"
+                        android:theme="@style/PrimaryButton"
+                        android:layout_weight="1"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <customsfonts.MyTextView
+                            android:id="@+id/acc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="sudah punya akun?"
+                            android:layout_above="@+id/signinhere"
+                            android:gravity="center"
+                            android:lines="1"
+
+                            />
+                        <TextView
+                            android:id="@+id/signinhere"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="login disini"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:layout_alignParentBottom="true"
+                            android:gravity="center"
+                            android:lines="1"
+                            android:layout_marginBottom="15dp"
+
+                            />
+                    </LinearLayout>
+                </LinearLayout>
 
 
 
 
             </LinearLayout>
         </ScrollView>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <View
-                android:layout_width="match_parent"
 
-                android:layout_height="1dp"
-                android:layout_marginBottom="5dp"
-                android:background="#dad8d8"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="120dp"
-                android:layout_marginRight="120dp"
-                android:text="Daftar"
-                android:id="@+id/signup1"
-                android:textAllCaps="false"
-                android:theme="@style/PrimaryButton"
-                android:layout_weight="1"/>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-                <customsfonts.MyTextView
-                    android:id="@+id/acc"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="sudah punya akun?"
-                    android:layout_above="@+id/signinhere"
-                    android:gravity="center"
-                    android:lines="1"
-
-                    />
-                <TextView
-                    android:id="@+id/signinhere"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="login disini"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:layout_alignParentBottom="true"
-                    android:gravity="center"
-                    android:lines="1"
-                    android:layout_marginBottom="15dp"
-
-                    />
-            </LinearLayout>
-        </LinearLayout>
     </LinearLayout>
 
     <ImageView

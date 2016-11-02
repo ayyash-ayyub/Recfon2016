@@ -1,16 +1,13 @@
 package com.ayyash.recfon.profile;
 
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,10 +22,8 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.ayyash.recfon.ConfigUmum;
-import com.ayyash.recfon.MainMenu;
+import com.ayyash.recfon.Persetujuan;
 import com.ayyash.recfon.R;
-import com.ayyash.recfon.aktifitas.ItemObjectAktifitas;
-import com.ayyash.recfon.aktifitas.MainAdapterAktifitas;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -122,7 +117,7 @@ public class ProfileUser extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Toast.makeText(getApplicationContext(), "Masalah pada koneksi, atau data makan kurang lengkap", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(getApplicationContext(),MainMenu.class);
+                Intent intent = new Intent(getApplicationContext(),Persetujuan.class);
                 startActivity(intent);
                 finish();
             }
@@ -171,7 +166,7 @@ public class ProfileUser extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Toast.makeText(getApplicationContext(), "Masalah pada koneksi, atau data makan kurang lengkap", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(getApplicationContext(),MainMenu.class);
+                Intent intent = new Intent(getApplicationContext(),Persetujuan.class);
                 startActivity(intent);
                 finish();
             }
@@ -236,7 +231,7 @@ public class ProfileUser extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(getApplicationContext(),MainMenu.class);
+        Intent intent = new Intent(getApplicationContext(),Persetujuan.class);
         startActivity(intent);
         finish();
 

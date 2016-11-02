@@ -6,10 +6,8 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
-
-
 
     <application
         android:allowBackup="true"
@@ -32,19 +30,16 @@
         <activity android:name=".selinganmalam.PerhitunganSelinganMalam" />
         <activity android:name=".profile.ProfileUser" />
 
-
         <receiver
             android:name=".NotifikasiListener"
-            android:process=".remote"/>
-
+            android:process=".remote" />
         <receiver
             android:name=".SimpleBootReceiver"
             android:enabled="false">
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-
 
         <activity android:name=".Register" />
         <activity android:name=".Splash">
@@ -57,7 +52,7 @@
         <activity android:name=".HalamanDepan" />
         <activity android:name=".MenuFoodsRecord" />
         <activity android:name=".Login" />
-        <activity android:name=".MainMenu" />
+        <activity android:name=".Persetujuan" />
         <activity android:name=".StatusGizi" />
         <activity android:name=".aktifitas.AktifitasFisik" />
         <activity android:name=".frekuensi.FormFrekuensiMakan" />
@@ -86,8 +81,7 @@
         <activity
             android:name=".PerbandinganAsupan"
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity android:name=".MainMenu"></activity>
     </application>
-
-
 
 </manifest>

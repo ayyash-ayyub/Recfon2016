@@ -199,7 +199,7 @@ public class FormAktifitas extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent i = new Intent(getApplicationContext(), MenuFoodsRecord.class);
+        Intent i = new Intent(getApplicationContext(), AktifitasFisik.class);
         startActivity(i);
         finish();
     }

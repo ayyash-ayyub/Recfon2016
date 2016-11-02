@@ -26,8 +26,6 @@ import com.android.volley.toolbox.Volley;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.ayyash.recfon.R;
-
 public class Login extends AppCompatActivity {
 
     EditText email,password;
@@ -108,7 +106,7 @@ public class Login extends AppCompatActivity {
         loggedIn = sharedPreferences.getBoolean(ConfigUmum.LOGGEDIN_SHARED_PREF, false);
 
         if (loggedIn) {
-            Intent intent = new Intent(Login.this, MainMenu.class);
+            Intent intent = new Intent(Login.this, Persetujuan.class);
             startActivity(intent);
             finish();
         }
@@ -136,7 +134,7 @@ public class Login extends AppCompatActivity {
 
                             editor.commit();
 
-                            Intent i = new Intent(Login.this, MainMenu.class);
+                            Intent i = new Intent(Login.this, Persetujuan.class);
                             startActivity(i);
                             progressDialog.dismiss();
                         } else {

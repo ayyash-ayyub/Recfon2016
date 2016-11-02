@@ -17,25 +17,12 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.android.volley.DefaultRetryPolicy;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.RetryPolicy;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-import com.ayyash.recfon.R;
 import com.ayyash.recfon.makanmalam.KonfirmasiMakanMalam;
 import com.ayyash.recfon.makansiang.KonfirmasiMakanSiang;
 import com.ayyash.recfon.selinganmalam.KonfirmasiSelinganMalam;
 import com.ayyash.recfon.selinganpagi.KonfirmasiSelinganSarapan;
 import com.ayyash.recfon.selingansiang.KonfirmasiSelinganSiang;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class MenuFoodsRecord extends AppCompatActivity {
 
@@ -183,14 +170,43 @@ public class MenuFoodsRecord extends AppCompatActivity {
 
     }
 
-
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
-        Intent i = new Intent(MenuFoodsRecord.this, MainMenu.class);
-        startActivity(i);
-        finish();
+        android.app.AlertDialog.Builder alertDialog = new android.app.AlertDialog.Builder(MenuFoodsRecord.this);
+
+        // Setting Dialog Title
+        alertDialog.setTitle("Konfirmasi");
+        // Setting Dialog Message
+        alertDialog.setMessage("Apakah Anda yakin sudah memasukan semua menu sarapan Anda?");
+        // Setting Icon to Dialog
+        alertDialog.setIcon(R.drawable.i);
+
+        // Setting Positive "Yes" Button
+        alertDialog.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog,int which) {
+
+                // Write your code here to invoke YES event
+                Intent i = new Intent(MenuFoodsRecord.this, MainMenu.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        // Setting Negative "NO" Button
+        alertDialog.setNegativeButton("Cek Kembali", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                // Write your code here to invoke NO event
+//                Toast.makeText(getApplicationContext(), "You clicked on NO", Toast.LENGTH_SHORT).show();
+                dialog.cancel();
+            }
+        });
+
+        // Showing Alert Message
+        alertDialog.show();
+//    }
+
     }
+
 
     private void logout() {
 

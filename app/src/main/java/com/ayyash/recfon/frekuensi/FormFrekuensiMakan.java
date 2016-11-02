@@ -6,11 +6,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
@@ -30,11 +28,9 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.ayyash.recfon.ConfigUmum;
 import com.ayyash.recfon.ItemObject;
-import com.ayyash.recfon.MainMenu;
-import com.ayyash.recfon.MenuFoodsRecord;
-import com.ayyash.recfon.PerhitunganPagi;
+
 import com.ayyash.recfon.R;
-import com.ayyash.recfon.SarapanActivity;
+
 
 import java.text.DecimalFormat;
 import java.util.HashMap;

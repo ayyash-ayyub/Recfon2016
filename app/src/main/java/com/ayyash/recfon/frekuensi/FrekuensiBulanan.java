@@ -3,21 +3,16 @@ package com.ayyash.recfon.frekuensi;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.ColorInt;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
-import android.util.Log;
 import android.view.Gravity;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.RequestQueue;
@@ -25,14 +20,11 @@ import com.android.volley.Response;
 import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
-import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.ayyash.recfon.ConfigUmum;
-import com.ayyash.recfon.MainMenu;
-import com.ayyash.recfon.MenuFoodsRecord;
+import com.ayyash.recfon.Persetujuan;
 import com.ayyash.recfon.R;
-import com.google.gson.JsonObject;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -717,7 +709,7 @@ public class FrekuensiBulanan extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent i = new Intent(FrekuensiBulanan.this, MainMenu.class);
+        Intent i = new Intent(FrekuensiBulanan.this, Persetujuan.class);
         startActivity(i);
         finish();
     }

@@ -76,7 +76,8 @@
             android:background="#0000"
             android:padding="16dp"
             android:gravity="left"
-            />
+            android:inputType="textWebEmailAddress"
+            android:singleLine="true" />
 
         <View
             android:layout_width="match_parent"

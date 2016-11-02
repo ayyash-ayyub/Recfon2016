@@ -18,22 +18,14 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.ayyash.recfon.ConfigUmum;
-import com.ayyash.recfon.MainAdapter;
 import com.ayyash.recfon.MainMenu;
-import com.ayyash.recfon.aktifitas.ItemObjectAktifitas;
-import com.ayyash.recfon.aktifitas.MainAdapterAktifitas;
-import com.ayyash.recfon.MenuFoodsRecord;
+import com.ayyash.recfon.Persetujuan;
 import com.ayyash.recfon.R;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 public class AktifitasFisik extends AppCompatActivity {
 

@@ -96,10 +96,7 @@ public class KonfirmasiSarapan extends AppCompatActivity {
         final String lemak1 = "";
         final String kalori1 = "";
 
-        //parsing id kelas
-//            final String sIdKelas = getIdKelas(ambilIDKelas);
-        //final String sIdKelas = "100000";
-        //final int saveIdKelas = Integer.parseInt(sIdKelas);
+
 
         StringRequest sR = new StringRequest(Request.Method.POST, ConfigUmum.URL_INSERT_PAGI,
                 new Response.Listener<String>() {
@@ -115,6 +112,7 @@ public class KonfirmasiSarapan extends AppCompatActivity {
                         Intent i = new Intent(getApplicationContext(), SarapanActivity.class);
                         startActivity(i);
                         finish();
+
                     }
                 },
                 new Response.ErrorListener() {
@@ -221,38 +219,6 @@ public class KonfirmasiSarapan extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-//        AlertDialog.Builder alertDialog = new AlertDialog.Builder(SarapanActivity.this);
-//
-//        // Setting Dialog Title
-//        alertDialog.setTitle("Sarapan");
-//        // Setting Dialog Message
-//        alertDialog.setMessage("Apakah Anda yakin sudah memasukan semua menu sarapan Anda?");
-//        // Setting Icon to Dialog
-//        alertDialog.setIcon(R.drawable.i);
-//
-//        // Setting Positive "Yes" Button
-//        alertDialog.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
-//            public void onClick(DialogInterface dialog,int which) {
-//
-//                // Write your code here to invoke YES event
-//                Intent intent = new Intent(getApplicationContext(),MenuFoodsRecord.class);
-//                startActivity(intent);
-//                finish();
-//            }
-//        });
-//
-//        // Setting Negative "NO" Button
-//        alertDialog.setNegativeButton("Cek Kembali", new DialogInterface.OnClickListener() {
-//            public void onClick(DialogInterface dialog, int which) {
-//                // Write your code here to invoke NO event
-////                Toast.makeText(getApplicationContext(), "You clicked on NO", Toast.LENGTH_SHORT).show();
-//                dialog.cancel();
-//            }
-//        });
-//
-//        // Showing Alert Message
-//        alertDialog.show();
-////    }
 
     }
 }
