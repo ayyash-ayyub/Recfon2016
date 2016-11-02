@@ -23,6 +23,7 @@ import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.ayyash.recfon.ConfigUmum;
+import com.ayyash.recfon.MainMenu;
 import com.ayyash.recfon.Persetujuan;
 import com.ayyash.recfon.R;
 
@@ -709,7 +710,7 @@ public class FrekuensiBulanan extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent i = new Intent(FrekuensiBulanan.this, Persetujuan.class);
+        Intent i = new Intent(FrekuensiBulanan.this, MainMenu.class);
         startActivity(i);
         finish();
     }

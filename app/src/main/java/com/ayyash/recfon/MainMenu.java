@@ -19,6 +19,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.ayyash.recfon.aktifitas.AktifitasFisik;
+import com.ayyash.recfon.aktifitas.MenuAktifitas;
 import com.ayyash.recfon.frekuensi.FrekuensiBulanan;
 import com.ayyash.recfon.makanmalam.KonfirmasiMakanMalam;
 import com.ayyash.recfon.makansiang.KonfirmasiMakanSiang;
@@ -36,7 +37,7 @@ public class MainMenu extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_main_menu_food_record);
+        setContentView(R.layout.activity_main_menu2);
         sPagi = (Button)findViewById(R.id.btnsarapanpagi);
         selinganPagi= (Button)findViewById(R.id.selinganPagi);
         makanSiang = (Button)findViewById(R.id.makanSiang);
@@ -57,7 +58,7 @@ public class MainMenu extends AppCompatActivity {
         sPagi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), ProfileUser.class);
+                Intent i = new Intent(getApplicationContext(), StatusGizi.class);
                 startActivity(i);
                 finish();
             }
@@ -68,7 +69,7 @@ public class MainMenu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent i = new Intent(MainMenu.this, FrekuensiBulanan.class);
+                Intent i = new Intent(MainMenu.this, MenuFoodsRecord.class);
                 startActivity(i);
                 finish();
 
@@ -78,7 +79,7 @@ public class MainMenu extends AppCompatActivity {
         makanSiang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainMenu.this, AktifitasFisik.class);
+                Intent i = new Intent(MainMenu.this, MenuAktifitas.class);
                 startActivity(i);
                 finish();
 
@@ -88,7 +89,7 @@ public class MainMenu extends AppCompatActivity {
         selinganSiang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainMenu.this, KonfirmasiSelinganSiang.class);
+                Intent i = new Intent(MainMenu.this, FrekuensiBulanan.class);
                 startActivity(i);
 //                finish();
 
@@ -97,7 +98,7 @@ public class MainMenu extends AppCompatActivity {
         makanMalam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainMenu.this, MenuFoodsRecord.class);
+                Intent i = new Intent(MainMenu.this, ProfileUser.class);
                 startActivity(i);
                 finish();
 

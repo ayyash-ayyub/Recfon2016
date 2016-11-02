@@ -35,12 +35,13 @@ public class FormAktifitas extends AppCompatActivity {
     public static final String KEY_EMAIL = "txt_email";
     public static final String KEY_AKTIFITAS = "aktifitas";
     public static final String KEY_KATEGORI = "catagory";
+    public static final String KEY_FREKUENSI = "frekuensi";
     public static final String KEY_DURASI = "durasi";
 
 
     Button Simpan;
     TextView namaAktifitas;
-    EditText Jam, Menit;
+    EditText txtFrekuensi, Menit;
     String nM;
     int indexActivity;
     private String email, kategori;
@@ -55,21 +56,21 @@ public class FormAktifitas extends AppCompatActivity {
         setContentView(R.layout.activity_form_aktifitas);
 
         namaAktifitas = (TextView) findViewById(R.id.txtActivity);
-        Jam = (EditText)findViewById(R.id.txtJam);
-        Menit = (EditText)findViewById(R.id.txtMenit);
 
-        Jam.setOnTouchListener(new View.OnTouchListener() {
+        txtFrekuensi = (EditText)findViewById(R.id.txtFrekuensi);
+        txtFrekuensi.setOnTouchListener(new View.OnTouchListener() {
 
             @Override
             public boolean onTouch(View v, MotionEvent event) {
 
-                Jam.setFocusable(true);
-                Jam.requestFocus();
-                Jam.setText(null);
+                txtFrekuensi.setFocusable(true);
+                txtFrekuensi.requestFocus();
+                txtFrekuensi.setText(null);
                 return false;
             }
         });
 
+        Menit = (EditText)findViewById(R.id.txtMenit);
         Menit.setOnTouchListener(new View.OnTouchListener() {
 
             @Override
@@ -131,18 +132,6 @@ public class FormAktifitas extends AppCompatActivity {
             case 22:
                 kategori = "Ringan";
                 break;
-            case 23:
-            case 24:
-            case 25:
-            case 26:
-            case 27:
-            case 28:
-            case 29:
-            case 30:
-            case 31:
-            case 32:
-                kategori = "Duduk";
-                break;
         }
 
         Simpan = (Button)findViewById(R.id.btnSimpan);
@@ -159,7 +148,8 @@ public class FormAktifitas extends AppCompatActivity {
         final String txt_email = email.toString().trim();
         final String aktifitas = namaAktifitas.getText().toString().trim();
         final String catagory = kategori.trim();
-        final String durasi = Jam.getText().toString().trim()+" Jam "+Menit.getText().toString().trim()+" Menit";
+        final String frekuensi = txtFrekuensi.getText().toString().trim();
+        final String durasi = Menit.getText().toString().trim();
 
         StringRequest sR = new StringRequest(Request.Method.POST, ConfigUmum.URL_INSERT_ACTIVITY,
                 new Response.Listener<String>() {
@@ -184,6 +174,7 @@ public class FormAktifitas extends AppCompatActivity {
                 params.put(KEY_EMAIL, txt_email);
                 params.put(KEY_AKTIFITAS, aktifitas);
                 params.put(KEY_KATEGORI, catagory);
+                params.put(KEY_FREKUENSI, frekuensi);
                 params.put(KEY_DURASI, durasi);
                 return params;
             }

@@ -68,10 +68,10 @@ public class MainAdapterProfile extends RecyclerView.Adapter<MainHolderProfile> 
     @Override
     public void onBindViewHolder(MainHolderProfile holder, final int position) {
         holder.satu.setText("Tanggal            : "+resultsList.get(position).filled_times);
-        holder.dua.setText("AKG Energy          : "+resultsList.get(position).akg_energy);
-        holder.tiga.setText("AKG Protein        : "+resultsList.get(position).akg_protein);
-        holder.empat.setText("AKG Lemak         : " +resultsList.get(position).akg_lemak);
-        holder.lima.setText("AKG Karbohidrat    : "+resultsList.get(position).akg_karbohidrat);
+        holder.dua.setText("Energy          : "+resultsList.get(position).akg_energy);
+        holder.tiga.setText("Protein        : "+resultsList.get(position).akg_protein);
+        holder.empat.setText("Lemak         : " +resultsList.get(position).akg_lemak);
+        holder.lima.setText("Karbohidrat    : "+resultsList.get(position).akg_karbohidrat);
        // holder.enam.setText("Asupan Gizi  : " +resultsList.get(position).keterangan);
 //
 //

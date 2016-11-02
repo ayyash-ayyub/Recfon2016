@@ -30,15 +30,15 @@
 
         <item>Jalan Ringan, Dikantor, Dirumah dll</item>
 
-        <item>Duduk di transportasi (Hari Kerja)</item>
-        <item>Duduk di transportasi (Hari Libur)</item>
-        <item>Duduk Ditempat Kerja (Hari Kerja)</item>
-        <item>Duduk Ditempat Kerja (Hari Libur)</item>
-        <item>Duduk di rumah (Hari Kerja)</item>
-        <item>Duduk di rumah (Hari Libur)</item>
-        <item>Duduk Menonton TV dan Bersantai (Hari Kerja)</item>
-        <item>Duduk Menonton TV dan Bersantai (Hari Libur)</item>
-        <item>Tidur (Hari Kerja)</item>
-        <item>Tidur (Hari Libur)</item>
+        <!--<item>Duduk di transportasi (Hari Kerja)</item>-->
+        <!--<item>Duduk di transportasi (Hari Libur)</item>-->
+        <!--<item>Duduk Ditempat Kerja (Hari Kerja)</item>-->
+        <!--<item>Duduk Ditempat Kerja (Hari Libur)</item>-->
+        <!--<item>Duduk di rumah (Hari Kerja)</item>-->
+        <!--<item>Duduk di rumah (Hari Libur)</item>-->
+        <!--<item>Duduk Menonton TV dan Bersantai (Hari Kerja)</item>-->
+        <!--<item>Duduk Menonton TV dan Bersantai (Hari Libur)</item>-->
+        <!--<item>Tidur (Hari Kerja)</item>-->
+        <!--<item>Tidur (Hari Libur)</item>-->
     </string-array>
 </resources>

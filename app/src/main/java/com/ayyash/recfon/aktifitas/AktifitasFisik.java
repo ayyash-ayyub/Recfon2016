@@ -81,13 +81,6 @@ public class AktifitasFisik extends AppCompatActivity {
                 adapter = new MainAdapterAktifitas(getApplication(), objectAkatifitas.result);
               //  adapter = new MainAdapterProfile((Response.Listener<String>) getApplication(), objectBelajar.result);
                 rv_item.setAdapter(adapter);
-//                if(response.contains("1")){
-//                    tidakSarapan.setVisibility(View.INVISIBLE);
-//                }else {
-//                    tidakSarapan.setVisibility(View.VISIBLE);
-//                }
-
-              //  Toast.makeText(getApplicationContext(), "Data aktifitas: "+response.toString(), Toast.LENGTH_SHORT).show();
 
                 progressDialog.hide();
             }
@@ -98,8 +91,7 @@ public class AktifitasFisik extends AppCompatActivity {
                 progressDialog.hide();
             }
         });
-//        int socketTimeout = 30000;//30 seconds - change to what you want
-//        RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+
         int socketTimeout = 30000;//30 seconds - change to what you want
         RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
         stringRequest.setRetryPolicy(policy);
@@ -123,7 +115,7 @@ public class AktifitasFisik extends AppCompatActivity {
             public void onClick(DialogInterface dialog,int which) {
 
                 // Write your code here to invoke YES event
-                Intent intent = new Intent(getApplicationContext(),MainMenu.class);
+                Intent intent = new Intent(getApplicationContext(),MenuAktifitas.class);
                 startActivity(intent);
                 finish();
             }

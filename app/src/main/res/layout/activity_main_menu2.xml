@@ -13,7 +13,7 @@
         android:minHeight="?attr/actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:title="Catatan makan harian"
+        app:title="Menu Utama"
         app:titleTextColor="#fff"
         android:layout_marginTop="0dp"
         android:background="?attr/colorPrimary"
@@ -36,18 +36,19 @@
                 android:layout_height="wrap_content">
 
                 <Button
+                    android:text="Status Gizi"
                     android:layout_margin="10dp"
                     android:layout_height="150dp"
                     android:layout_width="150dp"
                     android:id="@+id/btnsarapanpagi"
-                    android:background="@drawable/btn_sarapan" />
+                     />
 
                 <Button
                     android:layout_margin="10dp"
                     android:id="@+id/selinganPagi"
                     android:layout_height="150dp"
                     android:layout_width="150dp"
-                    android:background="@drawable/btn_spagi" />
+                    android:text="Makan Harian" />
             </LinearLayout>
 
             <LinearLayout
@@ -61,14 +62,14 @@
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:id="@+id/makanSiang"
-                    android:background="@drawable/btn_siang" />
+                    android:text="Aktifitas" />
 
                 <Button
                     android:layout_margin="10dp"
                     android:layout_height="150dp"
                     android:id="@+id/seliSiang"
                     android:layout_width="150dp"
-                    android:background="@drawable/btn_ssiang" />
+                    android:text="Frekuensi Makan Bulanan" />
             </LinearLayout>
             <LinearLayout
                 android:gravity="center"
@@ -81,14 +82,14 @@
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:id="@+id/makanMalam"
-                    android:background="@drawable/btn_malam" />
+                    android:text="Profile" />
 
                 <Button
                     android:layout_margin="10dp"
                     android:layout_height="150dp"
                     android:id="@+id/selinganMala"
                     android:layout_width="150dp"
-                    android:background="@drawable/btn_smalam" />
+                    android:text="Logout" />
             </LinearLayout>
             <LinearLayout
                 android:gravity="center"

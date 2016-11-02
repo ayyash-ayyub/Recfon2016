@@ -46,12 +46,19 @@ public class Persetujuan extends AppCompatActivity {
         final Boolean ambil =  sp.getBoolean("ayyash", false);
 
 
+        if (ambil) {
+            Intent i = new Intent(getApplicationContext(),MainMenu.class);
+            startActivity(i);
+            aktifkan.setVisibility(View.INVISIBLE);
+        }
+
+
    //  Toast.makeText(Persetujuan.this, "apa: "+ambil.toString(), Toast.LENGTH_SHORT).show();
 
 
         String htmlText = " %s ";
         String myData = "<h4 style='text-align:justify'><strong>SURVEY ONLINE STUDI AWAL TENTANG TRANSISI " +
-                "RESIKO OBESITAS PADA MAHASISWA DAN ALUMNI UNIVERSITAS INDONESIA.</strong></h4>" +
+                "RESIKO OBESITAS.</strong></h4>" +
 
                 "<p style='text-align:justify'>Survey ini diselenggarakan oleh SEAMEO RECFON (Pusat Studi Regional Penelitian Gizi dan Kesehatan Masyarakat) yang memiliki tanggung jawab untuk terus meningkatkan status gizi masyarakat di Asia Tenggara, termasuk Indonesia.</p>" +
                 "" +
@@ -77,11 +84,9 @@ public class Persetujuan extends AppCompatActivity {
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer);
 
         aktifkan = (Button) findViewById(R.id.buttonAktif);
-        if (ambil) {
-            Intent i = new Intent(getApplicationContext(),MainMenu.class);
-            startActivity(i);
-            aktifkan.setVisibility(View.INVISIBLE);
-        }
+
+
+
 
 
 
@@ -103,6 +108,8 @@ public class Persetujuan extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+
 
 
         // On click of menu icon on toolbar
