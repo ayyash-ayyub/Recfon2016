@@ -107,7 +107,7 @@ public class MainMenu extends AppCompatActivity {
         selinganMalam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainMenu.this, StatusGizi.class);
+                Intent i = new Intent(MainMenu.this, PenilaianSurvei.class);
                 startActivity(i);
                 finish();
 

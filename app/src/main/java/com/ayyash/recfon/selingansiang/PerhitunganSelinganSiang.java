@@ -9964,6 +9964,7 @@ public class PerhitunganSelinganSiang extends AppCompatActivity {
 //    }
 
     private void Save() {
+        PD.show();
         final String txt_email = email.toString().trim();
         final String makanan = namaMakanan.getText().toString().trim();
         final String jumlah = penampungProgres.toString().trim();
@@ -9982,7 +9983,9 @@ public class PerhitunganSelinganSiang extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                     //   Toast.makeText(PerhitunganSelinganSiang.this, response, Toast.LENGTH_SHORT).show();
+                        PD.dismiss();
+                        Toast.makeText(PerhitunganSelinganSiang.this, response, Toast.LENGTH_SHORT).show();
+
                         Intent i = new Intent(PerhitunganSelinganSiang.this, SelinganSiangActivity.class);
                         startActivity(i);
                         finish();
@@ -9991,6 +9994,7 @@ public class PerhitunganSelinganSiang extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
+                        PD.dismiss();
                         Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
                     }
                 }) {

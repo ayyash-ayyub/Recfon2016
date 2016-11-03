@@ -113,8 +113,8 @@ public class PerhitunganPagi extends AppCompatActivity {
         final DecimalFormat df = new DecimalFormat("#.##");
 
 
-        progress = 0.5;
-        pengali = 0.5;
+        progress = 1;
+        pengali = 1;
         satuan.setText("porsi: " + String.valueOf(progress));
 
 
@@ -9994,6 +9994,7 @@ public class PerhitunganPagi extends AppCompatActivity {
     }
 
     private void Save() {
+        PD.show();
         final String txt_email = email.toString().trim();
         final String makanan = namaMakanan.getText().toString().trim();
         final String jumlah = penampungProgres.toString().trim();
@@ -10019,6 +10020,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 
                         }
 
+                        PD.dismiss();
 
                        // Toast.makeText(PerhitunganPagi.this, response, Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(PerhitunganPagi.this, SarapanActivity.class);
@@ -10030,6 +10032,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
+                        PD.dismiss();
                     }
                 }) {
             @Override

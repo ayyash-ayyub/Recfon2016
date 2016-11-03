@@ -86,7 +86,8 @@
         <activity android:name=".aktifitas.AktifitasSedentari" />
         <activity
             android:name=".aktifitas.FormAktifitasSedentari"
-            android:theme="@style/Theme.AppCompat.Light.Dialog"></activity>
+            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+        <activity android:name=".PenilaianSurvei"></activity>
     </application>
 
 </manifest>

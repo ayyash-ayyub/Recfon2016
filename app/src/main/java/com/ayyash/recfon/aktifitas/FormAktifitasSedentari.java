@@ -131,6 +131,7 @@ public class FormAktifitasSedentari extends AppCompatActivity {
     }
 
     private void Save() {
+        PD.show();
         final String txt_email = email.toString().trim();
         final String aktifitas = nM.toString().trim();
         final String durasi = Menit.getText().toString().trim();
@@ -139,6 +140,7 @@ public class FormAktifitasSedentari extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        PD.dismiss();
                         Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show();
                         // namaAktifitas.setText(response);
                         Intent i = new Intent(getApplicationContext(), AktifitasSedentari.class);
@@ -149,6 +151,7 @@ public class FormAktifitasSedentari extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
+                        PD.dismiss();
                         Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
                     }
                 }) {

@@ -145,6 +145,7 @@ public class FormAktifitas extends AppCompatActivity {
     }
 
     private void Save() {
+        PD.show();
         final String txt_email = email.toString().trim();
         final String aktifitas = namaAktifitas.getText().toString().trim();
         final String catagory = kategori.trim();
@@ -156,16 +157,19 @@ public class FormAktifitas extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show();
+                        PD.dismiss();
                        // namaAktifitas.setText(response);
                         Intent i = new Intent(getApplicationContext(), AktifitasFisik.class);
                         startActivity(i);
                         finish();
+
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
+                        PD.dismiss();
                     }
                 }) {
             @Override

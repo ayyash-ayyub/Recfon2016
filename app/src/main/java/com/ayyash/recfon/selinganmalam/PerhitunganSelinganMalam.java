@@ -9971,6 +9971,7 @@ public class PerhitunganSelinganMalam extends AppCompatActivity {
         final String protein1 = hProteinSort;
         final String lemak1 = hLemakSort;
         final String kalori1 = hKaloriSort;
+        PD.show();
 
         //parsing id kelas
 //            final String sIdKelas = getIdKelas(ambilIDKelas);
@@ -9981,6 +9982,7 @@ public class PerhitunganSelinganMalam extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        PD.dismiss();
                         Toast.makeText(PerhitunganSelinganMalam.this, response, Toast.LENGTH_SHORT).show();
                         Intent i = new Intent(PerhitunganSelinganMalam.this, SelinganMalamActivity.class);
                         startActivity(i);
@@ -9990,6 +9992,7 @@ public class PerhitunganSelinganMalam extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
+                        PD.dismiss();
                         Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
                     }
                 }) {
