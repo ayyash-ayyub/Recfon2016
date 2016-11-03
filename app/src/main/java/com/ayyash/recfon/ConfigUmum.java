@@ -18,6 +18,7 @@ public class ConfigUmum {
 
     public static String URL_GET_PASS = "http://"+IP+"/api/lupapasword.php";
     public static String URL_UPDATE_STATUS_GIZI = "http://"+IP+"/api/update_status_gizi.php";
+    public static String URL_INSERT_PENILAIAN = "http://"+IP+"/api/insert_penilaian_survey.php";
     public static String URL_SHOW_FREKUENSI = "http://"+IP+"/api/get_frekuensi.php?email=";
     public static String URL_SHOW_ACTIVITY = "http://"+IP+"/api/get_record_activity.php?email=";
     public static String URL_LIST_MAKANAN = "http://"+IP+"/api/get_list_makanan.php?email=";

@@ -140,12 +140,21 @@ public class FormAktifitasSedentari extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        PD.dismiss();
-                        Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show();
-                        // namaAktifitas.setText(response);
-                        Intent i = new Intent(getApplicationContext(), AktifitasSedentari.class);
-                        startActivity(i);
-                        finish();
+//                        PD.dismiss();
+//                        Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show();
+//                        // namaAktifitas.setText(response);
+//                        //Intent intent = getIntent();
+
+                        if(response.equals("Sukses")){
+
+                            Intent i = new Intent(FormAktifitasSedentari.this, AktifitasSedentari.class);
+                            i.putExtra("segar","reload");
+                            startActivity(i);
+                            finish();
+
+                        }
+
+
                     }
                 },
                 new Response.ErrorListener() {

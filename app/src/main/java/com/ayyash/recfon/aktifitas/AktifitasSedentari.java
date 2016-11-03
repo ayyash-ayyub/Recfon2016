@@ -45,6 +45,14 @@ public class AktifitasSedentari extends AppCompatActivity {
         bas9 = (Button)findViewById(R.id.bas9);
         bas10 = (Button)findViewById(R.id.bas10);
 
+        Intent i = getIntent();
+        String aa = i.getStringExtra("segar");
+
+//        if(aa.equals("reload")){
+//           // startActivity(i);
+//        }
+
+
         getDataNgisi();
 
 
@@ -209,5 +217,11 @@ public class AktifitasSedentari extends AppCompatActivity {
         RetryPolicy policy = new DefaultRetryPolicy(socketTimeout, DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
         req.setRetryPolicy(policy);
         queue.add(req);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        startActivity(getIntent());
     }
 }

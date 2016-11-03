@@ -22,6 +22,9 @@ public class ItemObjectAktifitas {
 
             @SerializedName("durasi")
             public String durasi;
+
+            @SerializedName("frekuensi")
+            public String frekuensi;
         }
     }
 }

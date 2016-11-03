@@ -1,5 +1,6 @@
 package com.ayyash.recfon;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -57,6 +58,8 @@ public class StatusGizi extends AppCompatActivity {
     Typeface fonts1;
     ArrayList list ;
 
+    ProgressDialog PD;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,6 +91,11 @@ public class StatusGizi extends AppCompatActivity {
         rgMakan     = (RadioGroup)findViewById(R.id.rgMakanToday);
         rgSarapan     = (RadioGroup)findViewById(R.id.rgSarapan);
         txt = (TextView)findViewById(R.id.textView5);
+
+        PD = new ProgressDialog(this);
+        PD.setMessage("Loading.....");
+        PD.setCancelable(false);
+
 
         SharedPreferences sharedPreferences = getSharedPreferences(ConfigUmum.SHARED_PREF_NAME, Context.MODE_PRIVATE);
         email = sharedPreferences.getString(ConfigUmum.NIS_SHARED_PREF, "tidak tersedia");
@@ -332,7 +340,7 @@ public class StatusGizi extends AppCompatActivity {
 
 
     private void Save() {
-
+        PD.show();
         final String txtEmail = email.toString().trim();
         final String BB = txt_Berat.getText().toString().trim();
         final String ukurBB = rbUkurBB.getText().toString().trim();
@@ -355,6 +363,7 @@ public class StatusGizi extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        PD.dismiss();
                         Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
                         Intent i = new Intent(getApplicationContext(), Persetujuan.class);
                         startActivity(i);
@@ -365,6 +374,7 @@ public class StatusGizi extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
+                        PD.dismiss();
                         Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
                     }
                 }) {
