@@ -51,12 +51,7 @@ public class AktifitasSedentari extends AppCompatActivity {
         PD.setMessage("Loading.....");
         PD.setCancelable(false);
 
-        Intent i = getIntent();
-        String aa = i.getStringExtra("segar");
 
-//        if(aa.equals("reload")){
-//           // startActivity(i);
-//        }
 
 
         getDataNgisi();
@@ -68,6 +63,7 @@ public class AktifitasSedentari extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(),FormAktifitasSedentari.class);
                 i.putExtra("aktifitas", 1);
                 startActivity(i);
+                finish();
             }
         });
         bas2.setOnClickListener(new View.OnClickListener() {
@@ -229,9 +225,5 @@ public class AktifitasSedentari extends AppCompatActivity {
         queue.add(req);
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        startActivity(getIntent());
-    }
+
 }
