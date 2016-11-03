@@ -124,8 +124,7 @@ public class AktifitasFisik extends AppCompatActivity {
         // Setting Negative "NO" Button
         alertDialog.setNegativeButton("Cek Kembali", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
-                // Write your code here to invoke NO event
-//                Toast.makeText(getApplicationContext(), "You clicked on NO", Toast.LENGTH_SHORT).show();
+
                 dialog.cancel();
             }
         });

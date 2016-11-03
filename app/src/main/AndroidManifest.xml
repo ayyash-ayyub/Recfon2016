@@ -83,7 +83,10 @@
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
         <activity android:name=".MainMenu" />
         <activity android:name=".aktifitas.MenuAktifitas" />
-        <activity android:name=".aktifitas.AktifitasSedentari"></activity>
+        <activity android:name=".aktifitas.AktifitasSedentari" />
+        <activity
+            android:name=".aktifitas.FormAktifitasSedentari"
+            android:theme="@style/Theme.AppCompat.Light.Dialog"></activity>
     </application>
 
 </manifest>

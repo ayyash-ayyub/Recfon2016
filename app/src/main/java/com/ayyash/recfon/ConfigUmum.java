@@ -21,6 +21,7 @@ public class ConfigUmum {
     public static String URL_SHOW_FREKUENSI = "http://"+IP+"/api/get_frekuensi.php?email=";
     public static String URL_SHOW_ACTIVITY = "http://"+IP+"/api/get_record_activity.php?email=";
     public static String URL_LIST_MAKANAN = "http://"+IP+"/api/get_list_makanan.php?email=";
+    public static String URL_LIST_SEDENTARI = "http://"+IP+"/api/get_list_activity_sedentary.php?email=";
     public static String URL_INSERT_FOOD_RECALL = "http://"+IP+"/api/insert_frekuensi_makan.php";
 
 
@@ -57,6 +58,10 @@ public class ConfigUmum {
     //activity
     public static String URL_INSERT_ACTIVITY = "http://"+IP+"/api/insert_activity.php";
     public static String URL_DELETE_ACTIVITY = "http://"+IP+"/api/delete_activity.php?id=";
+
+    //activity
+    public static String URL_INSERT_ACTIVITY_SEDENTARI = "http://"+IP+"/api/insert_activity_sedentari.php";
+    public static String URL_DELETE_ACTIVITY_SEDENTARI = "http://"+IP+"/api/delete_activity.php?id=";
 
     public static String URL_INSERT_ASUPAN = "http://"+IP+"/api/insert_asupan.php";
 

@@ -18,77 +18,86 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <Button
-                android:text="Nasi"
+                android:id="@+id/bas1"
+                android:textAllCaps="false"
+                android:text="Duduk Di Transportasi (Hari Kerja)"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:theme="@style/PrimaryButton"
                 />
             <Button
-                android:text="Nasi"
+                android:id="@+id/bas2"
+                android:textAllCaps="false"
+                android:text="Duduk Di Transportasi (Hari Libur)"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:theme="@style/PrimaryButton"
                 />
             <Button
-                android:text="Nasi"
+                android:id="@+id/bas3"
+                android:textAllCaps="false"
+                android:text="Duduk Ditempat Kerja (Hari Kerja)"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:theme="@style/PrimaryButton"
                 />
             <Button
-                android:text="Nasi"
+                android:id="@+id/bas4"
+                android:textAllCaps="false"
+                android:text="Duduk Ditempat Kerja (Hari Libur)"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:theme="@style/PrimaryButton"
                 />
             <Button
-                android:text="Nasi"
+                android:id="@+id/bas5"
+                android:textAllCaps="false"
+                android:text="Duduk di Rumah (Hari Kerja)"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:theme="@style/PrimaryButton"
                 />
             <Button
-                android:text="Nasi"
+                android:id="@+id/bas6"
+                android:textAllCaps="false"
+                android:text="Duduk di Rumah (Hari Libur)"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:theme="@style/PrimaryButton"
                 />
             <Button
-                android:text="Nasi"
+                android:id="@+id/bas7"
+                android:textAllCaps="false"
+                android:text="Duduk Menonton TV dan Bersantai (Hari Kerja)"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:theme="@style/PrimaryButton"
                 />
             <Button
-                android:text="Nasi"
+                android:id="@+id/bas8"
+                android:textAllCaps="false"
+                android:text="Duduk Menonton TV dan Bersantai (Hari Libur)"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:theme="@style/PrimaryButton"
                 />
             <Button
-                android:text="Nasi"
+                android:id="@+id/bas9"
+                android:textAllCaps="false"
+                android:text="Tidur (Hari Kerja)"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:theme="@style/PrimaryButton"
                 />
             <Button
-                android:text="Nasi"
+                android:id="@+id/bas10"
+                android:textAllCaps="false"
+                android:text="Tidur (Hari Libur)"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:theme="@style/PrimaryButton"
                 />
-            <Button
-                android:text="Nasi"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:theme="@style/PrimaryButton"
-                />
-            <Button
-                android:text="Nasi"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:theme="@style/PrimaryButton"
-                />
+
         </LinearLayout>
     </ScrollView>
 

@@ -36,19 +36,18 @@
                 android:layout_height="wrap_content">
 
                 <Button
-                    android:text="Status Gizi"
                     android:layout_margin="10dp"
                     android:layout_height="150dp"
                     android:layout_width="150dp"
                     android:id="@+id/btnsarapanpagi"
-                     />
+                    android:background="@drawable/btn_statusg" />
 
                 <Button
                     android:layout_margin="10dp"
                     android:id="@+id/selinganPagi"
                     android:layout_height="150dp"
                     android:layout_width="150dp"
-                    android:text="Makan Harian" />
+                    android:background="@drawable/btn_dua" />
             </LinearLayout>
 
             <LinearLayout
@@ -62,14 +61,14 @@
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:id="@+id/makanSiang"
-                    android:text="Aktifitas" />
+                    android:background="@drawable/btn_tiga" />
 
                 <Button
                     android:layout_margin="10dp"
                     android:layout_height="150dp"
                     android:id="@+id/seliSiang"
                     android:layout_width="150dp"
-                    android:text="Frekuensi Makan Bulanan" />
+                    android:background="@drawable/btn_empat" />
             </LinearLayout>
             <LinearLayout
                 android:gravity="center"
@@ -82,14 +81,14 @@
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:id="@+id/makanMalam"
-                    android:text="Profile" />
+                    android:background="@drawable/btn_lima" />
 
                 <Button
                     android:layout_margin="10dp"
                     android:layout_height="150dp"
                     android:id="@+id/selinganMala"
                     android:layout_width="150dp"
-                    android:text="Logout" />
+                    android:background="@drawable/btn_enam" />
             </LinearLayout>
             <LinearLayout
                 android:gravity="center"
@@ -102,7 +101,7 @@
                     android:layout_margin="10dp"
                     android:layout_width="293dp"
                     android:layout_height="wrap_content"
-                    android:text="Perbandingan Asupan Makan"
+                    android:text="Logout"
                     android:theme="@style/PrimaryButton"
                     android:id="@+id/btnAsupan"
                     android:layout_weight="0.37" />

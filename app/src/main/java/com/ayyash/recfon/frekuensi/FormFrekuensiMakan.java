@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -90,6 +91,17 @@ public class FormFrekuensiMakan extends AppCompatActivity {
         seekBar = (SeekBar) findViewById(R.id.seekBar);
         namaMakanan = (TextView) findViewById(R.id.textView3);
         txtFrekuensi = (EditText) findViewById(R.id.txtFrekuensiUye);
+        txtFrekuensi.setOnTouchListener(new View.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+
+                txtFrekuensi.setFocusable(true);
+                txtFrekuensi.requestFocus();
+                txtFrekuensi.setText(null);
+                return false;
+            }
+        });
         satuanFrekuensi = (Spinner) findViewById(R.id.spinner2) ;
 
         Toast.makeText(getApplicationContext(),"sdads"+ txtFrekuensi.getText().toString().trim(),Toast.LENGTH_LONG).show();

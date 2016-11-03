@@ -739,15 +739,7 @@ public class FrekuensiBulanan extends AppCompatActivity {
                                 //tujuh
                                 String d7 = (String) obj.get("id");
                                 String d7b = (String) obj.get("status_makanan");
-//
-//                                data7 = "";
-//                                data7a = "";
-//
-//                                data7 +=d7;
-//                                data7a +=d7b;
-//
-//
-//                                Toast.makeText(getApplicationContext(),d7+" dan "+d7b,Toast.LENGTH_LONG).show();
+
                                 if(d7.equals("1") && d7b.equals("1")){
                                     b1.setEnabled(false);
                                 }
