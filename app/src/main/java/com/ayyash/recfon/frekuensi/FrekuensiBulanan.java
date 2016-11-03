@@ -1,5 +1,6 @@
 package com.ayyash.recfon.frekuensi;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -47,6 +48,7 @@ public class FrekuensiBulanan extends AppCompatActivity {
 
     String data7, data7a;
     ImageView pePeng;
+    ProgressDialog PD;
 
 
 
@@ -123,6 +125,10 @@ public class FrekuensiBulanan extends AppCompatActivity {
         b59 = (Button)findViewById(R.id.bb59);
         b60 = (Button)findViewById(R.id.bb60);
         pePeng = (ImageView)findViewById(R.id.imageViewPeFrek) ;
+
+        PD = new ProgressDialog(this);
+        PD.setMessage("Loading.....");
+        PD.setCancelable(false);
 
 
         pePeng.setOnClickListener(new View.OnClickListener() {
@@ -716,6 +722,7 @@ public class FrekuensiBulanan extends AppCompatActivity {
     }
 
     private void getDataNgisi(){
+        PD.show();
         RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
         //  System.out.println("url get : "+ConfigUmum.URL_LIST_MAKANAN+email);
 
@@ -723,7 +730,8 @@ public class FrekuensiBulanan extends AppCompatActivity {
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        System.out.println("ar"+response.toString());
+                        PD.dismiss();
+//                        System.out.println("ar"+response.toString());
                         JSONArray ayyash = null;
                         try {
                             ayyash = response.getJSONArray("result");
@@ -936,6 +944,7 @@ public class FrekuensiBulanan extends AppCompatActivity {
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                PD.dismiss();
                 VolleyLog.e("Error: ", error.getMessage());
             }
         });

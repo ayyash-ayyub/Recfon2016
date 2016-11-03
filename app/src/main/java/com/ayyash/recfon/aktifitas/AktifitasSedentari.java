@@ -1,5 +1,6 @@
 package com.ayyash.recfon.aktifitas;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -26,6 +27,7 @@ import org.json.JSONObject;
 public class AktifitasSedentari extends AppCompatActivity {
     Button bas1,bas2,bas3,bas4,bas5,bas6,bas7,bas8,bas9,bas10;
     String email;
+    ProgressDialog PD;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +46,10 @@ public class AktifitasSedentari extends AppCompatActivity {
         bas8 = (Button)findViewById(R.id.bas8);
         bas9 = (Button)findViewById(R.id.bas9);
         bas10 = (Button)findViewById(R.id.bas10);
+
+        PD = new ProgressDialog(this);
+        PD.setMessage("Loading.....");
+        PD.setCancelable(false);
 
         Intent i = getIntent();
         String aa = i.getStringExtra("segar");
@@ -140,6 +146,7 @@ public class AktifitasSedentari extends AppCompatActivity {
     }
 
     private void getDataNgisi(){
+        PD.show();
         RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
         //  System.out.println("url get : "+ConfigUmum.URL_LIST_MAKANAN+email);
 
@@ -147,7 +154,8 @@ public class AktifitasSedentari extends AppCompatActivity {
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        System.out.println("ar"+response.toString());
+//                        System.out.println("ar"+response.toString());
+                        PD.dismiss();
                         JSONArray ayyash = null;
                         try {
                             ayyash = response.getJSONArray("result");
@@ -209,6 +217,8 @@ public class AktifitasSedentari extends AppCompatActivity {
                 }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                PD.dismiss();
+
                 VolleyLog.e("Error: ", error.getMessage());
             }
         });

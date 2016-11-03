@@ -29,7 +29,7 @@ import com.ayyash.recfon.selinganpagi.KonfirmasiSelinganSarapan;
 import com.ayyash.recfon.selingansiang.KonfirmasiSelinganSiang;
 
 public class MainMenu extends AppCompatActivity {
-    Button sPagi,selinganPagi, makanSiang,selinganSiang,makanMalam,selinganMalam,perbandinganAsupan;
+    Button statusGizi, makanHarian, aktifitasFisik, frekuensiMakan, profile, penilaian, logOut;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,13 +38,13 @@ public class MainMenu extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main_menu2);
-        sPagi = (Button)findViewById(R.id.btnsarapanpagi);
-        selinganPagi= (Button)findViewById(R.id.selinganPagi);
-        makanSiang = (Button)findViewById(R.id.makanSiang);
-        selinganSiang =(Button)findViewById(R.id.seliSiang);
-        makanMalam = (Button)findViewById(R.id.makanMalam);
-        selinganMalam = (Button)findViewById(R.id.selinganMala);
-        perbandinganAsupan = (Button)findViewById(R.id.btnAsupan);
+        statusGizi = (Button) findViewById(R.id.btnsarapanpagi);
+        makanHarian = (Button) findViewById(R.id.selinganPagi);
+        aktifitasFisik = (Button) findViewById(R.id.makanSiang);
+        frekuensiMakan = (Button) findViewById(R.id.seliSiang);
+        profile = (Button) findViewById(R.id.makanMalam);
+        penilaian = (Button) findViewById(R.id.selinganMala);
+        logOut = (Button) findViewById(R.id.btnAsupan);
          /* Top toolbar */
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -55,7 +55,7 @@ public class MainMenu extends AppCompatActivity {
 
         //makan pagi
         //makan pagi
-        sPagi.setOnClickListener(new View.OnClickListener() {
+        statusGizi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), StatusGizi.class);
@@ -65,7 +65,7 @@ public class MainMenu extends AppCompatActivity {
         });
 
 
-        selinganPagi.setOnClickListener(new View.OnClickListener() {
+        makanHarian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -76,7 +76,7 @@ public class MainMenu extends AppCompatActivity {
             }
         });
 
-        makanSiang.setOnClickListener(new View.OnClickListener() {
+        aktifitasFisik.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainMenu.this, MenuAktifitas.class);
@@ -86,7 +86,7 @@ public class MainMenu extends AppCompatActivity {
             }
         });
 
-        selinganSiang.setOnClickListener(new View.OnClickListener() {
+        frekuensiMakan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainMenu.this, FrekuensiBulanan.class);
@@ -95,7 +95,7 @@ public class MainMenu extends AppCompatActivity {
 
             }
         });
-        makanMalam.setOnClickListener(new View.OnClickListener() {
+        profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainMenu.this, ProfileUser.class);
@@ -104,7 +104,7 @@ public class MainMenu extends AppCompatActivity {
 
             }
         });
-        selinganMalam.setOnClickListener(new View.OnClickListener() {
+        penilaian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainMenu.this, PenilaianSurvei.class);
@@ -114,7 +114,7 @@ public class MainMenu extends AppCompatActivity {
             }
         });
 
-        perbandinganAsupan.setOnClickListener(new View.OnClickListener() {
+        logOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 SharedPreferences sp = getSharedPreferences("ayyash", MODE_WORLD_READABLE);
@@ -127,9 +127,6 @@ public class MainMenu extends AppCompatActivity {
         });
 
     }
-
-
-
 
 
     @Override
@@ -146,7 +143,7 @@ public class MainMenu extends AppCompatActivity {
         if (id == R.id.menuLogout) {
 
             logout();
-        }else if(id==R.id.menuHelp){
+        } else if (id == R.id.menuHelp) {
             // Toast.makeText(MainMenu.this,"ini help", Toast.LENGTH_LONG).show();
             help();
         }
@@ -154,20 +151,20 @@ public class MainMenu extends AppCompatActivity {
     }
 
 
-    private void help(){
+    private void help() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Petunjuk");
         // builder.setMessage("Anda diminta menuliskan jenis dan jumlah yang makanan dan minuman yang dikonsumsi selama 24 jam HARI INI (sejak bangun tidur hingga tidur lagi)");
         // (Html.fromHtml("Hello "+"<b>"+"World"+"</b>"));
-        builder.setMessage(Html.fromHtml("Anda diminta menuliskan jenis dan jumlah "+"<b>"+ "makanan dan minuman" + "</b>"+" yang dikonsumsi"+"<b>"+" " +
-                "selama 24 jam HARI INI (sejak bangun tidur hingga tidur lagi)"+ "</b>"+"<br><br><br>"+"<u>"+"Cara pengisian :"+"</u>"+"<br>"+
-                "<b>"+"Pilih jenis makanan dan minuman yang dikonsumsi, kemudian isikan jumlah yang dikonsumsi sesuai ukuran wadah yang tersedia"+"</b>"+
-                "<br><br><br>"+"<p style='text-align:justify'>Setelah anda mengisi ke 6 aktifitas harian dari pagi sampai dengan selingan malam , jangan lupa juga mengisi <strong style='color:red;'>PERBANDINGAN ASUPAN MAKAN</strong> pada tombol hijau yang berada paling bawah.</p>"+
+        builder.setMessage(Html.fromHtml("Anda diminta menuliskan jenis dan jumlah " + "<b>" + "makanan dan minuman" + "</b>" + " yang dikonsumsi" + "<b>" + " " +
+                "selama 24 jam HARI INI (sejak bangun tidur hingga tidur lagi)" + "</b>" + "<br><br><br>" + "<u>" + "Cara pengisian :" + "</u>" + "<br>" +
+                "<b>" + "Pilih jenis makanan dan minuman yang dikonsumsi, kemudian isikan jumlah yang dikonsumsi sesuai ukuran wadah yang tersedia" + "</b>" +
+                "<br><br><br>" + "<p style='text-align:justify'>Setelah anda mengisi ke 6 aktifitas harian dari pagi sampai dengan selingan malam , jangan lupa juga mengisi <strong style='color:red;'>PERBANDINGAN ASUPAN MAKAN</strong> pada tombol hijau yang berada paling bawah.</p>" +
                 ""));
 
         builder.setPositiveButton("OK", null);
         AlertDialog dialog = builder.show();
-        TextView messageText = (TextView)dialog.findViewById(android.R.id.message);
+        TextView messageText = (TextView) dialog.findViewById(android.R.id.message);
         messageText.setGravity(Gravity.LEFT);
         dialog.show();
 
@@ -186,7 +183,7 @@ public class MainMenu extends AppCompatActivity {
 
         // Setting Positive "Yes" Button
         alertDialog.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog,int which) {
+            public void onClick(DialogInterface dialog, int which) {
 
                 // Write your code here to invoke YES event
 
@@ -251,4 +248,8 @@ public class MainMenu extends AppCompatActivity {
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
     }
+
+
+
+
 }
