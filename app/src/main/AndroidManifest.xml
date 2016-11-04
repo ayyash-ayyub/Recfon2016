@@ -58,8 +58,7 @@
         <activity android:name=".frekuensi.FormFrekuensiMakan" />
         <activity android:name=".ForgotPassword" />
         <activity
-            android:name=".aktifitas.FormAktifitas"
-            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+            android:name=".aktifitas.FormAktifitas"/>
         <activity
             android:name=".KonfirmasiSarapan"
             android:theme="@style/Theme.AppCompat.Light.Dialog" />
@@ -85,8 +84,7 @@
         <activity android:name=".aktifitas.MenuAktifitas" />
         <activity android:name=".aktifitas.AktifitasSedentari" />
         <activity
-            android:name=".aktifitas.FormAktifitasSedentari"
-            android:theme="@style/Theme.AppCompat.Light.Dialog" />
+            android:name=".aktifitas.FormAktifitasSedentari" />
         <activity android:name=".PenilaianSurvei"></activity>
     </application>
 

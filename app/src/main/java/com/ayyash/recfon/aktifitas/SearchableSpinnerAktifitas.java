@@ -142,8 +142,8 @@ public class SearchableSpinnerAktifitas extends Spinner implements View.OnTouchL
         _context.startActivity(i);
 
         //stop aktifitas sekarang
-//        Activity activity = (Activity)getContext();
-//        activity.finish();
+        Activity activity = (Activity)getContext();
+        activity.finish();
 
 
     }

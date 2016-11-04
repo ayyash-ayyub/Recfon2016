@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.RequestQueue;
@@ -64,6 +65,8 @@ public class AktifitasSedentari extends AppCompatActivity {
                 i.putExtra("aktifitas", 1);
                 startActivity(i);
                 finish();
+
+               // finish();
             }
         });
         bas2.setOnClickListener(new View.OnClickListener() {
@@ -72,6 +75,7 @@ public class AktifitasSedentari extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(),FormAktifitasSedentari.class);
                 i.putExtra("aktifitas", 2);
                 startActivity(i);
+                finish();
             }
         });
         bas3.setOnClickListener(new View.OnClickListener() {
@@ -80,6 +84,7 @@ public class AktifitasSedentari extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(),FormAktifitasSedentari.class);
                 i.putExtra("aktifitas", 3);
                 startActivity(i);
+                finish();
             }
         });
         bas4.setOnClickListener(new View.OnClickListener() {
@@ -96,6 +101,7 @@ public class AktifitasSedentari extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(),FormAktifitasSedentari.class);
                 i.putExtra("aktifitas", 5);
                 startActivity(i);
+                finish();
             }
         });
         bas6.setOnClickListener(new View.OnClickListener() {
@@ -104,6 +110,7 @@ public class AktifitasSedentari extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(),FormAktifitasSedentari.class);
                 i.putExtra("aktifitas", 6);
                 startActivity(i);
+                finish();
             }
         });
         bas7.setOnClickListener(new View.OnClickListener() {
@@ -112,6 +119,7 @@ public class AktifitasSedentari extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(),FormAktifitasSedentari.class);
                 i.putExtra("aktifitas", 7);
                 startActivity(i);
+                finish();
             }
         });
         bas8.setOnClickListener(new View.OnClickListener() {
@@ -128,6 +136,7 @@ public class AktifitasSedentari extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(),FormAktifitasSedentari.class);
                 i.putExtra("aktifitas", 9);
                 startActivity(i);
+                finish();
             }
         });
         bas10.setOnClickListener(new View.OnClickListener() {
@@ -136,8 +145,19 @@ public class AktifitasSedentari extends AppCompatActivity {
                 Intent i = new Intent(getApplicationContext(),FormAktifitasSedentari.class);
                 i.putExtra("aktifitas", 10);
                 startActivity(i);
+                finish();
             }
         });
+
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+       Intent i = new Intent(AktifitasSedentari.this, AktifitasSedentari.class);
+       startActivity(i);
+        this.finish();
+
 
     }
 
