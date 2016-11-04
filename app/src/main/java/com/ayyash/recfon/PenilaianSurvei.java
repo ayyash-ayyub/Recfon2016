@@ -22,6 +22,8 @@ import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.ayyash.recfon.aktifitas.AktifitasSedentari;
+import com.ayyash.recfon.aktifitas.MenuAktifitas;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -176,6 +178,14 @@ public class PenilaianSurvei extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i = new Intent(PenilaianSurvei.this, MainMenu.class);
+        startActivity(i);
+        finish();
+    }
+
     private void Save() {
 
 //        Toast.makeText(getApplicationContext(),email+", Manfaat :"+txtManfaat+", Jumlah : "+txtJumlah+", Sesuai : "+txtSesuai+", Seluruh : "+txtSeluruh+"Saran : "+ saran.getText(),Toast.LENGTH_LONG).show();
@@ -200,11 +210,11 @@ public class PenilaianSurvei extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         System.out.println(response);
-                     //   Toast.makeText(getApplicationContext(), response, Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), response.toString(), Toast.LENGTH_LONG).show();
 //                        Intent i = new Intent(getApplicationContext(), Persetujuan.class);
 //                        startActivity(i);
 //                        finish();
-                        System.out.println("sql"+response);
+                      //  System.out.println("sql"+response);
                         PD.dismiss();
                     }
                 },

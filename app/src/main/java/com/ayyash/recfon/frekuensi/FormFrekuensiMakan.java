@@ -104,7 +104,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
         });
         satuanFrekuensi = (Spinner) findViewById(R.id.spinner2) ;
 
-        Toast.makeText(getApplicationContext(),"sdads"+ txtFrekuensi.getText().toString().trim(),Toast.LENGTH_LONG).show();
+      //  Toast.makeText(getApplicationContext(),"sdads"+ txtFrekuensi.getText().toString().trim(),Toast.LENGTH_LONG).show();
 
         btnKeluar = (Button) findViewById(R.id.batal);
 

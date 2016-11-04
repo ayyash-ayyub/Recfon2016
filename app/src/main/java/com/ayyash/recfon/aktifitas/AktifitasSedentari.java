@@ -161,6 +161,14 @@ public class AktifitasSedentari extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i = new Intent(AktifitasSedentari.this, MenuAktifitas.class);
+        startActivity(i);
+        finish();
+    }
+
     private void getDataNgisi(){
         PD.show();
         RequestQueue queue = Volley.newRequestQueue(getApplicationContext());

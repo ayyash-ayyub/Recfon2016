@@ -49,7 +49,8 @@ public class Persetujuan extends AppCompatActivity {
         if (ambil) {
             Intent i = new Intent(getApplicationContext(),MainMenu.class);
             startActivity(i);
-            aktifkan.setVisibility(View.INVISIBLE);
+            finish();
+         //   aktifkan.setVisibility(View.INVISIBLE);
         }
 
 
@@ -106,6 +107,7 @@ public class Persetujuan extends AppCompatActivity {
 //                drawerLayout.openDrawer(GravityCompat.START);
                 Intent i = new Intent(getApplicationContext(),MainMenu.class);
                 startActivity(i);
+                finish();
             }
         });
 

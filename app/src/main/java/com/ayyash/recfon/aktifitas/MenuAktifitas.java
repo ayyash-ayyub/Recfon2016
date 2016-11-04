@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.ayyash.recfon.MainMenu;
 import com.ayyash.recfon.R;
 
 public class MenuAktifitas extends AppCompatActivity {
@@ -35,5 +36,14 @@ public class MenuAktifitas extends AppCompatActivity {
             }
         });
 
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent i = new Intent(MenuAktifitas.this, MainMenu.class);
+        startActivity(i);
+        finish();
     }
 }
