@@ -174,36 +174,27 @@ public class MenuFoodsRecord extends AppCompatActivity {
     public void onBackPressed() {
         android.app.AlertDialog.Builder alertDialog = new android.app.AlertDialog.Builder(MenuFoodsRecord.this);
 
-        // Setting Dialog Title
         alertDialog.setTitle("Konfirmasi");
-        // Setting Dialog Message
-        alertDialog.setMessage("Apakah Anda yakin sudah memasukan semua menu sarapan Anda?");
-        // Setting Icon to Dialog
+        alertDialog.setMessage("Apakah anda yakin sudah memasukan semua daftar makanan yang anda makan sampai saat ini?");
         alertDialog.setIcon(R.drawable.i);
 
-        // Setting Positive "Yes" Button
         alertDialog.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog,int which) {
 
-                // Write your code here to invoke YES event
                 Intent i = new Intent(MenuFoodsRecord.this, MainMenu.class);
                 startActivity(i);
                 finish();
             }
         });
 
-        // Setting Negative "NO" Button
         alertDialog.setNegativeButton("Cek Kembali", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
-                // Write your code here to invoke NO event
-//                Toast.makeText(getApplicationContext(), "You clicked on NO", Toast.LENGTH_SHORT).show();
+
                 dialog.cancel();
             }
         });
 
-        // Showing Alert Message
         alertDialog.show();
-//    }
 
     }
 

@@ -26,17 +26,27 @@
         android:gravity="center"
         android:orientation="vertical">
 
-    <TextView
+        <TextView
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:layout_marginBottom="10dp"
+            android:text="Menu Aktifitas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView26" />
+
+        <TextView
         android:text="Pada menu aktifitas fisik. Isikan aktifitas yang anda lakukan dalam 1 minggu terakhir, pada menu sedentari, isikan kegiatan yang anda lakukan dalam keadaan duduk atau tidur."
         android:layout_width="match_parent"
+            android:layout_marginBottom="15dp"
         android:textAlignment="center"
         android:textSize="20dp"
-        android:textStyle="bold"
         android:layout_height="wrap_content"
         android:id="@+id/textView25"
         />
 
-    <LinearLayout
+        <LinearLayout
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"

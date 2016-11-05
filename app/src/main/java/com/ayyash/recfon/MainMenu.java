@@ -117,12 +117,10 @@ public class MainMenu extends AppCompatActivity {
         logOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SharedPreferences sp = getSharedPreferences("ayyash", MODE_WORLD_READABLE);
-                SharedPreferences.Editor edd = sp.edit();
 
-                edd.clear();
-                edd.commit();
-                logout();
+
+                        logout();
+
             }
         });
 
@@ -143,6 +141,7 @@ public class MainMenu extends AppCompatActivity {
         if (id == R.id.menuLogout) {
 
             logout();
+
         } else if (id == R.id.menuHelp) {
             // Toast.makeText(MainMenu.this,"ini help", Toast.LENGTH_LONG).show();
             help();
@@ -177,7 +176,7 @@ public class MainMenu extends AppCompatActivity {
         // Setting Dialog Title
         alertDialog.setTitle("Konfirmasi");
         // Setting Dialog Message
-        alertDialog.setMessage("Apakah Anda yakin sudah memasukan semua menu sarapan Anda?");
+        alertDialog.setMessage("Apakah Anda yakin Anda Ingin Keluar?");
         // Setting Icon to Dialog
         alertDialog.setIcon(R.drawable.i);
 
@@ -220,10 +219,14 @@ public class MainMenu extends AppCompatActivity {
                         SharedPreferences preferences = getSharedPreferences(ConfigUmum.SHARED_PREF_NAME, Context.MODE_PRIVATE);
                         SharedPreferences.Editor editor = preferences.edit();
 
+                        SharedPreferences sp = getSharedPreferences("ayyash", MODE_WORLD_READABLE);
+                        SharedPreferences.Editor edd = sp.edit();
+
+                        edd.clear();
+                        edd.commit();
+
 
                         editor.putBoolean(ConfigUmum.LOGGEDIN_SHARED_PREF, false);
-
-
                         editor.putString(ConfigUmum.NIS_SHARED_PREF, "");
 
                         editor.commit();

@@ -6,8 +6,14 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.text.Html;
+import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
@@ -47,6 +53,11 @@ public class AktifitasSedentari extends AppCompatActivity {
         bas8 = (Button)findViewById(R.id.bas8);
         bas9 = (Button)findViewById(R.id.bas9);
         bas10 = (Button)findViewById(R.id.bas10);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar2);
+        toolbar.setNavigationIcon(R.drawable.logo_atas);
+        toolbar.inflateMenu(R.menu.menu_main);
+        setSupportActionBar(toolbar);
 
         PD = new ProgressDialog(this);
         PD.setMessage("Loading.....");
@@ -252,6 +263,40 @@ public class AktifitasSedentari extends AppCompatActivity {
         req.setRetryPolicy(policy);
         queue.add(req);
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
 
+        getMenuInflater().inflate(R.menu.menu_help, menu);
+        return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.menuHelp) {
+            // Toast.makeText(MainMenu.this,"ini help", Toast.LENGTH_LONG).show();
+            help();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
+    private void help() {
+        android.support.v7.app.AlertDialog.Builder builder = new android.support.v7.app.AlertDialog.Builder(this);
+        builder.setTitle("Petunjuk");
+        // builder.setMessage("Anda diminta menuliskan jenis dan jumlah yang makanan dan minuman yang dikonsumsi selama 24 jam HARI INI (sejak bangun tidur hingga tidur lagi)");
+        // (Html.fromHtml("Hello "+"<b>"+"World"+"</b>"));
+        builder.setMessage(Html.fromHtml("Mohon untuk mengisikan  "+
+                "semua (10) aktifitas duduk/tidur (sedentari), isikan berapa menit masing-masing aktifitas tersebut anda lakukan setiap harinya."+ "<br><br><br>"  +
+                ""));
+
+        builder.setPositiveButton("OK", null);
+        android.support.v7.app.AlertDialog dialog = builder.show();
+        TextView messageText = (TextView) dialog.findViewById(android.R.id.message);
+        messageText.setGravity(Gravity.LEFT);
+        dialog.show();
+
+    }
 
 }

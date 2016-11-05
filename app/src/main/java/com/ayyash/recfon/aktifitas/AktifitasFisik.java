@@ -170,12 +170,9 @@ public class AktifitasFisik extends AppCompatActivity {
         builder.setTitle("Petunjuk");
         // builder.setMessage("Anda diminta menuliskan jenis dan jumlah yang makanan dan minuman yang dikonsumsi selama 24 jam HARI INI (sejak bangun tidur hingga tidur lagi)");
         // (Html.fromHtml("Hello "+"<b>"+"World"+"</b>"));
-        builder.setMessage(Html.fromHtml("Mohon untuk mengisi  "+
-                "semua pertanyaan dihalaman ini dengan sebenar-benarnya dengan cara ;."+ "<br><br><br>"  +
-                "<b>" + "1.Menuliskan berat & tinggi badan pada form yang telah disediakan." + "</b><br>" +
-                "<b>" + "2.Menjawab dengan opsi yang sesuai pada masing-masing pertanyaan." + "</b><br>" +
-                "<b>" + "3.Khusus riwayat penyakit, anda dapat memilih lebih dari satu dengan pilihan yang sesuai." + "</b><br>" +
-                "<br><br><br>" + "Pertanyaan di halaman ini cukup diisi sekali saja. jika ada perubahan data, maka akan otomatis mengganti/mengupdate data yang lama" +
+        builder.setMessage(Html.fromHtml(""+
+                "<b>" + "● Pilih aktifitas yang biasa anda lakukan" + "</b><br>" +
+                "<b>" + "● untuk setiap aktifitas yang dipilih, isikan berapa kali perminggu " + "</b><br>" +
                 ""));
 
         builder.setPositiveButton("OK", null);

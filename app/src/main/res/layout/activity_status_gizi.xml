@@ -8,7 +8,6 @@
     android:background="#fff">
 
     <android.support.v7.widget.Toolbar
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:title="Status Gizi"
@@ -19,6 +18,7 @@
         android:id="@+id/toolbar6" />
 
     <LinearLayout
+        android:padding="15dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -42,10 +42,9 @@
                 <customsfonts.MyEditText
                     android:id="@+id/txtBerat"
                     android:textSize="16dp"
-                    android:layout_width="253dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Berat Badan (Kg)"
-                    android:layout_marginLeft="46dp"
 
                     android:textColorHint="@color/colorhint"
                     android:textColor="@color/colortext"
@@ -56,15 +55,14 @@
                     />
                 <View
                     android:layout_width="match_parent"
-                    android:layout_marginLeft="56dp"
-                    android:layout_marginRight="56dp"
+
                     android:layout_height="1dp"
                     android:layout_marginBottom="10dp"
                     android:background="#dad8d8"/>
                 <RadioGroup
                     android:id="@+id/rgUkurBB"
                     android:orientation="horizontal"
-                    android:layout_marginLeft="46dp"
+
                     android:layout_width="254dp"
                     android:layout_height="wrap_content" >
                     <RadioButton
@@ -81,8 +79,8 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_marginLeft="56dp"
-                    android:layout_marginRight="56dp"
+
+
                     android:layout_height="1dp"
                     android:layout_marginBottom="10dp"
                     android:background="#dad8d8"/>
@@ -93,7 +91,7 @@
                     android:layout_width="253dp"
                     android:layout_height="wrap_content"
                     android:hint="Tinggi Badan (cm)"
-                    android:layout_marginLeft="46dp"
+
 
                     android:textColorHint="@color/colorhint"
                     android:textColor="@color/colortext"
@@ -104,15 +102,15 @@
                     />
                 <View
                     android:layout_width="match_parent"
-                    android:layout_marginLeft="56dp"
-                    android:layout_marginRight="56dp"
+
+
                     android:layout_height="1dp"
                     android:layout_marginBottom="10dp"
                     android:background="#dad8d8"/>
                 <RadioGroup
                     android:id="@+id/rgUkurTB"
                     android:orientation="horizontal"
-                    android:layout_marginLeft="46dp"
+
                     android:layout_width="254dp"
                     android:layout_height="wrap_content" >
                     <RadioButton
@@ -130,8 +128,8 @@
                 </RadioGroup>
                 <View
                     android:layout_width="match_parent"
-                    android:layout_marginLeft="56dp"
-                    android:layout_marginRight="56dp"
+
+
                     android:layout_height="1dp"
                     android:layout_marginBottom="10dp"
                     android:background="#dad8d8"/>
@@ -140,15 +138,15 @@
                     android:textStyle="bold"
                     android:paddingLeft="16dp"
                     android:paddingTop="10dp"
-                    android:layout_marginLeft="46dp"
-                    android:layout_width="232dp"
+
+                    android:layout_width="match_parent"
                     android:textColor="@color/colorhint"
                     android:layout_height="wrap_content"
                     android:text="Status Merokok"/>
                 <LinearLayout
                     android:padding="10dp"
-                    android:layout_marginLeft="46dp"
-                    android:layout_width="232dp"
+
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <RadioGroup
@@ -159,7 +157,7 @@
                         <RadioButton
                             android:textColor="@color/colorhint"
                             android:text="Merokok"
-                            android:layout_width="232dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/rbMerokok"
                             android:layout_weight="1"/>
@@ -167,7 +165,7 @@
                         <RadioButton
                             android:textColor="@color/colorhint"
                             android:text="Berhenti Merokok"
-                            android:layout_width="232dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/rbBerhentiM"
                             android:layout_weight="1"/>
@@ -175,7 +173,7 @@
                         <RadioButton
                             android:textColor="@color/colorhint"
                             android:text="Tidak Merokok"
-                            android:layout_width="232dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/rbTidakM"
                             android:layout_weight="1"/>
@@ -184,8 +182,8 @@
                 </LinearLayout>
                 <View
                     android:layout_width="match_parent"
-                    android:layout_marginLeft="56dp"
-                    android:layout_marginRight="56dp"
+
+
                     android:layout_height="1dp"
                     android:layout_marginBottom="10dp"
                     android:background="#dad8d8"/>
@@ -194,15 +192,15 @@
                     android:textStyle="bold"
                     android:paddingLeft="16dp"
                     android:paddingTop="10dp"
-                    android:layout_marginLeft="46dp"
-                    android:layout_width="232dp"
+
+                    android:layout_width="match_parent"
                     android:textColor="@color/colorhint"
                     android:layout_height="wrap_content"
                     android:text="Konsumsi Alkohol"/>
                 <LinearLayout
                     android:padding="10dp"
-                    android:layout_marginLeft="46dp"
-                    android:layout_width="232dp"
+
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <RadioGroup
@@ -213,7 +211,7 @@
                         <RadioButton
                             android:textColor="@color/colorhint"
                             android:text="Rutin"
-                            android:layout_width="232dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/rbRutinA"
                             android:layout_weight="1"/>
@@ -221,7 +219,7 @@
                         <RadioButton
                             android:textColor="@color/colorhint"
                             android:text="Tidak Rutin"
-                            android:layout_width="232dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/rbTidakRA"
                             android:layout_weight="1"/>
@@ -229,7 +227,7 @@
                         <RadioButton
                             android:textColor="@color/colorhint"
                             android:text="Tidak"
-                            android:layout_width="232dp"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/rbTidakA"
                             android:layout_weight="1"/>
@@ -238,8 +236,8 @@
                 </LinearLayout>
                 <View
                     android:layout_width="match_parent"
-                    android:layout_marginLeft="56dp"
-                    android:layout_marginRight="56dp"
+
+
                     android:layout_height="1dp"
                     android:layout_marginBottom="10dp"
                     android:background="#dad8d8"/>
@@ -252,16 +250,16 @@
                     android:textStyle="bold"
                     android:paddingLeft="16dp"
                     android:paddingTop="10dp"
-                    android:layout_marginLeft="46dp"
-                    android:layout_width="232dp"
+
+                    android:layout_width="match_parent"
                     android:textColor="@color/colorhint"
                     android:layout_height="wrap_content"
                     android:text="Riwayat Penyakit"/>
 
                 <LinearLayout
                     android:padding="10dp"
-                    android:layout_marginLeft="46dp"
-                    android:layout_width="232dp"
+
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
                     <!--<RadioGroup-->
@@ -272,7 +270,7 @@
                     <CheckBox
                         android:textColor="@color/colorhint"
                         android:text="Tidak Ada"
-                        android:layout_width="232dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/cbTidak"
                         android:layout_weight="1"/>
@@ -280,7 +278,7 @@
                     <CheckBox
                         android:textColor="@color/colorhint"
                         android:text="Tekanan Darah Tinggi"
-                        android:layout_width="232dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/cbHipertensi"
                         android:layout_weight="1"/>
@@ -288,63 +286,63 @@
                     <CheckBox
                         android:textColor="@color/colorhint"
                         android:text="Diabetes"
-                        android:layout_width="232dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/cbDiabetes"
                         android:layout_weight="1"/>
                     <CheckBox
                         android:textColor="@color/colorhint"
                         android:text="Kolesterol"
-                        android:layout_width="232dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/cbKolesterol"
                         android:layout_weight="1"/>
                     <CheckBox
                         android:textColor="@color/colorhint"
                         android:text="Penyakit Jantung"
-                        android:layout_width="232dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/cbJantung"
                         android:layout_weight="1"/>
                     <CheckBox
                         android:textColor="@color/colorhint"
                         android:text="Penyakit Ginjal"
-                        android:layout_width="232dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/cbGinjal"
                         android:layout_weight="1"/>
                     <CheckBox
                         android:textColor="@color/colorhint"
                         android:text="Kanker"
-                        android:layout_width="232dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/cbKanker"
                         android:layout_weight="1"/>
                     <CheckBox
                         android:textColor="@color/colorhint"
                         android:text="Stroke (Pernah Mengalami)"
-                        android:layout_width="232dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/cbStroke"
                         android:layout_weight="1"/>
                     <CheckBox
                         android:textColor="@color/colorhint"
                         android:text="Sakit Punggung Bawah"
-                        android:layout_width="232dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/cbPunggung"
                         android:layout_weight="1"/>
                     <CheckBox
                         android:textColor="@color/colorhint"
                         android:text="Pengapuran/Nyeri Sendi"
-                        android:layout_width="232dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/cbPengapuran"
                         android:layout_weight="1"/>
                     <CheckBox
                         android:textColor="@color/colorhint"
                         android:text="Tuberkulosis"
-                        android:layout_width="232dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/cbTBC"
                         android:layout_weight="1"/>
@@ -353,8 +351,8 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_marginLeft="56dp"
-                    android:layout_marginRight="56dp"
+
+
                     android:layout_height="1dp"
                     android:layout_marginBottom="10dp"
                     android:background="#dad8d8"/>
@@ -363,8 +361,8 @@
                     android:textStyle="bold"
                     android:paddingLeft="16dp"
                     android:paddingTop="10dp"
-                    android:layout_marginLeft="46dp"
-                    android:layout_width="232dp"
+
+                    android:layout_width="match_parent"
                     android:textColor="@color/colorhint"
                     android:layout_height="wrap_content"
                     android:text="Rata-rata Makan Utama per-hari"/>
@@ -373,13 +371,13 @@
                     android:id="@+id/rgMakanToday"
                     android:orientation="horizontal"
                     android:layout_width="249dp"
-                    android:layout_marginLeft="46dp"
+
                     android:layout_height="wrap_content">
                     <RadioButton
 
                         android:textColor="@color/colorhint"
                         android:text="3 Kali"
-                        android:layout_width="232dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/rb3x"
                         android:layout_weight="1"/>
@@ -387,10 +385,10 @@
                     <RadioButton
                         android:textColor="@color/colorhint"
                         android:text="Kurang dari 3 Kali"
-                        android:layout_width="232dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/rbLebih3x"
-                        android:layout_weight="1"/>
+                        android:layout_weight="0.5"/>
 
 
                 </RadioGroup>
@@ -399,8 +397,8 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_marginLeft="56dp"
-                    android:layout_marginRight="56dp"
+
+
                     android:layout_height="1dp"
                     android:layout_marginBottom="10dp"
                     android:background="#dad8d8"/>
@@ -409,8 +407,8 @@
                     android:textStyle="bold"
                     android:paddingLeft="16dp"
                     android:paddingTop="10dp"
-                    android:layout_marginLeft="46dp"
-                    android:layout_width="232dp"
+
+                    android:layout_width="match_parent"
                     android:textColor="@color/colorhint"
                     android:layout_height="wrap_content"
                     android:text="Apakah anda terbiasa sarapan pagi?"/>
@@ -418,13 +416,13 @@
                 <RadioGroup
                     android:id="@+id/rgSarapan"
                     android:orientation="vertical"
-                    android:layout_marginLeft="46dp"
+
                     android:layout_width="266dp"
                     android:layout_height="wrap_content">
                     <RadioButton
                         android:textColor="@color/colorhint"
                         android:text="Tidak Pernah"
-                        android:layout_width="232dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/rbTidakS"
                         android:layout_weight="1"/>
@@ -432,7 +430,7 @@
                     <RadioButton
                         android:textColor="@color/colorhint"
                         android:text="Kadang-kadang"
-                        android:layout_width="232dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/rbKadangS"
                         android:layout_weight="1"/>
@@ -440,7 +438,7 @@
                     <RadioButton
                         android:textColor="@color/colorhint"
                         android:text="Selalu"
-                        android:layout_width="232dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/rbSelaluS"
                         android:layout_weight="1"/>
@@ -449,8 +447,8 @@
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_marginLeft="56dp"
-                    android:layout_marginRight="56dp"
+
+
                     android:layout_height="1dp"
                     android:layout_marginBottom="10dp"
                     android:background="#dad8d8"/>
@@ -489,4 +487,7 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
+
+
 </LinearLayout>

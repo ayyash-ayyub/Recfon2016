@@ -116,20 +116,7 @@ public class Persetujuan extends AppCompatActivity {
 
         // On click of menu icon on toolbar
 
-        toolbar.setNavigationIcon(R.drawable.ic_menu_24dp);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-
-                if (ambil) {
-                    drawerLayout.openDrawer(GravityCompat.START);
-                } else {
-                    Toast.makeText(getApplicationContext(), "Anda harus menyetujui terlebih dahulu dengan cara klik tombol, SAYA SETUJU MENGIKUTI SURVEY, untuk dapat mengikuti survey", Toast.LENGTH_LONG).show();
-                }
-
-            }
-        });
 
         // On click of the navigation menu
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
