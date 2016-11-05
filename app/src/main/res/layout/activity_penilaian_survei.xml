@@ -158,7 +158,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <TextView
-                    android:text="Penilaina Keseluruhan"
+                    android:text="Penilaian Keseluruhan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
@@ -197,7 +197,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <TextView
-                    android:text="Jika survey online ini dilanjutkan SECARA ONLINE, Apakah anda bersedia untuk mengiukuti kembali?"
+                    android:text="Jika survey online ini dilanjutkan SECARA ONLINE, Apakah anda bersedia untuk mengikuti  kembali?"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"

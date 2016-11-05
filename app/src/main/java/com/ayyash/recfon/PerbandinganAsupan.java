@@ -51,7 +51,7 @@ public class PerbandinganAsupan extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Silahkan Tunggu...");
-        GetDataSebelumnya(ConfigUmum.CEK_INPUT_SEBELUMNYA +"email="+email+"&waktumakan=6");
+        GetDataSebelumnya(ConfigUmum.CEK_INPUT_SEBELUMNYA +"email="+email+"&waktumakan=5");
 
         btnSimpanAsupan = (Button)findViewById(R.id.btnYaAsupan);
 
@@ -185,7 +185,7 @@ public class PerbandinganAsupan extends AppCompatActivity {
                     // Toast.makeText(getApplicationContext(),response,Toast.LENGTH_LONG).show();
                     //GetData(ConfigUmum.URL_SHOW_MAKAN_SIANG + email);
                 }else {
-                    Toast.makeText(getApplicationContext(),"Silahkan lengkapi semua data makan diatas.",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Silahkan lengkapi semua data makan diatas (sampai makan malam).",Toast.LENGTH_SHORT).show();
                     finish();
                 }
 

@@ -5,8 +5,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.text.Html;
+import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -95,6 +101,12 @@ public class StatusGizi extends AppCompatActivity {
         PD = new ProgressDialog(this);
         PD.setMessage("Loading.....");
         PD.setCancelable(false);
+
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar6);
+        toolbar.setNavigationIcon(R.drawable.logo_atas);
+        toolbar.inflateMenu(R.menu.menu_main);
+        setSupportActionBar(toolbar);
 
 
         SharedPreferences sharedPreferences = getSharedPreferences(ConfigUmum.SHARED_PREF_NAME, Context.MODE_PRIVATE);
@@ -335,10 +347,6 @@ public class StatusGizi extends AppCompatActivity {
         finish();
     }
 
-
-
-
-
     private void Save() {
         PD.show();
         final String txtEmail = email.toString().trim();
@@ -403,5 +411,45 @@ public class StatusGizi extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         sR.setRetryPolicy(policy);
         requestQueue.add(sR);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.menu_help, menu);
+        return true;
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.menuHelp) {
+            // Toast.makeText(MainMenu.this,"ini help", Toast.LENGTH_LONG).show();
+            help();
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+
+    private void help() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Petunjuk");
+        // builder.setMessage("Anda diminta menuliskan jenis dan jumlah yang makanan dan minuman yang dikonsumsi selama 24 jam HARI INI (sejak bangun tidur hingga tidur lagi)");
+        // (Html.fromHtml("Hello "+"<b>"+"World"+"</b>"));
+        builder.setMessage(Html.fromHtml("Mohon untuk mengisi  "+
+                "semua pertanyaan dihalaman ini dengan sebenar-benarnya dengan cara ;."+ "<br><br><br>"  +
+                "<b>" + "1.Menuliskan berat & tinggi badan pada form yang telah disediakan." + "</b><br>" +
+                "<b>" + "2.Menjawab dengan opsi yang sesuai pada masing-masing pertanyaan." + "</b><br>" +
+                "<b>" + "3.Khusus riwayat penyakit, anda dapat memilih lebih dari satu dengan pilihan yang sesuai." + "</b><br>" +
+                "<br><br><br>" + "Pertanyaan di halaman ini cukup diisi sekali saja. jika ada perubahan data, maka akan otomatis mengganti/mengupdate data yang lama" +
+                ""));
+
+        builder.setPositiveButton("OK", null);
+        AlertDialog dialog = builder.show();
+        TextView messageText = (TextView) dialog.findViewById(android.R.id.message);
+        messageText.setGravity(Gravity.LEFT);
+        dialog.show();
+
     }
 }
