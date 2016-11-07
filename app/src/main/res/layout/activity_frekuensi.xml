@@ -47,6 +47,12 @@
             android:id="@+id/textView21" />
     </LinearLayout>
 
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView27" />
+
     <Space
         android:layout_width="match_parent"
         android:layout_height="20dp" />
@@ -155,7 +161,7 @@
                 android:id="@+id/bb11" />
 
             <Button
-                android:text="Kentang goreng"
+                android:text="Kentang"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:theme="@style/PrimaryButton"
@@ -356,7 +362,7 @@
                 android:id="@+id/bb33" />
 
             <Button
-                android:text="Sate ayanm"
+                android:text="Sate ayam"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:theme="@style/PrimaryButton"

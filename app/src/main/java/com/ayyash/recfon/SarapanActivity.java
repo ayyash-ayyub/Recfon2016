@@ -162,17 +162,15 @@ public class SarapanActivity extends AppCompatActivity {
 //                }
                 if (response.contains("tidak makan")){
                     bgSpinner.setVisibility(View.GONE);
-                    tidakSarapan.setVisibility(View.VISIBLE);
-                    rv_item.setVisibility(View.GONE);
                 }
 
-                progressDialog.hide();
+                progressDialog.dismiss();
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Toast.makeText(getApplicationContext(), "Gagal Konek ke server, periksa jaringan anda :(", Toast.LENGTH_SHORT).show();
-                progressDialog.hide();
+                progressDialog.dismiss();
             }
         });
 //        int socketTimeout = 30000;//30 seconds - change to what you want

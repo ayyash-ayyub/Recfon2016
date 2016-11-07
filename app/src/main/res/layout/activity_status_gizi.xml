@@ -369,7 +369,7 @@
 
                 <RadioGroup
                     android:id="@+id/rgMakanToday"
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
                     android:layout_width="249dp"
 
                     android:layout_height="wrap_content">
@@ -385,6 +385,14 @@
                     <RadioButton
                         android:textColor="@color/colorhint"
                         android:text="Kurang dari 3 Kali"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rbKurang3x"
+                        android:layout_weight="0.5"/>
+
+                    <RadioButton
+                        android:textColor="@color/colorhint"
+                        android:text="Lebih dari 3 Kali"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/rbLebih3x"
@@ -453,39 +461,36 @@
                     android:layout_marginBottom="10dp"
                     android:background="#dad8d8"/>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="100dp"
+                        android:layout_marginRight="100dp"
+                        android:text="Simpan"
+                        android:id="@+id/btnSaveStatusGizi"
+                        android:textAllCaps="false"
+                        android:theme="@style/PrimaryButton"
+                        android:layout_weight="1"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                    </LinearLayout>
+                </LinearLayout>
 
             </LinearLayout>
+
         </ScrollView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginBottom="5dp"
-                android:background="#dad8d8"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
-                android:layout_marginRight="100dp"
-                android:text="Simpan"
-                android:id="@+id/btnSaveStatusGizi"
-                android:textAllCaps="false"
-                android:theme="@style/PrimaryButton"
-                android:layout_weight="1"/>
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-
-            </LinearLayout>
-        </LinearLayout>
     </LinearLayout>
 
 

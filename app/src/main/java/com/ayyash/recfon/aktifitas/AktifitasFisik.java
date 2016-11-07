@@ -173,7 +173,7 @@ public class AktifitasFisik extends AppCompatActivity {
         builder.setMessage(Html.fromHtml(""+
                 "<b>" + "● Pilih aktifitas yang biasa anda lakukan" + "</b><br>" +
                 "<b>" + "● untuk setiap aktifitas yang dipilih, isikan berapa kali perminggu " + "</b><br>" +
-                ""));
+                "<br> <b>Catatan : </b> Aktivitas yang dapat direkam adalah aktifitas yang dilakukan lebih dari 10 menit."));
 
         builder.setPositiveButton("OK", null);
         android.support.v7.app.AlertDialog dialog = builder.show();

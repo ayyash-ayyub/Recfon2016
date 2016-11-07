@@ -263,90 +263,90 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
                     <!--<RadioGroup-->
-                        <!--android:id="@+id/rKerja"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content">-->
+                    <!--android:id="@+id/rKerja"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content">-->
 
-                        <CheckBox
-                            android:textColor="@color/colorhint"
-                            android:text="Tidak Ada"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/cbTidak"
-                            android:layout_weight="1"/>
+                    <CheckBox
+                        android:textColor="@color/colorhint"
+                        android:text="Tidak Ada"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbTidak"
+                        android:layout_weight="1"/>
 
-                        <CheckBox
-                            android:textColor="@color/colorhint"
-                            android:text="Tekanan Darah Tinggi"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/cbHipertensi"
-                            android:layout_weight="1"/>
+                    <CheckBox
+                        android:textColor="@color/colorhint"
+                        android:text="Tekanan Darah Tinggi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbHipertensi"
+                        android:layout_weight="1"/>
 
-                        <CheckBox
-                            android:textColor="@color/colorhint"
-                            android:text="Diabetes"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/cbDiabetes"
-                            android:layout_weight="1"/>
-                        <CheckBox
-                            android:textColor="@color/colorhint"
-                            android:text="Kolesterol"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/cbKolesterol"
-                            android:layout_weight="1"/>
-                        <CheckBox
-                            android:textColor="@color/colorhint"
-                            android:text="Penyakit Jantung"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/cbJantung"
-                            android:layout_weight="1"/>
-                        <CheckBox
-                                android:textColor="@color/colorhint"
-                                android:text="Penyakit Ginjal"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/cbGinjal"
-                                android:layout_weight="1"/>
-                        <CheckBox
-                                android:textColor="@color/colorhint"
-                                android:text="Kanker"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/cbKanker"
-                                android:layout_weight="1"/>
-                        <CheckBox
-                                android:textColor="@color/colorhint"
-                                android:text="Stroke (Pernah Mengalami)"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/cbStroke"
-                                android:layout_weight="1"/>
-                        <CheckBox
-                                android:textColor="@color/colorhint"
-                                android:text="Sakit Punggung Bawah"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/cbPunggung"
-                                android:layout_weight="1"/>
-                        <CheckBox
-                                android:textColor="@color/colorhint"
-                                android:text="Pengapuran/Nyeri Sendi"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/cbPengapuran"
-                                android:layout_weight="1"/>
-                        <CheckBox
-                                android:textColor="@color/colorhint"
-                                android:text="Tuberkulosis"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/cbTBC"
-                                android:layout_weight="1"/>
-                        <!--</RadioGroup>-->
+                    <CheckBox
+                        android:textColor="@color/colorhint"
+                        android:text="Diabetes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbDiabetes"
+                        android:layout_weight="1"/>
+                    <CheckBox
+                        android:textColor="@color/colorhint"
+                        android:text="Kolesterol"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbKolesterol"
+                        android:layout_weight="1"/>
+                    <CheckBox
+                        android:textColor="@color/colorhint"
+                        android:text="Penyakit Jantung"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbJantung"
+                        android:layout_weight="1"/>
+                    <CheckBox
+                        android:textColor="@color/colorhint"
+                        android:text="Penyakit Ginjal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbGinjal"
+                        android:layout_weight="1"/>
+                    <CheckBox
+                        android:textColor="@color/colorhint"
+                        android:text="Kanker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbKanker"
+                        android:layout_weight="1"/>
+                    <CheckBox
+                        android:textColor="@color/colorhint"
+                        android:text="Stroke (Pernah Mengalami)"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbStroke"
+                        android:layout_weight="1"/>
+                    <CheckBox
+                        android:textColor="@color/colorhint"
+                        android:text="Sakit Punggung Bawah"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbPunggung"
+                        android:layout_weight="1"/>
+                    <CheckBox
+                        android:textColor="@color/colorhint"
+                        android:text="Pengapuran/Nyeri Sendi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbPengapuran"
+                        android:layout_weight="1"/>
+                    <CheckBox
+                        android:textColor="@color/colorhint"
+                        android:text="Tuberkulosis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cbTBC"
+                        android:layout_weight="1"/>
+                    <!--</RadioGroup>-->
                 </LinearLayout>
 
                 <View
@@ -367,31 +367,39 @@
                     android:layout_height="wrap_content"
                     android:text="Rata-rata Makan Utama per-hari"/>
 
-                    <RadioGroup
-                        android:id="@+id/rgMakanToday"
-                        android:orientation="horizontal"
-                        android:layout_width="249dp"
+                <RadioGroup
+                    android:id="@+id/rgMakanToday"
+                    android:orientation="vertical"
+                    android:layout_width="249dp"
 
-                        android:layout_height="wrap_content">
-                        <RadioButton
+                    android:layout_height="wrap_content">
+                    <RadioButton
 
-                            android:textColor="@color/colorhint"
-                            android:text="3 Kali"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/rb3x"
-                            android:layout_weight="1"/>
+                        android:textColor="@color/colorhint"
+                        android:text="3 Kali"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rb3x"
+                        android:layout_weight="1"/>
 
-                        <RadioButton
-                            android:textColor="@color/colorhint"
-                            android:text="Kurang dari 3 Kali"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/rbLebih3x"
-                            android:layout_weight="0.5"/>
+                    <RadioButton
+                        android:textColor="@color/colorhint"
+                        android:text="Kurang dari 3 Kali"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rbKurang3x"
+                        android:layout_weight="0.5"/>
+
+                    <RadioButton
+                        android:textColor="@color/colorhint"
+                        android:text="Lebih dari 3 Kali"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rbLebih3x"
+                        android:layout_weight="0.5"/>
 
 
-                    </RadioGroup>
+                </RadioGroup>
 
 
 
@@ -403,89 +411,86 @@
                     android:layout_marginBottom="10dp"
                     android:background="#dad8d8"/>
 
-                    <TextView
-                        android:textStyle="bold"
-                        android:paddingLeft="16dp"
-                        android:paddingTop="10dp"
+                <TextView
+                    android:textStyle="bold"
+                    android:paddingLeft="16dp"
+                    android:paddingTop="10dp"
 
-                        android:layout_width="match_parent"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/colorhint"
+                    android:layout_height="wrap_content"
+                    android:text="Apakah anda terbiasa sarapan pagi?"/>
+
+                <RadioGroup
+                    android:id="@+id/rgSarapan"
+                    android:orientation="vertical"
+
+                    android:layout_width="266dp"
+                    android:layout_height="wrap_content">
+                    <RadioButton
                         android:textColor="@color/colorhint"
-                        android:layout_height="wrap_content"
-                        android:text="Apakah anda terbiasa sarapan pagi?"/>
-
-                        <RadioGroup
-                            android:id="@+id/rgSarapan"
-                            android:orientation="vertical"
-
-                            android:layout_width="266dp"
-                            android:layout_height="wrap_content">
-                            <RadioButton
-                                android:textColor="@color/colorhint"
-                                android:text="Tidak Pernah"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/rbTidakS"
-                                android:layout_weight="1"/>
-
-                            <RadioButton
-                                android:textColor="@color/colorhint"
-                                android:text="Kadang-kadang"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/rbKadangS"
-                                android:layout_weight="1"/>
-
-                            <RadioButton
-                                android:textColor="@color/colorhint"
-                                android:text="Selalu"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:id="@+id/rbSelaluS"
-                                android:layout_weight="1"/>
-                        </RadioGroup>
-
-
-                    <View
+                        android:text="Tidak Pernah"
                         android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rbTidakS"
+                        android:layout_weight="1"/>
+
+                    <RadioButton
+                        android:textColor="@color/colorhint"
+                        android:text="Kadang-kadang"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rbKadangS"
+                        android:layout_weight="1"/>
+
+                    <RadioButton
+                        android:textColor="@color/colorhint"
+                        android:text="Selalu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rbSelaluS"
+                        android:layout_weight="1"/>
+                </RadioGroup>
 
 
-                        android:layout_height="1dp"
-                        android:layout_marginBottom="10dp"
-                        android:background="#dad8d8"/>
+                <View
+                    android:layout_width="match_parent"
 
 
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#dad8d8"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="100dp"
+                        android:layout_marginRight="100dp"
+                        android:text="Simpan"
+                        android:id="@+id/btnSaveStatusGizi"
+                        android:textAllCaps="false"
+                        android:theme="@style/PrimaryButton"
+                        android:layout_weight="1"/>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                    </LinearLayout>
+                </LinearLayout>
 
             </LinearLayout>
+
         </ScrollView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginBottom="5dp"
-                android:background="#dad8d8"/>
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
-                android:layout_marginRight="100dp"
-                android:text="Simpan"
-                android:id="@+id/btnSaveStatusGizi"
-                android:textAllCaps="false"
-                android:theme="@style/PrimaryButton"
-                android:layout_weight="1"/>
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-
-            </LinearLayout>
-        </LinearLayout>
     </LinearLayout>
 
 

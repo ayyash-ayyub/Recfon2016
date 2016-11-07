@@ -1693,12 +1693,22 @@ public class PerhitunganSelinganMalam extends AppCompatActivity {
                         double hKalori = (urt / 100) * k;
 
                         //buat batasi digit coma
-                        double hEnergiSort = Math.round(hEnergi * 100) / 100;
-                        double hProteinSort = Math.round(hProtein * 100) / 100;
-                        double hLemakSort = Math.round(hLemak * 100) / 100;
-                        double hKaloriSort = Math.round(hKalori * 100) / 100;
+//                        double hEnergiSort = Math.round(hEnergi * 100) / 100;
+//                        double hProteinSort = Math.round(hProtein * 100) / 100;
+//                        double hLemakSort = Math.round(hLemak * 100) / 100;
+//                        double hKaloriSort = Math.round(hKalori * 100) / 100;
 
+                        hEnergiSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
+                        hLemakSort = df.format(hLemak);
+                        hKaloriSort = df.format(hKalori);
 
+                        //JANGAN DIUTAK ATIK
+
+                        penampungProgres = String.valueOf(progress);
+                        penampungUkuran = String.valueOf(ukuran);
+
+                        Save();
                     }
                 });
                 break;
@@ -3929,7 +3939,7 @@ public class PerhitunganSelinganMalam extends AppCompatActivity {
                             urt = 80 * pengali;
                             ukuran = "Buah besar";
                         } else if (r3.isChecked()) {
-                            urt = 20 * pengali;
+                            urt = 30 * pengali;
                             ukuran = "Buah kecil";
                         }
 

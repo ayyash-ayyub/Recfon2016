@@ -72,12 +72,17 @@ public class MainAdapter extends RecyclerView.Adapter<MainHolder> {
         queue.add(stringRequest);
     }
 
-
     @Override
     public void onBindViewHolder(MainHolder holder, final int position) {
-        holder.txt_name.setText("Nama Makanan : "+resultsList.get(position).nama_makanan);
-        holder.txt_office.setText("Porsi : "+resultsList.get(position).jumlah_besaran_makanan);
-        holder.txtUkuran.setText("Ukuran : "+resultsList.get(position).besaran_makanan);
+        if (resultsList.get(position).nama_makanan.equalsIgnoreCase("Tidak Makan")){
+            holder.txt_name.setText("Anda Telah Memilih Tidak Makan");
+            holder.txt_office.setVisibility(View.INVISIBLE);
+            holder.txtUkuran.setVisibility(View.INVISIBLE);
+        }else {
+            holder.txt_name.setText("Nama Makanan : " + resultsList.get(position).nama_makanan);
+            holder.txt_office.setText("Porsi : " + resultsList.get(position).jumlah_besaran_makanan);
+            holder.txtUkuran.setText("Ukuran : " + resultsList.get(position).besaran_makanan);
+        }
 
         final String nama_makanan =resultsList.get(position).nama_makanan;
         final String idd = resultsList.get(position).id;

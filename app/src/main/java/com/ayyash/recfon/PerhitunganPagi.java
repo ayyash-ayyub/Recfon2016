@@ -1692,10 +1692,23 @@ public class PerhitunganPagi extends AppCompatActivity {
                         double hKalori = (urt / 100) * k;
 
                         //buat batasi digit coma
-                        double hEnergiSort = Math.round(hEnergi * 100) / 100;
-                        double hProteinSort = Math.round(hProtein * 100) / 100;
-                        double hLemakSort = Math.round(hLemak * 100) / 100;
-                        double hKaloriSort = Math.round(hKalori * 100) / 100;
+//                        double hEnergiSort = Math.round(hEnergi * 100) / 100;
+//                        double hProteinSort = Math.round(hProtein * 100) / 100;
+//                        double hLemakSort = Math.round(hLemak * 100) / 100;
+//                        double hKaloriSort = Math.round(hKalori * 100) / 100;
+
+                        hEnergiSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
+                        hLemakSort = df.format(hLemak);
+                        hKaloriSort = df.format(hKalori);
+
+                        //JANGAN DIUTAK ATIK
+
+                        penampungProgres = String.valueOf(progress);
+                        penampungUkuran = String.valueOf(ukuran);
+
+
+                        Save();
 
 
                     }
@@ -3929,7 +3942,7 @@ public class PerhitunganPagi extends AppCompatActivity {
                             urt = 80 * pengali;
                             ukuran = "Buah besar";
                         } else if (r3.isChecked()) {
-                            urt = 20 * pengali;
+                            urt = 30 * pengali;
                             ukuran = "Buah kecil";
                         }
 
@@ -7256,10 +7269,10 @@ public class PerhitunganPagi extends AppCompatActivity {
                 hitung.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        double e = 319.38;
-                        double p = 4.65;
-                        double l = 0.52;
-                        double k = 71.67;
+                        double e = 341.72;
+                        double p = 5.84;
+                        double l = 2.34;
+                        double k = 72.41;
 
                         if (r1.isChecked()) {
                             urt = 50 * pengali;

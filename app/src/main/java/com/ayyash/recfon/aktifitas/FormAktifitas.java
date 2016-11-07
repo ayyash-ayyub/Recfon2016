@@ -130,6 +130,10 @@ public class FormAktifitas extends AppCompatActivity {
                 kategori = "Sedang";
                 break;
             case 22:
+            case 23:
+            case 24:
+            case 25:
+            case 26:
                 kategori = "Ringan";
                 break;
         }
@@ -138,7 +142,19 @@ public class FormAktifitas extends AppCompatActivity {
         Simpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Save();
+                if (txtFrekuensi.getText().equals("") && Menit.getText().equals("")){
+                    Toast.makeText(getApplicationContext(),"Mohon Mengisikan semua data pada kolom.",Toast.LENGTH_LONG).show();
+
+                }else {
+                    int a = Integer.parseInt(Menit.getText().toString());
+
+                    if (a < 10) {
+                        Toast.makeText(getApplicationContext(), "Aktifitas yang direkam adalah aktifitas yang dilakukan selama lebih dari 10 menit.", Toast.LENGTH_LONG).show();
+                    } else {
+                        Save();
+                    }
+//                Save();
+                }
             }
         });
 

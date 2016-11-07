@@ -199,10 +199,10 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 rm1.setVisibility(View.GONE);
 
 
-                 e = 177.00;
-                 p = 3.90;
-                 l = 0.20;
-                 k = 39.95;
+                e = 177.00;
+                p = 3.90;
+                l = 0.20;
+                k = 39.95;
                 berat = 50;
                 ukuran = "centong";
                 //jangan diapa-apain
@@ -374,7 +374,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         n = Integer.parseInt(x);
 
 
-                            urt = berat * pengali * n /frekuensi;
+                        urt = berat * pengali * n /frekuensi;
 
                         //Batas disesuaikan
 
@@ -480,7 +480,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         n = Integer.parseInt(x);
 
 
-                            urt = berat * pengali * n /frekuensi;
+                        urt = berat * pengali * n /frekuensi;
 
 
 
@@ -588,7 +588,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         n = Integer.parseInt(x);
 
 
-                            urt = berat * pengali * n /frekuensi;
+                        urt = berat * pengali * n /frekuensi;
 
 
 
@@ -695,7 +695,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         n = Integer.parseInt(x);
 
 
-                            urt = berat * pengali * n /frekuensi;
+                        urt = berat * pengali * n /frekuensi;
 
 
                         //Batas disesuaikan
@@ -802,7 +802,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         n = Integer.parseInt(x);
 
 
-                            urt = berat * pengali * n /frekuensi;
+                        urt = berat * pengali * n /frekuensi;
 
 
 
@@ -840,6 +840,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 rm1.setText("Mie goreng (Bukan instant)");
                 rm2.setText("kwetiaw goreng");
                 rm3.setText("Bihun Goreng");
+                keteranganPilihan.setVisibility(View.VISIBLE);
                 rm3.setVisibility(View.VISIBLE);
                 rm2.setVisibility(View.VISIBLE);
 
@@ -930,7 +931,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 //                        Toast.makeText(getApplicationContext(),"uhuy" + txtFrekuensi.getText().toString().trim(),Toast.LENGTH_LONG).show();
 
 
-                         urt = berat * pengali * n /frekuensi;
+                        urt = berat * pengali * n /frekuensi;
 
 
 
@@ -1299,6 +1300,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 rm2.setText("Singkong goreng");
                 rm3.setText("Ubi rebus");
                 rm4.setText("Singkong rebus");
+                keteranganPilihan.setVisibility(View.VISIBLE);
                 rm2.setVisibility(View.VISIBLE);
                 rm3.setVisibility(View.VISIBLE);
                 rm4.setVisibility(View.VISIBLE);
@@ -1430,14 +1432,14 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                                 @Override
                                 public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
-                                if (r1.isChecked()) {
-                                    berat = 100;
-                                    ukuran = "potong besar";
-                                }else if (r2.isChecked()) {
-                                    berat = 50;
+                                    if (r1.isChecked()) {
+                                        berat = 100;
+                                        ukuran = "potong besar";
+                                    }else if (r2.isChecked()) {
+                                        berat = 50;
 
-                                    ukuran = "potong kecil";
-                                }
+                                        ukuran = "potong kecil";
+                                    }
 
                                 }
                             });
@@ -1497,7 +1499,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 Img.setImageResource(R.drawable.perkedel_kentang);
                 rm1.setText("Perkedel kentang");
                 rm2.setText("Kentang goreng");
-                keteranganPilihan.setVisibility(View.GONE);
+                keteranganPilihan.setVisibility(View.VISIBLE);
                 rm1.setVisibility(View.VISIBLE);
                 rm2.setVisibility(View.VISIBLE);
 
@@ -1658,7 +1660,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 rm1.setText("Labu siam masak santan");
                 rm2.setText("Gulai daun singkong");
                 rm3.setText("Sayur lodeh");
-                keteranganPilihan.setVisibility(View.GONE);
+                keteranganPilihan.setVisibility(View.VISIBLE);
                 rm1.setVisibility(View.VISIBLE);
                 rm2.setVisibility(View.VISIBLE);
                 rm3.setVisibility(View.VISIBLE);
@@ -1715,7 +1717,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r2.setVisibility(View.GONE);
 
 
-                                ukuran = "sendok sayur";
+                            ukuran = "sendok sayur";
 
                             Img.setImageResource(R.drawable.labu_siam_masak_santan);
                             namaMakanan.setText("Labu siam masak santan");
@@ -1732,7 +1734,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r2.setVisibility(View.GONE);
 
 
-                                ukuran = "mangkok";
+                            ukuran = "mangkok";
 
 
                             Img.setImageResource(R.drawable.gulai_daun_singkong);
@@ -1820,7 +1822,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 rm1.setText("Tumis kacang panjang");
                 rm2.setText("Tumis kangkung");
                 rm3.setText("Tumis sawi hijau / Bok choy");
-                keteranganPilihan.setVisibility(View.GONE);
+                keteranganPilihan.setVisibility(View.VISIBLE);
                 rm1.setVisibility(View.VISIBLE);
                 rm2.setVisibility(View.VISIBLE);
                 rm3.setVisibility(View.VISIBLE);
@@ -1877,18 +1879,18 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r2.setText("piring");
                             r1.setVisibility(View.VISIBLE);
                             r2.setVisibility(View.VISIBLE);
-                        rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-                            @Override
-                            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                                if (r1.isChecked()) {
-                                    berat = 15;
-                                    ukuran = "sendok makan";
-                                }else if (r2.isChecked()) {
-                                    berat = 100;
-                                    ukuran = "piring";
+                            rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                                @Override
+                                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                                    if (r1.isChecked()) {
+                                        berat = 15;
+                                        ukuran = "sendok makan";
+                                    }else if (r2.isChecked()) {
+                                        berat = 100;
+                                        ukuran = "piring";
+                                    }
                                 }
-                            }
-                        });
+                            });
 
                             Img.setImageResource(R.drawable.tumis_kacang_panjang);
                             namaMakanan.setText("Tumis kacang panjang");
@@ -1970,7 +1972,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         n = Integer.parseInt(x);
 
 
-                            urt = berat * pengali * n /frekuensi;
+                        urt = berat * pengali * n /frekuensi;
 
 
                         //Batas disesuaikan
@@ -2008,7 +2010,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 rm1.setText("Sayur sop");
                 rm2.setText("Sayur bening bayam");
                 rm3.setText("Sayur asam");
-                keteranganPilihan.setVisibility(View.GONE);
+                keteranganPilihan.setVisibility(View.VISIBLE);
                 rm1.setVisibility(View.VISIBLE);
                 rm2.setVisibility(View.VISIBLE);
                 rm3.setVisibility(View.VISIBLE);
@@ -2095,17 +2097,17 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r1.setVisibility(View.VISIBLE);
                             r2.setVisibility(View.VISIBLE);
                             rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-                                  @Override
-                                  public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                                      if (r1.isChecked()) {
-                                          berat = 15;
-                                          ukuran = "sendok sayur";
-                                      } else if (r2.isChecked()) {
-                                          berat = 100;
-                                          ukuran = "mangkok";
-                                      }
-                                  }
-                              });
+                                @Override
+                                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                                    if (r1.isChecked()) {
+                                        berat = 15;
+                                        ukuran = "sendok sayur";
+                                    } else if (r2.isChecked()) {
+                                        berat = 100;
+                                        ukuran = "mangkok";
+                                    }
+                                }
+                            });
 
                             Img.setImageResource(R.drawable.sayur_bayam_bening);
                             namaMakanan.setText("Sayur bening bayam");
@@ -2159,7 +2161,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         n = Integer.parseInt(x);
 
 
-                            urt = berat * pengali * n /frekuensi;
+                        urt = berat * pengali * n /frekuensi;
 
 
                         //Batas disesuaikan
@@ -2198,7 +2200,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 rm2.setText("Sayur pecel");
                 rm3.setText("Gado - gado / Karedok");
                 rm4.setText("Ketoprak");
-                keteranganPilihan.setVisibility(View.GONE);
+                keteranganPilihan.setVisibility(View.VISIBLE);
                 rm1.setVisibility(View.VISIBLE);
                 rm2.setVisibility(View.VISIBLE);
                 rm3.setVisibility(View.VISIBLE);
@@ -2287,7 +2289,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r2.setVisibility(View.GONE);
 
 
-                                ukuran = "porsi";
+                            ukuran = "porsi";
 
 
                             Img.setImageResource(R.drawable.sayur_pecel);
@@ -2358,7 +2360,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         n = Integer.parseInt(x);
 
 
-                            urt = berat * pengali * n /frekuensi;
+                        urt = berat * pengali * n /frekuensi;
 
 
                         //Batas disesuaikan
@@ -2969,7 +2971,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 rm1.setText("Semangka");
                 rm2.setText("Melon");
                 rm3.setText("Apel");
-                keteranganPilihan.setVisibility(View.GONE);
+                keteranganPilihan.setVisibility(View.VISIBLE);
                 rm1.setVisibility(View.VISIBLE);
                 rm2.setVisibility(View.VISIBLE);
                 rm3.setVisibility(View.VISIBLE);
@@ -3701,7 +3703,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 rm2.setText("Gulai sapi / Kambing");
                 rm3.setText("Rawon daging");
                 rm4.setText("Tongseng sapi / kambing");
-                keteranganPilihan.setVisibility(View.GONE);
+                keteranganPilihan.setVisibility(View.VISIBLE);
                 rm1.setVisibility(View.VISIBLE);
                 rm2.setVisibility(View.VISIBLE);
                 rm3.setVisibility(View.VISIBLE);
@@ -4076,6 +4078,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 rm1.setText("Bakso sapi");
                 rm2.setText("Sosis sapi bakar");
                 rm3.setText("Sosis ayam bakar");
+                keteranganPilihan.setVisibility(View.VISIBLE);
                 rm2.setVisibility(View.VISIBLE);
                 rm3.setVisibility(View.VISIBLE);
 
@@ -4607,6 +4610,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 rm1.setText("Tongkol goreng / Pesmol / Masak balado");
                 rm2.setText("Lele goreng / Pesmol / Masak balado");
                 rm3.setText("Mujair goreng / Pesmol / Masak balado");
+                keteranganPilihan.setVisibility(View.VISIBLE);
                 rm1.setVisibility(View.VISIBLE);
                 rm2.setVisibility(View.VISIBLE);
                 rm3.setVisibility(View.VISIBLE);
@@ -4784,6 +4788,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 rm2.setText("Udang kukus / Rebus / Masak sup");
                 rm3.setText("Cumi kukus / Rebus / Masak sup");
                 rm4.setText("Cumi goreng / Pesmol / Masak balado");
+                keteranganPilihan.setVisibility(View.VISIBLE);
                 rm1.setVisibility(View.VISIBLE);
                 rm2.setVisibility(View.VISIBLE);
                 rm3.setVisibility(View.VISIBLE);
@@ -4877,13 +4882,13 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                                 public void onCheckedChanged(RadioGroup radioGroup, int i) {
 
 
-                                if (r1.isChecked()) {
-                                    berat = 10;
-                                    ukuran = "ekor sedang";
-                                }else if (r2.isChecked()) {
-                                    berat = 6;
-                                    ukuran = "ekor kecil";
-                                }
+                                    if (r1.isChecked()) {
+                                        berat = 10;
+                                        ukuran = "ekor sedang";
+                                    }else if (r2.isChecked()) {
+                                        berat = 6;
+                                        ukuran = "ekor kecil";
+                                    }
                                 }
                             });
 
@@ -5001,7 +5006,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 rm1.setText("Hati ayam goreng");
                 rm2.setText("Rempela ayam goreng");
                 rm3.setText("Usus ayam goreng");
-                keteranganPilihan.setVisibility(View.GONE);
+                keteranganPilihan.setVisibility(View.VISIBLE);
                 rm1.setVisibility(View.VISIBLE);
                 rm2.setVisibility(View.VISIBLE);
                 rm3.setVisibility(View.VISIBLE);
@@ -5091,7 +5096,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             r2.setVisibility(View.GONE);
 
 
-                                ukuran = "tusuk";
+                            ukuran = "tusuk";
 
                             Img.setImageResource(R.drawable.usus);
                             namaMakanan.setText("Usus ayam goreng");
@@ -5328,7 +5333,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         n = Integer.parseInt(x);
 
 
-                            urt = berat * pengali * n /frekuensi;
+                        urt = berat * pengali * n /frekuensi;
 
 
 
@@ -5366,6 +5371,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 rm1.setText("Perkedel jagung");
                 rm2.setText("Bakwan sayuran");
                 rm2.setVisibility(View.VISIBLE);
+                keteranganPilihan.setVisibility(View.VISIBLE);
 
                 e = 224.06;
                 p = 5.19;
@@ -5481,6 +5487,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 Img.setImageResource(R.drawable.roti_manis_isi);
                 rm1.setText("Roti manis / Roti isi");
                 rm2.setText("Bolu kukus");
+                keteranganPilihan.setVisibility(View.VISIBLE);
                 rm2.setVisibility(View.VISIBLE);
 
                 e = 267.00;
@@ -5698,6 +5705,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 Img.setImageResource(R.drawable.martabak_telur);
                 rm1.setText("Martabak telur");
                 rm2.setText("Martabak manis");
+                keteranganPilihan.setVisibility(View.VISIBLE);
                 rm2.setVisibility(View.VISIBLE);
 
                 e = 274.55;
@@ -5922,6 +5930,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 rm4.setText("Biskuit coklat (Good time, Choco mania)");
                 rm5.setText("Biskuit krim (Oreo)");
                 rm6.setText("Biskuit selai (Slai Olai)");
+                keteranganPilihan.setVisibility(View.VISIBLE);
                 rm2.setVisibility(View.VISIBLE);
                 rm3.setVisibility(View.VISIBLE);
                 rm4.setVisibility(View.VISIBLE);
@@ -6113,7 +6122,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 
                 Img.setImageResource(R.drawable.coklat_batang);
                 rm1.setText("Coklat batang (Silver queen, Cadbury, Chunky bar)");
-                keteranganPilihan.setVisibility(View.GONE);
+                keteranganPilihan.setVisibility(View.VISIBLE);
                 rm1.setVisibility(View.VISIBLE);
                 rm2.setVisibility(View.GONE);
 
@@ -6260,6 +6269,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 rm1.setText("Cilok");
                 rm2.setText("Cireng");
                 rm3.setText("Seblak basah");
+                keteranganPilihan.setVisibility(View.VISIBLE);
                 rm3.setVisibility(View.VISIBLE);
                 rm2.setVisibility(View.VISIBLE);
 
@@ -6371,7 +6381,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 
 
 
-                            urt = berat * pengali * n /frekuensi;
+                        urt = berat * pengali * n /frekuensi;
 
 
                         //JANGAN DIGANTI BAGIAN INI
@@ -6406,6 +6416,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 rm1.setText("Kerupuk udang");
                 rm2.setText("Keripik kentang");
                 rm3.setText("Keripik singkong");
+                keteranganPilihan.setVisibility(View.VISIBLE);
                 rm3.setVisibility(View.VISIBLE);
                 rm2.setVisibility(View.VISIBLE);
 
@@ -6933,6 +6944,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 Img.setImageResource(R.drawable.minuman_kemasan_sari_buah);
                 rm1.setText("Minuman kemasan sari buah (Buahvita, Floridina, Minute maid pulpy, Ale ale, Country choice)");
                 rm2.setText("Minuman serbuk sari buah (Nutrisari, Marimas)");
+                keteranganPilihan.setVisibility(View.VISIBLE);
                 rm1.setVisibility(View.VISIBLE);
                 rm2.setVisibility(View.VISIBLE);
 
@@ -7056,15 +7068,15 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 
                 rg.setVisibility(View.VISIBLE);
 
-        r1.setText("Botol Minute Maid");
-        r2.setText("Botol Floridina");
-        r3.setText("Kotak Buahvita/Country Choice");
-        r4.setText("Gelas Ale ale");
+                r1.setText("Botol Minute Maid");
+                r2.setText("Botol Floridina");
+                r3.setText("Kotak Buahvita/Country Choice");
+                r4.setText("Gelas Ale ale");
 
-        r1.setVisibility(View.VISIBLE);
-        r2.setVisibility(View.VISIBLE);
-        r3.setVisibility(View.VISIBLE);
-        r4.setVisibility(View.VISIBLE);
+                r1.setVisibility(View.VISIBLE);
+                r2.setVisibility(View.VISIBLE);
+                r3.setVisibility(View.VISIBLE);
+                r4.setVisibility(View.VISIBLE);
 
 
                 System.out.println("urt luar :"+ urt +"="+berat +"*"+ pengali +"*"+ n +"/"+frekuensi);
@@ -7185,7 +7197,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         n = Integer.parseInt(x);
 
 
-                            urt = berat * pengali * n /frekuensi;
+                        urt = berat * pengali * n /frekuensi;
 
 
 
@@ -7223,6 +7235,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                 rm1.setText("Kopi instant bubuk (Abc, Good day, Nescafe, Kapal api)");
                 rm2.setText("Kopi instant bubuk siap minum (kopiko 78, Good day)");
                 rm3.setText("Kopi manis bukan kemasan (Gula pasirnya)");
+                keteranganPilihan.setVisibility(View.VISIBLE);
                 rm2.setVisibility(View.VISIBLE);
                 rm3.setVisibility(View.VISIBLE);
 
@@ -7421,7 +7434,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
 
                 break;
 
-                case 55:
+            case 55:
 
                 id_bahan_makanan = "55";
                 namaMakanan.setText("Es teler / Es campur / Es goyobod");
@@ -7498,7 +7511,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         n = Integer.parseInt(x);
 
 
-                            urt = berat * pengali * n /frekuensi;
+                        urt = berat * pengali * n /frekuensi;
 
 
                         //Batas disesuaikan
@@ -7525,7 +7538,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                         Save();
                     }
                 });
-                    break;
+                break;
 
             case 56:
 
