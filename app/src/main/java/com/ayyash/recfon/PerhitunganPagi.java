@@ -1099,6 +1099,8 @@ public class PerhitunganPagi extends AppCompatActivity {
                 Img.setImageResource(R.drawable.perkedel_kentang);
                 rg.setVisibility(View.VISIBLE);
 
+                r3.setVisibility(View.VISIBLE);
+
                 r1.setText("Buah besar");
                 r2.setText("Buah sedang");
                 r3.setText("Buah kecil");
