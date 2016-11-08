@@ -3207,7 +3207,7 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             berat = 40;
                             ukuran = "potong sedang";
                         }else if (r3.isChecked()) {
-                            berat = 20;
+                            berat = 30;
                             ukuran = "potong kecil";
                         }
 
@@ -4168,10 +4168,10 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             l = 31.83;
                             k = 11.00;
                             berat = 70;
-                            ukuran = "buah sosis besar";
+                            ukuran = "sosis besar";
 
-                            r1.setText("buah sosis besar");
-                            r1.setText("buah sosis sedang");
+                            r1.setText("sosis besar");
+                            r1.setText("sosis sedang");
                             r1.setVisibility(View.VISIBLE);
                             r2.setVisibility(View.VISIBLE);
                             r3.setVisibility(View.GONE);
@@ -4181,10 +4181,10 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                                 public void onCheckedChanged(RadioGroup radioGroup, int i) {
                                     if (r1.isChecked()) {
                                         berat = 70;
-                                        ukuran = "buah sosis besar";
+                                        ukuran = "sosis besar";
                                     }else if (r2.isChecked()) {
                                         berat = 30;
-                                        ukuran = "buah sosis sedang";
+                                        ukuran = "sosis sedang";
                                     }
                                 }
                             });
@@ -4198,10 +4198,10 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                             l = 20.80;
                             k = 9.28;
                             berat = 70;
-                            ukuran = "buah sosis besar";
+                            ukuran = "sosis besar";
 
-                            r1.setText("buah sosis besar");
-                            r1.setText("buah sosis sedang");
+                            r1.setText("sosis besar");
+                            r1.setText("sosis sedang");
                             r1.setVisibility(View.VISIBLE);
                             r2.setVisibility(View.VISIBLE);
                             r3.setVisibility(View.GONE);
@@ -4211,10 +4211,10 @@ public class FormFrekuensiMakan extends AppCompatActivity {
                                 public void onCheckedChanged(RadioGroup radioGroup, int i) {
                                     if (r1.isChecked()) {
                                         berat = 70;
-                                        ukuran = "buah sosis besar";
+                                        ukuran = "sosis besar";
                                     }else if (r2.isChecked()) {
                                         berat = 30;
-                                        ukuran = "buah sosis sedang";
+                                        ukuran = "sosis sedang";
                                     }
                                 }
                             });

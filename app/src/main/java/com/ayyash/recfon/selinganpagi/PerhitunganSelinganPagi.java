@@ -9815,6 +9815,55 @@ public class PerhitunganSelinganPagi extends AppCompatActivity {
                 });
                 break;
 
+            case 182:
+                Img.setImageResource(R.drawable.rujak);
+                rg.setVisibility(View.VISIBLE);
+
+                r1.setText("porsi");
+                r2.setVisibility(View.GONE);
+
+                hitung.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        double e = 123;
+                        double p = 2.3;
+                        double l = 2.7;
+                        double k = 23.7;
+
+                        if (r1.isChecked()) {
+                            urt = 408 * pengali;
+                            ukuran = "porsi";
+                        }
+
+                        //JANGAN DIGANTI BAGIAN INI
+                        double hEnergi = (urt / 100) * e;
+                        double hProtein = (urt / 100) * p;
+                        double hLemak = (urt / 100) * l;
+                        double hKalori = (urt / 100) * k;
+
+                        //buat batasi digit coma
+//                        double hEnergiSort = Math.round(hEnergi * 100) / 100;
+//                        double hProteinSort = Math.round(hProtein * 100) / 100;
+//                        double hLemakSort = Math.round(hLemak * 100) / 100;
+//                        double hKaloriSort = Math.round(hKalori * 100) / 100;
+
+                        hEnergiSort = df.format(hEnergi);
+                        hProteinSort = df.format(hProtein);
+                        hLemakSort = df.format(hLemak);
+                        hKaloriSort = df.format(hKalori);
+
+                        //JANGAN DIUTAK ATIK
+
+                        penampungProgres = String.valueOf(progress);
+                        penampungUkuran = String.valueOf(ukuran);
+
+
+
+                        Save();
+                    }
+                });
+                break;
+
 
 //            case 181:
 //                Img.setImageResource(R.drawable.selai);

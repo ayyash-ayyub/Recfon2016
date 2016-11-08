@@ -157,12 +157,7 @@ public class SelinganSiangActivity extends AppCompatActivity {
                 objectBelajar = mGson.fromJson(response, ItemObject.ObjectBelajar.class);
                 adapter = new MainAdapter(getApplication(), objectBelajar.result);
                 rv_item.setAdapter(adapter);
-//                if(response.contains("1")){
-//                    tidakSarapan.setVisibility(View.INVISIBLE);
-//                }else {
-//                    tidakSarapan.setVisibility(View.VISIBLE);
-//                }
-                System.out.println(response);
+                //System.out.println(response);
                 if (response.contains("tidak makan")){
                     bgSpinner.setVisibility(View.GONE);
                 }
