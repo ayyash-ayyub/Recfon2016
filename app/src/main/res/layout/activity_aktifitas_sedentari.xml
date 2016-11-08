@@ -19,6 +19,12 @@
         android:minHeight="?attr/actionBarSize"
         android:id="@+id/toolbar2" />
 
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtJumlah" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -38,6 +44,7 @@
                 android:layout_height="wrap_content"
                 android:theme="@style/PrimaryButton"
                 />
+
             <Button
                 android:id="@+id/bas2"
                 android:textAllCaps="false"
@@ -46,6 +53,7 @@
                 android:layout_height="wrap_content"
                 android:theme="@style/PrimaryButton"
                 />
+
             <Button
                 android:id="@+id/bas3"
                 android:textAllCaps="false"
