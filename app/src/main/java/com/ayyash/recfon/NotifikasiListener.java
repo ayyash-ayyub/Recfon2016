@@ -1,5 +1,6 @@
 package com.ayyash.recfon;
 
+import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
@@ -24,11 +25,12 @@ public class NotifikasiListener extends BroadcastReceiver{
 
         Uri soundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(context)
-                //.setContentIntent(pendingIntent)
+                .setDefaults(Notification.DEFAULT_ALL)
                 .setSmallIcon(R.drawable.logo_notif)
                 .setContentTitle("Pengingat: Calorie Diary")
                 .setContentText("Jangan lupa mengisi rekam makan hari ini")
                 .setSound(soundUri)
+                .setContentIntent(pendingIntent)
                 .setAutoCancel(true);
 
         notificationManager.notify(10408,builder.build());

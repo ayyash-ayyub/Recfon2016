@@ -57,6 +57,7 @@ public class HalamanDepan extends AppCompatActivity {
         });
 
     }
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -66,7 +67,7 @@ public class HalamanDepan extends AppCompatActivity {
 
         //SharedPreferences sharedPref = getSharedPreferences(ConfigUmum.SHARED_PREF_NAME, Context.MODE_PRIVATE);
 
-        long startTime = sharedPreferences.getLong("start_time", 0L);
+        long startTime = sharedPreferences.getLong("ayyash911_start_time", 0L);
 
         Calendar now = Calendar.getInstance();
         Calendar cal = Calendar.getInstance();
@@ -74,15 +75,8 @@ public class HalamanDepan extends AppCompatActivity {
         long difference = now.getTimeInMillis() - cal.getTimeInMillis();
 
         // 1000 * 60 * 60 * 24 * 2 * 3
-        if(difference >= 1000 * 60 * 60 * 24 * 2 * 3){
-            Intent intent = new Intent(context, NotifikasiListener.class);
-            PendingIntent pIntent = PendingIntent.getBroadcast(context, 10408, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-
-            AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-            if(alarmManager != null){
-                alarmManager.cancel(pIntent);
-            }
-
+        long interval = 1000 * 60 * 60 * 24 * 2; // 2 hari
+        if(difference >= interval * 3){
             // disable murupkan
             ComponentName receiver = new ComponentName(context, SimpleBootReceiver.class);
             PackageManager pm = context.getPackageManager();
@@ -90,6 +84,22 @@ public class HalamanDepan extends AppCompatActivity {
             pm.setComponentEnabledSetting(receiver,
                     PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
                     PackageManager.DONT_KILL_APP);
+        } else {
+            Intent intent = new Intent(context, NotifikasiListener.class);
+            PendingIntent pIntent = PendingIntent.getBroadcast(context, 10408, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+            if (difference >= interval * 2){
+                cal.add(Calendar.DATE, 2 * 3);
+                AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+                alarmManager.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), pIntent);
+            } else if(difference >= interval * 1){
+                cal.add(Calendar.DATE, 2 * 2);
+                AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+                alarmManager.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), pIntent);
+            } else if(difference >= interval * 0){
+                cal.add(Calendar.DATE, 2 * 1);
+                AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+                alarmManager.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), pIntent);
+            }
         }
         ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -100,4 +110,5 @@ public class HalamanDepan extends AppCompatActivity {
             finish();
         }
     }
+
 }

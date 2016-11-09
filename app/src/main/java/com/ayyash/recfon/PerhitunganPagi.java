@@ -10027,7 +10027,7 @@ public class PerhitunganPagi extends AppCompatActivity {
 
 
     private void setPengingatAA(){
-        if(!sharedPreferences.getBoolean("alarm_aktif", false)){
+        if(!sharedPreferences.getBoolean("ayyash911_alarm_aktif", false)){
             Calendar cal = Calendar.getInstance();
             cal.add(Calendar.DATE, 2);
             cal.set(Calendar.HOUR_OF_DAY, 20);
@@ -10039,11 +10039,11 @@ public class PerhitunganPagi extends AppCompatActivity {
             PendingIntent pIntent = PendingIntent.getBroadcast(context, 10408, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
             AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-            alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), AlarmManager.INTERVAL_DAY * 2, pIntent);
+            alarmManager.set(AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), pIntent);
 
             SharedPreferences.Editor editor = sharedPreferences.edit();
-            editor.putLong("start_time", cal.getTimeInMillis());
-            editor.putBoolean("alarm_aktif", true);
+            editor.putLong("ayyash911_start_time", cal.getTimeInMillis());
+            editor.putBoolean("ayyash911_alarm_aktif", true);
             editor.commit();
 
             // enable pas boot
